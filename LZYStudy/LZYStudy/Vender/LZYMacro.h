@@ -9,6 +9,11 @@
 #ifndef LZYMacro_h
 #define LZYMacro_h
 
+#import <Masonry/Masonry.h>
+#import <SVProgressHUD/SVProgressHUD.h>
+#import "BlocksKit+UIKit.h"
+#import "NSDate+Transfer.h"
+#import "NSString+Transfer.h"
 
 /// 当前设备iOS版本
 #ifndef LZY_IOS_VERSION
@@ -36,6 +41,15 @@
 #ifndef LZY_IOS_VERSION
 #define LZY_IOS_VERSION [[UIDevice currentDevice].systemVersion doubleValue]
 #endif
+
+// 设备：是否iPhone、iPad
+#ifndef LZY_IS_IPHONE_DEVICE
+#define LZY_IS_IPHONE_DEVICE   (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
+#endif
+#ifndef LZY_IS_IPAD_DEVICE
+#define LZY_IS_IPAD_DEVICE   (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
+#endif
+
 
 // iPhone X 宏定义(iPhone X、iPhone XR、iPhone XS、iPhone XS Max)
 #ifndef LZY_IS_IPHONEX

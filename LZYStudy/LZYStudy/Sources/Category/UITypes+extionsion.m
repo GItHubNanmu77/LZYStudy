@@ -462,7 +462,7 @@
  @param formStyle 格式(例如:2018-11-14 17:49:11)
  @return 返回日期
  */
-- (NSDate*)parseToDate:(NSString*)formStyle{
+- (NSDate *)parseToDate:(NSString *)formStyle{
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     [dateFormatter setDateFormat:formStyle];
     return [dateFormatter dateFromString:self];
