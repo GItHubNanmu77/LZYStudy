@@ -10,12 +10,12 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-typedef NS_ENUM(NSUInteger, SDQZDateStyle) {
-    DateStyleShowYearMonthDayHourMinute = 1 << 0, //年月日时分
-    DateStyleShowMonthDayHourMinute = 1 << 1, //月日时分
-    DateStyleShowYearMonthDay = 1 << 2, //年月日
-    DateStyleShowMonthDay = 1 << 3, //月日
-    DateStyleShowHourMinute = 1 << 4, //时分
+typedef NS_ENUM(NSUInteger, LZYDateTimePickerStyle) {
+    LZYDateTimePickerStyleYearMonthDayHourMinute = 1 << 0, //年月日时分
+    LZYDateTimePickerStyleMonthDayHourMinute = 1 << 1, //月日时分
+    LZYDateTimePickerStyleYearMonthDay = 1 << 2, //年月日
+    LZYDateTimePickerStyleMonthDay = 1 << 3, //月日
+    LZYDateTimePickerStyleHourMinute = 1 << 4, //时分
 };
 
 @interface LZYDateTimePickerView : UIView 
@@ -28,7 +28,7 @@ typedef NS_ENUM(NSUInteger, SDQZDateStyle) {
  *
  *  @return return value description
  */
-- (instancetype)initWithDatePickerStyle:(SDQZDateStyle )style defaultDateStr:(nullable NSString *)defaultDateStr isDoubleSelected:(BOOL)isDouble;
+- (instancetype)initWithDatePickerStyle:(LZYDateTimePickerStyle )style defaultDateStr:(nullable NSString *)defaultDateStr isDoubleSelected:(BOOL)isDouble;
 - (void)show;
 
 /// 限制最大时间（没有设置默认2199）

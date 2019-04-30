@@ -52,7 +52,7 @@ static const CGFloat kPickerButtonHeight = 44.0;
 @property (nonatomic, assign) CGFloat resultViewHeight;
 
 /// 选择器类型
-@property (nonatomic, assign) SDQZDateStyle datePickerStyle;
+@property (nonatomic, assign) LZYDateTimePickerStyle datePickerStyle;
 /// 滚到指定日期
 @property (nonatomic, retain) NSDate *scrollToDate;
 /// 默认显示日期
@@ -99,7 +99,7 @@ static const CGFloat kPickerButtonHeight = 44.0;
  *
  *  @return return value description
  */
-- (instancetype)initWithDatePickerStyle:(SDQZDateStyle )style defaultDateStr:(nullable NSString *)defaultDateStr isDoubleSelected:(BOOL)isDouble{
+- (instancetype)initWithDatePickerStyle:(LZYDateTimePickerStyle )style defaultDateStr:(nullable NSString *)defaultDateStr isDoubleSelected:(BOOL)isDouble{
     self = [super init];
     if (self) {
         
@@ -116,27 +116,27 @@ static const CGFloat kPickerButtonHeight = 44.0;
         
         
         switch (style) {
-            case DateStyleShowYearMonthDayHourMinute: {
+            case LZYDateTimePickerStyleYearMonthDayHourMinute: {
                 _nameArray = @[@"年",@"月",@"日",@"时",@"分"];
                 _dateFormatter = @"yyyy-MM-dd HH:mm";
                 _componentNumber = 5;
             } break;
-            case DateStyleShowYearMonthDay: {
+            case LZYDateTimePickerStyleYearMonthDay: {
                 _nameArray = @[@"年",@"月",@"日"];
                 _dateFormatter = @"yyyy-MM-dd";
                 _componentNumber = 3;
             } break;
-            case DateStyleShowMonthDayHourMinute: {
+            case LZYDateTimePickerStyleMonthDayHourMinute: {
                 _nameArray = @[@"月",@"日",@"时",@"分"];
                 _dateFormatter = @"yyyy-MM-dd HH:mm";
                 _componentNumber = 4;
             } break;
-            case DateStyleShowMonthDay: {
+            case LZYDateTimePickerStyleMonthDay: {
                 _nameArray = @[@"月",@"日"];
                 _dateFormatter = @"yyyy-MM-dd";
                 _componentNumber = 2;
             } break;
-            case DateStyleShowHourMinute: {
+            case LZYDateTimePickerStyleHourMinute: {
                 _nameArray = @[@"时",@"分"];
                 _dateFormatter = @"HH:mm";
                 _componentNumber = 2;
@@ -508,19 +508,19 @@ static const CGFloat kPickerButtonHeight = 44.0;
     NSInteger timeInterval = MAXYEAR - MINYEAR;
     
     switch (self.datePickerStyle) {
-        case DateStyleShowYearMonthDayHourMinute:
+        case LZYDateTimePickerStyleYearMonthDayHourMinute:
             return @[@(yearNum),@(monthNum),@(dayNum),@(hourNum),@(minuteNUm)];
             break;
-        case DateStyleShowMonthDayHourMinute:
+        case LZYDateTimePickerStyleMonthDayHourMinute:
             return @[@(monthNum*timeInterval),@(dayNum),@(hourNum),@(minuteNUm)];
             break;
-        case DateStyleShowYearMonthDay:
+        case LZYDateTimePickerStyleYearMonthDay:
             return @[@(yearNum),@(monthNum),@(dayNum)];
             break;
-        case DateStyleShowMonthDay:
+        case LZYDateTimePickerStyleMonthDay:
             return @[@(monthNum*timeInterval),@(dayNum),@(hourNum)];
             break;
-        case DateStyleShowHourMinute:
+        case LZYDateTimePickerStyleHourMinute:
             return @[@(hourNum),@(minuteNUm)];
             break;
         default:
@@ -553,7 +553,7 @@ static const CGFloat kPickerButtonHeight = 44.0;
     retval.textAlignment = NSTextAlignmentCenter;
     
     switch (self.datePickerStyle) {
-        case DateStyleShowYearMonthDayHourMinute: {
+        case LZYDateTimePickerStyleYearMonthDayHourMinute: {
             if (component==0) {
                 title = _yearArray[row];
             }
@@ -570,7 +570,7 @@ static const CGFloat kPickerButtonHeight = 44.0;
                 title = _minuteArray[row];
             }
         } break;
-        case DateStyleShowYearMonthDay: {
+        case LZYDateTimePickerStyleYearMonthDay: {
             if (component==0) {
                 title = _yearArray[row];
             }
@@ -581,7 +581,7 @@ static const CGFloat kPickerButtonHeight = 44.0;
                 title = _dayArray[row];
             }
         } break;
-        case DateStyleShowMonthDayHourMinute: {
+        case LZYDateTimePickerStyleMonthDayHourMinute: {
             if (component==0) {
                 title = _monthArray[row%12];
             }
@@ -595,7 +595,7 @@ static const CGFloat kPickerButtonHeight = 44.0;
                 title = _minuteArray[row];
             }
         } break;
-        case DateStyleShowMonthDay: {
+        case LZYDateTimePickerStyleMonthDay: {
             if (component==0) {
                 title = _monthArray[row%12];
             }
@@ -603,7 +603,7 @@ static const CGFloat kPickerButtonHeight = 44.0;
                 title = _dayArray[row];
             }
         } break;
-        case DateStyleShowHourMinute: {
+        case LZYDateTimePickerStyleHourMinute: {
             if (component==0) {
                 title = _hourArray[row];
             }
@@ -630,7 +630,7 @@ static const CGFloat kPickerButtonHeight = 44.0;
  */
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component {
     switch (self.datePickerStyle) {
-        case DateStyleShowYearMonthDayHourMinute:{
+        case LZYDateTimePickerStyleYearMonthDayHourMinute:{
             
             if (component == 0) {
                 _yearIndex = row;
@@ -656,7 +656,7 @@ static const CGFloat kPickerButtonHeight = 44.0;
             }
         } break;
             
-        case DateStyleShowYearMonthDay: {
+        case LZYDateTimePickerStyleYearMonthDay: {
             if (component == 0) {
                 _yearIndex = row;
             }
@@ -674,7 +674,7 @@ static const CGFloat kPickerButtonHeight = 44.0;
             }
         } break;
             
-        case DateStyleShowMonthDayHourMinute: {
+        case LZYDateTimePickerStyleMonthDayHourMinute: {
             if (component == 1) {
                 _dayIndex = row;
             }
@@ -696,7 +696,7 @@ static const CGFloat kPickerButtonHeight = 44.0;
             
         } break;
             
-        case DateStyleShowMonthDay: {
+        case LZYDateTimePickerStyleMonthDay: {
             if (component == 1) {
                 _dayIndex = row;
             }
@@ -711,7 +711,7 @@ static const CGFloat kPickerButtonHeight = 44.0;
             [self DaysfromYear:[_yearArray[_yearIndex] integerValue] andMonth:[_monthArray[_monthIndex] integerValue]];
         } break;
             
-        case DateStyleShowHourMinute: {
+        case LZYDateTimePickerStyleHourMinute: {
             if (component == 0) {
                 _hourIndex = row;
             }
@@ -742,26 +742,27 @@ static const CGFloat kPickerButtonHeight = 44.0;
         [self getNowDate:self.maxLimitDate animated:YES];
     }
     
-//    NSString *resultDateString = [self.scrollToDate stringWithFormat:_dateFormatter];
+    if (self.isDouble) {
     NSString *resultDateString = [self.scrollToDate formterToStringByStyle:_dateFormatter];
-    if (self.isChangeStartTime) {
-        if ([self.endLabel.text isEqualToString:@"结束时间"]) {
-            self.startLabel.text = resultDateString;
-        } else {
-            if ([resultDateString compare:self.endLabel.text] == NSOrderedAscending) {
+        if (self.isChangeStartTime) {
+            if ([self.endLabel.text isEqualToString:@"结束时间"]) {
                 self.startLabel.text = resultDateString;
             } else {
-                [SVProgressHUD showErrorWithStatus:@"开始时间不得大于结束时间"];
+                if ([resultDateString compare:self.endLabel.text] == NSOrderedAscending) {
+                    self.startLabel.text = resultDateString;
+                } else {
+                    [SVProgressHUD showErrorWithStatus:@"开始时间不得大于结束时间"];
+                }
             }
-        }
-    } else {
-        if ([self.startLabel.text isEqualToString:@"开始时间"]) {
-            self.endLabel.text = resultDateString;
         } else {
-            if ([self.startLabel.text compare:resultDateString] == NSOrderedAscending) {
+            if ([self.startLabel.text isEqualToString:@"开始时间"]) {
                 self.endLabel.text = resultDateString;
             } else {
-                [SVProgressHUD showErrorWithStatus:@"结束时间不得小于开始时间"];
+                if ([self.startLabel.text compare:resultDateString] == NSOrderedAscending) {
+                    self.endLabel.text = resultDateString;
+                } else {
+                    [SVProgressHUD showErrorWithStatus:@"结束时间不得小于开始时间"];
+                }
             }
         }
     }
@@ -957,21 +958,21 @@ static const CGFloat kPickerButtonHeight = 44.0;
     
     NSArray *indexArray;
     
-    if (self.datePickerStyle == DateStyleShowYearMonthDayHourMinute)
+    if (self.datePickerStyle == LZYDateTimePickerStyleYearMonthDayHourMinute)
         indexArray = @[@(_yearIndex),@(_monthIndex),@(_dayIndex),@(_hourIndex),@(_minuteIndex)];
-    if (self.datePickerStyle == DateStyleShowYearMonthDay)
+    if (self.datePickerStyle == LZYDateTimePickerStyleYearMonthDay)
         indexArray = @[@(_yearIndex),@(_monthIndex),@(_dayIndex)];
-    if (self.datePickerStyle == DateStyleShowMonthDayHourMinute)
+    if (self.datePickerStyle == LZYDateTimePickerStyleMonthDayHourMinute)
         indexArray = @[@(_monthIndex),@(_dayIndex),@(_hourIndex),@(_minuteIndex)];
-    if (self.datePickerStyle == DateStyleShowMonthDay)
+    if (self.datePickerStyle == LZYDateTimePickerStyleMonthDay)
         indexArray = @[@(_monthIndex),@(_dayIndex)];
-    if (self.datePickerStyle == DateStyleShowHourMinute)
+    if (self.datePickerStyle == LZYDateTimePickerStyleHourMinute)
         indexArray = @[@(_hourIndex),@(_minuteIndex)];
     
     [self.pickerView reloadAllComponents];
     
     for (int i=0; i<indexArray.count; i++) {
-        if ((self.datePickerStyle == DateStyleShowMonthDayHourMinute || self.datePickerStyle == DateStyleShowMonthDay)&& i==0) {
+        if ((self.datePickerStyle == LZYDateTimePickerStyleMonthDayHourMinute || self.datePickerStyle == LZYDateTimePickerStyleMonthDay)&& i==0) {
             NSInteger mIndex = [indexArray[i] integerValue]+(12*(self.scrollToDate.year - MINYEAR));
             [self.pickerView selectRow:mIndex inComponent:i animated:animated];
         } else {

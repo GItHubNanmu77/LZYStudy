@@ -28,6 +28,9 @@
 		4AF29C4A2276DB2600622BC2 /* LZYDateTimePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AF29C492276DB2600622BC2 /* LZYDateTimePickerView.m */; };
 		4AF29C4D2276E63300622BC2 /* NSDate+Transfer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AF29C4C2276E63300622BC2 /* NSDate+Transfer.m */; };
 		4AF29C502276E9C700622BC2 /* NSString+Transfer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AF29C4F2276E9C700622BC2 /* NSString+Transfer.m */; };
+		4AF29CF22277E10B00622BC2 /* LZYConfirmView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AF29CF12277E10B00622BC2 /* LZYConfirmView.m */; };
+		4AF29CF82277FC2900622BC2 /* CustomTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AF29CF72277FC2900622BC2 /* CustomTabBar.m */; };
+		4AF29CFB22781E1700622BC2 /* CustomTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AF29CFA22781E1700622BC2 /* CustomTabBarController.m */; };
 		4AFE35B02269A52B003120DC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AFE35AF2269A52B003120DC /* AppDelegate.m */; };
 		4AFE35B32269A52B003120DC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AFE35B22269A52B003120DC /* ViewController.m */; };
 		4AFE35B62269A52B003120DC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AFE35B42269A52B003120DC /* Main.storyboard */; };
@@ -105,6 +108,12 @@
 		4AF29C4C2276E63300622BC2 /* NSDate+Transfer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Transfer.m"; sourceTree = "<group>"; };
 		4AF29C4E2276E9C700622BC2 /* NSString+Transfer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+Transfer.h"; sourceTree = "<group>"; };
 		4AF29C4F2276E9C700622BC2 /* NSString+Transfer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+Transfer.m"; sourceTree = "<group>"; };
+		4AF29CF02277E10B00622BC2 /* LZYConfirmView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LZYConfirmView.h; sourceTree = "<group>"; };
+		4AF29CF12277E10B00622BC2 /* LZYConfirmView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LZYConfirmView.m; sourceTree = "<group>"; };
+		4AF29CF62277FC2900622BC2 /* CustomTabBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomTabBar.h; sourceTree = "<group>"; };
+		4AF29CF72277FC2900622BC2 /* CustomTabBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomTabBar.m; sourceTree = "<group>"; };
+		4AF29CF922781E1700622BC2 /* CustomTabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomTabBarController.h; sourceTree = "<group>"; };
+		4AF29CFA22781E1700622BC2 /* CustomTabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomTabBarController.m; sourceTree = "<group>"; };
 		4AFE35AB2269A52B003120DC /* LZYStudy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LZYStudy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AFE35AE2269A52B003120DC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		4AFE35AF2269A52B003120DC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -246,8 +255,46 @@
 			children = (
 				4AF29C482276DB2600622BC2 /* LZYDateTimePickerView.h */,
 				4AF29C492276DB2600622BC2 /* LZYDateTimePickerView.m */,
+				4AF29CF02277E10B00622BC2 /* LZYConfirmView.h */,
+				4AF29CF12277E10B00622BC2 /* LZYConfirmView.m */,
 			);
 			path = BaseView;
+			sourceTree = "<group>";
+		};
+		4AF29CF32277F88B00622BC2 /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				4AF29CF52277F91000622BC2 /* Common */,
+				4AFE35E02269A546003120DC /* Home */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		4AF29CF42277F8A600622BC2 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				4AFE35AE2269A52B003120DC /* AppDelegate.h */,
+				4AFE35AF2269A52B003120DC /* AppDelegate.m */,
+				4AFE35B12269A52B003120DC /* ViewController.h */,
+				4AFE35B22269A52B003120DC /* ViewController.m */,
+				4AFE35B42269A52B003120DC /* Main.storyboard */,
+				4AFE35B72269A52C003120DC /* Assets.xcassets */,
+				4AFE35B92269A52C003120DC /* LaunchScreen.storyboard */,
+				4AFE35BC2269A52C003120DC /* Info.plist */,
+				4AFE35BD2269A52C003120DC /* main.m */,
+			);
+			path = "Support Files";
+			sourceTree = "<group>";
+		};
+		4AF29CF52277F91000622BC2 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				4AF29CF62277FC2900622BC2 /* CustomTabBar.h */,
+				4AF29CF72277FC2900622BC2 /* CustomTabBar.m */,
+				4AF29CF922781E1700622BC2 /* CustomTabBarController.h */,
+				4AF29CFA22781E1700622BC2 /* CustomTabBarController.m */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 		4AFE35A22269A52B003120DC = {
@@ -275,17 +322,9 @@
 		4AFE35AD2269A52B003120DC /* LZYStudy */ = {
 			isa = PBXGroup;
 			children = (
+				4AF29CF42277F8A600622BC2 /* Support Files */,
+				4AF29CF32277F88B00622BC2 /* Module */,
 				4AFE35E42269AA7D003120DC /* Vender */,
-				4AFE35E02269A546003120DC /* Home */,
-				4AFE35AE2269A52B003120DC /* AppDelegate.h */,
-				4AFE35AF2269A52B003120DC /* AppDelegate.m */,
-				4AFE35B12269A52B003120DC /* ViewController.h */,
-				4AFE35B22269A52B003120DC /* ViewController.m */,
-				4AFE35B42269A52B003120DC /* Main.storyboard */,
-				4AFE35B72269A52C003120DC /* Assets.xcassets */,
-				4AFE35B92269A52C003120DC /* LaunchScreen.storyboard */,
-				4AFE35BC2269A52C003120DC /* Info.plist */,
-				4AFE35BD2269A52C003120DC /* main.m */,
 			);
 			path = LZYStudy;
 			sourceTree = "<group>";
@@ -604,6 +643,7 @@
 				4A3E35612269BD7800C4C96B /* NSObject+A2BlockDelegate.m in Sources */,
 				4A3E35622269BD7800C4C96B /* A2DynamicDelegate.m in Sources */,
 				4A3E35602269BD7800C4C96B /* A2BlockInvocation.m in Sources */,
+				4AF29CF82277FC2900622BC2 /* CustomTabBar.m in Sources */,
 				4A3E355E2269BD7800C4C96B /* UIActionSheet+BlocksKit.m in Sources */,
 				4AFE35BE2269A52C003120DC /* main.m in Sources */,
 				4AFE35B02269A52B003120DC /* AppDelegate.m in Sources */,
@@ -615,8 +655,10 @@
 				4A3E355F2269BD7800C4C96B /* UIControl+BlocksKit.m in Sources */,
 				4AF29C502276E9C700622BC2 /* NSString+Transfer.m in Sources */,
 				4A3E35CD2269C6B400C4C96B /* NSDictionary+SafeAccess.m in Sources */,
+				4AF29CFB22781E1700622BC2 /* CustomTabBarController.m in Sources */,
 				4A3E355A2269BD7800C4C96B /* UIAlertView+BlocksKit.m in Sources */,
 				4AFE35E32269A599003120DC /* HomeViewController.m in Sources */,
+				4AF29CF22277E10B00622BC2 /* LZYConfirmView.m in Sources */,
 				4A3E35632269BD7800C4C96B /* NSObject+A2DynamicDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -792,7 +834,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5DYL533N39;
 				HEADER_SEARCH_PATHS = $PODS_ROOT;
-				INFOPLIST_FILE = LZYStudy/Info.plist;
+				INFOPLIST_FILE = "/Users/cisdi/LZYStudy/LZYStudy/LZYStudy/Support Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -811,7 +853,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5DYL533N39;
 				HEADER_SEARCH_PATHS = $PODS_ROOT;
-				INFOPLIST_FILE = LZYStudy/Info.plist;
+				INFOPLIST_FILE = "/Users/cisdi/LZYStudy/LZYStudy/LZYStudy/Support Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
