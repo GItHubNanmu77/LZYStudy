@@ -1,8 +1,8 @@
 //
-//  HomeViewController.h
+//  LLDynamicViewController.h
 //  LZYStudy
 //
-//  Created by cisdi on 2019/4/19.
+//  Created by cisdi on 2019/5/6.
 //  Copyright © 2019 lzy. All rights reserved.
 //
 
@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface HomeViewController : UIViewController
+@interface LLDynamicViewController : UIViewController
 
 @end
 

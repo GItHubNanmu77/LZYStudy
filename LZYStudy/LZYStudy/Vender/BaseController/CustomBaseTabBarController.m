@@ -1,20 +1,20 @@
 //
-//  CustomTabBarController.m
+//  CustomBaseTabBarController.m
 //  LZYStudy
 //
 //  Created by cisdi on 2019/4/30.
 //  Copyright © 2019 lzy. All rights reserved.
 //
 
-#import "CustomTabBarController.h"
+#import "CustomBaseTabBarController.h"
 #import "LZYMacro.h"
 
 
-@interface CustomTabBarController () <CustomTabBarDelegate>
+@interface CustomBaseTabBarController () <CustomTabBarDelegate>
 
 @end
 
-@implementation CustomTabBarController
+@implementation CustomBaseTabBarController
 
 /**
  *  加载视图
@@ -185,14 +185,14 @@
     }
 }
 
-#pragma mark - SDcusTabBarDelegate
+#pragma mark - cusTabBarDelegate
 /**
  自定义按钮点击事件回调
  
  @param tabBar <#tabBar description#>
  */
-- (void)tabBarDidClickPlusButton:(CustomTabBar *)tabBar {
-    !self.clickPlusButtonBlock ?: self.clickPlusButtonBlock();
+- (void)tabBarDidClickCenterButton:(CustomTabBar *)tabBar {
+    
 }
 
 #pragma mark - UITabBarDelegate

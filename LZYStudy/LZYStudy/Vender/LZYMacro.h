@@ -14,6 +14,7 @@
 #import "BlocksKit+UIKit.h"
 #import "NSDate+Transfer.h"
 #import "NSString+Transfer.h"
+#import "UIView+Frame.h"
 
 /// 当前设备iOS版本
 #ifndef LZY_IOS_VERSION
@@ -77,6 +78,13 @@
 #endif
 
 
+// Adapt
+#ifndef LZY_WIDTH_SCALE_IPHONE
+#define LZY_WIDTH_SCALE_IPHONE(px)  ((px) * (((LZY_SCREEN_WIDTH < LZY_SCREEN_HEIGHT) ? LZY_SCREEN_WIDTH : LZY_SCREEN_HEIGHT) / 375.0))
+#endif
+#ifndef LZY_HEIGHT_SCALE_IPHONE
+#define LZY_HEIGHT_SCALE_IPHONE(px) ((px) * ((((LZY_SCREEN_WIDTH < LZY_SCREEN_HEIGHT) ? LZY_SCREEN_WIDTH : LZY_SCREEN_HEIGHT) / 667.0))
+#endif
 
 /// 强/弱引用
 /**

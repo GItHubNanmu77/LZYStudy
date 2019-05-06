@@ -15,7 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @optional
 
-- (void)tabBarDidClickPlusButton:(CustomTabBar *)tabBar;
+- (void)tabBarDidClickCenterButton:(CustomTabBar *)tabBar;
 
 @end
 
@@ -24,7 +24,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, weak) id<CustomTabBarDelegate> tabBarDelegate;
 
-
+/**
+ *  调整中间按钮位置
+ */
+- (void)refreshCenterButton;
 
 /**
  *  显示小红点

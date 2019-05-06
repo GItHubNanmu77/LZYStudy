@@ -1,5 +1,5 @@
 //
-//  CustomTabBarController.h
+//  CustomBaseTabBarController.h
 //  LZYStudy
 //
 //  Created by cisdi on 2019/4/30.
@@ -11,7 +11,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface CustomTabBarController : UITabBarController
+@interface CustomBaseTabBarController : UITabBarController
 
 /// TabBarItem 文字默认字体
 @property (nonatomic, strong) UIFont *normalFont;
@@ -23,8 +23,6 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) UIColor *selectedColor;
 /// tabBar
 @property (nonatomic, strong) CustomTabBar *cusTabBar;
-/// 点击自定义按钮回调
-@property (nonatomic, strong) void (^clickPlusButtonBlock)(void);
 
 /**
  *  设置 TabBarItem

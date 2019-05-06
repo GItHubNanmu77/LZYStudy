@@ -8,6 +8,7 @@
 
 
 #import "CustomTabBar.h"
+#import "LZYMacro.h"
 
 #define BADGETAG 999
 
@@ -23,10 +24,10 @@
     if(self){
         self.barTintColor = [UIColor colorWithRed:63/255.0 green:64/255.0 blue:77/255.0 alpha:1];
         
-        self.btnCenter = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 59, 59)];
+        self.btnCenter = [[UIButton alloc]init];
         [self.btnCenter setImage:[UIImage imageNamed:@"Publish_Normal"] forState:UIControlStateNormal];
         
-        [self.btnCenter setImage:[UIImage imageNamed:@""] forState:UIControlStateSelected];
+        [self.btnCenter setImage:[UIImage imageNamed:@"Publish_Highlighted"] forState:UIControlStateSelected];
         [self.btnCenter addTarget:self action:@selector(pressedButton:) forControlEvents:UIControlEventTouchUpInside];
         
         [self addSubview:self.btnCenter];
@@ -39,11 +40,12 @@
 - (void)layoutSubviews {
     [super layoutSubviews];
     
+    [self refreshCenterButton];
+    
     CGFloat buttonW = self.frame.size.width / 5;
     CGFloat buttonIndex = 0;
     for (UIView *subview in self.subviews) {
-        Class class = NSClassFromString(@"UITabBarButton");
-        if ([subview isKindOfClass:class]) {
+        if ([subview isKindOfClass:NSClassFromString(@"UITabBarButton")]) {
             CGRect subviewRect = subview.frame;
             subviewRect.size.width = buttonW;
             subviewRect.origin.x = buttonIndex * buttonW;
@@ -57,9 +59,19 @@
     }
 }
 
+- (void)refreshCenterButton {
+    [self bringSubviewToFront:self.btnCenter];
+
+    self.btnCenter.center = CGPointMake(self.frame.size.width / 2, self.frame.size.height / 2 - 7.5);
+    self.btnCenter.width = self.frame.size.width / 5;
+    self.btnCenter.y = LZY_IS_IPHONEX ? - 15.0 : 0.0;
+    self.btnCenter.height = self.frame.size.height;
+}
+
+
 - (void)pressedButton:(UIButton *)sender {
-    if (self.tabBarDelegate && [self.tabBarDelegate respondsToSelector:@selector(tabBarDidClickPlusButton:)]) {
-        [self.tabBarDelegate tabBarDidClickPlusButton:self];
+    if (self.tabBarDelegate && [self.tabBarDelegate respondsToSelector:@selector(tabBarDidClickCenterButton:)]) {
+        [self.tabBarDelegate tabBarDidClickCenterButton:self];
     }
 }
 

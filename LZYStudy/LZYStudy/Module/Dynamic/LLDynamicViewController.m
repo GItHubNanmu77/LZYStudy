@@ -1,23 +1,23 @@
 //
-//  HomeViewController.m
+//  LLDynamicViewController.m
 //  LZYStudy
 //
-//  Created by cisdi on 2019/4/19.
+//  Created by cisdi on 2019/5/6.
 //  Copyright © 2019 lzy. All rights reserved.
 //
 
-#import "HomeViewController.h"
+#import "LLDynamicViewController.h"
 
-@interface HomeViewController ()
+@interface LLDynamicViewController ()
 
 @end
 
-@implementation HomeViewController
+@implementation LLDynamicViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-  
+    self.view.backgroundColor = [UIColor greenColor];
 }
 
 /*
