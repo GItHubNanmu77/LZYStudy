@@ -7,8 +7,12 @@
 //
 
 #import "LZYCustomBaseNavigationViewController.h"
+#import "LZYMacro.h"
 
 @interface LZYCustomBaseNavigationViewController ()
+
+/// 自定义返回按钮
+@property (nonatomic, strong) UIBarButtonItem *customBack;
 
 @end
 
@@ -16,17 +20,44 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    //自定义返回按钮
+    [[UINavigationBar appearance] setBackIndicatorTransitionMaskImage:nil];
+    UIImage *navBackImage = [UIImage imageNamed:@"Nav_Back_Icon"];
+    navBackImage = [navBackImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    
+    self.navigationBar.backIndicatorImage = navBackImage;
+    self.navigationBar.backIndicatorTransitionMaskImage = navBackImage;
+    
+    // 背景
+    UIImage *backgroundImage = [UIImage imageWithColor:[UIColor whiteColor] size:CGSizeMake(self.navigationBar.frame.size.width, LZY_IOS_VERSION >= 7.0 ? 64.0 : 44.0)];
+    [self.navigationBar setBackgroundImage:backgroundImage forBarMetrics:UIBarMetricsDefault];
+    
+    // 修改标题色
+    self.navigationController.navigationBar.titleTextAttributes = [NSDictionary dictionaryWithObjectsAndKeys:[UIColor blackColor],NSForegroundColorAttributeName, nil];
+    [self.navigationItem.rightBarButtonItem setTintColor:[UIColor blackColor]];
+    
+    // 自定义返回按钮文字
+    self.customBack = [[UIBarButtonItem alloc] initWithImage:[[UIImage alloc] init] style:UIBarButtonItemStylePlain target:nil action:nil];
+    
+    // 刷新返回按钮
+    for (UIViewController *viewController in self.viewControllers) {
+        viewController.navigationItem.backBarButtonItem = nil;
+        viewController.navigationItem.backBarButtonItem = self.customBack;
+        viewController.navigationController.navigationBar.backIndicatorTransitionMaskImage = navBackImage;
+        viewController.navigationController.navigationBar.backIndicatorImage = navBackImage;
+    }
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated {
+    [super pushViewController:viewController animated:animated];
+    
+    viewController.navigationItem.backBarButtonItem = self.customBack;
+    
+    // 修改tabBar的frame（解决iPhone X push的时候tabBar上移）
+    CGRect frame = self.tabBarController.tabBar.frame;
+    frame.origin.y = [UIScreen mainScreen].bounds.size.height - frame.size.height;
+    self.tabBarController.tabBar.frame = frame;
 }
-*/
 
 @end

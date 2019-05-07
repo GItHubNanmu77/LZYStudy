@@ -1,5 +1,5 @@
 //
-//  CustomBaseTabBarController.h
+//  LZYCustomBaseTabBarController.h
 //  LZYStudy
 //
 //  Created by cisdi on 2019/4/30.
@@ -11,7 +11,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface CustomBaseTabBarController : UITabBarController
+@interface LZYCustomBaseTabBarController : UITabBarController
 
 /// TabBarItem 文字默认字体
 @property (nonatomic, strong) UIFont *normalFont;

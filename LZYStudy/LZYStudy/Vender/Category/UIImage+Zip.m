@@ -135,4 +135,63 @@
     });
 }
 
+/**
+ 根据颜色和大小生成图片
+ 
+ @param color 图片颜色
+ @param size 图片大小
+ @return 图片
+ */
++ (UIImage *)imageWithColor:(UIColor *)color size:(CGSize)size {
+    @autoreleasepool {
+        CGRect rect = CGRectMake(0.0, 0.0, size.width, size.height);
+        UIGraphicsBeginImageContext(rect.size);
+        
+        CGContextRef contextRef = UIGraphicsGetCurrentContext();
+        CGContextSetFillColorWithColor(contextRef, color.CGColor);
+        CGContextFillRect(contextRef, rect);
+        
+        UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+        UIGraphicsEndImageContext();
+        
+        return image;
+    }
+}
+
+/**
+ 拉伸图片：边角不拉伸
+ 
+ @param image 图片
+ @return 拉伸后的图片
+ */
+- (UIImage *)resizableImage:(UIImage *)image {
+    return image ? [image stretchableImageWithLeftCapWidth:image.size.width / 2.0 topCapHeight:image.size.height / 2.0] : nil;
+}
+
+
+/**
+ 获取指定路径的图片
+ 
+ @param name 图片名称
+ @param bundleName bundleName
+ @param resizable 是否拉伸
+ @return 图片
+ */
+- (UIImage *)getImageWithPath:(NSString *)name bundleName:(NSString *)bundleName resizable:(BOOL)resizable {
+    if (name.length == 0) {
+        return nil;
+    }
+    
+    NSBundle *mainBundle = [NSBundle mainBundle];
+    NSURL *url = [mainBundle URLForResource:bundleName withExtension:@"bundle"];
+    NSBundle *imageBundle = [NSBundle bundleWithURL:url];
+    UIImage *image = [UIImage imageNamed:name inBundle:imageBundle compatibleWithTraitCollection:nil];
+    
+    if (resizable) {
+        image = [self resizableImage:image];
+    }
+    
+    return image;
+}
+
 @end

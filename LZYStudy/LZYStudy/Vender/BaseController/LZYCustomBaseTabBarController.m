@@ -1,20 +1,20 @@
 //
-//  CustomBaseTabBarController.m
+//  LZYCustomBaseTabBarController.m
 //  LZYStudy
 //
 //  Created by cisdi on 2019/4/30.
 //  Copyright © 2019 lzy. All rights reserved.
 //
 
-#import "CustomBaseTabBarController.h"
+#import "LZYCustomBaseTabBarController.h"
 #import "LZYMacro.h"
 
 
-@interface CustomBaseTabBarController () <CustomTabBarDelegate>
+@interface LZYCustomBaseTabBarController () <CustomTabBarDelegate>
 
 @end
 
-@implementation CustomBaseTabBarController
+@implementation LZYCustomBaseTabBarController
 
 /**
  *  加载视图

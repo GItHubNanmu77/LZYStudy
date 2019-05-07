@@ -6,11 +6,11 @@
 //  Copyright © 2019 lzy. All rights reserved.
 //
 
-#import "CustomBaseTabBarController.h"
+#import "LZYCustomBaseTabBarController.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface LLCustomTabBarController : CustomBaseTabBarController
+@interface LLCustomTabBarController : LZYCustomBaseTabBarController
 
 @end
 

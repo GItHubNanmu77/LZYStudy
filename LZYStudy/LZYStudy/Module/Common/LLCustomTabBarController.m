@@ -132,9 +132,9 @@
 {
     NSArray *arr =[UIApplication sharedApplication].windows;
     NSLog(@"windows -- %@",arr);
-    UIViewController *tabbarController = [UIApplication sharedApplication].windows[1].rootViewController;
-    if ([tabbarController isKindOfClass:[LLCustomTabBarController class]]) {
-        LLCustomTabBarController *tabVC = (LLCustomTabBarController *)tabbarController;
+    UIViewController *tabbarController = [UIApplication sharedApplication].keyWindow.rootViewController;
+    if ([tabbarController isKindOfClass:[UITabBarController class]]) {
+        UITabBarController *tabVC = (UITabBarController *)tabbarController;
         UINavigationController *selectedNV = (UINavigationController *)tabVC.selectedViewController;
         if ([selectedNV isKindOfClass:[UINavigationController class]]) {
             return selectedNV;
@@ -142,4 +142,28 @@
     }
     return nil;
 }
+/**
+ *  获取最上层的控制器
+ *
+ *  @return <#return value description#>
+ */
+- (UIViewController *)mostTopViewController {
+    return [self topViewControllerWithRootViewController:[UIApplication sharedApplication].keyWindow.rootViewController];
+}
+
+- (UIViewController *)topViewControllerWithRootViewController:(UIViewController *)rootViewController {
+    if ([rootViewController isKindOfClass:[UITabBarController class]]) {
+        UITabBarController *tabBarController = (UITabBarController *)rootViewController;
+        return [self topViewControllerWithRootViewController:tabBarController.selectedViewController];
+    } else if ([rootViewController isKindOfClass:[UINavigationController class]]) {
+        UINavigationController *navigationController = (UINavigationController *)rootViewController;
+        return [self topViewControllerWithRootViewController:navigationController.visibleViewController];
+    } else if (rootViewController.presentedViewController) {
+        UIViewController *presentedViewController = rootViewController.presentedViewController;
+        return [self topViewControllerWithRootViewController:presentedViewController];
+    } else {
+        return rootViewController;
+    }
+}
+
 @end

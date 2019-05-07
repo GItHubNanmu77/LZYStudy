@@ -15,6 +15,7 @@
 #import "NSDate+Transfer.h"
 #import "NSString+Transfer.h"
 #import "UIView+Frame.h"
+#import "UIImage+Zip.h"
 
 /// 当前设备iOS版本
 #ifndef LZY_IOS_VERSION

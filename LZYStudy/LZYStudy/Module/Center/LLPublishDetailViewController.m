@@ -1,25 +1,25 @@
 //
-//  LLPublishViewController.m
+//  LLPublishDetailViewController.m
 //  LZYStudy
 //
-//  Created by cisdi on 2019/5/6.
+//  Created by cisdi on 2019/5/7.
 //  Copyright © 2019 lzy. All rights reserved.
 //
 
-#import "LLPublishViewController.h"
 #import "LLPublishDetailViewController.h"
 
-@interface LLPublishViewController ()
+@interface LLPublishDetailViewController ()
 
 @end
 
-@implementation LLPublishViewController
+@implementation LLPublishDetailViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.view.backgroundColor = [UIColor yellowColor];
-    self.title = @"发布";
+    self.view.backgroundColor = [UIColor magentaColor];
+    self.title = @"发布详情";
+    
 }
 
 /*
@@ -31,10 +31,5 @@
     // Pass the selected object to the new view controller.
 }
 */
-
--(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-    LLPublishDetailViewController *vc = [[LLPublishDetailViewController alloc] init];
-    [self.navigationController pushViewController:vc animated:YES];
-}
 
 @end
