@@ -451,6 +451,9 @@ static const CGFloat kPickerButtonHeight = 44.0;
  *  隐藏
  */
 - (void)hide {
+    if (self.pickerBeforeDismissCallback) {
+        self.pickerBeforeDismissCallback();
+    }
     [UIView animateWithDuration:0.25
                      animations:^{
                          self.coverView.alpha = 0.0;

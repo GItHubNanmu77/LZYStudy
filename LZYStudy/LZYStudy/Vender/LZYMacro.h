@@ -17,6 +17,8 @@
 #import "UIView+Frame.h"
 #import "UIImage+Zip.h"
 
+#import <MBProgressHUD/MBProgressHUD.h>
+
 /// 当前设备iOS版本
 #ifndef LZY_IOS_VERSION
 #define LZY_IOS_VERSION [[UIDevice currentDevice].systemVersion doubleValue]

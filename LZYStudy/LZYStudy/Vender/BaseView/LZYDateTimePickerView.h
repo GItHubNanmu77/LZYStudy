@@ -58,7 +58,8 @@ typedef NS_ENUM(NSUInteger, LZYDateTimePickerStyle) {
 @property (nonatomic, copy) void(^confirmButtonPressedCallback) (NSString *dateString);
 /// 双选确定按钮点击返回数据
 @property (nonatomic, copy) void(^doubleConfirmButtonPressedCallback) (NSString *startTime,NSString *endTime);
-
+/// picker消失前的回调
+@property (nonatomic, copy) void(^pickerBeforeDismissCallback) (void);
 
 @end
 

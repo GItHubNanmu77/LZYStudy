@@ -15,6 +15,19 @@
 		4A08D67122800EF100A22E6C /* LZYCustomBaseNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A08D67022800EF100A22E6C /* LZYCustomBaseNavigationViewController.m */; };
 		4A08D6752280306000A22E6C /* LLPublishViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A08D6742280306000A22E6C /* LLPublishViewController.m */; };
 		4A08D6782281684E00A22E6C /* LLPublishDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A08D6772281684E00A22E6C /* LLPublishDetailViewController.m */; };
+		4A08D67C22817BCB00A22E6C /* NetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A08D67B22817BCB00A22E6C /* NetManager.m */; };
+		4A08D6B9228184FF00A22E6C /* SDQZAccessTokenAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A08D689228184FE00A22E6C /* SDQZAccessTokenAPI.m */; };
+		4A08D6BA228184FF00A22E6C /* SDQZLoginPostAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A08D68A228184FE00A22E6C /* SDQZLoginPostAPI.m */; };
+		4A08D6C5228184FF00A22E6C /* SDQZBaseRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A08D6A0228184FF00A22E6C /* SDQZBaseRequest.m */; };
+		4A08D6E52281853100A22E6C /* YTKNetworkConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A08D6D22281853100A22E6C /* YTKNetworkConfig.m */; };
+		4A08D6E62281853100A22E6C /* YTKChainRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A08D6D42281853100A22E6C /* YTKChainRequest.m */; };
+		4A08D6E72281853100A22E6C /* YTKNetworkPrivate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A08D6D82281853100A22E6C /* YTKNetworkPrivate.m */; };
+		4A08D6E82281853100A22E6C /* YTKBaseRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A08D6DC2281853100A22E6C /* YTKBaseRequest.m */; };
+		4A08D6E92281853100A22E6C /* YTKBatchRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A08D6DF2281853100A22E6C /* YTKBatchRequest.m */; };
+		4A08D6EA2281853100A22E6C /* YTKNetworkAgent.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A08D6E02281853100A22E6C /* YTKNetworkAgent.m */; };
+		4A08D6EB2281853100A22E6C /* YTKChainRequestAgent.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A08D6E12281853100A22E6C /* YTKChainRequestAgent.m */; };
+		4A08D6EC2281853100A22E6C /* YTKBatchRequestAgent.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A08D6E22281853100A22E6C /* YTKBatchRequestAgent.m */; };
+		4A08D6ED2281853100A22E6C /* YTKRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A08D6E42281853100A22E6C /* YTKRequest.m */; };
 		4A3E35562269BD7800C4C96B /* UINavigationController+FDFullscreenPopGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A3E35362269BD7800C4C96B /* UINavigationController+FDFullscreenPopGesture.m */; };
 		4A3E35572269BD7800C4C96B /* NSTimer+BlocksKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A3E353A2269BD7800C4C96B /* NSTimer+BlocksKit.m */; };
 		4A3E35582269BD7800C4C96B /* UIWebView+BlocksKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A3E353F2269BD7800C4C96B /* UIWebView+BlocksKit.m */; };
@@ -88,6 +101,33 @@
 		4A08D6742280306000A22E6C /* LLPublishViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LLPublishViewController.m; sourceTree = "<group>"; };
 		4A08D6762281684E00A22E6C /* LLPublishDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LLPublishDetailViewController.h; sourceTree = "<group>"; };
 		4A08D6772281684E00A22E6C /* LLPublishDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LLPublishDetailViewController.m; sourceTree = "<group>"; };
+		4A08D67A22817BCB00A22E6C /* NetManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetManager.h; sourceTree = "<group>"; };
+		4A08D67B22817BCB00A22E6C /* NetManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetManager.m; sourceTree = "<group>"; };
+		4A08D687228184FE00A22E6C /* SDQZAccessTokenAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDQZAccessTokenAPI.h; sourceTree = "<group>"; };
+		4A08D688228184FE00A22E6C /* SDQZLoginPostAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDQZLoginPostAPI.h; sourceTree = "<group>"; };
+		4A08D689228184FE00A22E6C /* SDQZAccessTokenAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDQZAccessTokenAPI.m; sourceTree = "<group>"; };
+		4A08D68A228184FE00A22E6C /* SDQZLoginPostAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDQZLoginPostAPI.m; sourceTree = "<group>"; };
+		4A08D6A0228184FF00A22E6C /* SDQZBaseRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDQZBaseRequest.m; sourceTree = "<group>"; };
+		4A08D6A1228184FF00A22E6C /* SDQZBaseRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDQZBaseRequest.h; sourceTree = "<group>"; };
+		4A08D6D22281853100A22E6C /* YTKNetworkConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YTKNetworkConfig.m; sourceTree = "<group>"; };
+		4A08D6D32281853100A22E6C /* YTKBaseRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTKBaseRequest.h; sourceTree = "<group>"; };
+		4A08D6D42281853100A22E6C /* YTKChainRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YTKChainRequest.m; sourceTree = "<group>"; };
+		4A08D6D52281853100A22E6C /* YTKNetwork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTKNetwork.h; sourceTree = "<group>"; };
+		4A08D6D62281853100A22E6C /* YTKBatchRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTKBatchRequest.h; sourceTree = "<group>"; };
+		4A08D6D72281853100A22E6C /* YTKNetworkAgent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTKNetworkAgent.h; sourceTree = "<group>"; };
+		4A08D6D82281853100A22E6C /* YTKNetworkPrivate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YTKNetworkPrivate.m; sourceTree = "<group>"; };
+		4A08D6D92281853100A22E6C /* YTKRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTKRequest.h; sourceTree = "<group>"; };
+		4A08D6DA2281853100A22E6C /* YTKBatchRequestAgent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTKBatchRequestAgent.h; sourceTree = "<group>"; };
+		4A08D6DB2281853100A22E6C /* YTKChainRequestAgent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTKChainRequestAgent.h; sourceTree = "<group>"; };
+		4A08D6DC2281853100A22E6C /* YTKBaseRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YTKBaseRequest.m; sourceTree = "<group>"; };
+		4A08D6DD2281853100A22E6C /* YTKNetworkConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTKNetworkConfig.h; sourceTree = "<group>"; };
+		4A08D6DE2281853100A22E6C /* YTKChainRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTKChainRequest.h; sourceTree = "<group>"; };
+		4A08D6DF2281853100A22E6C /* YTKBatchRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YTKBatchRequest.m; sourceTree = "<group>"; };
+		4A08D6E02281853100A22E6C /* YTKNetworkAgent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YTKNetworkAgent.m; sourceTree = "<group>"; };
+		4A08D6E12281853100A22E6C /* YTKChainRequestAgent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YTKChainRequestAgent.m; sourceTree = "<group>"; };
+		4A08D6E22281853100A22E6C /* YTKBatchRequestAgent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YTKBatchRequestAgent.m; sourceTree = "<group>"; };
+		4A08D6E32281853100A22E6C /* YTKNetworkPrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTKNetworkPrivate.h; sourceTree = "<group>"; };
+		4A08D6E42281853100A22E6C /* YTKRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YTKRequest.m; sourceTree = "<group>"; };
 		4A3E35352269BD7800C4C96B /* UINavigationController+FDFullscreenPopGesture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+FDFullscreenPopGesture.h"; sourceTree = "<group>"; };
 		4A3E35362269BD7800C4C96B /* UINavigationController+FDFullscreenPopGesture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+FDFullscreenPopGesture.m"; sourceTree = "<group>"; };
 		4A3E35382269BD7800C4C96B /* BlocksKit+UIKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BlocksKit+UIKit.h"; sourceTree = "<group>"; };
@@ -251,6 +291,65 @@
 				4A08D6772281684E00A22E6C /* LLPublishDetailViewController.m */,
 			);
 			path = Center;
+			sourceTree = "<group>";
+		};
+		4A08D67922817B9400A22E6C /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				4A08D67A22817BCB00A22E6C /* NetManager.h */,
+				4A08D67B22817BCB00A22E6C /* NetManager.m */,
+				4A08D685228184FE00A22E6C /* SDQZNetwork */,
+			);
+			path = Tool;
+			sourceTree = "<group>";
+		};
+		4A08D685228184FE00A22E6C /* SDQZNetwork */ = {
+			isa = PBXGroup;
+			children = (
+				4A08D6A1228184FF00A22E6C /* SDQZBaseRequest.h */,
+				4A08D6A0228184FF00A22E6C /* SDQZBaseRequest.m */,
+				4A08D686228184FE00A22E6C /* NoNeedAccessTokenAPI */,
+				4A08D6D12281853100A22E6C /* YTKNetwork */,
+			);
+			name = SDQZNetwork;
+			path = Network/SDQZNetwork;
+			sourceTree = "<group>";
+		};
+		4A08D686228184FE00A22E6C /* NoNeedAccessTokenAPI */ = {
+			isa = PBXGroup;
+			children = (
+				4A08D687228184FE00A22E6C /* SDQZAccessTokenAPI.h */,
+				4A08D689228184FE00A22E6C /* SDQZAccessTokenAPI.m */,
+				4A08D688228184FE00A22E6C /* SDQZLoginPostAPI.h */,
+				4A08D68A228184FE00A22E6C /* SDQZLoginPostAPI.m */,
+			);
+			path = NoNeedAccessTokenAPI;
+			sourceTree = "<group>";
+		};
+		4A08D6D12281853100A22E6C /* YTKNetwork */ = {
+			isa = PBXGroup;
+			children = (
+				4A08D6D22281853100A22E6C /* YTKNetworkConfig.m */,
+				4A08D6D32281853100A22E6C /* YTKBaseRequest.h */,
+				4A08D6D42281853100A22E6C /* YTKChainRequest.m */,
+				4A08D6D52281853100A22E6C /* YTKNetwork.h */,
+				4A08D6D62281853100A22E6C /* YTKBatchRequest.h */,
+				4A08D6D72281853100A22E6C /* YTKNetworkAgent.h */,
+				4A08D6D82281853100A22E6C /* YTKNetworkPrivate.m */,
+				4A08D6D92281853100A22E6C /* YTKRequest.h */,
+				4A08D6DA2281853100A22E6C /* YTKBatchRequestAgent.h */,
+				4A08D6DB2281853100A22E6C /* YTKChainRequestAgent.h */,
+				4A08D6DC2281853100A22E6C /* YTKBaseRequest.m */,
+				4A08D6DD2281853100A22E6C /* YTKNetworkConfig.h */,
+				4A08D6DE2281853100A22E6C /* YTKChainRequest.h */,
+				4A08D6DF2281853100A22E6C /* YTKBatchRequest.m */,
+				4A08D6E02281853100A22E6C /* YTKNetworkAgent.m */,
+				4A08D6E12281853100A22E6C /* YTKChainRequestAgent.m */,
+				4A08D6E22281853100A22E6C /* YTKBatchRequestAgent.m */,
+				4A08D6E32281853100A22E6C /* YTKNetworkPrivate.h */,
+				4A08D6E42281853100A22E6C /* YTKRequest.m */,
+			);
+			path = YTKNetwork;
 			sourceTree = "<group>";
 		};
 		4A3E35342269BD7800C4C96B /* UINavigationController+FDFullscreenPopGesture */ = {
@@ -437,6 +536,7 @@
 				4A08D65F228009B800A22E6C /* BaseController */,
 				4AF29C472276DA8000622BC2 /* BaseView */,
 				4AFE35EA2269B40D003120DC /* Category */,
+				4A08D67922817B9400A22E6C /* Tool */,
 			);
 			path = Vender;
 			sourceTree = "<group>";
@@ -616,6 +716,8 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-LZYStudy/Pods-LZYStudy-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
+				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
 				"${PODS_ROOT}/Masonry/ios/Masonry.framework",
 				"${PODS_ROOT}/Masonry/ios/Masonry.framework.dSYM",
 				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
@@ -624,6 +726,8 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
 				"${DWARF_DSYM_FOLDER_PATH}/Masonry.framework.dSYM",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
@@ -706,11 +810,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A08D6EB2281853100A22E6C /* YTKChainRequestAgent.m in Sources */,
 				4A3E355C2269BD7800C4C96B /* UIGestureRecognizer+BlocksKit.m in Sources */,
 				4A08D66222800D8E00A22E6C /* LLHomeViewController.m in Sources */,
+				4A08D6B9228184FF00A22E6C /* SDQZAccessTokenAPI.m in Sources */,
 				4AF29C4A2276DB2600622BC2 /* LZYDateTimePickerView.m in Sources */,
+				4A08D6EA2281853100A22E6C /* YTKNetworkAgent.m in Sources */,
+				4A08D6E92281853100A22E6C /* YTKBatchRequest.m in Sources */,
+				4A08D6ED2281853100A22E6C /* YTKRequest.m in Sources */,
+				4A08D6C5228184FF00A22E6C /* SDQZBaseRequest.m in Sources */,
 				4A3E35D02269CA6200C4C96B /* UIView+RoundCorner.m in Sources */,
+				4A08D67C22817BCB00A22E6C /* NetManager.m in Sources */,
 				4A3E35582269BD7800C4C96B /* UIWebView+BlocksKit.m in Sources */,
+				4A08D6E52281853100A22E6C /* YTKNetworkConfig.m in Sources */,
 				4A3E35562269BD7800C4C96B /* UINavigationController+FDFullscreenPopGesture.m in Sources */,
 				4A3E355B2269BD7800C4C96B /* UIView+BlocksKit.m in Sources */,
 				4A08D6782281684E00A22E6C /* LLPublishDetailViewController.m in Sources */,
@@ -727,12 +839,16 @@
 				4A08D66A22800DB600A22E6C /* LLMessageViewController.m in Sources */,
 				4A08D67122800EF100A22E6C /* LZYCustomBaseNavigationViewController.m in Sources */,
 				4AFE35BE2269A52C003120DC /* main.m in Sources */,
+				4A08D6BA228184FF00A22E6C /* SDQZLoginPostAPI.m in Sources */,
+				4A08D6E62281853100A22E6C /* YTKChainRequest.m in Sources */,
 				4AFE35B02269A52B003120DC /* AppDelegate.m in Sources */,
+				4A08D6E72281853100A22E6C /* YTKNetworkPrivate.m in Sources */,
 				4A3E35572269BD7800C4C96B /* NSTimer+BlocksKit.m in Sources */,
 				4A3E35D32269CC3700C4C96B /* NSString+Modify.m in Sources */,
 				4AFE35F02269BA79003120DC /* UIView+Frame.m in Sources */,
 				4AF29C4D2276E63300622BC2 /* NSDate+Transfer.m in Sources */,
 				4A3E355D2269BD7800C4C96B /* UIPopoverController+BlocksKit.m in Sources */,
+				4A08D6EC2281853100A22E6C /* YTKBatchRequestAgent.m in Sources */,
 				4A08D6752280306000A22E6C /* LLPublishViewController.m in Sources */,
 				4A3E355F2269BD7800C4C96B /* UIControl+BlocksKit.m in Sources */,
 				4A08D65E2280098E00A22E6C /* LLCustomTabBarController.m in Sources */,
@@ -741,6 +857,7 @@
 				4AF29CFB22781E1700622BC2 /* LZYCustomBaseTabBarController.m in Sources */,
 				4A3E355A2269BD7800C4C96B /* UIAlertView+BlocksKit.m in Sources */,
 				4AF29CF22277E10B00622BC2 /* LZYConfirmView.m in Sources */,
+				4A08D6E82281853100A22E6C /* YTKBaseRequest.m in Sources */,
 				4A3E35632269BD7800C4C96B /* NSObject+A2DynamicDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
