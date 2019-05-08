@@ -10,13 +10,14 @@
 #define LZYMacro_h
 
 #import <Masonry/Masonry.h>
-#import <SVProgressHUD/SVProgressHUD.h>
+
 #import "BlocksKit+UIKit.h"
 #import "NSDate+Transfer.h"
 #import "NSString+Transfer.h"
 #import "UIView+Frame.h"
 #import "UIImage+Zip.h"
-
+#import "NSDictionary+SafeAccess.h"
+#import <SVProgressHUD/SVProgressHUD.h>
 #import <MBProgressHUD/MBProgressHUD.h>
 
 /// 当前设备iOS版本

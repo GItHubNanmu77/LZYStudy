@@ -15,19 +15,25 @@
 		4A08D67122800EF100A22E6C /* LZYCustomBaseNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A08D67022800EF100A22E6C /* LZYCustomBaseNavigationViewController.m */; };
 		4A08D6752280306000A22E6C /* LLPublishViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A08D6742280306000A22E6C /* LLPublishViewController.m */; };
 		4A08D6782281684E00A22E6C /* LLPublishDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A08D6772281684E00A22E6C /* LLPublishDetailViewController.m */; };
-		4A08D67C22817BCB00A22E6C /* NetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A08D67B22817BCB00A22E6C /* NetManager.m */; };
-		4A08D6B9228184FF00A22E6C /* SDQZAccessTokenAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A08D689228184FE00A22E6C /* SDQZAccessTokenAPI.m */; };
-		4A08D6BA228184FF00A22E6C /* SDQZLoginPostAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A08D68A228184FE00A22E6C /* SDQZLoginPostAPI.m */; };
-		4A08D6C5228184FF00A22E6C /* SDQZBaseRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A08D6A0228184FF00A22E6C /* SDQZBaseRequest.m */; };
-		4A08D6E52281853100A22E6C /* YTKNetworkConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A08D6D22281853100A22E6C /* YTKNetworkConfig.m */; };
-		4A08D6E62281853100A22E6C /* YTKChainRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A08D6D42281853100A22E6C /* YTKChainRequest.m */; };
-		4A08D6E72281853100A22E6C /* YTKNetworkPrivate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A08D6D82281853100A22E6C /* YTKNetworkPrivate.m */; };
-		4A08D6E82281853100A22E6C /* YTKBaseRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A08D6DC2281853100A22E6C /* YTKBaseRequest.m */; };
-		4A08D6E92281853100A22E6C /* YTKBatchRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A08D6DF2281853100A22E6C /* YTKBatchRequest.m */; };
-		4A08D6EA2281853100A22E6C /* YTKNetworkAgent.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A08D6E02281853100A22E6C /* YTKNetworkAgent.m */; };
-		4A08D6EB2281853100A22E6C /* YTKChainRequestAgent.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A08D6E12281853100A22E6C /* YTKChainRequestAgent.m */; };
-		4A08D6EC2281853100A22E6C /* YTKBatchRequestAgent.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A08D6E22281853100A22E6C /* YTKBatchRequestAgent.m */; };
-		4A08D6ED2281853100A22E6C /* YTKRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A08D6E42281853100A22E6C /* YTKRequest.m */; };
+		4A08D718228272CE00A22E6C /* YYNetworkingConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A08D6EF228272CE00A22E6C /* YYNetworkingConfig.m */; };
+		4A08D719228272CE00A22E6C /* YYNetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A08D6F0228272CE00A22E6C /* YYNetworkManager.m */; };
+		4A08D71A228272CE00A22E6C /* YYApiObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A08D6F1228272CE00A22E6C /* YYApiObject.m */; };
+		4A08D71B228272CE00A22E6C /* NetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A08D6F7228272CE00A22E6C /* NetManager.m */; };
+		4A08D71C228272CE00A22E6C /* SDQZAccessTokenAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A08D6FE228272CE00A22E6C /* SDQZAccessTokenAPI.m */; };
+		4A08D71D228272CE00A22E6C /* SDQZLoginPostAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A08D6FF228272CE00A22E6C /* SDQZLoginPostAPI.m */; };
+		4A08D71E228272CE00A22E6C /* SDQZBaseRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A08D701228272CE00A22E6C /* SDQZBaseRequest.m */; };
+		4A08D71F228272CE00A22E6C /* YTKNetworkConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A08D705228272CE00A22E6C /* YTKNetworkConfig.m */; };
+		4A08D720228272CE00A22E6C /* YTKChainRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A08D707228272CE00A22E6C /* YTKChainRequest.m */; };
+		4A08D721228272CE00A22E6C /* YTKNetworkPrivate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A08D70B228272CE00A22E6C /* YTKNetworkPrivate.m */; };
+		4A08D722228272CE00A22E6C /* YTKBaseRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A08D70F228272CE00A22E6C /* YTKBaseRequest.m */; };
+		4A08D723228272CE00A22E6C /* YTKBatchRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A08D712228272CE00A22E6C /* YTKBatchRequest.m */; };
+		4A08D724228272CE00A22E6C /* YTKNetworkAgent.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A08D713228272CE00A22E6C /* YTKNetworkAgent.m */; };
+		4A08D725228272CE00A22E6C /* YTKChainRequestAgent.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A08D714228272CE00A22E6C /* YTKChainRequestAgent.m */; };
+		4A08D726228272CE00A22E6C /* YTKBatchRequestAgent.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A08D715228272CE00A22E6C /* YTKBatchRequestAgent.m */; };
+		4A08D727228272CE00A22E6C /* YTKRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A08D717228272CE00A22E6C /* YTKRequest.m */; };
+		4A08D72D2282760E00A22E6C /* YYDatastore.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A08D72B2282760E00A22E6C /* YYDatastore.m */; };
+		4A08D72E2282760E00A22E6C /* YYDBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A08D72C2282760E00A22E6C /* YYDBManager.m */; };
+		4A08D7312282B28600A22E6C /* LZYBaseRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A08D7302282B28600A22E6C /* LZYBaseRequest.m */; };
 		4A3E35562269BD7800C4C96B /* UINavigationController+FDFullscreenPopGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A3E35362269BD7800C4C96B /* UINavigationController+FDFullscreenPopGesture.m */; };
 		4A3E35572269BD7800C4C96B /* NSTimer+BlocksKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A3E353A2269BD7800C4C96B /* NSTimer+BlocksKit.m */; };
 		4A3E35582269BD7800C4C96B /* UIWebView+BlocksKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A3E353F2269BD7800C4C96B /* UIWebView+BlocksKit.m */; };
@@ -101,33 +107,46 @@
 		4A08D6742280306000A22E6C /* LLPublishViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LLPublishViewController.m; sourceTree = "<group>"; };
 		4A08D6762281684E00A22E6C /* LLPublishDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LLPublishDetailViewController.h; sourceTree = "<group>"; };
 		4A08D6772281684E00A22E6C /* LLPublishDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LLPublishDetailViewController.m; sourceTree = "<group>"; };
-		4A08D67A22817BCB00A22E6C /* NetManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetManager.h; sourceTree = "<group>"; };
-		4A08D67B22817BCB00A22E6C /* NetManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetManager.m; sourceTree = "<group>"; };
-		4A08D687228184FE00A22E6C /* SDQZAccessTokenAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDQZAccessTokenAPI.h; sourceTree = "<group>"; };
-		4A08D688228184FE00A22E6C /* SDQZLoginPostAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDQZLoginPostAPI.h; sourceTree = "<group>"; };
-		4A08D689228184FE00A22E6C /* SDQZAccessTokenAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDQZAccessTokenAPI.m; sourceTree = "<group>"; };
-		4A08D68A228184FE00A22E6C /* SDQZLoginPostAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDQZLoginPostAPI.m; sourceTree = "<group>"; };
-		4A08D6A0228184FF00A22E6C /* SDQZBaseRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDQZBaseRequest.m; sourceTree = "<group>"; };
-		4A08D6A1228184FF00A22E6C /* SDQZBaseRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDQZBaseRequest.h; sourceTree = "<group>"; };
-		4A08D6D22281853100A22E6C /* YTKNetworkConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YTKNetworkConfig.m; sourceTree = "<group>"; };
-		4A08D6D32281853100A22E6C /* YTKBaseRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTKBaseRequest.h; sourceTree = "<group>"; };
-		4A08D6D42281853100A22E6C /* YTKChainRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YTKChainRequest.m; sourceTree = "<group>"; };
-		4A08D6D52281853100A22E6C /* YTKNetwork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTKNetwork.h; sourceTree = "<group>"; };
-		4A08D6D62281853100A22E6C /* YTKBatchRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTKBatchRequest.h; sourceTree = "<group>"; };
-		4A08D6D72281853100A22E6C /* YTKNetworkAgent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTKNetworkAgent.h; sourceTree = "<group>"; };
-		4A08D6D82281853100A22E6C /* YTKNetworkPrivate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YTKNetworkPrivate.m; sourceTree = "<group>"; };
-		4A08D6D92281853100A22E6C /* YTKRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTKRequest.h; sourceTree = "<group>"; };
-		4A08D6DA2281853100A22E6C /* YTKBatchRequestAgent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTKBatchRequestAgent.h; sourceTree = "<group>"; };
-		4A08D6DB2281853100A22E6C /* YTKChainRequestAgent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTKChainRequestAgent.h; sourceTree = "<group>"; };
-		4A08D6DC2281853100A22E6C /* YTKBaseRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YTKBaseRequest.m; sourceTree = "<group>"; };
-		4A08D6DD2281853100A22E6C /* YTKNetworkConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTKNetworkConfig.h; sourceTree = "<group>"; };
-		4A08D6DE2281853100A22E6C /* YTKChainRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTKChainRequest.h; sourceTree = "<group>"; };
-		4A08D6DF2281853100A22E6C /* YTKBatchRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YTKBatchRequest.m; sourceTree = "<group>"; };
-		4A08D6E02281853100A22E6C /* YTKNetworkAgent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YTKNetworkAgent.m; sourceTree = "<group>"; };
-		4A08D6E12281853100A22E6C /* YTKChainRequestAgent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YTKChainRequestAgent.m; sourceTree = "<group>"; };
-		4A08D6E22281853100A22E6C /* YTKBatchRequestAgent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YTKBatchRequestAgent.m; sourceTree = "<group>"; };
-		4A08D6E32281853100A22E6C /* YTKNetworkPrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTKNetworkPrivate.h; sourceTree = "<group>"; };
-		4A08D6E42281853100A22E6C /* YTKRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YTKRequest.m; sourceTree = "<group>"; };
+		4A08D6EF228272CE00A22E6C /* YYNetworkingConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYNetworkingConfig.m; sourceTree = "<group>"; };
+		4A08D6F0228272CE00A22E6C /* YYNetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYNetworkManager.m; sourceTree = "<group>"; };
+		4A08D6F1228272CE00A22E6C /* YYApiObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYApiObject.m; sourceTree = "<group>"; };
+		4A08D6F2228272CE00A22E6C /* YYNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYNetworking.h; sourceTree = "<group>"; };
+		4A08D6F3228272CE00A22E6C /* YYNetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYNetworkManager.h; sourceTree = "<group>"; };
+		4A08D6F4228272CE00A22E6C /* YYNetworkingConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYNetworkingConfig.h; sourceTree = "<group>"; };
+		4A08D6F5228272CE00A22E6C /* YYApiObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYApiObject.h; sourceTree = "<group>"; };
+		4A08D6F7228272CE00A22E6C /* NetManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetManager.m; sourceTree = "<group>"; };
+		4A08D6F8228272CE00A22E6C /* NetManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetManager.h; sourceTree = "<group>"; };
+		4A08D6FC228272CE00A22E6C /* SDQZAccessTokenAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDQZAccessTokenAPI.h; sourceTree = "<group>"; };
+		4A08D6FD228272CE00A22E6C /* SDQZLoginPostAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDQZLoginPostAPI.h; sourceTree = "<group>"; };
+		4A08D6FE228272CE00A22E6C /* SDQZAccessTokenAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDQZAccessTokenAPI.m; sourceTree = "<group>"; };
+		4A08D6FF228272CE00A22E6C /* SDQZLoginPostAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDQZLoginPostAPI.m; sourceTree = "<group>"; };
+		4A08D701228272CE00A22E6C /* SDQZBaseRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDQZBaseRequest.m; sourceTree = "<group>"; };
+		4A08D702228272CE00A22E6C /* SDQZBaseRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDQZBaseRequest.h; sourceTree = "<group>"; };
+		4A08D705228272CE00A22E6C /* YTKNetworkConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YTKNetworkConfig.m; sourceTree = "<group>"; };
+		4A08D706228272CE00A22E6C /* YTKBaseRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTKBaseRequest.h; sourceTree = "<group>"; };
+		4A08D707228272CE00A22E6C /* YTKChainRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YTKChainRequest.m; sourceTree = "<group>"; };
+		4A08D708228272CE00A22E6C /* YTKNetwork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTKNetwork.h; sourceTree = "<group>"; };
+		4A08D709228272CE00A22E6C /* YTKBatchRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTKBatchRequest.h; sourceTree = "<group>"; };
+		4A08D70A228272CE00A22E6C /* YTKNetworkAgent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTKNetworkAgent.h; sourceTree = "<group>"; };
+		4A08D70B228272CE00A22E6C /* YTKNetworkPrivate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YTKNetworkPrivate.m; sourceTree = "<group>"; };
+		4A08D70C228272CE00A22E6C /* YTKRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTKRequest.h; sourceTree = "<group>"; };
+		4A08D70D228272CE00A22E6C /* YTKBatchRequestAgent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTKBatchRequestAgent.h; sourceTree = "<group>"; };
+		4A08D70E228272CE00A22E6C /* YTKChainRequestAgent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTKChainRequestAgent.h; sourceTree = "<group>"; };
+		4A08D70F228272CE00A22E6C /* YTKBaseRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YTKBaseRequest.m; sourceTree = "<group>"; };
+		4A08D710228272CE00A22E6C /* YTKNetworkConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTKNetworkConfig.h; sourceTree = "<group>"; };
+		4A08D711228272CE00A22E6C /* YTKChainRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTKChainRequest.h; sourceTree = "<group>"; };
+		4A08D712228272CE00A22E6C /* YTKBatchRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YTKBatchRequest.m; sourceTree = "<group>"; };
+		4A08D713228272CE00A22E6C /* YTKNetworkAgent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YTKNetworkAgent.m; sourceTree = "<group>"; };
+		4A08D714228272CE00A22E6C /* YTKChainRequestAgent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YTKChainRequestAgent.m; sourceTree = "<group>"; };
+		4A08D715228272CE00A22E6C /* YTKBatchRequestAgent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YTKBatchRequestAgent.m; sourceTree = "<group>"; };
+		4A08D716228272CE00A22E6C /* YTKNetworkPrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTKNetworkPrivate.h; sourceTree = "<group>"; };
+		4A08D717228272CE00A22E6C /* YTKRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YTKRequest.m; sourceTree = "<group>"; };
+		4A08D7292282760E00A22E6C /* YYDatastore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYDatastore.h; sourceTree = "<group>"; };
+		4A08D72A2282760E00A22E6C /* YYDBManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYDBManager.h; sourceTree = "<group>"; };
+		4A08D72B2282760E00A22E6C /* YYDatastore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYDatastore.m; sourceTree = "<group>"; };
+		4A08D72C2282760E00A22E6C /* YYDBManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYDBManager.m; sourceTree = "<group>"; };
+		4A08D72F2282B28600A22E6C /* LZYBaseRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LZYBaseRequest.h; sourceTree = "<group>"; };
+		4A08D7302282B28600A22E6C /* LZYBaseRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LZYBaseRequest.m; sourceTree = "<group>"; };
 		4A3E35352269BD7800C4C96B /* UINavigationController+FDFullscreenPopGesture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+FDFullscreenPopGesture.h"; sourceTree = "<group>"; };
 		4A3E35362269BD7800C4C96B /* UINavigationController+FDFullscreenPopGesture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+FDFullscreenPopGesture.m"; sourceTree = "<group>"; };
 		4A3E35382269BD7800C4C96B /* BlocksKit+UIKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BlocksKit+UIKit.h"; sourceTree = "<group>"; };
@@ -296,60 +315,104 @@
 		4A08D67922817B9400A22E6C /* Tool */ = {
 			isa = PBXGroup;
 			children = (
-				4A08D67A22817BCB00A22E6C /* NetManager.h */,
-				4A08D67B22817BCB00A22E6C /* NetManager.m */,
-				4A08D685228184FE00A22E6C /* SDQZNetwork */,
+				4A08D6F6228272CE00A22E6C /* NetManager */,
+				4A08D6EE228272CE00A22E6C /* NetworkingYYApiObject */,
+				4A08D6F9228272CE00A22E6C /* NetworkYTK */,
 			);
 			path = Tool;
 			sourceTree = "<group>";
 		};
-		4A08D685228184FE00A22E6C /* SDQZNetwork */ = {
+		4A08D6EE228272CE00A22E6C /* NetworkingYYApiObject */ = {
 			isa = PBXGroup;
 			children = (
-				4A08D6A1228184FF00A22E6C /* SDQZBaseRequest.h */,
-				4A08D6A0228184FF00A22E6C /* SDQZBaseRequest.m */,
-				4A08D686228184FE00A22E6C /* NoNeedAccessTokenAPI */,
-				4A08D6D12281853100A22E6C /* YTKNetwork */,
+				4A08D7282282760E00A22E6C /* DB */,
+				4A08D6F5228272CE00A22E6C /* YYApiObject.h */,
+				4A08D6F1228272CE00A22E6C /* YYApiObject.m */,
+				4A08D6F2228272CE00A22E6C /* YYNetworking.h */,
+				4A08D6F4228272CE00A22E6C /* YYNetworkingConfig.h */,
+				4A08D6EF228272CE00A22E6C /* YYNetworkingConfig.m */,
+				4A08D6F3228272CE00A22E6C /* YYNetworkManager.h */,
+				4A08D6F0228272CE00A22E6C /* YYNetworkManager.m */,
 			);
-			name = SDQZNetwork;
-			path = Network/SDQZNetwork;
+			path = NetworkingYYApiObject;
 			sourceTree = "<group>";
 		};
-		4A08D686228184FE00A22E6C /* NoNeedAccessTokenAPI */ = {
+		4A08D6F6228272CE00A22E6C /* NetManager */ = {
 			isa = PBXGroup;
 			children = (
-				4A08D687228184FE00A22E6C /* SDQZAccessTokenAPI.h */,
-				4A08D689228184FE00A22E6C /* SDQZAccessTokenAPI.m */,
-				4A08D688228184FE00A22E6C /* SDQZLoginPostAPI.h */,
-				4A08D68A228184FE00A22E6C /* SDQZLoginPostAPI.m */,
+				4A08D6F8228272CE00A22E6C /* NetManager.h */,
+				4A08D6F7228272CE00A22E6C /* NetManager.m */,
+			);
+			path = NetManager;
+			sourceTree = "<group>";
+		};
+		4A08D6F9228272CE00A22E6C /* NetworkYTK */ = {
+			isa = PBXGroup;
+			children = (
+				4A08D6FA228272CE00A22E6C /* SDQZNetwork */,
+				4A08D72F2282B28600A22E6C /* LZYBaseRequest.h */,
+				4A08D7302282B28600A22E6C /* LZYBaseRequest.m */,
+			);
+			path = NetworkYTK;
+			sourceTree = "<group>";
+		};
+		4A08D6FA228272CE00A22E6C /* SDQZNetwork */ = {
+			isa = PBXGroup;
+			children = (
+				4A08D6FB228272CE00A22E6C /* NoNeedAccessTokenAPI */,
+				4A08D702228272CE00A22E6C /* SDQZBaseRequest.h */,
+				4A08D701228272CE00A22E6C /* SDQZBaseRequest.m */,
+				4A08D704228272CE00A22E6C /* YTKNetwork */,
+			);
+			path = SDQZNetwork;
+			sourceTree = "<group>";
+		};
+		4A08D6FB228272CE00A22E6C /* NoNeedAccessTokenAPI */ = {
+			isa = PBXGroup;
+			children = (
+				4A08D6FC228272CE00A22E6C /* SDQZAccessTokenAPI.h */,
+				4A08D6FE228272CE00A22E6C /* SDQZAccessTokenAPI.m */,
+				4A08D6FD228272CE00A22E6C /* SDQZLoginPostAPI.h */,
+				4A08D6FF228272CE00A22E6C /* SDQZLoginPostAPI.m */,
 			);
 			path = NoNeedAccessTokenAPI;
 			sourceTree = "<group>";
 		};
-		4A08D6D12281853100A22E6C /* YTKNetwork */ = {
+		4A08D704228272CE00A22E6C /* YTKNetwork */ = {
 			isa = PBXGroup;
 			children = (
-				4A08D6D22281853100A22E6C /* YTKNetworkConfig.m */,
-				4A08D6D32281853100A22E6C /* YTKBaseRequest.h */,
-				4A08D6D42281853100A22E6C /* YTKChainRequest.m */,
-				4A08D6D52281853100A22E6C /* YTKNetwork.h */,
-				4A08D6D62281853100A22E6C /* YTKBatchRequest.h */,
-				4A08D6D72281853100A22E6C /* YTKNetworkAgent.h */,
-				4A08D6D82281853100A22E6C /* YTKNetworkPrivate.m */,
-				4A08D6D92281853100A22E6C /* YTKRequest.h */,
-				4A08D6DA2281853100A22E6C /* YTKBatchRequestAgent.h */,
-				4A08D6DB2281853100A22E6C /* YTKChainRequestAgent.h */,
-				4A08D6DC2281853100A22E6C /* YTKBaseRequest.m */,
-				4A08D6DD2281853100A22E6C /* YTKNetworkConfig.h */,
-				4A08D6DE2281853100A22E6C /* YTKChainRequest.h */,
-				4A08D6DF2281853100A22E6C /* YTKBatchRequest.m */,
-				4A08D6E02281853100A22E6C /* YTKNetworkAgent.m */,
-				4A08D6E12281853100A22E6C /* YTKChainRequestAgent.m */,
-				4A08D6E22281853100A22E6C /* YTKBatchRequestAgent.m */,
-				4A08D6E32281853100A22E6C /* YTKNetworkPrivate.h */,
-				4A08D6E42281853100A22E6C /* YTKRequest.m */,
+				4A08D706228272CE00A22E6C /* YTKBaseRequest.h */,
+				4A08D70F228272CE00A22E6C /* YTKBaseRequest.m */,
+				4A08D709228272CE00A22E6C /* YTKBatchRequest.h */,
+				4A08D712228272CE00A22E6C /* YTKBatchRequest.m */,
+				4A08D70D228272CE00A22E6C /* YTKBatchRequestAgent.h */,
+				4A08D715228272CE00A22E6C /* YTKBatchRequestAgent.m */,
+				4A08D711228272CE00A22E6C /* YTKChainRequest.h */,
+				4A08D707228272CE00A22E6C /* YTKChainRequest.m */,
+				4A08D70E228272CE00A22E6C /* YTKChainRequestAgent.h */,
+				4A08D714228272CE00A22E6C /* YTKChainRequestAgent.m */,
+				4A08D708228272CE00A22E6C /* YTKNetwork.h */,
+				4A08D70A228272CE00A22E6C /* YTKNetworkAgent.h */,
+				4A08D713228272CE00A22E6C /* YTKNetworkAgent.m */,
+				4A08D710228272CE00A22E6C /* YTKNetworkConfig.h */,
+				4A08D705228272CE00A22E6C /* YTKNetworkConfig.m */,
+				4A08D716228272CE00A22E6C /* YTKNetworkPrivate.h */,
+				4A08D70B228272CE00A22E6C /* YTKNetworkPrivate.m */,
+				4A08D70C228272CE00A22E6C /* YTKRequest.h */,
+				4A08D717228272CE00A22E6C /* YTKRequest.m */,
 			);
 			path = YTKNetwork;
+			sourceTree = "<group>";
+		};
+		4A08D7282282760E00A22E6C /* DB */ = {
+			isa = PBXGroup;
+			children = (
+				4A08D7292282760E00A22E6C /* YYDatastore.h */,
+				4A08D72B2282760E00A22E6C /* YYDatastore.m */,
+				4A08D72A2282760E00A22E6C /* YYDBManager.h */,
+				4A08D72C2282760E00A22E6C /* YYDBManager.m */,
+			);
+			path = DB;
 			sourceTree = "<group>";
 		};
 		4A3E35342269BD7800C4C96B /* UINavigationController+FDFullscreenPopGesture */ = {
@@ -717,9 +780,10 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-LZYStudy/Pods-LZYStudy-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
+				"${BUILT_PRODUCTS_DIR}/FMDB/FMDB.framework",
 				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
-				"${PODS_ROOT}/Masonry/ios/Masonry.framework",
-				"${PODS_ROOT}/Masonry/ios/Masonry.framework.dSYM",
+				"${BUILT_PRODUCTS_DIR}/MJExtension/MJExtension.framework",
+				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
 				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -727,9 +791,10 @@
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FMDB.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJExtension.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
-				"${DWARF_DSYM_FOLDER_PATH}/Masonry.framework.dSYM",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -810,54 +875,60 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4A08D6EB2281853100A22E6C /* YTKChainRequestAgent.m in Sources */,
+				4A08D71A228272CE00A22E6C /* YYApiObject.m in Sources */,
+				4A08D71B228272CE00A22E6C /* NetManager.m in Sources */,
 				4A3E355C2269BD7800C4C96B /* UIGestureRecognizer+BlocksKit.m in Sources */,
 				4A08D66222800D8E00A22E6C /* LLHomeViewController.m in Sources */,
-				4A08D6B9228184FF00A22E6C /* SDQZAccessTokenAPI.m in Sources */,
+				4A08D722228272CE00A22E6C /* YTKBaseRequest.m in Sources */,
 				4AF29C4A2276DB2600622BC2 /* LZYDateTimePickerView.m in Sources */,
-				4A08D6EA2281853100A22E6C /* YTKNetworkAgent.m in Sources */,
-				4A08D6E92281853100A22E6C /* YTKBatchRequest.m in Sources */,
-				4A08D6ED2281853100A22E6C /* YTKRequest.m in Sources */,
-				4A08D6C5228184FF00A22E6C /* SDQZBaseRequest.m in Sources */,
 				4A3E35D02269CA6200C4C96B /* UIView+RoundCorner.m in Sources */,
-				4A08D67C22817BCB00A22E6C /* NetManager.m in Sources */,
 				4A3E35582269BD7800C4C96B /* UIWebView+BlocksKit.m in Sources */,
-				4A08D6E52281853100A22E6C /* YTKNetworkConfig.m in Sources */,
 				4A3E35562269BD7800C4C96B /* UINavigationController+FDFullscreenPopGesture.m in Sources */,
+				4A08D71D228272CE00A22E6C /* SDQZLoginPostAPI.m in Sources */,
 				4A3E355B2269BD7800C4C96B /* UIView+BlocksKit.m in Sources */,
 				4A08D6782281684E00A22E6C /* LLPublishDetailViewController.m in Sources */,
 				4A3E35592269BD7800C4C96B /* UIBarButtonItem+BlocksKit.m in Sources */,
+				4A08D71E228272CE00A22E6C /* SDQZBaseRequest.m in Sources */,
+				4A08D71F228272CE00A22E6C /* YTKNetworkConfig.m in Sources */,
 				4A3E35B42269BD8800C4C96B /* UIImage+Zip.m in Sources */,
 				4AFE35B32269A52B003120DC /* ViewController.m in Sources */,
 				4A08D66E22800DDD00A22E6C /* LLDynamicViewController.m in Sources */,
+				4A08D7312282B28600A22E6C /* LZYBaseRequest.m in Sources */,
 				4A3E35612269BD7800C4C96B /* NSObject+A2BlockDelegate.m in Sources */,
 				4A3E35622269BD7800C4C96B /* A2DynamicDelegate.m in Sources */,
 				4A3E35602269BD7800C4C96B /* A2BlockInvocation.m in Sources */,
 				4A08D66622800DA400A22E6C /* LLMineViewController.m in Sources */,
 				4AF29CF82277FC2900622BC2 /* CustomTabBar.m in Sources */,
+				4A08D720228272CE00A22E6C /* YTKChainRequest.m in Sources */,
+				4A08D727228272CE00A22E6C /* YTKRequest.m in Sources */,
 				4A3E355E2269BD7800C4C96B /* UIActionSheet+BlocksKit.m in Sources */,
 				4A08D66A22800DB600A22E6C /* LLMessageViewController.m in Sources */,
+				4A08D726228272CE00A22E6C /* YTKBatchRequestAgent.m in Sources */,
 				4A08D67122800EF100A22E6C /* LZYCustomBaseNavigationViewController.m in Sources */,
 				4AFE35BE2269A52C003120DC /* main.m in Sources */,
-				4A08D6BA228184FF00A22E6C /* SDQZLoginPostAPI.m in Sources */,
-				4A08D6E62281853100A22E6C /* YTKChainRequest.m in Sources */,
+				4A08D72D2282760E00A22E6C /* YYDatastore.m in Sources */,
 				4AFE35B02269A52B003120DC /* AppDelegate.m in Sources */,
-				4A08D6E72281853100A22E6C /* YTKNetworkPrivate.m in Sources */,
 				4A3E35572269BD7800C4C96B /* NSTimer+BlocksKit.m in Sources */,
+				4A08D72E2282760E00A22E6C /* YYDBManager.m in Sources */,
 				4A3E35D32269CC3700C4C96B /* NSString+Modify.m in Sources */,
+				4A08D723228272CE00A22E6C /* YTKBatchRequest.m in Sources */,
+				4A08D718228272CE00A22E6C /* YYNetworkingConfig.m in Sources */,
+				4A08D71C228272CE00A22E6C /* SDQZAccessTokenAPI.m in Sources */,
 				4AFE35F02269BA79003120DC /* UIView+Frame.m in Sources */,
 				4AF29C4D2276E63300622BC2 /* NSDate+Transfer.m in Sources */,
 				4A3E355D2269BD7800C4C96B /* UIPopoverController+BlocksKit.m in Sources */,
-				4A08D6EC2281853100A22E6C /* YTKBatchRequestAgent.m in Sources */,
+				4A08D719228272CE00A22E6C /* YYNetworkManager.m in Sources */,
 				4A08D6752280306000A22E6C /* LLPublishViewController.m in Sources */,
 				4A3E355F2269BD7800C4C96B /* UIControl+BlocksKit.m in Sources */,
 				4A08D65E2280098E00A22E6C /* LLCustomTabBarController.m in Sources */,
 				4AF29C502276E9C700622BC2 /* NSString+Transfer.m in Sources */,
+				4A08D724228272CE00A22E6C /* YTKNetworkAgent.m in Sources */,
 				4A3E35CD2269C6B400C4C96B /* NSDictionary+SafeAccess.m in Sources */,
+				4A08D725228272CE00A22E6C /* YTKChainRequestAgent.m in Sources */,
+				4A08D721228272CE00A22E6C /* YTKNetworkPrivate.m in Sources */,
 				4AF29CFB22781E1700622BC2 /* LZYCustomBaseTabBarController.m in Sources */,
 				4A3E355A2269BD7800C4C96B /* UIAlertView+BlocksKit.m in Sources */,
 				4AF29CF22277E10B00622BC2 /* LZYConfirmView.m in Sources */,
-				4A08D6E82281853100A22E6C /* YTKBaseRequest.m in Sources */,
 				4A3E35632269BD7800C4C96B /* NSObject+A2DynamicDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

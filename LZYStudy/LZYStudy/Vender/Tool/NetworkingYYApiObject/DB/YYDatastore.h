@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <FMDB/FMDB.h>
 
+
 @interface YYDataStoreItem : NSObject
 @property (strong, nonatomic) NSString *itemId;
 @property (strong, nonatomic) id itemObject;
