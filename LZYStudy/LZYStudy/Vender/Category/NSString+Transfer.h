@@ -12,6 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface NSString (Transfer)
 
+#pragma mark - NSString 转 日期,格式化日期
 /**
  把标准yyyy-MM-dd HH:mm:ss 日期转传入的格式
  @param formatterStyle 格式(例如:2018-11-14 17:49:11)
@@ -57,6 +58,11 @@ NS_ASSUME_NONNULL_BEGIN
  */
 + (NSString *)htmlEntityDecode:(NSString *)htlmString;
 
+/**
+ 转成Json字符串
+ @return string
+ */
+- (NSString *)parseToJsonString;
 @end
 
 NS_ASSUME_NONNULL_END

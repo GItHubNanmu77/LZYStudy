@@ -9,16 +9,18 @@
 #ifndef LZYMacro_h
 #define LZYMacro_h
 
-#import <Masonry/Masonry.h>
-
 #import "BlocksKit+UIKit.h"
 #import "NSDate+Transfer.h"
 #import "NSString+Transfer.h"
 #import "UIView+Frame.h"
 #import "UIImage+Zip.h"
 #import "NSDictionary+SafeAccess.h"
+#import "MBProgressHUD+XY.h"
+
 #import <SVProgressHUD/SVProgressHUD.h>
 #import <MBProgressHUD/MBProgressHUD.h>
+#import <Masonry/Masonry.h>
+
 
 /// 当前设备iOS版本
 #ifndef LZY_IOS_VERSION
@@ -156,5 +158,21 @@ alpha:1.0]
 //国际化
 #define NSLocString(key,comment) [[NSBundle mainBundle] localizedStringForKey:(key) value:@"" table:nil]
 
+
+//单例化一个类
+#define SINGLETON_FOR_HEADER(className) \
+\
++ (className *)shared##className;
+
+#define SINGLETON_FOR_CLASS(className) \
+\
++ (className *)shared##className { \
+static className *shared##className = nil; \
+static dispatch_once_t onceToken; \
+dispatch_once(&onceToken, ^{ \
+shared##className = [[self alloc] init]; \
+}); \
+return shared##className; \
+}
 
 #endif /* LZYMacro_h */

@@ -90,4 +90,22 @@
     return htlmString;
 }
 
+/**
+ 转成Json
+ */
+- (NSString *)parseToJsonString {
+    
+    NSString *jsonString = nil;
+    
+    if([NSJSONSerialization isValidJSONObject:self]) {
+        NSError *error;
+        NSData *jsonData = [NSJSONSerialization dataWithJSONObject:self options:NSJSONWritingPrettyPrinted error:&error];
+        jsonString =[[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
+        //NSLog(@"json data:%@",jsonString);
+        if(error) {
+            NSLog(@"Error:%@", error);
+        }
+    }
+    return jsonString;
+}
 @end
