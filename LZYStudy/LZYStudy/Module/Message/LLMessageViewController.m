@@ -7,8 +7,10 @@
 //
 
 #import "LLMessageViewController.h"
+#import "LZYAuthorizationUtils.h"
+#import "LZYActionSheetAlterManager.h"
 
-@interface LLMessageViewController () <UITableViewDelegate,UITableViewDataSource>
+@interface LLMessageViewController () <UITableViewDelegate,UITableViewDataSource,UINavigationControllerDelegate,UIImagePickerControllerDelegate>
 
 @property (nonatomic, strong) NSMutableArray *dataArray;
 @property (nonatomic, strong) UITableView *dataTableView;
@@ -72,7 +74,28 @@
     } else if(indexPath.row == 3) {
         [MBProgressHUD showErrorMessage:@"错误"];
     } else {
-        [MBProgressHUD showTipMessageInWindow:@"窗口提示"];
+//        [MBProgressHUD showTipMessageInWindow:@"窗口提示"];
+        [LZYAuthorizationUtils openAlbumServiceWithBlock:^(BOOL isOpen) {
+            if (isOpen){
+                if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
+                    UIImagePickerController *imagePickerController = [[UIImagePickerController alloc] init];
+                    imagePickerController.sourceType = UIImagePickerControllerSourceTypeCamera;
+                    imagePickerController.delegate = self;
+                    imagePickerController.allowsEditing = NO;
+                    dispatch_async(dispatch_get_main_queue(), ^{
+                        [self presentViewController:imagePickerController
+                                           animated:YES
+                                         completion:^{
+                                             [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleDefault animated:NO];
+                                         }];
+                    });
+                }
+                
+//                [[LZYActionSheetAlterManager sharedLZYActionSheetAlterManager] showSettingAlert:self deviceName:@"相册"];
+            }else{
+                [[LZYActionSheetAlterManager sharedLZYActionSheetAlterManager] showSettingAlert:self deviceName:@"相册"];
+            }
+        }];
     }
 }
 
@@ -83,5 +106,15 @@
 - (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section {
     UIView *view = [[UIView alloc] init];
     return view;
+}
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
+    
+}
+
+- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
+    [picker dismissViewControllerAnimated:YES
+                               completion:^{
+                                   [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent animated:NO];
+                               }];
 }
 @end

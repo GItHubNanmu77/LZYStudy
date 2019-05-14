@@ -15,8 +15,6 @@
 
 @implementation LZYAuthorizationUtils
 
-
-
 #pragma mark - 检测是否开启消息推送
 + (void)openMessageNotificationServiceWithBlock:(ReturnBlock)returnBlock
 {
@@ -36,8 +34,6 @@
         returnBlock(isOpen);
     }
 }
-
-
 
 #pragma mark - 检测是否允许访问相机
 + (void)openCaptureDeviceServiceWithBlock:(ReturnBlock)returnBlock

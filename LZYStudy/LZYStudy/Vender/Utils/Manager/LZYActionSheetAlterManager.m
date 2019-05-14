@@ -8,6 +8,7 @@
 
 #import "LZYActionSheetAlterManager.h"
 #import "IAPManager.h"
+#import "LZYDeviceUtils.h"
 
 @interface LZYActionSheetAlterManager ()
 
@@ -49,6 +50,49 @@ SINGLETON_FOR_CLASS(LZYActionSheetAlterManager)
     [alertVC addAction:[UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
     }]];
     [vc presentViewController:alertVC animated:YES completion:nil];
+}
+
+- (void)showAlert:(UIViewController *)vc title:(NSString *)title message:(NSString *)message handlerConfirmAction:(void (^)(void))handlerConfirmAction {
+    
+    UIAlertController *alertVC = [UIAlertController alertControllerWithTitle:title message:message preferredStyle:UIAlertControllerStyleAlert];
+    [alertVC addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        !handlerConfirmAction ?: handlerConfirmAction();
+    }]];
+    [alertVC addAction:[UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+    }]];
+    [vc presentViewController:alertVC animated:YES completion:nil];
+}
+
+- (void)showSettingAlert:(UIViewController *)vc deviceName:(NSString *)deviceName {
+    NSString *title = [NSString stringWithFormat:@"%@权限已关闭", deviceName];
+    NSString *message = [self settingTips:deviceName];
+    
+    UIAlertController *alertVC = [UIAlertController alertControllerWithTitle:title message:message preferredStyle:UIAlertControllerStyleAlert];
+    [alertVC addAction:[UIAlertAction actionWithTitle:@"去设置" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+//        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:UIApplicationOpenSettingsURLString] options:@{} completionHandler:nil];
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"prefs:root=Privacy&path=?"] options:@{} completionHandler:nil];
+    }]];
+    [alertVC addAction:[UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+    }]];
+    [vc presentViewController:alertVC animated:YES completion:nil];
+}
+
+/**
+ *  权限设置提示
+ *
+ *  @param deviceName 设备名
+ *
+ *  @return <#return value description#>
+ */
+- (NSString *)settingTips:(NSString *)deviceName {
+    NSString *tips;
+    if (deviceName.length > 0) {
+        tips = [NSString stringWithFormat:@"请到[设置]->[隐私]->[%@]中开启[%@]%@权限", deviceName, [LZYDeviceUtils CFBundleDisplayName], deviceName];
+    } else {
+        tips = [NSString stringWithFormat:@"请到[设置]->[隐私]中开启[%@]对应的权限", [LZYDeviceUtils CFBundleDisplayName]];
+    }
+    
+    return tips;
 }
 
 @end

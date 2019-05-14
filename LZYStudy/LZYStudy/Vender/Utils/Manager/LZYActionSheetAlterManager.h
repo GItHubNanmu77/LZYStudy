@@ -29,6 +29,15 @@ SINGLETON_FOR_HEADER(LZYActionSheetAlterManager)
  */
 - (void)showActionSheet:(UIViewController *)vc handlerCameraPicker:(void (^)(void))handlerCameraPicker handlerAlbumPicker:(void (^)(void))handlerAlbumPicker handlerCancel:(void (^)(void))handlerCancel;
 
+/**
+ 自定义alert提示框
+ */
+- (void)showAlert:(UIViewController *)vc  title:(NSString *)title message:(NSString *)message handlerConfirmAction:(void (^)(void))handlerConfirmAction;
+
+/**
+ 权限设置提示
+ */
+- (void)showSettingAlert:(UIViewController *)vc deviceName:(NSString *)deviceName;
 @end
 
 NS_ASSUME_NONNULL_END
