@@ -160,10 +160,12 @@ alpha:1.0]
 
 
 //单例化一个类
+///头文件
 #define SINGLETON_FOR_HEADER(className) \
 \
 + (className *)shared##className;
 
+///实现文件
 #define SINGLETON_FOR_CLASS(className) \
 \
 + (className *)shared##className { \

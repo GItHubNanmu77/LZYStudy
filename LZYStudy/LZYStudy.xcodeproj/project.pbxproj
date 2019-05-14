@@ -46,6 +46,9 @@
 		4A091751228943D90059FAD9 /* SandBoxHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A091748228943D80059FAD9 /* SandBoxHelper.m */; };
 		4A091752228943D90059FAD9 /* OpenUDID.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A09174B228943D90059FAD9 /* OpenUDID.m */; };
 		4A0917572289548A0059FAD9 /* MBProgressHUD+XY.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A0917562289548A0059FAD9 /* MBProgressHUD+XY.m */; };
+		4A09179D228AB88C0059FAD9 /* LZYActionSheetAlterManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A09179C228AB88C0059FAD9 /* LZYActionSheetAlterManager.m */; };
+		4A0917A0228ABE440059FAD9 /* LZYAuthorizationUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A09179F228ABE440059FAD9 /* LZYAuthorizationUtils.m */; };
+		4A0917A3228ABEDD0059FAD9 /* LZYDeviceUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A0917A2228ABEDD0059FAD9 /* LZYDeviceUtils.m */; };
 		4A3E35562269BD7800C4C96B /* UINavigationController+FDFullscreenPopGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A3E35362269BD7800C4C96B /* UINavigationController+FDFullscreenPopGesture.m */; };
 		4A3E35572269BD7800C4C96B /* NSTimer+BlocksKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A3E353A2269BD7800C4C96B /* NSTimer+BlocksKit.m */; };
 		4A3E35582269BD7800C4C96B /* UIWebView+BlocksKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A3E353F2269BD7800C4C96B /* UIWebView+BlocksKit.m */; };
@@ -176,6 +179,12 @@
 		4A0917552289548A0059FAD9 /* MBProgressHUD+XY.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+XY.h"; sourceTree = "<group>"; };
 		4A0917562289548A0059FAD9 /* MBProgressHUD+XY.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+XY.m"; sourceTree = "<group>"; };
 		4A09175C22896A6B0059FAD9 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		4A09179B228AB88C0059FAD9 /* LZYActionSheetAlterManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LZYActionSheetAlterManager.h; sourceTree = "<group>"; };
+		4A09179C228AB88C0059FAD9 /* LZYActionSheetAlterManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LZYActionSheetAlterManager.m; sourceTree = "<group>"; };
+		4A09179E228ABE440059FAD9 /* LZYAuthorizationUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LZYAuthorizationUtils.h; sourceTree = "<group>"; };
+		4A09179F228ABE440059FAD9 /* LZYAuthorizationUtils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LZYAuthorizationUtils.m; sourceTree = "<group>"; };
+		4A0917A1228ABEDD0059FAD9 /* LZYDeviceUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LZYDeviceUtils.h; sourceTree = "<group>"; };
+		4A0917A2228ABEDD0059FAD9 /* LZYDeviceUtils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LZYDeviceUtils.m; sourceTree = "<group>"; };
 		4A3E35352269BD7800C4C96B /* UINavigationController+FDFullscreenPopGesture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+FDFullscreenPopGesture.h"; sourceTree = "<group>"; };
 		4A3E35362269BD7800C4C96B /* UINavigationController+FDFullscreenPopGesture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+FDFullscreenPopGesture.m"; sourceTree = "<group>"; };
 		4A3E35382269BD7800C4C96B /* BlocksKit+UIKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BlocksKit+UIKit.h"; sourceTree = "<group>"; };
@@ -460,6 +469,10 @@
 			isa = PBXGroup;
 			children = (
 				4A0917542289548A0059FAD9 /* MBProgressHUD+XY */,
+				4A09179E228ABE440059FAD9 /* LZYAuthorizationUtils.h */,
+				4A09179F228ABE440059FAD9 /* LZYAuthorizationUtils.m */,
+				4A0917A1228ABEDD0059FAD9 /* LZYDeviceUtils.h */,
+				4A0917A2228ABEDD0059FAD9 /* LZYDeviceUtils.m */,
 			);
 			path = Tool;
 			sourceTree = "<group>";
@@ -492,6 +505,8 @@
 			children = (
 				4A09172C228943110059FAD9 /* IAPManager.h */,
 				4A091729228943110059FAD9 /* IAPManager.m */,
+				4A09179B228AB88C0059FAD9 /* LZYActionSheetAlterManager.h */,
+				4A09179C228AB88C0059FAD9 /* LZYActionSheetAlterManager.m */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -1013,6 +1028,7 @@
 				4A08D71D228272CE00A22E6C /* SDQZLoginPostAPI.m in Sources */,
 				4A3E355B2269BD7800C4C96B /* UIView+BlocksKit.m in Sources */,
 				4A08D6782281684E00A22E6C /* LLPublishDetailViewController.m in Sources */,
+				4A09179D228AB88C0059FAD9 /* LZYActionSheetAlterManager.m in Sources */,
 				4A3E35592269BD7800C4C96B /* UIBarButtonItem+BlocksKit.m in Sources */,
 				4A08D71E228272CE00A22E6C /* SDQZBaseRequest.m in Sources */,
 				4A08D71F228272CE00A22E6C /* YTKNetworkConfig.m in Sources */,
@@ -1027,6 +1043,7 @@
 				4AF29CF82277FC2900622BC2 /* CustomTabBar.m in Sources */,
 				4A08D720228272CE00A22E6C /* YTKChainRequest.m in Sources */,
 				4A08D727228272CE00A22E6C /* YTKRequest.m in Sources */,
+				4A0917A3228ABEDD0059FAD9 /* LZYDeviceUtils.m in Sources */,
 				4A091739228943110059FAD9 /* IAPManager.m in Sources */,
 				4A3E355E2269BD7800C4C96B /* UIActionSheet+BlocksKit.m in Sources */,
 				4A08D66A22800DB600A22E6C /* LLMessageViewController.m in Sources */,
@@ -1044,6 +1061,7 @@
 				4A091751228943D90059FAD9 /* SandBoxHelper.m in Sources */,
 				4A08D718228272CE00A22E6C /* YYNetworkingConfig.m in Sources */,
 				4A08D71C228272CE00A22E6C /* SDQZAccessTokenAPI.m in Sources */,
+				4A0917A0228ABE440059FAD9 /* LZYAuthorizationUtils.m in Sources */,
 				4AFE35F02269BA79003120DC /* UIView+Frame.m in Sources */,
 				4AF29C4D2276E63300622BC2 /* NSDate+Transfer.m in Sources */,
 				4A3E355D2269BD7800C4C96B /* UIPopoverController+BlocksKit.m in Sources */,
