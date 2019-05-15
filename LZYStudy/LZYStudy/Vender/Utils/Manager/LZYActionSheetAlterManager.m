@@ -14,7 +14,7 @@
 
 @end
 
-@implementation LZYActionSheetAlterManager
+@implementation LZYActionSheetAlterManager 
 
 // 单例
 SINGLETON_FOR_CLASS(LZYActionSheetAlterManager)
@@ -69,8 +69,10 @@ SINGLETON_FOR_CLASS(LZYActionSheetAlterManager)
     
     UIAlertController *alertVC = [UIAlertController alertControllerWithTitle:title message:message preferredStyle:UIAlertControllerStyleAlert];
     [alertVC addAction:[UIAlertAction actionWithTitle:@"去设置" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-//        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:UIApplicationOpenSettingsURLString] options:@{} completionHandler:nil];
-        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"prefs:root=Privacy&path=?"] options:@{} completionHandler:nil];
+        NSURL *url =  [NSURL URLWithString:UIApplicationOpenSettingsURLString];
+        if ([[UIApplication sharedApplication] canOpenURL:url]) {
+            [[UIApplication sharedApplication] openURL:url options:@{} completionHandler:nil];
+        }
     }]];
     [alertVC addAction:[UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
     }]];

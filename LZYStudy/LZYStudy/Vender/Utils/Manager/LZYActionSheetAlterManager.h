@@ -27,8 +27,7 @@ SINGLETON_FOR_HEADER(LZYActionSheetAlterManager)
 /**
  自定义sheet提示框
  */
-- (void)showActionSheet:(UIViewController *)vc handlerCameraPicker:(void (^)(void))handlerCameraPicker handlerAlbumPicker:(void (^)(void))handlerAlbumPicker handlerCancel:(void (^)(void))handlerCancel;
-
+- (void)showActionSheet:(UIViewController *)vc message:(NSString *)message handlerConfirmAction:(void (^)(void))handlerConfirmAction;
 /**
  自定义alert提示框
  */
