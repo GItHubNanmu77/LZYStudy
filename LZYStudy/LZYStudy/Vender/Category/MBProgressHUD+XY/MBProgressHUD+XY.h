@@ -1,9 +1,9 @@
 //
 //  MBProgressHUD+XY.h
-//  MiAiApp
+//  LZYStudy
 //
-//  Created by 徐阳 on 2017/5/19.
-//  Copyright © 2017年 徐阳. All rights reserved.
+//  Created by cisdi on 2019/5/14.
+//  Copyright © 2019 lzy. All rights reserved.
 //
 
 #import <MBProgressHUD/MBProgressHUD.h>

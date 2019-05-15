@@ -8,7 +8,7 @@
 
 #import "LLMessageViewController.h"
 #import "LZYAuthorizationUtils.h"
-#import "LZYActionSheetAlterManager.h"
+#import "LZYSheetAlertManager.h"
 
 @interface LLMessageViewController () <UITableViewDelegate,UITableViewDataSource,UINavigationControllerDelegate,UIImagePickerControllerDelegate,TZImagePickerControllerDelegate>
 
@@ -67,7 +67,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     if(indexPath.row == 0) {
-        [[LZYActionSheetAlterManager sharedLZYActionSheetAlterManager]  showActionSheet:self message:nil sheets:@[@"相机",@"相册"] handlerConfirmAction:^(NSInteger sheetTag) {
+        [[LZYSheetAlertManager sharedLZYActionSheetAlterManager]  showActionSheet:self message:nil sheets:@[@"相机",@"相册"] handlerConfirmAction:^(NSInteger sheetTag) {
             if(sheetTag == 0) {
                 [MBProgressHUD showWarnMessage:@"相机"];
             } else {
@@ -75,7 +75,7 @@
             }
         }];
     } else if (indexPath.row == 1){
-        [[LZYActionSheetAlterManager sharedLZYActionSheetAlterManager] showAlert:self title:@"警告" message:@"确定删除吗？" handlerConfirmAction:^{
+        [[LZYSheetAlertManager sharedLZYActionSheetAlterManager] showAlert:self title:@"警告" message:@"确定删除吗？" handlerConfirmAction:^{
             [MBProgressHUD showWarnMessage:@"警告"];
         }];
     } else if (indexPath.row == 2) {
@@ -84,7 +84,7 @@
         [MBProgressHUD showErrorMessage:@"错误"];
     } else {
         @LZY_weakify(self)
-        [[LZYActionSheetAlterManager sharedLZYActionSheetAlterManager] showSelectPicSourceActionSheet:self handlerCameraPicker:^{
+        [[LZYSheetAlertManager sharedLZYActionSheetAlterManager] showSelectPicSourceActionSheet:self handlerCameraPicker:^{
             @LZY_strongify(self)
             [LZYAuthorizationUtils openCaptureDeviceServiceWithBlock:^(BOOL isOpen) {
                 if (isOpen) {
@@ -97,7 +97,7 @@
                         });
                     }
                 } else {
-                    [[LZYActionSheetAlterManager sharedLZYActionSheetAlterManager] showSettingAlert:self deviceName:@"相机"];
+                    [[LZYSheetAlertManager sharedLZYActionSheetAlterManager] showSettingAlert:self deviceName:@"相机"];
                 }
             }];
         } handlerAlbumPicker:^{
@@ -117,7 +117,7 @@
 //                        });
 //                    }
                 } else {
-                    [[LZYActionSheetAlterManager sharedLZYActionSheetAlterManager] showSettingAlert:self deviceName:@"相册"];
+                    [[LZYSheetAlertManager sharedLZYActionSheetAlterManager] showSettingAlert:self deviceName:@"相册"];
                 }
             }];
         } handlerCancel:^{

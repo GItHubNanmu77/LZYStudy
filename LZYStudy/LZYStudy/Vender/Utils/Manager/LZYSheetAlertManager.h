@@ -1,5 +1,5 @@
 //
-//  LZYActionSheetAlterManager.h
+//  LZYSheetAlertManager.h
 //  LZYStudy
 //
 //  Created by cisdi on 2019/5/14.
@@ -10,9 +10,9 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface LZYActionSheetAlterManager : NSObject
+@interface LZYSheetAlertManager : NSObject
 
-SINGLETON_FOR_HEADER(LZYActionSheetAlterManager)
+SINGLETON_FOR_HEADER(LZYSheetAlertManager)
 
 /**
  相册选择提示框

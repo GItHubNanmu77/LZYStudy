@@ -30,47 +30,87 @@ typedef void(^ReturnBlock)(BOOL isOpen);
 #endif
 
 @interface LZYAuthorizationUtils : NSObject
- 
-#pragma mark - 检测是否开启消息推送
+/**
+ *   检测是否开启消息推送
+ *
+ */
 + (void)openMessageNotificationServiceWithBlock:(ReturnBlock)returnBlock;
 
-#pragma mark - 检测是否允许访问相机
+/**
+ *   检测是否允许访问相机
+ *
+ */
 + (void)openCaptureDeviceServiceWithBlock:(ReturnBlock)returnBlock;
 
-#pragma mark - 检测是否允许访问手机相册
+/**
+ *   检测是否允许访问手机相册
+ *
+ */
 + (void)openAlbumServiceWithBlock:(ReturnBlock)returnBlock;
 
-#pragma mark - 检测是否允许访问麦克风
+/**
+ *   检测是否允许访问麦克风
+ *
+ */
 + (void)openRecordServiceWithBlock:(ReturnBlock)returnBlock;
-
-#pragma mark - 检测是否允许使用定位服务
+/**
+ *   检测是否允许使用定位服务
+ *
+ */
 + (void)openLocationServiceWithBlock:(ReturnBlock)returnBlock;
 
-#pragma mark - 是否开启通讯录
+/**
+ *   是否开启通讯录
+ *
+ */
 + (void)openContactsServiceWithBolck:(ReturnBlock)returnBolck;
 
-#pragma mark - 是否开启蓝牙
+/**
+ *   是否开启蓝牙
+ *
+ */
 + (void)openPeripheralServiceWithBolck:(ReturnBlock)returnBolck;
 
-#pragma mark -  是否开启联网
+/**
+ *   是否开启联网
+ *
+ */
 + (void)openEventServiceWithBolck:(ReturnBlock)returnBolck;
 
-#pragma mark - 是否开启健康
+/**
+ *  是否开启健康
+ *
+ */
 + (void)openHealthServiceWithBolck:(ReturnBlock)returnBolck;
 
-#pragma mark - 开启Touch ID服务
+/**
+ *  开启Touch ID服务
+ *
+ */
 + (void)openTouchIDServiceWithBlock:(ReturnBlock)returnBlock;
 
-#pragma mark - 开启语音识别服务
+/**
+ *  开启语音识别服务
+ *
+ */
 + (void)openSpeechServiceWithBlock:(ReturnBlock)returnBlock;
 
-#pragma mark - 开启媒体资料库/Apple Music 服务
+/**
+ *   开启媒体资料库/Apple Music 服务
+ *
+ */
 + (void)openMediaPlayerServiceWithBlock:(ReturnBlock)returnBlock;
 
-#pragma mark - 开启Siri服务
+/**
+ *   开启Siri服务
+ *
+ */
 + (void)openSiriServiceWithBlock:(ReturnBlock)returnBlock;
 
-#pragma mark - 开启日历备忘录
+/**
+ *   开启日历备忘录
+ *
+ */
 + (void)openEventServiceWithBolck:(ReturnBlock)returnBolck withType:(EKEntityType )entityType;
 
 /**

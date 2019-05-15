@@ -46,9 +46,11 @@
 		4A091751228943D90059FAD9 /* SandBoxHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A091748228943D80059FAD9 /* SandBoxHelper.m */; };
 		4A091752228943D90059FAD9 /* OpenUDID.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A09174B228943D90059FAD9 /* OpenUDID.m */; };
 		4A0917572289548A0059FAD9 /* MBProgressHUD+XY.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A0917562289548A0059FAD9 /* MBProgressHUD+XY.m */; };
-		4A09179D228AB88C0059FAD9 /* LZYActionSheetAlterManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A09179C228AB88C0059FAD9 /* LZYActionSheetAlterManager.m */; };
+		4A09179D228AB88C0059FAD9 /* LZYSheetAlertManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A09179C228AB88C0059FAD9 /* LZYSheetAlertManager.m */; };
 		4A0917A0228ABE440059FAD9 /* LZYAuthorizationUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A09179F228ABE440059FAD9 /* LZYAuthorizationUtils.m */; };
 		4A0917A3228ABEDD0059FAD9 /* LZYDeviceUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A0917A2228ABEDD0059FAD9 /* LZYDeviceUtils.m */; };
+		4A0917A6228C00070059FAD9 /* LZYFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A0917A5228C00070059FAD9 /* LZYFileManager.m */; };
+		4A0917A9228C01DC0059FAD9 /* UIButton+FitStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A0917A8228C01DC0059FAD9 /* UIButton+FitStyle.m */; };
 		4A3E35562269BD7800C4C96B /* UINavigationController+FDFullscreenPopGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A3E35362269BD7800C4C96B /* UINavigationController+FDFullscreenPopGesture.m */; };
 		4A3E35572269BD7800C4C96B /* NSTimer+BlocksKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A3E353A2269BD7800C4C96B /* NSTimer+BlocksKit.m */; };
 		4A3E35582269BD7800C4C96B /* UIWebView+BlocksKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A3E353F2269BD7800C4C96B /* UIWebView+BlocksKit.m */; };
@@ -179,12 +181,16 @@
 		4A0917552289548A0059FAD9 /* MBProgressHUD+XY.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+XY.h"; sourceTree = "<group>"; };
 		4A0917562289548A0059FAD9 /* MBProgressHUD+XY.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+XY.m"; sourceTree = "<group>"; };
 		4A09175C22896A6B0059FAD9 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
-		4A09179B228AB88C0059FAD9 /* LZYActionSheetAlterManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LZYActionSheetAlterManager.h; sourceTree = "<group>"; };
-		4A09179C228AB88C0059FAD9 /* LZYActionSheetAlterManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LZYActionSheetAlterManager.m; sourceTree = "<group>"; };
+		4A09179B228AB88C0059FAD9 /* LZYSheetAlertManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LZYSheetAlertManager.h; sourceTree = "<group>"; };
+		4A09179C228AB88C0059FAD9 /* LZYSheetAlertManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LZYSheetAlertManager.m; sourceTree = "<group>"; };
 		4A09179E228ABE440059FAD9 /* LZYAuthorizationUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LZYAuthorizationUtils.h; sourceTree = "<group>"; };
 		4A09179F228ABE440059FAD9 /* LZYAuthorizationUtils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LZYAuthorizationUtils.m; sourceTree = "<group>"; };
 		4A0917A1228ABEDD0059FAD9 /* LZYDeviceUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LZYDeviceUtils.h; sourceTree = "<group>"; };
 		4A0917A2228ABEDD0059FAD9 /* LZYDeviceUtils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LZYDeviceUtils.m; sourceTree = "<group>"; };
+		4A0917A4228C00070059FAD9 /* LZYFileManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LZYFileManager.h; sourceTree = "<group>"; };
+		4A0917A5228C00070059FAD9 /* LZYFileManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LZYFileManager.m; sourceTree = "<group>"; };
+		4A0917A7228C01DC0059FAD9 /* UIButton+FitStyle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+FitStyle.h"; sourceTree = "<group>"; };
+		4A0917A8228C01DC0059FAD9 /* UIButton+FitStyle.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+FitStyle.m"; sourceTree = "<group>"; };
 		4A3E35352269BD7800C4C96B /* UINavigationController+FDFullscreenPopGesture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+FDFullscreenPopGesture.h"; sourceTree = "<group>"; };
 		4A3E35362269BD7800C4C96B /* UINavigationController+FDFullscreenPopGesture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+FDFullscreenPopGesture.m"; sourceTree = "<group>"; };
 		4A3E35382269BD7800C4C96B /* BlocksKit+UIKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BlocksKit+UIKit.h"; sourceTree = "<group>"; };
@@ -468,7 +474,6 @@
 		4A0916F6228915D90059FAD9 /* Tool */ = {
 			isa = PBXGroup;
 			children = (
-				4A0917542289548A0059FAD9 /* MBProgressHUD+XY */,
 				4A09179E228ABE440059FAD9 /* LZYAuthorizationUtils.h */,
 				4A09179F228ABE440059FAD9 /* LZYAuthorizationUtils.m */,
 				4A0917A1228ABEDD0059FAD9 /* LZYDeviceUtils.h */,
@@ -505,8 +510,10 @@
 			children = (
 				4A09172C228943110059FAD9 /* IAPManager.h */,
 				4A091729228943110059FAD9 /* IAPManager.m */,
-				4A09179B228AB88C0059FAD9 /* LZYActionSheetAlterManager.h */,
-				4A09179C228AB88C0059FAD9 /* LZYActionSheetAlterManager.m */,
+				4A09179B228AB88C0059FAD9 /* LZYSheetAlertManager.h */,
+				4A09179C228AB88C0059FAD9 /* LZYSheetAlertManager.m */,
+				4A0917A4228C00070059FAD9 /* LZYFileManager.h */,
+				4A0917A5228C00070059FAD9 /* LZYFileManager.m */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -732,6 +739,7 @@
 		4AFE35EA2269B40D003120DC /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				4A0917542289548A0059FAD9 /* MBProgressHUD+XY */,
 				4A3E35372269BD7800C4C96B /* BlocksKit */,
 				4AF29C4B2276E63300622BC2 /* NSDate+Transfer.h */,
 				4AF29C4C2276E63300622BC2 /* NSDate+Transfer.m */,
@@ -748,6 +756,8 @@
 				4AFE35EF2269BA79003120DC /* UIView+Frame.m */,
 				4A3E35CE2269CA6200C4C96B /* UIView+RoundCorner.h */,
 				4A3E35CF2269CA6200C4C96B /* UIView+RoundCorner.m */,
+				4A0917A7228C01DC0059FAD9 /* UIButton+FitStyle.h */,
+				4A0917A8228C01DC0059FAD9 /* UIButton+FitStyle.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -1020,6 +1030,7 @@
 			files = (
 				4A08D71A228272CE00A22E6C /* YYApiObject.m in Sources */,
 				4A08D71B228272CE00A22E6C /* NetManager.m in Sources */,
+				4A0917A6228C00070059FAD9 /* LZYFileManager.m in Sources */,
 				4A3E355C2269BD7800C4C96B /* UIGestureRecognizer+BlocksKit.m in Sources */,
 				4A08D66222800D8E00A22E6C /* LLHomeViewController.m in Sources */,
 				4A08D722228272CE00A22E6C /* YTKBaseRequest.m in Sources */,
@@ -1030,7 +1041,7 @@
 				4A08D71D228272CE00A22E6C /* SDQZLoginPostAPI.m in Sources */,
 				4A3E355B2269BD7800C4C96B /* UIView+BlocksKit.m in Sources */,
 				4A08D6782281684E00A22E6C /* LLPublishDetailViewController.m in Sources */,
-				4A09179D228AB88C0059FAD9 /* LZYActionSheetAlterManager.m in Sources */,
+				4A09179D228AB88C0059FAD9 /* LZYSheetAlertManager.m in Sources */,
 				4A3E35592269BD7800C4C96B /* UIBarButtonItem+BlocksKit.m in Sources */,
 				4A08D71E228272CE00A22E6C /* SDQZBaseRequest.m in Sources */,
 				4A08D71F228272CE00A22E6C /* YTKNetworkConfig.m in Sources */,
@@ -1056,6 +1067,7 @@
 				4A0917572289548A0059FAD9 /* MBProgressHUD+XY.m in Sources */,
 				4A08D72D2282760E00A22E6C /* YYDatastore.m in Sources */,
 				4AFE35B02269A52B003120DC /* AppDelegate.m in Sources */,
+				4A0917A9228C01DC0059FAD9 /* UIButton+FitStyle.m in Sources */,
 				4A3E35572269BD7800C4C96B /* NSTimer+BlocksKit.m in Sources */,
 				4A08D72E2282760E00A22E6C /* YYDBManager.m in Sources */,
 				4A3E35D32269CC3700C4C96B /* NSString+Modify.m in Sources */,
@@ -1254,7 +1266,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5DYL533N39;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/LZYStudy/Support Files/PrefixHeader.pch";
-				HEADER_SEARCH_PATHS = "$PODS_ROOT";
+				HEADER_SEARCH_PATHS = $PODS_ROOT;
 				INFOPLIST_FILE = "/Users/cisdi/LZYStudy/LZYStudy/LZYStudy/Support Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1274,7 +1286,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5DYL533N39;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/LZYStudy/Support Files/PrefixHeader.pch";
-				HEADER_SEARCH_PATHS = "$PODS_ROOT";
+				HEADER_SEARCH_PATHS = $PODS_ROOT;
 				INFOPLIST_FILE = "/Users/cisdi/LZYStudy/LZYStudy/LZYStudy/Support Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

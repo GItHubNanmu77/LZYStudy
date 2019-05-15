@@ -1,23 +1,23 @@
 //
-//  LZYActionSheetAlterManager.m
+//  LZYSheetAlertManager.m
 //  LZYStudy
 //
 //  Created by cisdi on 2019/5/14.
 //  Copyright © 2019 lzy. All rights reserved.
 //
 
-#import "LZYActionSheetAlterManager.h"
+#import "LZYSheetAlertManager.h"
 #import "IAPManager.h"
 #import "LZYDeviceUtils.h"
 
-@interface LZYActionSheetAlterManager ()
+@interface LZYSheetAlertManager ()
 
 @end
 
-@implementation LZYActionSheetAlterManager 
+@implementation LZYSheetAlertManager 
 
 // 单例
-SINGLETON_FOR_CLASS(LZYActionSheetAlterManager)
+SINGLETON_FOR_CLASS(LZYSheetAlertManager)
 
 - (void)showSelectPicSourceActionSheet:(UIViewController *)vc handlerCameraPicker:(void (^)(void))handlerCameraPicker handlerAlbumPicker:(void (^)(void))handlerAlbumPicker handlerCancel:(void (^)(void))handlerCancel {
     UIAlertController *alertVC = [UIAlertController alertControllerWithTitle:nil message:nil preferredStyle:UIAlertControllerStyleActionSheet];
