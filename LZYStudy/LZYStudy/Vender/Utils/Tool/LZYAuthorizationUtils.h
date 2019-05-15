@@ -30,7 +30,7 @@ typedef void(^ReturnBlock)(BOOL isOpen);
 #endif
 
 @interface LZYAuthorizationUtils : NSObject
-
+ 
 #pragma mark - 检测是否开启消息推送
 + (void)openMessageNotificationServiceWithBlock:(ReturnBlock)returnBlock;
 

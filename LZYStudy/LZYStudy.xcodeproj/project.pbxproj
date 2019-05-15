@@ -921,6 +921,7 @@
 				"${BUILT_PRODUCTS_DIR}/SDCycleScrollView/SDCycleScrollView.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/TZImagePickerController/TZImagePickerController.framework",
 				"${BUILT_PRODUCTS_DIR}/YYCache/YYCache.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -936,6 +937,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDCycleScrollView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TZImagePickerController.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYCache.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1252,7 +1254,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5DYL533N39;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/LZYStudy/Support Files/PrefixHeader.pch";
-				HEADER_SEARCH_PATHS = $PODS_ROOT;
+				HEADER_SEARCH_PATHS = "$PODS_ROOT";
 				INFOPLIST_FILE = "/Users/cisdi/LZYStudy/LZYStudy/LZYStudy/Support Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1260,7 +1262,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = lzy.LZYStudy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -1272,7 +1274,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5DYL533N39;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/LZYStudy/Support Files/PrefixHeader.pch";
-				HEADER_SEARCH_PATHS = $PODS_ROOT;
+				HEADER_SEARCH_PATHS = "$PODS_ROOT";
 				INFOPLIST_FILE = "/Users/cisdi/LZYStudy/LZYStudy/LZYStudy/Support Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1280,7 +1282,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = lzy.LZYStudy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

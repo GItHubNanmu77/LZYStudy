@@ -46,7 +46,6 @@
                 returnBlock(granted);
             }
         }];
-        returnBlock(NO);
     } else if (authStatus == AVAuthorizationStatusRestricted || authStatus == AVAuthorizationStatusDenied) {
         returnBlock(NO);
     } else {

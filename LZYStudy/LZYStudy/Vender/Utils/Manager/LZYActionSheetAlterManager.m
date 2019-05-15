@@ -42,11 +42,15 @@ SINGLETON_FOR_CLASS(LZYActionSheetAlterManager)
     [vc presentViewController:alertVC animated:YES completion:nil];
 }
 
-- (void)showActionSheet:(UIViewController *)vc message:(NSString *)message handlerConfirmAction:(void (^)(void))handlerConfirmAction {
-    UIAlertController *alertVC = [UIAlertController alertControllerWithTitle:@"提示" message:message preferredStyle:UIAlertControllerStyleActionSheet];
-    [alertVC addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-        !handlerConfirmAction ?: handlerConfirmAction();
-    }]];
+- (void)showActionSheet:(UIViewController *)vc message:(NSString *)message sheets:(NSArray<NSString *> *)sheets handlerConfirmAction:(void (^)(NSInteger))handlerConfirmAction {
+    UIAlertController *alertVC = [UIAlertController alertControllerWithTitle:nil message:message preferredStyle:UIAlertControllerStyleActionSheet];
+    for (int i=0; i<sheets.count; i++) {
+        NSString *title = sheets[i];
+        UIAlertAction *action = [UIAlertAction actionWithTitle:title style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            !handlerConfirmAction ?: handlerConfirmAction(i);
+        }];
+        [alertVC addAction:action];
+    }
     [alertVC addAction:[UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
     }]];
     [vc presentViewController:alertVC animated:YES completion:nil];

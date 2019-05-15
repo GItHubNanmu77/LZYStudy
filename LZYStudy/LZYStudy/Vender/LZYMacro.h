@@ -20,6 +20,7 @@
 #import <SVProgressHUD/SVProgressHUD.h>
 #import <MBProgressHUD/MBProgressHUD.h>
 #import <Masonry/Masonry.h>
+#import <TZImagePickerController/TZImagePickerController.h>
 
 
 /// 当前设备iOS版本

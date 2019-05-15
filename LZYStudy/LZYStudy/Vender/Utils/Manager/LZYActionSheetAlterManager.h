@@ -27,7 +27,7 @@ SINGLETON_FOR_HEADER(LZYActionSheetAlterManager)
 /**
  自定义sheet提示框
  */
-- (void)showActionSheet:(UIViewController *)vc message:(NSString *)message handlerConfirmAction:(void (^)(void))handlerConfirmAction;
+- (void)showActionSheet:(UIViewController *)vc message:(nullable NSString *)message sheets:(NSArray <NSString *>*)sheets handlerConfirmAction:(void (^)(NSInteger sheetTag))handlerConfirmAction;
 /**
  自定义alert提示框
  */

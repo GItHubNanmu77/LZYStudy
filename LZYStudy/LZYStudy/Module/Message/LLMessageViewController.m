@@ -10,11 +10,12 @@
 #import "LZYAuthorizationUtils.h"
 #import "LZYActionSheetAlterManager.h"
 
-@interface LLMessageViewController () <UITableViewDelegate,UITableViewDataSource,UINavigationControllerDelegate,UIImagePickerControllerDelegate>
+@interface LLMessageViewController () <UITableViewDelegate,UITableViewDataSource,UINavigationControllerDelegate,UIImagePickerControllerDelegate,TZImagePickerControllerDelegate>
 
 @property (nonatomic, strong) NSMutableArray *dataArray;
 @property (nonatomic, strong) UITableView *dataTableView;
 
+@property (nonatomic, strong) UIImagePickerController *pickerController;
 @end
 
 @implementation LLMessageViewController
@@ -66,36 +67,63 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     if(indexPath.row == 0) {
-        [MBProgressHUD showInfoMessage:@"信息"];
+        [[LZYActionSheetAlterManager sharedLZYActionSheetAlterManager]  showActionSheet:self message:nil sheets:@[@"相机",@"相册"] handlerConfirmAction:^(NSInteger sheetTag) {
+            if(sheetTag == 0) {
+                [MBProgressHUD showWarnMessage:@"相机"];
+            } else {
+                [MBProgressHUD showWarnMessage:@"相册"];
+            }
+        }];
     } else if (indexPath.row == 1){
-        [MBProgressHUD showTipMessageInView:@"view提示"];
+        [[LZYActionSheetAlterManager sharedLZYActionSheetAlterManager] showAlert:self title:@"警告" message:@"确定删除吗？" handlerConfirmAction:^{
+            [MBProgressHUD showWarnMessage:@"警告"];
+        }];
     } else if (indexPath.row == 2) {
         [MBProgressHUD showWarnMessage:@"警告"];
     } else if(indexPath.row == 3) {
         [MBProgressHUD showErrorMessage:@"错误"];
     } else {
-//        [MBProgressHUD showTipMessageInWindow:@"窗口提示"];
-        [LZYAuthorizationUtils openAlbumServiceWithBlock:^(BOOL isOpen) {
-            if (isOpen){
-                if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
-                    UIImagePickerController *imagePickerController = [[UIImagePickerController alloc] init];
-                    imagePickerController.sourceType = UIImagePickerControllerSourceTypeCamera;
-                    imagePickerController.delegate = self;
-                    imagePickerController.allowsEditing = NO;
-                    dispatch_async(dispatch_get_main_queue(), ^{
-                        [self presentViewController:imagePickerController
-                                           animated:YES
-                                         completion:^{
-                                             [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleDefault animated:NO];
-                                         }];
-                    });
+        @LZY_weakify(self)
+        [[LZYActionSheetAlterManager sharedLZYActionSheetAlterManager] showSelectPicSourceActionSheet:self handlerCameraPicker:^{
+            @LZY_strongify(self)
+            [LZYAuthorizationUtils openCaptureDeviceServiceWithBlock:^(BOOL isOpen) {
+                if (isOpen) {
+                    if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
+                        self.pickerController.sourceType = UIImagePickerControllerSourceTypeCamera;
+                        dispatch_async(dispatch_get_main_queue(), ^{
+                            [self presentViewController:self.pickerController animated:YES completion:^{
+                                [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleDefault animated:NO];
+                            }];
+                        });
+                    }
+                } else {
+                    [[LZYActionSheetAlterManager sharedLZYActionSheetAlterManager] showSettingAlert:self deviceName:@"相机"];
                 }
-                
-//                [[LZYActionSheetAlterManager sharedLZYActionSheetAlterManager] showSettingAlert:self deviceName:@"相册"];
-            }else{
-                [[LZYActionSheetAlterManager sharedLZYActionSheetAlterManager] showSettingAlert:self deviceName:@"相册"];
-            }
+            }];
+        } handlerAlbumPicker:^{
+            @LZY_strongify(self)
+            [LZYAuthorizationUtils openAlbumServiceWithBlock:^(BOOL isOpen) {
+                if (isOpen) {
+                    TZImagePickerController *tzPicker = [[TZImagePickerController alloc] initWithMaxImagesCount:9 delegate:self];
+                    tzPicker.delegate = self;
+                    [self presentViewController:tzPicker animated:YES completion:nil];
+                    
+//                    if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeSavedPhotosAlbum]) {
+//                        self.pickerController.sourceType = UIImagePickerControllerSourceTypeSavedPhotosAlbum;
+//                        dispatch_async(dispatch_get_main_queue(), ^{
+//                            [self presentViewController:self.pickerController animated:YES completion:^{
+//
+//                            }];
+//                        });
+//                    }
+                } else {
+                    [[LZYActionSheetAlterManager sharedLZYActionSheetAlterManager] showSettingAlert:self deviceName:@"相册"];
+                }
+            }];
+        } handlerCancel:^{
+            
         }];
+ 
     }
 }
 
@@ -107,14 +135,27 @@
     UIView *view = [[UIView alloc] init];
     return view;
 }
-- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
+
+#pragma mark - UIImagePickerControllerDelegate
+- (void)imagePickerController:(TZImagePickerController *)picker didFinishPickingPhotos:(NSArray<UIImage *> *)photos sourceAssets:(NSArray *)assets isSelectOriginalPhoto:(BOOL)isSelectOriginalPhoto {
     
+     [picker dismissViewControllerAnimated:YES completion:nil];
+}
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
+     [picker dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
-    [picker dismissViewControllerAnimated:YES
-                               completion:^{
-                                   [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent animated:NO];
-                               }];
+    [picker dismissViewControllerAnimated:YES completion:nil];
 }
+- (UIImagePickerController *)pickerController{
+    if (!_pickerController) {
+        _pickerController = [[UIImagePickerController alloc]init];
+        _pickerController.delegate = self;
+        _pickerController.allowsEditing = YES;
+    }
+    return _pickerController;
+}
+
+
 @end
