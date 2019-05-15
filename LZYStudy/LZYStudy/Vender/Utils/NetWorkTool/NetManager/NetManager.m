@@ -8,7 +8,7 @@
 
 #import "NetManager.h"
 #import <AFNetworking/AFNetworking.h>
-#import <MBProgressHUD/MBProgressHUD.h>
+#import "MBProgressHUD.h"
 
 static NetManager *_netManager;
 

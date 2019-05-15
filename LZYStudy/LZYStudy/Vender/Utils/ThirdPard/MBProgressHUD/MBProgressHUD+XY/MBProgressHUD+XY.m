@@ -7,7 +7,8 @@
 //
 
 #import "MBProgressHUD+XY.h"
-#import <MBProgressHUD/MBProgressHUD.h>
+#import "MBProgressHUD.h"
+
 const NSInteger hideTime = 2;
 
 @implementation MBProgressHUD (XY)

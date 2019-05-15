@@ -17,11 +17,11 @@
 #import "NSDictionary+SafeAccess.h"
 #import "MBProgressHUD+XY.h"
 
-#import <SVProgressHUD/SVProgressHUD.h>
-#import <MBProgressHUD/MBProgressHUD.h>
+#import "SVProgressHUD.h"
+#import "MBProgressHUD.h"
 #import <Masonry/Masonry.h>
 #import <TZImagePickerController/TZImagePickerController.h>
-
+#import <SDWebImage/SDWebImage.h>
 
 /// 当前设备iOS版本
 #ifndef LZY_IOS_VERSION

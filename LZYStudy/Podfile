@@ -11,9 +11,9 @@ target 'LZYStudy' do
   pod 'AFNetworking', '~> 3.2.1',:inhibit_warnings => true
   pod 'SDWebImage',:inhibit_warnings => true
   pod 'SDCycleScrollView',:inhibit_warnings => true
-  pod 'MBProgressHUD',:inhibit_warnings => true
+  # pod 'MBProgressHUD',:inhibit_warnings => true
   pod 'Masonry', :inhibit_warnings => true
-  pod 'SVProgressHUD', :inhibit_warnings => true
+  # pod 'SVProgressHUD', :inhibit_warnings => true
   pod 'FMDB',:inhibit_warnings => true
   pod 'MJExtension',:inhibit_warnings => true
   pod 'PPNetworkHelper',:git => 'https://github.com/jkpang/PPNetworkHelper.git'

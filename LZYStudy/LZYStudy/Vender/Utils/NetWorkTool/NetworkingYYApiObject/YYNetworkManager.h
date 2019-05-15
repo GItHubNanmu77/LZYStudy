@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <AFNetworking/AFNetworking.h>
 #import <MJExtension/MJExtension.h>
-#import <MBProgressHUD/MBProgressHUD.h>
+
 #import "LZYMacro.h"
 #import "YYApiObject.h"
 #import "YYNetworkingConfig.h"

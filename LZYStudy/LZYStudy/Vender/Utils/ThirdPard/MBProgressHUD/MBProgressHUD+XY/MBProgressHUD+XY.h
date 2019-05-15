@@ -6,7 +6,7 @@
 //  Copyright © 2019 lzy. All rights reserved.
 //
 
-#import <MBProgressHUD/MBProgressHUD.h>
+#import "MBProgressHUD.h"
 
 /**
  MBProgressHUD 的二次封装

@@ -67,7 +67,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     if(indexPath.row == 0) {
-        [[LZYSheetAlertManager sharedLZYActionSheetAlterManager]  showActionSheet:self message:nil sheets:@[@"相机",@"相册"] handlerConfirmAction:^(NSInteger sheetTag) {
+        [[LZYSheetAlertManager sharedLZYSheetAlertManager]  showActionSheet:self message:nil sheets:@[@"相机",@"相册"] handlerConfirmAction:^(NSInteger sheetTag) {
             if(sheetTag == 0) {
                 [MBProgressHUD showWarnMessage:@"相机"];
             } else {
@@ -75,7 +75,7 @@
             }
         }];
     } else if (indexPath.row == 1){
-        [[LZYSheetAlertManager sharedLZYActionSheetAlterManager] showAlert:self title:@"警告" message:@"确定删除吗？" handlerConfirmAction:^{
+        [[LZYSheetAlertManager sharedLZYSheetAlertManager] showAlert:self title:@"警告" message:@"确定删除吗？" handlerConfirmAction:^{
             [MBProgressHUD showWarnMessage:@"警告"];
         }];
     } else if (indexPath.row == 2) {
@@ -84,7 +84,7 @@
         [MBProgressHUD showErrorMessage:@"错误"];
     } else {
         @LZY_weakify(self)
-        [[LZYSheetAlertManager sharedLZYActionSheetAlterManager] showSelectPicSourceActionSheet:self handlerCameraPicker:^{
+        [[LZYSheetAlertManager sharedLZYSheetAlertManager] showSelectPicSourceActionSheet:self handlerCameraPicker:^{
             @LZY_strongify(self)
             [LZYAuthorizationUtils openCaptureDeviceServiceWithBlock:^(BOOL isOpen) {
                 if (isOpen) {
@@ -97,7 +97,7 @@
                         });
                     }
                 } else {
-                    [[LZYSheetAlertManager sharedLZYActionSheetAlterManager] showSettingAlert:self deviceName:@"相机"];
+                    [[LZYSheetAlertManager sharedLZYSheetAlertManager] showSettingAlert:self deviceName:@"相机"];
                 }
             }];
         } handlerAlbumPicker:^{
@@ -117,7 +117,7 @@
 //                        });
 //                    }
                 } else {
-                    [[LZYSheetAlertManager sharedLZYActionSheetAlterManager] showSettingAlert:self deviceName:@"相册"];
+                    [[LZYSheetAlertManager sharedLZYSheetAlertManager] showSettingAlert:self deviceName:@"相册"];
                 }
             }];
         } handlerCancel:^{
