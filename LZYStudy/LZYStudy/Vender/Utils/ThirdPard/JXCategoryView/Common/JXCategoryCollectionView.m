@@ -16,7 +16,7 @@
 
     for (UIView<JXCategoryIndicatorProtocol> *view in self.indicators) {
         [self sendSubviewToBack:view];
-        view.sd_y = self.sd_bottom - view.sd_height;
+        view.y = self.bottom - view.height;
     }
 }
 

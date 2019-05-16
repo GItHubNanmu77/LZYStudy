@@ -126,6 +126,8 @@
 		4ABCE35A228D659600676337 /* JXCategoryBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ABCE337228D659500676337 /* JXCategoryBaseView.m */; };
 		4ABCE35B228D659600676337 /* JXCategoryBaseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ABCE338228D659500676337 /* JXCategoryBaseCell.m */; };
 		4ABCE35C228D659600676337 /* JXCategoryBaseCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ABCE339228D659500676337 /* JXCategoryBaseCellModel.m */; };
+		4ABCE363228D66AF00676337 /* MF_Base64Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ABCE361228D66AF00676337 /* MF_Base64Additions.m */; };
+		4ABCE364228D66AF00676337 /* SDQZEncryptUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ABCE362228D66AF00676337 /* SDQZEncryptUtils.m */; };
 		4AF29C4A2276DB2600622BC2 /* LZYDateTimePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AF29C492276DB2600622BC2 /* LZYDateTimePickerView.m */; };
 		4AF29C4D2276E63300622BC2 /* NSDate+Transfer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AF29C4C2276E63300622BC2 /* NSDate+Transfer.m */; };
 		4AF29C502276E9C700622BC2 /* NSString+Transfer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AF29C4F2276E9C700622BC2 /* NSString+Transfer.m */; };
@@ -401,6 +403,10 @@
 		4ABCE337228D659500676337 /* JXCategoryBaseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JXCategoryBaseView.m; sourceTree = "<group>"; };
 		4ABCE338228D659500676337 /* JXCategoryBaseCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JXCategoryBaseCell.m; sourceTree = "<group>"; };
 		4ABCE339228D659500676337 /* JXCategoryBaseCellModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JXCategoryBaseCellModel.m; sourceTree = "<group>"; };
+		4ABCE35E228D66AF00676337 /* SDQZEncryptUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDQZEncryptUtils.h; sourceTree = "<group>"; };
+		4ABCE360228D66AF00676337 /* MF_Base64Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MF_Base64Additions.h; sourceTree = "<group>"; };
+		4ABCE361228D66AF00676337 /* MF_Base64Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MF_Base64Additions.m; sourceTree = "<group>"; };
+		4ABCE362228D66AF00676337 /* SDQZEncryptUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDQZEncryptUtils.m; sourceTree = "<group>"; };
 		4AF29C482276DB2600622BC2 /* LZYDateTimePickerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LZYDateTimePickerView.h; sourceTree = "<group>"; };
 		4AF29C492276DB2600622BC2 /* LZYDateTimePickerView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LZYDateTimePickerView.m; sourceTree = "<group>"; };
 		4AF29C4B2276E63300622BC2 /* NSDate+Transfer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDate+Transfer.h"; sourceTree = "<group>"; };
@@ -650,6 +656,7 @@
 		4A0916F6228915D90059FAD9 /* Tool */ = {
 			isa = PBXGroup;
 			children = (
+				4ABCE35D228D66AF00676337 /* SDQZEncryptUtils */,
 				4A09179E228ABE440059FAD9 /* LZYAuthorizationUtils.h */,
 				4A09179F228ABE440059FAD9 /* LZYAuthorizationUtils.m */,
 				4A0917A1228ABEDD0059FAD9 /* LZYDeviceUtils.h */,
@@ -1056,6 +1063,25 @@
 				4ABCE339228D659500676337 /* JXCategoryBaseCellModel.m */,
 			);
 			path = Base;
+			sourceTree = "<group>";
+		};
+		4ABCE35D228D66AF00676337 /* SDQZEncryptUtils */ = {
+			isa = PBXGroup;
+			children = (
+				4ABCE35E228D66AF00676337 /* SDQZEncryptUtils.h */,
+				4ABCE362228D66AF00676337 /* SDQZEncryptUtils.m */,
+				4ABCE35F228D66AF00676337 /* Base64 */,
+			);
+			path = SDQZEncryptUtils;
+			sourceTree = "<group>";
+		};
+		4ABCE35F228D66AF00676337 /* Base64 */ = {
+			isa = PBXGroup;
+			children = (
+				4ABCE360228D66AF00676337 /* MF_Base64Additions.h */,
+				4ABCE361228D66AF00676337 /* MF_Base64Additions.m */,
+			);
+			path = Base64;
 			sourceTree = "<group>";
 		};
 		4AF29C472276DA8000622BC2 /* BaseView */ = {
@@ -1477,6 +1503,7 @@
 			files = (
 				4A08D71A228272CE00A22E6C /* YYApiObject.m in Sources */,
 				4A08D71B228272CE00A22E6C /* NetManager.m in Sources */,
+				4ABCE364228D66AF00676337 /* SDQZEncryptUtils.m in Sources */,
 				4A0917A6228C00070059FAD9 /* LZYFileManager.m in Sources */,
 				4ABCE347228D659600676337 /* JXCategoryDotCell.m in Sources */,
 				4A3E355C2269BD7800C4C96B /* UIGestureRecognizer+BlocksKit.m in Sources */,
@@ -1576,6 +1603,7 @@
 				4A0917D8228C18780059FAD9 /* FLAnimatedImage.m in Sources */,
 				4AF29C502276E9C700622BC2 /* NSString+Transfer.m in Sources */,
 				4A0917E1228C18780059FAD9 /* SVProgressHUD.m in Sources */,
+				4ABCE363228D66AF00676337 /* MF_Base64Additions.m in Sources */,
 				4A08D724228272CE00A22E6C /* YTKNetworkAgent.m in Sources */,
 				4ABCE355228D659600676337 /* JXCategoryNumberCellModel.m in Sources */,
 				4A0917DD228C18780059FAD9 /* SGQRCodeObtain.m in Sources */,
