@@ -9,6 +9,11 @@
 #ifndef LZYMacro_h
 #define LZYMacro_h
 
+#import "LZYBaseTableViewCell.h"
+#import "LZYURLImageView.h"
+#import "LZYConfirmView.h"
+#import "LZYDateTimePickerView.h"
+
 #import "BlocksKit+UIKit.h"
 #import "NSDate+Transfer.h"
 #import "NSString+Transfer.h"

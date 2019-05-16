@@ -89,6 +89,8 @@
 		4A3E35CD2269C6B400C4C96B /* NSDictionary+SafeAccess.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A3E35CC2269C6B400C4C96B /* NSDictionary+SafeAccess.m */; };
 		4A3E35D02269CA6200C4C96B /* UIView+RoundCorner.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A3E35CF2269CA6200C4C96B /* UIView+RoundCorner.m */; };
 		4A3E35D32269CC3700C4C96B /* NSString+Modify.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A3E35D22269CC3700C4C96B /* NSString+Modify.m */; };
+		4ABCE2E2228D555A00676337 /* LZYBaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ABCE2E1228D555A00676337 /* LZYBaseTableViewCell.m */; };
+		4ABCE2E5228D610F00676337 /* LLMessageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ABCE2E4228D610F00676337 /* LLMessageTableViewCell.m */; };
 		4AF29C4A2276DB2600622BC2 /* LZYDateTimePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AF29C492276DB2600622BC2 /* LZYDateTimePickerView.m */; };
 		4AF29C4D2276E63300622BC2 /* NSDate+Transfer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AF29C4C2276E63300622BC2 /* NSDate+Transfer.m */; };
 		4AF29C502276E9C700622BC2 /* NSString+Transfer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AF29C4F2276E9C700622BC2 /* NSString+Transfer.m */; };
@@ -287,6 +289,10 @@
 		4A3E35CF2269CA6200C4C96B /* UIView+RoundCorner.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+RoundCorner.m"; sourceTree = "<group>"; };
 		4A3E35D12269CC3700C4C96B /* NSString+Modify.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+Modify.h"; sourceTree = "<group>"; };
 		4A3E35D22269CC3700C4C96B /* NSString+Modify.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+Modify.m"; sourceTree = "<group>"; };
+		4ABCE2E0228D555A00676337 /* LZYBaseTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LZYBaseTableViewCell.h; sourceTree = "<group>"; };
+		4ABCE2E1228D555A00676337 /* LZYBaseTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LZYBaseTableViewCell.m; sourceTree = "<group>"; };
+		4ABCE2E3228D610F00676337 /* LLMessageTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LLMessageTableViewCell.h; sourceTree = "<group>"; };
+		4ABCE2E4228D610F00676337 /* LLMessageTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LLMessageTableViewCell.m; sourceTree = "<group>"; };
 		4AF29C482276DB2600622BC2 /* LZYDateTimePickerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LZYDateTimePickerView.h; sourceTree = "<group>"; };
 		4AF29C492276DB2600622BC2 /* LZYDateTimePickerView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LZYDateTimePickerView.m; sourceTree = "<group>"; };
 		4AF29C4B2276E63300622BC2 /* NSDate+Transfer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDate+Transfer.h"; sourceTree = "<group>"; };
@@ -391,6 +397,8 @@
 			children = (
 				4A08D66822800DB600A22E6C /* LLMessageViewController.h */,
 				4A08D66922800DB600A22E6C /* LLMessageViewController.m */,
+				4ABCE2E3228D610F00676337 /* LLMessageTableViewCell.h */,
+				4ABCE2E4228D610F00676337 /* LLMessageTableViewCell.m */,
 			);
 			path = Message;
 			sourceTree = "<group>";
@@ -790,6 +798,8 @@
 				4AF29CF12277E10B00622BC2 /* LZYConfirmView.m */,
 				4A0917AA228C12D00059FAD9 /* LZYURLImageView.h */,
 				4A0917AB228C12D00059FAD9 /* LZYURLImageView.m */,
+				4ABCE2E0228D555A00676337 /* LZYBaseTableViewCell.h */,
+				4ABCE2E1228D555A00676337 /* LZYBaseTableViewCell.m */,
 			);
 			path = BaseView;
 			sourceTree = "<group>";
@@ -1249,6 +1259,7 @@
 				4A08D72E2282760E00A22E6C /* YYDBManager.m in Sources */,
 				4A3E35D32269CC3700C4C96B /* NSString+Modify.m in Sources */,
 				4A08D723228272CE00A22E6C /* YTKBatchRequest.m in Sources */,
+				4ABCE2E2228D555A00676337 /* LZYBaseTableViewCell.m in Sources */,
 				4A0917E2228C18780059FAD9 /* SVIndefiniteAnimatedView.m in Sources */,
 				4A091751228943D90059FAD9 /* SandBoxHelper.m in Sources */,
 				4A08D718228272CE00A22E6C /* YYNetworkingConfig.m in Sources */,
@@ -1258,6 +1269,7 @@
 				4AF29C4D2276E63300622BC2 /* NSDate+Transfer.m in Sources */,
 				4A3E355D2269BD7800C4C96B /* UIPopoverController+BlocksKit.m in Sources */,
 				4A08D719228272CE00A22E6C /* YYNetworkManager.m in Sources */,
+				4ABCE2E5228D610F00676337 /* LLMessageTableViewCell.m in Sources */,
 				4A08D6752280306000A22E6C /* LLPublishViewController.m in Sources */,
 				4A3E355F2269BD7800C4C96B /* UIControl+BlocksKit.m in Sources */,
 				4A08D65E2280098E00A22E6C /* LLCustomTabBarController.m in Sources */,

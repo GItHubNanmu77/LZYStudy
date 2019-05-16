@@ -9,6 +9,7 @@
 #import "LLMessageViewController.h"
 #import "LZYAuthorizationUtils.h"
 #import "LZYSheetAlertManager.h"
+#import "LLMessageTableViewCell.h"
 
 @interface LLMessageViewController () <UITableViewDelegate,UITableViewDataSource,UINavigationControllerDelegate,UIImagePickerControllerDelegate,TZImagePickerControllerDelegate>
 
@@ -39,7 +40,7 @@
     self.dataTableView.rowHeight = 50;
     [self.view addSubview:self.dataTableView];
     
-    [self.dataTableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell"];
+    [self.dataTableView registerClass:[LLMessageTableViewCell class] forCellReuseIdentifier:[LLMessageTableViewCell cellIdentifier]];
     
     if (@available(iOS 11.0, *)) {
         self.dataTableView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
@@ -58,9 +59,19 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = (UITableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"cell"];
-    cell.textLabel.text = [NSString stringWithFormat:@"%ld",indexPath.row + 1];
-   
+    LLMessageTableViewCell *cell = (LLMessageTableViewCell *)[tableView dequeueReusableCellWithIdentifier:[LLMessageTableViewCell cellIdentifier]];
+    
+    
+    if (indexPath.row == 2) {
+        [cell setCustomLeftSeparator:20];
+    }
+    if(indexPath.row == 3) {
+        [cell setCustomSeparator];
+        [cell setCustomLeftSeparator:40];
+    }
+    if (indexPath.row == 4) {
+        cell.showBottomSeparator = NO;
+    }
     return cell;
 }
 
