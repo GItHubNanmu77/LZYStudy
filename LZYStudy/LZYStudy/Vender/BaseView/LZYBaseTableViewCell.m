@@ -7,7 +7,6 @@
 //
 
 #import "LZYBaseTableViewCell.h"
-#import "LZYMacro.h"
 
 //CGFloat const LeftIntend = 15.0;
 //CGFloat const LeftMargins = 10.0;
@@ -108,8 +107,6 @@
     self.topSeparator = [[UIImageView alloc] initWithFrame:CGRectZero];
     self.topSeparator.backgroundColor = [UIColor colorWithRed:218/255.0 green:218/255.0 blue:218/255.0 alpha:1];
     self.topSeparator.frame = CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 1);
-//    self.topSeparator.image = QZ_IMAGE_FROM_PATH_RESIZEABLE(@"Common/Separator_Shadow",YES);
-//    [self.topSeparator setHeight:self.topSeparator.image.size.height];
     self.topSeparator.hidden = YES;
     [self.contentView addSubview:self.topSeparator];
     
@@ -117,8 +114,6 @@
     self.bottomSeparator = [[UIImageView alloc] initWithFrame:CGRectZero];
     self.bottomSeparator.backgroundColor = [UIColor colorWithRed:218/255.0 green:218/255.0 blue:218/255.0 alpha:1];
     self.bottomSeparator.frame = CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 1);
-//    self.bottomSeparator.image = QZ_IMAGE_FROM_PATH_RESIZEABLE(@"Common/Separator_Shadow",YES);
-//    [self.bottomSeparator setSd_height:self.bottomSeparator.image.size.height];
     self.bottomSeparator.hidden = YES;
     [self.contentView addSubview:self.bottomSeparator];
 }
@@ -163,10 +158,9 @@
         CGRect frame = self.topSeparator.frame;
         frame.size.width = self.contentView.frame.size.width;
         self.topSeparator.frame = frame;
-//        [self.topSeparator setSd_width:self.contentView.sd_width];
     } else {
         self.topSeparator.hidden = YES;
-//        [self.topSeparator setSd_width:0.0];
+        self.topSeparator.frame = CGRectZero;
     }
     [self.contentView bringSubviewToFront:self.topSeparator];
     
@@ -178,12 +172,9 @@
         frame.origin.y = self.contentView.frame.size.height - self.bottomSeparator.frame.size.height;
         frame.size.width = self.contentView.frame.size.width - (leftRightIntend > 0.0 ? self.bottomSeparator.frame.origin.x + leftRightIntend : self.bottomSeparator.frame.origin.x);
         self.bottomSeparator.frame = frame;
-//        [self.bottomSeparator setSd_x:leftRightIntend > 0.0 ? leftRightIntend : (self.leftIntendSeparator ? 15.0 : 0.0)];
-//        [self.bottomSeparator setSd_y:self.contentView.sd_height - self.bottomSeparator.sd_height];
-//        [self.bottomSeparator setSd_width:self.contentView.sd_width - (leftRightIntend > 0.0 ? self.bottomSeparator.sd_x + leftRightIntend : self.bottomSeparator.sd_x)];
     } else {
         self.bottomSeparator.hidden = YES;
-//        [self.bottomSeparator setSd_width:0.0];
+        self.bottomSeparator.frame = CGRectZero;
     }
     [self.contentView bringSubviewToFront:self.bottomSeparator];
 }
@@ -200,10 +191,9 @@
         CGRect frame = self.topSeparator.frame;
         frame.size.width = self.contentView.frame.size.width;
         self.topSeparator.frame = frame;
-//        [self.topSeparator setSd_width:self.contentView.sd_width];
     } else {
         self.topSeparator.hidden = YES;
-//        [self.topSeparator setSd_width:0.0];
+        self.topSeparator.frame = CGRectZero;
     }
     [self.contentView bringSubviewToFront:self.topSeparator];
     
@@ -215,12 +205,9 @@
         frame.origin.y = self.contentView.frame.size.height - self.bottomSeparator.frame.size.height;
         frame.size.width = self.contentView.frame.size.width - self.bottomSeparator.frame.origin.x;
         self.bottomSeparator.frame = frame;
-//        [self.bottomSeparator setSd_x:leftIntend];
-//        [self.bottomSeparator setSd_y:self.contentView.sd_height - self.bottomSeparator.sd_height];
-//        [self.bottomSeparator setSd_width:self.contentView.sd_width - self.bottomSeparator.sd_x];
     } else {
         self.bottomSeparator.hidden = YES;
-//        [self.bottomSeparator setSd_width:0.0];
+        self.bottomSeparator.frame = CGRectZero;
     }
     [self.contentView bringSubviewToFront:self.bottomSeparator];
 }
