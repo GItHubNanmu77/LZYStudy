@@ -161,6 +161,9 @@ alpha:1.0]
 #define LZY_FONT_FROM_NAME_SIZE(sizeValue) ([UIFont fontWithName:@"PingFangSC-Regular" size:LZY_WIDTH_SCALE_IPHONE(sizeValue)])
 #endif
 
+#ifndef LZY_FONT_FROM_NAME_SIZE_MEDIUM
+#define LZY_FONT_FROM_NAME_SIZE_MEDIUM(sizeValue) ([UIFont fontWithName:@"PingFangSC-Medium" size:LZY_WIDTH_SCALE_IPHONE(sizeValue)])
+#endif
 //国际化
 #define NSLocString(key,comment) [[NSBundle mainBundle] localizedStringForKey:(key) value:@"" table:nil]
 

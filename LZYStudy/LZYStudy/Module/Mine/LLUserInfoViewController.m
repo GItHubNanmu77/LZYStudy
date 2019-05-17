@@ -1,16 +1,16 @@
 //
-//  LLDynamicViewController.m
+//  LLUserInfoViewController.m
 //  LZYStudy
 //
-//  Created by cisdi on 2019/5/6.
+//  Created by cisdi on 2019/5/17.
 //  Copyright © 2019 lzy. All rights reserved.
 //
 
-#import "LLDynamicViewController.h"
+#import "LLUserInfoViewController.h"
 #import "LLDynamicCollectionViewCell.h"
 #import "LLDynamicModel.h"
 
-@interface LLDynamicViewController ()<UICollectionViewDelegate,UICollectionViewDataSource>
+@interface LLUserInfoViewController ()<UICollectionViewDelegate,UICollectionViewDataSource>
 @property (nonatomic, strong) NSMutableArray *collDataArray;
 @property (nonatomic, strong) UICollectionView *collView;
 
@@ -20,7 +20,7 @@
 @property (nonatomic, assign) BOOL isVertical;
 @end
 
-@implementation LLDynamicViewController
+@implementation LLUserInfoViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -37,7 +37,7 @@
     
 }
 - (void)changeDataSource {
-    [self.collDataArray removeObjectAtIndex:0];
+    [self.collDataArray addObjectsFromArray:self.collDataArray];
     [self.collView setCollectionViewLayout:self.horizonLayout animated:YES];
     [self.collView reloadData];
 }
@@ -81,7 +81,7 @@
  @return UIView
  */
 - (UIView *)listView {
-   return self.view;
+    return self.view;
 }
 
 /**
@@ -108,9 +108,9 @@
 - (UICollectionView *)collView {
     if (!_collView) {
         _collView = ({
-            UICollectionView *collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, LZY_SCREEN_WIDTH, LZY_SCREEN_HEIGHT - LZY_IPHONE_NAV_HEIGHT - LZY_TAB_BAR_SAFE_BOTTOM_MARGIN) collectionViewLayout:self.verticalLayout];
+            UICollectionView *collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, LZY_SCREEN_WIDTH, LZY_SCREEN_HEIGHT - LZY_IPHONE_NAV_HEIGHT  - LZY_IPHNOE_TAB_BAR_HEIGHT) collectionViewLayout:self.verticalLayout];
             collectionView.backgroundColor = RGB3(247);
-            //            collectionView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+            collectionView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
             collectionView.dataSource = self;
             collectionView.delegate = self;
             [collectionView registerClass:[LLDynamicCollectionViewCell class] forCellWithReuseIdentifier:@"LLDynamicCollectionViewCell"];
@@ -183,3 +183,4 @@
 }
 
 @end
+
