@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4A0713E82293CE0C00F658D2 /* GCDQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A0713E02293CE0C00F658D2 /* GCDQueue.m */; };
+		4A0713E92293CE0C00F658D2 /* GCDTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A0713E12293CE0C00F658D2 /* GCDTimer.m */; };
+		4A0713EA2293CE0C00F658D2 /* GCDGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A0713E22293CE0C00F658D2 /* GCDGroup.m */; };
+		4A0713EB2293CE0C00F658D2 /* GCDSemaphore.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A0713E42293CE0C00F658D2 /* GCDSemaphore.m */; };
 		4A08D65E2280098E00A22E6C /* LLCustomTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A08D65D2280098E00A22E6C /* LLCustomTabBarController.m */; };
 		4A08D66222800D8E00A22E6C /* LLHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A08D66122800D8E00A22E6C /* LLHomeViewController.m */; };
 		4A08D66622800DA400A22E6C /* LLMineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A08D66522800DA400A22E6C /* LLMineViewController.m */; };
@@ -184,6 +188,15 @@
 
 /* Begin PBXFileReference section */
 		06E74CCC4503672FE0FF2342 /* Pods-LZYStudyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LZYStudyUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LZYStudyUITests/Pods-LZYStudyUITests.release.xcconfig"; sourceTree = "<group>"; };
+		4A0713DF2293CE0C00F658D2 /* GCDSemaphore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDSemaphore.h; sourceTree = "<group>"; };
+		4A0713E02293CE0C00F658D2 /* GCDQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDQueue.m; sourceTree = "<group>"; };
+		4A0713E12293CE0C00F658D2 /* GCDTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDTimer.m; sourceTree = "<group>"; };
+		4A0713E22293CE0C00F658D2 /* GCDGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDGroup.m; sourceTree = "<group>"; };
+		4A0713E32293CE0C00F658D2 /* GCD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCD.h; sourceTree = "<group>"; };
+		4A0713E42293CE0C00F658D2 /* GCDSemaphore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDSemaphore.m; sourceTree = "<group>"; };
+		4A0713E52293CE0C00F658D2 /* GCDQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDQueue.h; sourceTree = "<group>"; };
+		4A0713E62293CE0C00F658D2 /* GCDGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDGroup.h; sourceTree = "<group>"; };
+		4A0713E72293CE0C00F658D2 /* GCDTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDTimer.h; sourceTree = "<group>"; };
 		4A08D65C2280098E00A22E6C /* LLCustomTabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LLCustomTabBarController.h; sourceTree = "<group>"; };
 		4A08D65D2280098E00A22E6C /* LLCustomTabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LLCustomTabBarController.m; sourceTree = "<group>"; };
 		4A08D66022800D8E00A22E6C /* LLHomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LLHomeViewController.h; sourceTree = "<group>"; };
@@ -531,6 +544,22 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		4A0713DE2293CE0C00F658D2 /* GCDCommon */ = {
+			isa = PBXGroup;
+			children = (
+				4A0713DF2293CE0C00F658D2 /* GCDSemaphore.h */,
+				4A0713E02293CE0C00F658D2 /* GCDQueue.m */,
+				4A0713E12293CE0C00F658D2 /* GCDTimer.m */,
+				4A0713E22293CE0C00F658D2 /* GCDGroup.m */,
+				4A0713E32293CE0C00F658D2 /* GCD.h */,
+				4A0713E42293CE0C00F658D2 /* GCDSemaphore.m */,
+				4A0713E52293CE0C00F658D2 /* GCDQueue.h */,
+				4A0713E62293CE0C00F658D2 /* GCDGroup.h */,
+				4A0713E72293CE0C00F658D2 /* GCDTimer.h */,
+			);
+			path = GCDCommon;
+			sourceTree = "<group>";
+		};
 		4A08D65F228009B800A22E6C /* BaseController */ = {
 			isa = PBXGroup;
 			children = (
@@ -694,6 +723,7 @@
 		4A0916F5228915B10059FAD9 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				4A0713DE2293CE0C00F658D2 /* GCDCommon */,
 				4ABCE36E228E492B00676337 /* JXCategoryView */,
 				4ABCE365228E492B00676337 /* JXPagerView */,
 				4A0917AD228C177C0059FAD9 /* ThirdPard */,
@@ -1594,6 +1624,7 @@
 				4A08D71B228272CE00A22E6C /* NetManager.m in Sources */,
 				4ABCE3E1228E492B00676337 /* JXCategoryTitleImageCellModel.m in Sources */,
 				4ABCE364228D66AF00676337 /* SDQZEncryptUtils.m in Sources */,
+				4A0713EA2293CE0C00F658D2 /* GCDGroup.m in Sources */,
 				4ABCE3ED228E492B00676337 /* JXCategoryCollectionView.m in Sources */,
 				4A0917A6228C00070059FAD9 /* LZYFileManager.m in Sources */,
 				4ABCE3E0228E492B00676337 /* JXCategoryTitleImageCell.m in Sources */,
@@ -1604,6 +1635,7 @@
 				4ABCE3CA228E492B00676337 /* JXPagerListContainerView.m in Sources */,
 				4ABCE3EC228E492B00676337 /* JXCategoryFactory.m in Sources */,
 				4ABCE3F2228E492B00676337 /* JXCategoryBaseView.m in Sources */,
+				4A0713E92293CE0C00F658D2 /* GCDTimer.m in Sources */,
 				4A08D66222800D8E00A22E6C /* LLHomeViewController.m in Sources */,
 				4ABCE3F1228E492B00676337 /* UIColor+JXAdd.m in Sources */,
 				4A0917D9228C18780059FAD9 /* FLAnimatedImageView.m in Sources */,
@@ -1613,6 +1645,7 @@
 				4ABCE3D6228E492B00676337 /* JXCategoryIndicatorComponentView.m in Sources */,
 				4A3E35D02269CA6200C4C96B /* UIView+RoundCorner.m in Sources */,
 				4A0917E9228C18780059FAD9 /* WLUnitField.m in Sources */,
+				4A0713E82293CE0C00F658D2 /* GCDQueue.m in Sources */,
 				4A3E35582269BD7800C4C96B /* UIWebView+BlocksKit.m in Sources */,
 				4A3E35562269BD7800C4C96B /* UINavigationController+FDFullscreenPopGesture.m in Sources */,
 				4ABCE3CE228E492B00676337 /* JXCategoryTitleVerticalZoomCellModel.m in Sources */,
@@ -1670,6 +1703,7 @@
 				4A3E35D32269CC3700C4C96B /* NSString+Modify.m in Sources */,
 				4ABCE3D7228E492B00676337 /* JXCategoryIndicatorDotLineView.m in Sources */,
 				4ABCE3D1228E492B00676337 /* JXCategoryIndicatorLineView.m in Sources */,
+				4A0713EB2293CE0C00F658D2 /* GCDSemaphore.m in Sources */,
 				4A08D723228272CE00A22E6C /* YTKBatchRequest.m in Sources */,
 				4ABCE2E2228D555A00676337 /* LZYBaseTableViewCell.m in Sources */,
 				4A0917E2228C18780059FAD9 /* SVIndefiniteAnimatedView.m in Sources */,
