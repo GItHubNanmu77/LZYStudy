@@ -11,6 +11,10 @@
 		4A0713E92293CE0C00F658D2 /* GCDTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A0713E12293CE0C00F658D2 /* GCDTimer.m */; };
 		4A0713EA2293CE0C00F658D2 /* GCDGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A0713E22293CE0C00F658D2 /* GCDGroup.m */; };
 		4A0713EB2293CE0C00F658D2 /* GCDSemaphore.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A0713E42293CE0C00F658D2 /* GCDSemaphore.m */; };
+		4A0713EF2296232E00F658D2 /* LLWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A0713EE2296232E00F658D2 /* LLWebViewController.m */; };
+		4A0713F22296265400F658D2 /* LLWeakScriptMessageDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A0713F12296265400F658D2 /* LLWeakScriptMessageDelegate.m */; };
+		4A0713F522962D1E00F658D2 /* UIViewController+CommonTipView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A0713F422962D1E00F658D2 /* UIViewController+CommonTipView.m */; };
+		4A0713F922962DBB00F658D2 /* LZYCommonTipView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A0713F822962DBB00F658D2 /* LZYCommonTipView.m */; };
 		4A08D65E2280098E00A22E6C /* LLCustomTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A08D65D2280098E00A22E6C /* LLCustomTabBarController.m */; };
 		4A08D66222800D8E00A22E6C /* LLHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A08D66122800D8E00A22E6C /* LLHomeViewController.m */; };
 		4A08D66622800DA400A22E6C /* LLMineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A08D66522800DA400A22E6C /* LLMineViewController.m */; };
@@ -197,6 +201,14 @@
 		4A0713E52293CE0C00F658D2 /* GCDQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDQueue.h; sourceTree = "<group>"; };
 		4A0713E62293CE0C00F658D2 /* GCDGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDGroup.h; sourceTree = "<group>"; };
 		4A0713E72293CE0C00F658D2 /* GCDTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDTimer.h; sourceTree = "<group>"; };
+		4A0713ED2296232E00F658D2 /* LLWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LLWebViewController.h; sourceTree = "<group>"; };
+		4A0713EE2296232E00F658D2 /* LLWebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LLWebViewController.m; sourceTree = "<group>"; };
+		4A0713F02296265400F658D2 /* LLWeakScriptMessageDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LLWeakScriptMessageDelegate.h; sourceTree = "<group>"; };
+		4A0713F12296265400F658D2 /* LLWeakScriptMessageDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LLWeakScriptMessageDelegate.m; sourceTree = "<group>"; };
+		4A0713F322962D1E00F658D2 /* UIViewController+CommonTipView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+CommonTipView.h"; sourceTree = "<group>"; };
+		4A0713F422962D1E00F658D2 /* UIViewController+CommonTipView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+CommonTipView.m"; sourceTree = "<group>"; };
+		4A0713F722962DBB00F658D2 /* LZYCommonTipView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LZYCommonTipView.h; sourceTree = "<group>"; };
+		4A0713F822962DBB00F658D2 /* LZYCommonTipView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LZYCommonTipView.m; sourceTree = "<group>"; };
 		4A08D65C2280098E00A22E6C /* LLCustomTabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LLCustomTabBarController.h; sourceTree = "<group>"; };
 		4A08D65D2280098E00A22E6C /* LLCustomTabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LLCustomTabBarController.m; sourceTree = "<group>"; };
 		4A08D66022800D8E00A22E6C /* LLHomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LLHomeViewController.h; sourceTree = "<group>"; };
@@ -547,17 +559,39 @@
 		4A0713DE2293CE0C00F658D2 /* GCDCommon */ = {
 			isa = PBXGroup;
 			children = (
-				4A0713DF2293CE0C00F658D2 /* GCDSemaphore.h */,
-				4A0713E02293CE0C00F658D2 /* GCDQueue.m */,
-				4A0713E12293CE0C00F658D2 /* GCDTimer.m */,
-				4A0713E22293CE0C00F658D2 /* GCDGroup.m */,
 				4A0713E32293CE0C00F658D2 /* GCD.h */,
-				4A0713E42293CE0C00F658D2 /* GCDSemaphore.m */,
-				4A0713E52293CE0C00F658D2 /* GCDQueue.h */,
 				4A0713E62293CE0C00F658D2 /* GCDGroup.h */,
+				4A0713E22293CE0C00F658D2 /* GCDGroup.m */,
+				4A0713E52293CE0C00F658D2 /* GCDQueue.h */,
+				4A0713E02293CE0C00F658D2 /* GCDQueue.m */,
+				4A0713DF2293CE0C00F658D2 /* GCDSemaphore.h */,
+				4A0713E42293CE0C00F658D2 /* GCDSemaphore.m */,
 				4A0713E72293CE0C00F658D2 /* GCDTimer.h */,
+				4A0713E12293CE0C00F658D2 /* GCDTimer.m */,
 			);
 			path = GCDCommon;
+			sourceTree = "<group>";
+		};
+		4A0713EC2296231A00F658D2 /* Web */ = {
+			isa = PBXGroup;
+			children = (
+				4A0713ED2296232E00F658D2 /* LLWebViewController.h */,
+				4A0713EE2296232E00F658D2 /* LLWebViewController.m */,
+				4A0713F02296265400F658D2 /* LLWeakScriptMessageDelegate.h */,
+				4A0713F12296265400F658D2 /* LLWeakScriptMessageDelegate.m */,
+			);
+			path = Web;
+			sourceTree = "<group>";
+		};
+		4A0713F622962D8300F658D2 /* UIViewController+CommonTipView */ = {
+			isa = PBXGroup;
+			children = (
+				4A0713F322962D1E00F658D2 /* UIViewController+CommonTipView.h */,
+				4A0713F422962D1E00F658D2 /* UIViewController+CommonTipView.m */,
+				4A0713F722962DBB00F658D2 /* LZYCommonTipView.h */,
+				4A0713F822962DBB00F658D2 /* LZYCommonTipView.m */,
+			);
+			path = "UIViewController+CommonTipView";
 			sourceTree = "<group>";
 		};
 		4A08D65F228009B800A22E6C /* BaseController */ = {
@@ -1215,6 +1249,7 @@
 		4AF29CF32277F88B00622BC2 /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				4A0713EC2296231A00F658D2 /* Web */,
 				4AF29CF52277F91000622BC2 /* Common */,
 				4A08D6722280304800A22E6C /* Center */,
 				4AFE35E02269A546003120DC /* Home */,
@@ -1346,6 +1381,7 @@
 				4A3E35CF2269CA6200C4C96B /* UIView+RoundCorner.m */,
 				4A0917A7228C01DC0059FAD9 /* UIButton+FitStyle.h */,
 				4A0917A8228C01DC0059FAD9 /* UIButton+FitStyle.m */,
+				4A0713F622962D8300F658D2 /* UIViewController+CommonTipView */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -1649,12 +1685,14 @@
 				4A3E35582269BD7800C4C96B /* UIWebView+BlocksKit.m in Sources */,
 				4A3E35562269BD7800C4C96B /* UINavigationController+FDFullscreenPopGesture.m in Sources */,
 				4ABCE3CE228E492B00676337 /* JXCategoryTitleVerticalZoomCellModel.m in Sources */,
+				4A0713F522962D1E00F658D2 /* UIViewController+CommonTipView.m in Sources */,
 				4A08D71D228272CE00A22E6C /* SDQZLoginPostAPI.m in Sources */,
 				4A3E355B2269BD7800C4C96B /* UIView+BlocksKit.m in Sources */,
 				4A08D6782281684E00A22E6C /* LLPublishDetailViewController.m in Sources */,
 				4A0917E8228C18780059FAD9 /* UUMarqueeView.m in Sources */,
 				4A09179D228AB88C0059FAD9 /* LZYSheetAlertManager.m in Sources */,
 				4A0917AC228C12D00059FAD9 /* LZYURLImageView.m in Sources */,
+				4A0713F22296265400F658D2 /* LLWeakScriptMessageDelegate.m in Sources */,
 				4A3E35592269BD7800C4C96B /* UIBarButtonItem+BlocksKit.m in Sources */,
 				4A08D71E228272CE00A22E6C /* SDQZBaseRequest.m in Sources */,
 				4ABCE3D0228E492B00676337 /* JXCategoryTitleVerticalZoomView.m in Sources */,
@@ -1667,6 +1705,7 @@
 				4A08D7312282B28600A22E6C /* LZYBaseRequest.m in Sources */,
 				4ABCE3FA228E657500676337 /* LLDynamicModel.m in Sources */,
 				4A3E35612269BD7800C4C96B /* NSObject+A2BlockDelegate.m in Sources */,
+				4A0713EF2296232E00F658D2 /* LLWebViewController.m in Sources */,
 				4A3E35622269BD7800C4C96B /* A2DynamicDelegate.m in Sources */,
 				4ABCE3D3228E492B00676337 /* JXCategoryIndicatorRainbowLineView.m in Sources */,
 				4A0917DC228C18780059FAD9 /* SGQRCodeObtainConfigure.m in Sources */,
@@ -1678,6 +1717,7 @@
 				4A08D720228272CE00A22E6C /* YTKChainRequest.m in Sources */,
 				4A08D727228272CE00A22E6C /* YTKRequest.m in Sources */,
 				4A0917A3228ABEDD0059FAD9 /* LZYDeviceUtils.m in Sources */,
+				4A0713F922962DBB00F658D2 /* LZYCommonTipView.m in Sources */,
 				4A091739228943110059FAD9 /* IAPManager.m in Sources */,
 				4A3E355E2269BD7800C4C96B /* UIActionSheet+BlocksKit.m in Sources */,
 				4ABCE3D5228E492B00676337 /* JXCategoryIndicatorBallView.m in Sources */,

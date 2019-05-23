@@ -75,10 +75,14 @@
 }
 
 -(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-//    LLPublishDetailViewController *vc = [[LLPublishDetailViewController alloc] init];
-//    [self.navigationController pushViewController:vc animated:YES];
+    LLPublishDetailViewController *vc = [[LLPublishDetailViewController alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
     
 //    [self moveLine];
+//    [self hitView:touches];
+}
+
+- (void)hitView:(NSSet<UITouch *> *)touches {
     //get the touch point
     CGPoint point = [[touches anyObject] locationInView:self.view];
     //check if we've tapped the moving layer
@@ -113,13 +117,14 @@
     CALayer *shipLayer = [CALayer layer];
     shipLayer.frame = CGRectMake(0, 0, 64, 64);
     shipLayer.position = CGPointMake(0, 150);
-    shipLayer.contents = (__bridge id)[UIImage imageNamed: @"Ship.png"].CGImage;
+    shipLayer.contents = (__bridge id)[UIImage imageNamed:@"Dynamic_Highlighted"].CGImage;
     shipLayer.backgroundColor = [UIColor redColor].CGColor;
     [self.view.layer addSublayer:shipLayer];
     //create the keyframe animation
     CAKeyframeAnimation *animation = [CAKeyframeAnimation animation];
     animation.keyPath = @"position";
     animation.duration = 4.0;
+    animation.rotationMode = kCAAnimationRotateAuto;
     animation.path = bezierPath.CGPath;
     [shipLayer addAnimation:animation forKey:nil];
 }

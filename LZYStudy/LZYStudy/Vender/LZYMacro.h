@@ -21,6 +21,7 @@
 #import "UIImage+Zip.h"
 #import "NSDictionary+SafeAccess.h"
 #import "MBProgressHUD+XY.h"
+#import "UIViewController+CommonTipView.h"
 
 #import "SVProgressHUD.h"
 #import "MBProgressHUD.h"
