@@ -14,6 +14,7 @@ target 'LZYStudy' do
   pod 'Masonry', :git => 'https://github.com/SnapKit/Masonry.git', :inhibit_warnings => true
   pod 'FMDB',:git =>'https://github.com/ccgus/fmdb.git', :inhibit_warnings => true
   pod 'MJExtension', :git => 'https://github.com/CoderMJLee/MJExtension.git' ,:inhibit_warnings => true
+  pod 'YYModel', :git => 'https://github.com/ibireme/YYModel.git' ,:inhibit_warnings => true
   pod 'PPNetworkHelper', :git => 'https://github.com/jkpang/PPNetworkHelper.git', :inhibit_warnings => true
   pod 'TZImagePickerController',:git =>'https://github.com/banchichen/TZImagePickerController.git',:inhibit_warnings => true
   # pod 'MBProgressHUD',:inhibit_warnings => true

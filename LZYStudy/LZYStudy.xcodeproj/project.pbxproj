@@ -15,6 +15,10 @@
 		4A0713F22296265400F658D2 /* LLWeakScriptMessageDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A0713F12296265400F658D2 /* LLWeakScriptMessageDelegate.m */; };
 		4A0713F522962D1E00F658D2 /* UIViewController+CommonTipView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A0713F422962D1E00F658D2 /* UIViewController+CommonTipView.m */; };
 		4A0713F922962DBB00F658D2 /* LZYCommonTipView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A0713F822962DBB00F658D2 /* LZYCommonTipView.m */; };
+		4A0713FC22967F9A00F658D2 /* UIViewController+Swizzling.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A0713FB22967F9A00F658D2 /* UIViewController+Swizzling.m */; };
+		4A0713FF229695A900F658D2 /* UITextView+Placeholder.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A0713FE229695A900F658D2 /* UITextView+Placeholder.m */; };
+		4A0714022296996000F658D2 /* NSString+QTSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A0714002296996000F658D2 /* NSString+QTSafe.m */; };
+		4A071405229699B600F658D2 /* NSString+Judge.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A071404229699B600F658D2 /* NSString+Judge.m */; };
 		4A08D65E2280098E00A22E6C /* LLCustomTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A08D65D2280098E00A22E6C /* LLCustomTabBarController.m */; };
 		4A08D66222800D8E00A22E6C /* LLHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A08D66122800D8E00A22E6C /* LLHomeViewController.m */; };
 		4A08D66622800DA400A22E6C /* LLMineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A08D66522800DA400A22E6C /* LLMineViewController.m */; };
@@ -153,6 +157,8 @@
 		4ABCE405228E668D00676337 /* 2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4ABCE3FF228E668C00676337 /* 2.jpg */; };
 		4ABCE406228E668D00676337 /* 4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4ABCE400228E668D00676337 /* 4.jpg */; };
 		4ABCE409228E90AE00676337 /* LLUserInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ABCE408228E90AE00676337 /* LLUserInfoViewController.m */; };
+		4ADD34F32296A1BC000AC344 /* NSObject+Exceptioin.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ADD34F22296A1BC000AC344 /* NSObject+Exceptioin.m */; };
+		4ADD34F62296A1F4000AC344 /* NSObject+QTAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ADD34F52296A1F4000AC344 /* NSObject+QTAdd.m */; };
 		4AF29C4A2276DB2600622BC2 /* LZYDateTimePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AF29C492276DB2600622BC2 /* LZYDateTimePickerView.m */; };
 		4AF29C4D2276E63300622BC2 /* NSDate+Transfer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AF29C4C2276E63300622BC2 /* NSDate+Transfer.m */; };
 		4AF29C502276E9C700622BC2 /* NSString+Transfer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AF29C4F2276E9C700622BC2 /* NSString+Transfer.m */; };
@@ -209,6 +215,14 @@
 		4A0713F422962D1E00F658D2 /* UIViewController+CommonTipView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+CommonTipView.m"; sourceTree = "<group>"; };
 		4A0713F722962DBB00F658D2 /* LZYCommonTipView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LZYCommonTipView.h; sourceTree = "<group>"; };
 		4A0713F822962DBB00F658D2 /* LZYCommonTipView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LZYCommonTipView.m; sourceTree = "<group>"; };
+		4A0713FA22967F9A00F658D2 /* UIViewController+Swizzling.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Swizzling.h"; sourceTree = "<group>"; };
+		4A0713FB22967F9A00F658D2 /* UIViewController+Swizzling.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Swizzling.m"; sourceTree = "<group>"; };
+		4A0713FD229695A900F658D2 /* UITextView+Placeholder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITextView+Placeholder.h"; sourceTree = "<group>"; };
+		4A0713FE229695A900F658D2 /* UITextView+Placeholder.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITextView+Placeholder.m"; sourceTree = "<group>"; };
+		4A0714002296996000F658D2 /* NSString+QTSafe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+QTSafe.m"; sourceTree = "<group>"; };
+		4A0714012296996000F658D2 /* NSString+QTSafe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+QTSafe.h"; sourceTree = "<group>"; };
+		4A071403229699B600F658D2 /* NSString+Judge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+Judge.h"; sourceTree = "<group>"; };
+		4A071404229699B600F658D2 /* NSString+Judge.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+Judge.m"; sourceTree = "<group>"; };
 		4A08D65C2280098E00A22E6C /* LLCustomTabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LLCustomTabBarController.h; sourceTree = "<group>"; };
 		4A08D65D2280098E00A22E6C /* LLCustomTabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LLCustomTabBarController.m; sourceTree = "<group>"; };
 		4A08D66022800D8E00A22E6C /* LLHomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LLHomeViewController.h; sourceTree = "<group>"; };
@@ -477,6 +491,10 @@
 		4ABCE400228E668D00676337 /* 4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 4.jpg; sourceTree = "<group>"; };
 		4ABCE407228E90AE00676337 /* LLUserInfoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LLUserInfoViewController.h; sourceTree = "<group>"; };
 		4ABCE408228E90AE00676337 /* LLUserInfoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LLUserInfoViewController.m; sourceTree = "<group>"; };
+		4ADD34F12296A1BB000AC344 /* NSObject+Exceptioin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Exceptioin.h"; sourceTree = "<group>"; };
+		4ADD34F22296A1BC000AC344 /* NSObject+Exceptioin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Exceptioin.m"; sourceTree = "<group>"; };
+		4ADD34F42296A1F4000AC344 /* NSObject+QTAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+QTAdd.h"; sourceTree = "<group>"; };
+		4ADD34F52296A1F4000AC344 /* NSObject+QTAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+QTAdd.m"; sourceTree = "<group>"; };
 		4AF29C482276DB2600622BC2 /* LZYDateTimePickerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LZYDateTimePickerView.h; sourceTree = "<group>"; };
 		4AF29C492276DB2600622BC2 /* LZYDateTimePickerView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LZYDateTimePickerView.m; sourceTree = "<group>"; };
 		4AF29C4B2276E63300622BC2 /* NSDate+Transfer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDate+Transfer.h"; sourceTree = "<group>"; };
@@ -1366,10 +1384,18 @@
 				4A3E35372269BD7800C4C96B /* BlocksKit */,
 				4AF29C4B2276E63300622BC2 /* NSDate+Transfer.h */,
 				4AF29C4C2276E63300622BC2 /* NSDate+Transfer.m */,
+				4ADD34F12296A1BB000AC344 /* NSObject+Exceptioin.h */,
+				4ADD34F22296A1BC000AC344 /* NSObject+Exceptioin.m */,
+				4ADD34F42296A1F4000AC344 /* NSObject+QTAdd.h */,
+				4ADD34F52296A1F4000AC344 /* NSObject+QTAdd.m */,
 				4A3E35CB2269C6B400C4C96B /* NSDictionary+SafeAccess.h */,
 				4A3E35CC2269C6B400C4C96B /* NSDictionary+SafeAccess.m */,
 				4A3E35D12269CC3700C4C96B /* NSString+Modify.h */,
 				4A3E35D22269CC3700C4C96B /* NSString+Modify.m */,
+				4A071403229699B600F658D2 /* NSString+Judge.h */,
+				4A071404229699B600F658D2 /* NSString+Judge.m */,
+				4A0714012296996000F658D2 /* NSString+QTSafe.h */,
+				4A0714002296996000F658D2 /* NSString+QTSafe.m */,
 				4AF29C4E2276E9C700622BC2 /* NSString+Transfer.h */,
 				4AF29C4F2276E9C700622BC2 /* NSString+Transfer.m */,
 				4A3E35702269BD8800C4C96B /* UIImage+Zip.h */,
@@ -1381,6 +1407,10 @@
 				4A3E35CF2269CA6200C4C96B /* UIView+RoundCorner.m */,
 				4A0917A7228C01DC0059FAD9 /* UIButton+FitStyle.h */,
 				4A0917A8228C01DC0059FAD9 /* UIButton+FitStyle.m */,
+				4A0713FA22967F9A00F658D2 /* UIViewController+Swizzling.h */,
+				4A0713FB22967F9A00F658D2 /* UIViewController+Swizzling.m */,
+				4A0713FD229695A900F658D2 /* UITextView+Placeholder.h */,
+				4A0713FE229695A900F658D2 /* UITextView+Placeholder.m */,
 				4A0713F622962D8300F658D2 /* UIViewController+CommonTipView */,
 			);
 			path = Category;
@@ -1563,6 +1593,7 @@
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/TZImagePickerController/TZImagePickerController.framework",
 				"${BUILT_PRODUCTS_DIR}/YYCache/YYCache.framework",
+				"${BUILT_PRODUCTS_DIR}/YYModel/YYModel.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
@@ -1577,6 +1608,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TZImagePickerController.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYCache.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYModel.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1667,6 +1699,7 @@
 				4A3E355C2269BD7800C4C96B /* UIGestureRecognizer+BlocksKit.m in Sources */,
 				4ABCE3E8228E492B00676337 /* JXCategoryNumberView.m in Sources */,
 				4A0917DE228C18780059FAD9 /* SGQRCodeScanView.m in Sources */,
+				4A0713FC22967F9A00F658D2 /* UIViewController+Swizzling.m in Sources */,
 				4ABCE3F3228E492B00676337 /* JXCategoryBaseCell.m in Sources */,
 				4ABCE3CA228E492B00676337 /* JXPagerListContainerView.m in Sources */,
 				4ABCE3EC228E492B00676337 /* JXCategoryFactory.m in Sources */,
@@ -1684,6 +1717,7 @@
 				4A0713E82293CE0C00F658D2 /* GCDQueue.m in Sources */,
 				4A3E35582269BD7800C4C96B /* UIWebView+BlocksKit.m in Sources */,
 				4A3E35562269BD7800C4C96B /* UINavigationController+FDFullscreenPopGesture.m in Sources */,
+				4A0713FF229695A900F658D2 /* UITextView+Placeholder.m in Sources */,
 				4ABCE3CE228E492B00676337 /* JXCategoryTitleVerticalZoomCellModel.m in Sources */,
 				4A0713F522962D1E00F658D2 /* UIViewController+CommonTipView.m in Sources */,
 				4A08D71D228272CE00A22E6C /* SDQZLoginPostAPI.m in Sources */,
@@ -1711,9 +1745,12 @@
 				4A0917DC228C18780059FAD9 /* SGQRCodeObtainConfigure.m in Sources */,
 				4A3E35602269BD7800C4C96B /* A2BlockInvocation.m in Sources */,
 				4ABCE3DE228E492B00676337 /* JXCategoryDotCellModel.m in Sources */,
+				4ADD34F32296A1BC000AC344 /* NSObject+Exceptioin.m in Sources */,
 				4ABCE3E4228E492B00676337 /* JXCategoryTitleView.m in Sources */,
 				4A08D66622800DA400A22E6C /* LLMineViewController.m in Sources */,
+				4A0714022296996000F658D2 /* NSString+QTSafe.m in Sources */,
 				4AF29CF82277FC2900622BC2 /* CustomTabBar.m in Sources */,
+				4A071405229699B600F658D2 /* NSString+Judge.m in Sources */,
 				4A08D720228272CE00A22E6C /* YTKChainRequest.m in Sources */,
 				4A08D727228272CE00A22E6C /* YTKRequest.m in Sources */,
 				4A0917A3228ABEDD0059FAD9 /* LZYDeviceUtils.m in Sources */,
@@ -1765,6 +1802,7 @@
 				4A08D719228272CE00A22E6C /* YYNetworkManager.m in Sources */,
 				4ABCE2E5228D610F00676337 /* LLMessageTableViewCell.m in Sources */,
 				4ABCE3CD228E492B00676337 /* JXPagerListRefreshView.m in Sources */,
+				4ADD34F62296A1F4000AC344 /* NSObject+QTAdd.m in Sources */,
 				4ABCE3DA228E492B00676337 /* JXCategoryIndicatorCell.m in Sources */,
 				4ABCE3CB228E492B00676337 /* JXPagerMainTableView.m in Sources */,
 				4A08D6752280306000A22E6C /* LLPublishViewController.m in Sources */,
@@ -1970,7 +2008,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5DYL533N39;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/LZYStudy/Support Files/PrefixHeader.pch";
-				HEADER_SEARCH_PATHS = $PODS_ROOT;
+				HEADER_SEARCH_PATHS = "$PODS_ROOT";
 				INFOPLIST_FILE = "/Users/cisdi/LZYStudy/LZYStudy/LZYStudy/Support Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1990,7 +2028,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5DYL533N39;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/LZYStudy/Support Files/PrefixHeader.pch";
-				HEADER_SEARCH_PATHS = $PODS_ROOT;
+				HEADER_SEARCH_PATHS = "$PODS_ROOT";
 				INFOPLIST_FILE = "/Users/cisdi/LZYStudy/LZYStudy/LZYStudy/Support Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
