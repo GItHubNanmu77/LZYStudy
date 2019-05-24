@@ -24,6 +24,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, weak) id<CustomTabBarDelegate> tabBarDelegate;
 
+- (void)addCenterButton;
 /**
  *  调整中间按钮位置
  */

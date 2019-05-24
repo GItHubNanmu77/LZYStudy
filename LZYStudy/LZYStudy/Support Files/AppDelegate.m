@@ -8,6 +8,8 @@
 
 #import "AppDelegate.h"
 #import "LLCustomTabBarController.h"
+#import "LLLoginViewController.h"
+#import "LZYCustomBaseNavigationViewController.h"
 
 @interface AppDelegate ()
 
@@ -19,8 +21,17 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-    LLCustomTabBarController *tabVC = [[LLCustomTabBarController alloc] init];
-    self.window.rootViewController = tabVC;
+    BOOL isLogin = [[NSUserDefaults standardUserDefaults] boolForKey:@"isLogin"];
+    BOOL isManager = [[NSUserDefaults standardUserDefaults] boolForKey:@"isManager"];
+    if (isLogin){
+        LLCustomTabBarController *tabVC = [[LLCustomTabBarController alloc] initWithIsManager:isManager];
+        self.window.rootViewController = tabVC;
+    } else {
+        LLLoginViewController *loginVC = [[LLLoginViewController alloc] init];
+        LZYCustomBaseNavigationViewController *loginNav = [[LZYCustomBaseNavigationViewController alloc] initWithRootViewController:loginVC];
+        self.window.rootViewController = loginNav;
+    }
+   
     [self.window makeKeyAndVisible];
     return YES;
 }
