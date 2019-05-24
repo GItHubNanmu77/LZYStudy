@@ -182,6 +182,7 @@
 		4ADD354B2297D3D7000AC344 /* NSObject+GrowingIO.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ADD352B2297D3D6000AC344 /* NSObject+GrowingIO.m */; };
 		4ADD354D2297D3D7000AC344 /* NSMutableAttributedString+QTSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ADD352D2297D3D6000AC344 /* NSMutableAttributedString+QTSafe.m */; };
 		4ADD354E2297D3D7000AC344 /* NSTimer+QTSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ADD352F2297D3D6000AC344 /* NSTimer+QTSafe.m */; };
+		4ADD35612297EBCF000AC344 /* UIView+Snapshot.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ADD35602297EBCF000AC344 /* UIView+Snapshot.m */; };
 		4AF29C4A2276DB2600622BC2 /* LZYDateTimePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AF29C492276DB2600622BC2 /* LZYDateTimePickerView.m */; };
 		4AF29C4D2276E63300622BC2 /* NSDate+Transfer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AF29C4C2276E63300622BC2 /* NSDate+Transfer.m */; };
 		4AF29C502276E9C700622BC2 /* NSString+Transfer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AF29C4F2276E9C700622BC2 /* NSString+Transfer.m */; };
@@ -564,6 +565,8 @@
 		4ADD35312297D3D6000AC344 /* NSSet+QTSafe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSSet+QTSafe.h"; sourceTree = "<group>"; };
 		4ADD35322297D3D6000AC344 /* NSURL+QTSafe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURL+QTSafe.h"; sourceTree = "<group>"; };
 		4ADD35332297D3D6000AC344 /* NSAttributedString+QTSafe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSAttributedString+QTSafe.h"; sourceTree = "<group>"; };
+		4ADD355F2297EBCF000AC344 /* UIView+Snapshot.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+Snapshot.h"; sourceTree = "<group>"; };
+		4ADD35602297EBCF000AC344 /* UIView+Snapshot.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+Snapshot.m"; sourceTree = "<group>"; };
 		4AF29C482276DB2600622BC2 /* LZYDateTimePickerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LZYDateTimePickerView.h; sourceTree = "<group>"; };
 		4AF29C492276DB2600622BC2 /* LZYDateTimePickerView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LZYDateTimePickerView.m; sourceTree = "<group>"; };
 		4AF29C4B2276E63300622BC2 /* NSDate+Transfer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDate+Transfer.h"; sourceTree = "<group>"; };
@@ -1540,6 +1543,8 @@
 				4AFE35EF2269BA79003120DC /* UIView+Frame.m */,
 				4A3E35CE2269CA6200C4C96B /* UIView+RoundCorner.h */,
 				4A3E35CF2269CA6200C4C96B /* UIView+RoundCorner.m */,
+				4ADD355F2297EBCF000AC344 /* UIView+Snapshot.h */,
+				4ADD35602297EBCF000AC344 /* UIView+Snapshot.m */,
 				4A0713F622962D8300F658D2 /* UIViewController+CommonTipView */,
 				4A0713FA22967F9A00F658D2 /* UIViewController+Swizzling.h */,
 				4A0713FB22967F9A00F658D2 /* UIViewController+Swizzling.m */,
@@ -1951,6 +1956,7 @@
 				4ABCE3CD228E492B00676337 /* JXPagerListRefreshView.m in Sources */,
 				4ABCE3DA228E492B00676337 /* JXCategoryIndicatorCell.m in Sources */,
 				4ABCE3CB228E492B00676337 /* JXPagerMainTableView.m in Sources */,
+				4ADD35612297EBCF000AC344 /* UIView+Snapshot.m in Sources */,
 				4A08D6752280306000A22E6C /* LLPublishViewController.m in Sources */,
 				4ADD353D2297D3D7000AC344 /* NSAttributedString+QTSafe.m in Sources */,
 				4ADD353F2297D3D7000AC344 /* NSURL+QTSafe.m in Sources */,

@@ -10,9 +10,11 @@
 #import "LLLoginViewController.h"
 #import "AppDelegate.h"
 #import "LZYCustomBaseNavigationViewController.h"
+#import "UITextView+Placeholder.h"
 
 @interface LLHomeViewController ()
 @property (nonatomic, strong) UIButton *loginButton;
+@property (nonatomic, strong) UITextView *textView;
 @end
 
 @implementation LLHomeViewController
@@ -22,11 +24,12 @@
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor redColor];
     [self.view addSubview:self.loginButton];
+    [self.view addSubview:self.textView];
 }
 
 - (void)viewDidLayoutSubviews {
     [super viewDidLayoutSubviews];
-    
+    self.textView.frame = CGRectMake(0, LZY_IPHONE_NAV_HEIGHT, LZY_SCREEN_WIDTH, 300);
     self.loginButton.frame = CGRectMake((self.view.width - 80)/2, self.view.height - 220, 80, 40);
 }
 
@@ -57,6 +60,16 @@
         });
     }
     return _loginButton;
+}
+
+-(UITextView *)textView {
+    if (!_textView) {
+        _textView = [[UITextView alloc] init];
+        [_textView setPlaceholder:@"请输入" placeholdColor:[UIColor grayColor]];
+        _textView.font = [UIFont systemFontOfSize:15];
+        _textView.textColor = [UIColor blueColor];
+    }
+    return _textView;
 }
 
 @end

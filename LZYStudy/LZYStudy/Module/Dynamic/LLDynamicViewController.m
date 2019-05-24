@@ -9,6 +9,7 @@
 #import "LLDynamicViewController.h"
 #import "LLDynamicCollectionViewCell.h"
 #import "LLDynamicModel.h"
+#import "UIView+Snapshot.h"
 
 @interface LLDynamicViewController ()<UICollectionViewDelegate,UICollectionViewDataSource>
 @property (nonatomic, strong) NSMutableArray *collDataArray;
@@ -31,9 +32,11 @@
     
     self.isVertical = YES;
     
+    UIBarButtonItem *rightButton2 = [[UIBarButtonItem alloc] initWithTitle:@"截屏"  style:UIBarButtonItemStylePlain target:self action:@selector(rightBtnAction2:)];
+    
     UIBarButtonItem *rightButton = [[UIBarButtonItem alloc] initWithTitle:@"变化"  style:UIBarButtonItemStylePlain target:self action:@selector(rightBtnAction:)];
     rightButton.tintColor = [UIColor blackColor];
-    self.navigationItem.rightBarButtonItem = rightButton;
+    self.navigationItem.rightBarButtonItems = @[rightButton, rightButton2];
     
 }
 - (void)changeDataSource {
@@ -51,6 +54,11 @@
         [self.collView setCollectionViewLayout:self.verticalLayout animated:YES];
     }
     [self.collView reloadData];
+}
+- (void)rightBtnAction2:(UIBarButtonItem*)sender{
+    UIImage *snapshot = [self.collView snapshotScrollViewWithHeight:self.collView.contentSize.height];
+    NSLog(@"---%lf---%lf",snapshot.size.height,snapshot.size.width);
+    
 }
 
 
