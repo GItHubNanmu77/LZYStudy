@@ -53,7 +53,7 @@
                 [[NSUserDefaults standardUserDefaults] synchronize];
                 
                 AppDelegate *appDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
-                LLCustomTabBarController *tabVC = [[LLCustomTabBarController alloc] initWithIsManager:self.managerButton.selected];
+                LLCustomTabBarController *tabVC = [[LLCustomTabBarController alloc] init];
                 appDelegate.window.rootViewController = tabVC;
 
             } forControlEvents:UIControlEventTouchUpInside];

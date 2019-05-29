@@ -20,7 +20,7 @@
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor magentaColor];
     self.title = @"发布详情";
-    
+    self.name = @"123123123";
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {

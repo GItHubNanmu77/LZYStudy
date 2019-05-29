@@ -8,8 +8,13 @@
 
 #import "LZYCustomBaseNavigationViewController.h"
 #import "LZYMacro.h"
+#import "FPSLabel.h"
 
 @interface LZYCustomBaseNavigationViewController ()
+
+#if DEBUG
+@property (nonatomic, strong) FPSLabel *lb_fps;
+#endif
 
 /// 自定义返回按钮
 @property (nonatomic, strong) UIBarButtonItem *customBack;
@@ -60,4 +65,28 @@
     self.tabBarController.tabBar.frame = frame;
 }
 
+
+#if DEBUG
+
+- (void)showFPSLable
+{
+    self.lb_fps.hidden = NO;
+}
+
+- (void)hiddenFPSLable
+{
+    self.lb_fps.hidden = YES;
+}
+
+#pragma mark - Getter
+
+- (FPSLabel *)lb_fps {
+    if (!_lb_fps) {
+        _lb_fps = [[FPSLabel alloc] initWithFrame:CGRectMake(0, 0, 80, 40)];
+        [self.view addSubview:_lb_fps];
+    }
+    return _lb_fps;
+}
+
+#endif
 @end

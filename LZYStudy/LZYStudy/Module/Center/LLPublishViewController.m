@@ -8,12 +8,15 @@
 
 #import "LLPublishViewController.h"
 #import "LLPublishDetailViewController.h"
+#import "LLDynamicModel.h"
 
 @interface LLPublishViewController ()
 @property (nonatomic, strong) CAShapeLayer *shape;
 @property (nonatomic, strong) UIBezierPath *path;
 @property (nonatomic, strong) CALayer *colorLayer;
 
+@property (nonatomic, copy) NSString *name;
+@property (nonatomic, strong) LLDynamicModel *model;
 @end
 
 @implementation LLPublishViewController
@@ -23,6 +26,7 @@
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor yellowColor];
     self.title = @"发布";
+    self.name = @"123";
     
 //    [self drawRainbow];
 //    [self showcolorLayer];
@@ -76,6 +80,8 @@
 
 -(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     LLPublishDetailViewController *vc = [[LLPublishDetailViewController alloc] init];
+    vc.name = self.name;
+    vc.model = self.model;
     [self.navigationController pushViewController:vc animated:YES];
     
 //    [self moveLine];

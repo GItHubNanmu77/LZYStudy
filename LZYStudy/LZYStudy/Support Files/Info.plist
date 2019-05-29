@@ -62,5 +62,24 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>CFBundleDocumentTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeName</key>
+			<string>pdf</string>
+			<key>CFBundleTypeIconFiles</key>
+			<array>
+				<string>1.jpg</string>
+				<string>2.jpg</string>
+			</array>
+			<key>LSItemContentTypes</key>
+			<array>
+				<string>com.adobe.pdf</string>
+				<string>com.microsoft.excel.xls</string>
+			</array>
+			<key>LSHandlerRank</key>
+			<string>Owner</string>
+		</dict>
+	</array>
 </dict>
 </plist>

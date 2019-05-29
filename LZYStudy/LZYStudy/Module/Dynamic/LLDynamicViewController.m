@@ -10,6 +10,7 @@
 #import "LLDynamicCollectionViewCell.h"
 #import "LLDynamicModel.h"
 #import "UIView+Snapshot.h"
+#import "LLCustomTabBarController.h"
 
 @interface LLDynamicViewController ()<UICollectionViewDelegate,UICollectionViewDataSource>
 @property (nonatomic, strong) NSMutableArray *collDataArray;
@@ -79,6 +80,7 @@
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     [collectionView deselectItemAtIndexPath:indexPath animated:NO];
+    
     
 }
 

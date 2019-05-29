@@ -22,7 +22,7 @@
 - (instancetype)initWithFrame:(CGRect)frame{
     self = [super initWithFrame:frame];
     if(self){
-        self.barTintColor = [UIColor colorWithRed:63/255.0 green:64/255.0 blue:77/255.0 alpha:1];
+        self.barTintColor = [UIColor whiteColor];
         
       
         

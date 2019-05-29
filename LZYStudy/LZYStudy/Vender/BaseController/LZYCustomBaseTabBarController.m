@@ -25,7 +25,7 @@
     CGRect rect = CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 0.5);
     UIGraphicsBeginImageContext(rect.size);
     CGContextRef context = UIGraphicsGetCurrentContext();
-    CGContextSetFillColorWithColor(context, [UIColor colorWithWhite:0.3 alpha:1].CGColor);
+    CGContextSetFillColorWithColor(context, [UIColor colorWithWhite:0.8 alpha:1].CGColor);
     CGContextFillRect(context, rect);
     UIImage *shadowImage = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();

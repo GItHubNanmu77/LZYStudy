@@ -85,7 +85,7 @@ typedef void (*_VIMP)(id, SEL, ...);
 - (void)swiz_viewWillAppear:(BOOL)animated{
     [self swiz_viewWillAppear:animated];
 #if defined(DEBUG)
-    NSLog(@"当前控制器：%@",NSStringFromClass([self class]));
+    NSLog(@"\n当前控制器：%@",NSStringFromClass([self class]));
 #endif
     
 }
@@ -97,7 +97,7 @@ typedef void (*_VIMP)(id, SEL, ...);
 }
 
 -(void)swiz_dealloc{
-    
+    NSLog(@"\n上一个控制器：%@被销毁",NSStringFromClass([self class]));
     [self swiz_dealloc];
 }
 @end

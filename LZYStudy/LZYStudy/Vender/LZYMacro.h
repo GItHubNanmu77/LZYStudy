@@ -9,6 +9,8 @@
 #ifndef LZYMacro_h
 #define LZYMacro_h
 
+#import "LZYCustomBaseTabBarController.h"
+#import "LZYCustomBaseNavigationViewController.h"
 #import "LZYBaseTableViewCell.h"
 #import "LZYURLImageView.h"
 #import "LZYConfirmView.h"
@@ -22,6 +24,7 @@
 #import "NSDictionary+SafeAccess.h"
 #import "MBProgressHUD+XY.h"
 #import "UIViewController+CommonTipView.h"
+#import "UIViewController+Swizzling.h"
 
 #import "SVProgressHUD.h"
 #import "MBProgressHUD.h"

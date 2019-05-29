@@ -11,7 +11,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface LLCustomTabBarController : LZYCustomBaseTabBarController
-- (instancetype)initWithIsManager:(BOOL)isManager;
+
 
 @end
 

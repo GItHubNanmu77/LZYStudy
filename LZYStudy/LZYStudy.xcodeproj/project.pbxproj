@@ -100,6 +100,9 @@
 		4A3E35CD2269C6B400C4C96B /* NSDictionary+SafeAccess.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A3E35CC2269C6B400C4C96B /* NSDictionary+SafeAccess.m */; };
 		4A3E35D02269CA6200C4C96B /* UIView+RoundCorner.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A3E35CF2269CA6200C4C96B /* UIView+RoundCorner.m */; };
 		4A3E35D32269CC3700C4C96B /* NSString+Modify.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A3E35D22269CC3700C4C96B /* NSString+Modify.m */; };
+		4A80328E229CD54B0054ACCE /* LLPdfReaderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A80328D229CD54B0054ACCE /* LLPdfReaderViewController.m */; };
+		4A803292229CD6720054ACCE /* QzTeam.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 4A803291229CD6720054ACCE /* QzTeam.pdf */; };
+		4A803298229E1EFA0054ACCE /* FPSLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A803296229E1EF90054ACCE /* FPSLabel.m */; };
 		4ABCE2E2228D555A00676337 /* LZYBaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ABCE2E1228D555A00676337 /* LZYBaseTableViewCell.m */; };
 		4ABCE2E5228D610F00676337 /* LLMessageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ABCE2E4228D610F00676337 /* LLMessageTableViewCell.m */; };
 		4ABCE363228D66AF00676337 /* MF_Base64Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ABCE361228D66AF00676337 /* MF_Base64Additions.m */; };
@@ -404,6 +407,11 @@
 		4A3E35CF2269CA6200C4C96B /* UIView+RoundCorner.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+RoundCorner.m"; sourceTree = "<group>"; };
 		4A3E35D12269CC3700C4C96B /* NSString+Modify.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+Modify.h"; sourceTree = "<group>"; };
 		4A3E35D22269CC3700C4C96B /* NSString+Modify.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+Modify.m"; sourceTree = "<group>"; };
+		4A80328C229CD54B0054ACCE /* LLPdfReaderViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LLPdfReaderViewController.h; sourceTree = "<group>"; };
+		4A80328D229CD54B0054ACCE /* LLPdfReaderViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LLPdfReaderViewController.m; sourceTree = "<group>"; };
+		4A803291229CD6720054ACCE /* QzTeam.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = QzTeam.pdf; sourceTree = "<group>"; };
+		4A803296229E1EF90054ACCE /* FPSLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FPSLabel.m; sourceTree = "<group>"; };
+		4A803297229E1EFA0054ACCE /* FPSLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FPSLabel.h; sourceTree = "<group>"; };
 		4ABCE2E0228D555A00676337 /* LZYBaseTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LZYBaseTableViewCell.h; sourceTree = "<group>"; };
 		4ABCE2E1228D555A00676337 /* LZYBaseTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LZYBaseTableViewCell.m; sourceTree = "<group>"; };
 		4ABCE2E3228D610F00676337 /* LLMessageTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LLMessageTableViewCell.h; sourceTree = "<group>"; };
@@ -700,8 +708,8 @@
 			children = (
 				4A08D66422800DA400A22E6C /* LLMineViewController.h */,
 				4A08D66522800DA400A22E6C /* LLMineViewController.m */,
-				4ABCE407228E90AE00676337 /* LLUserInfoViewController.h */,
-				4ABCE408228E90AE00676337 /* LLUserInfoViewController.m */,
+				4A80328C229CD54B0054ACCE /* LLPdfReaderViewController.h */,
+				4A80328D229CD54B0054ACCE /* LLPdfReaderViewController.m */,
 			);
 			path = Mine;
 			sourceTree = "<group>";
@@ -863,6 +871,8 @@
 		4A0916F6228915D90059FAD9 /* Tool */ = {
 			isa = PBXGroup;
 			children = (
+				4A803297229E1EFA0054ACCE /* FPSLabel.h */,
+				4A803296229E1EF90054ACCE /* FPSLabel.m */,
 				4ABCE35D228D66AF00676337 /* SDQZEncryptUtils */,
 				4A09179E228ABE440059FAD9 /* LZYAuthorizationUtils.h */,
 				4A09179F228ABE440059FAD9 /* LZYAuthorizationUtils.m */,
@@ -875,6 +885,7 @@
 		4A0916FC2289166D0059FAD9 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				4A803291229CD6720054ACCE /* QzTeam.pdf */,
 				4ABCE3FE228E668C00676337 /* 1.jpg */,
 				4ABCE3FF228E668C00676337 /* 2.jpg */,
 				4ABCE3FD228E668C00676337 /* 3.jpg */,
@@ -1501,6 +1512,8 @@
 			children = (
 				4A08D66022800D8E00A22E6C /* LLHomeViewController.h */,
 				4A08D66122800D8E00A22E6C /* LLHomeViewController.m */,
+				4ABCE407228E90AE00676337 /* LLUserInfoViewController.h */,
+				4ABCE408228E90AE00676337 /* LLUserInfoViewController.m */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -1688,6 +1701,7 @@
 				4ABCE405228E668D00676337 /* 2.jpg in Resources */,
 				4AFE35B82269A52C003120DC /* Assets.xcassets in Resources */,
 				4A09170C228916870059FAD9 /* MBHUD_Warn@2x.png in Resources */,
+				4A803292229CD6720054ACCE /* QzTeam.pdf in Resources */,
 				4ABCE401228E668D00676337 /* 5.jpg in Resources */,
 				4A091707228916870059FAD9 /* MBHUD_Info@3x.png in Resources */,
 				4AFE35B62269A52B003120DC /* Main.storyboard in Resources */,
@@ -1926,6 +1940,7 @@
 				4ADD35462297D3D7000AC344 /* NSMutableSet+QTSafe.m in Sources */,
 				4A0917A9228C01DC0059FAD9 /* UIButton+FitStyle.m in Sources */,
 				4A3E35572269BD7800C4C96B /* NSTimer+BlocksKit.m in Sources */,
+				4A803298229E1EFA0054ACCE /* FPSLabel.m in Sources */,
 				4A08D72E2282760E00A22E6C /* YYDBManager.m in Sources */,
 				4ABCE3EA228E492B00676337 /* JXCategoryNumberCellModel.m in Sources */,
 				4A3E35D32269CC3700C4C96B /* NSString+Modify.m in Sources */,
@@ -1973,6 +1988,7 @@
 				4ADD35472297D3D7000AC344 /* NSObject+QTAdd.m in Sources */,
 				4ADD35432297D3D7000AC344 /* UIView+ThreadCheck.m in Sources */,
 				4A0917DD228C18780059FAD9 /* SGQRCodeObtain.m in Sources */,
+				4A80328E229CD54B0054ACCE /* LLPdfReaderViewController.m in Sources */,
 				4A3E35CD2269C6B400C4C96B /* NSDictionary+SafeAccess.m in Sources */,
 				4A0917E6228C18780059FAD9 /* XLImageViewerItem.m in Sources */,
 				4ABCE3EB228E492B00676337 /* JXCategoryListContainerView.m in Sources */,
