@@ -29,10 +29,6 @@
 		4A08D718228272CE00A22E6C /* YYNetworkingConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A08D6EF228272CE00A22E6C /* YYNetworkingConfig.m */; };
 		4A08D719228272CE00A22E6C /* YYNetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A08D6F0228272CE00A22E6C /* YYNetworkManager.m */; };
 		4A08D71A228272CE00A22E6C /* YYApiObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A08D6F1228272CE00A22E6C /* YYApiObject.m */; };
-		4A08D71B228272CE00A22E6C /* NetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A08D6F7228272CE00A22E6C /* NetManager.m */; };
-		4A08D71C228272CE00A22E6C /* SDQZAccessTokenAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A08D6FE228272CE00A22E6C /* SDQZAccessTokenAPI.m */; };
-		4A08D71D228272CE00A22E6C /* SDQZLoginPostAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A08D6FF228272CE00A22E6C /* SDQZLoginPostAPI.m */; };
-		4A08D71E228272CE00A22E6C /* SDQZBaseRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A08D701228272CE00A22E6C /* SDQZBaseRequest.m */; };
 		4A08D71F228272CE00A22E6C /* YTKNetworkConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A08D705228272CE00A22E6C /* YTKNetworkConfig.m */; };
 		4A08D720228272CE00A22E6C /* YTKChainRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A08D707228272CE00A22E6C /* YTKChainRequest.m */; };
 		4A08D721228272CE00A22E6C /* YTKNetworkPrivate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A08D70B228272CE00A22E6C /* YTKNetworkPrivate.m */; };
@@ -82,6 +78,13 @@
 		4A0917E8228C18780059FAD9 /* UUMarqueeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A0917D4228C18770059FAD9 /* UUMarqueeView.m */; };
 		4A0917E9228C18780059FAD9 /* WLUnitField.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A0917D7228C18770059FAD9 /* WLUnitField.m */; };
 		4A0917ED228C19380059FAD9 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A0917EC228C19380059FAD9 /* MBProgressHUD.m */; };
+		4A1098A822A7495E00C488BC /* LLCenterDetailPostRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A1098A722A7495E00C488BC /* LLCenterDetailPostRequest.m */; };
+		4A1098AB22A74E0600C488BC /* LZYDownloadRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A1098AA22A74E0600C488BC /* LZYDownloadRequest.m */; };
+		4A1098AE22A772B300C488BC /* LZYUploadRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A1098AD22A772B300C488BC /* LZYUploadRequest.m */; };
+		4A1098B322A78EE900C488BC /* LVRecordTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A1098AF22A78EE900C488BC /* LVRecordTool.m */; };
+		4A1098B422A78EE900C488BC /* YYRecordTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A1098B122A78EE900C488BC /* YYRecordTool.m */; };
+		4A1098B822A79AE300C488BC /* AliOSSFileUploadUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A1098B722A79AE300C488BC /* AliOSSFileUploadUtil.m */; };
+		4A1098BD22A79DE000C488BC /* NetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A1098BC22A79DE000C488BC /* NetManager.m */; };
 		4A3E35562269BD7800C4C96B /* UINavigationController+FDFullscreenPopGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A3E35362269BD7800C4C96B /* UINavigationController+FDFullscreenPopGesture.m */; };
 		4A3E35572269BD7800C4C96B /* NSTimer+BlocksKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A3E353A2269BD7800C4C96B /* NSTimer+BlocksKit.m */; };
 		4A3E35582269BD7800C4C96B /* UIWebView+BlocksKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A3E353F2269BD7800C4C96B /* UIWebView+BlocksKit.m */; };
@@ -271,14 +274,6 @@
 		4A08D6F3228272CE00A22E6C /* YYNetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYNetworkManager.h; sourceTree = "<group>"; };
 		4A08D6F4228272CE00A22E6C /* YYNetworkingConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYNetworkingConfig.h; sourceTree = "<group>"; };
 		4A08D6F5228272CE00A22E6C /* YYApiObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYApiObject.h; sourceTree = "<group>"; };
-		4A08D6F7228272CE00A22E6C /* NetManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetManager.m; sourceTree = "<group>"; };
-		4A08D6F8228272CE00A22E6C /* NetManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetManager.h; sourceTree = "<group>"; };
-		4A08D6FC228272CE00A22E6C /* SDQZAccessTokenAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDQZAccessTokenAPI.h; sourceTree = "<group>"; };
-		4A08D6FD228272CE00A22E6C /* SDQZLoginPostAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDQZLoginPostAPI.h; sourceTree = "<group>"; };
-		4A08D6FE228272CE00A22E6C /* SDQZAccessTokenAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDQZAccessTokenAPI.m; sourceTree = "<group>"; };
-		4A08D6FF228272CE00A22E6C /* SDQZLoginPostAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDQZLoginPostAPI.m; sourceTree = "<group>"; };
-		4A08D701228272CE00A22E6C /* SDQZBaseRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDQZBaseRequest.m; sourceTree = "<group>"; };
-		4A08D702228272CE00A22E6C /* SDQZBaseRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDQZBaseRequest.h; sourceTree = "<group>"; };
 		4A08D705228272CE00A22E6C /* YTKNetworkConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YTKNetworkConfig.m; sourceTree = "<group>"; };
 		4A08D706228272CE00A22E6C /* YTKBaseRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTKBaseRequest.h; sourceTree = "<group>"; };
 		4A08D707228272CE00A22E6C /* YTKChainRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YTKChainRequest.m; sourceTree = "<group>"; };
@@ -370,6 +365,20 @@
 		4A0917D7228C18770059FAD9 /* WLUnitField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WLUnitField.m; sourceTree = "<group>"; };
 		4A0917EB228C19380059FAD9 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
 		4A0917EC228C19380059FAD9 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		4A1098A622A7495E00C488BC /* LLCenterDetailPostRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LLCenterDetailPostRequest.h; sourceTree = "<group>"; };
+		4A1098A722A7495E00C488BC /* LLCenterDetailPostRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LLCenterDetailPostRequest.m; sourceTree = "<group>"; };
+		4A1098A922A74E0600C488BC /* LZYDownloadRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LZYDownloadRequest.h; sourceTree = "<group>"; };
+		4A1098AA22A74E0600C488BC /* LZYDownloadRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LZYDownloadRequest.m; sourceTree = "<group>"; };
+		4A1098AC22A772B300C488BC /* LZYUploadRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LZYUploadRequest.h; sourceTree = "<group>"; };
+		4A1098AD22A772B300C488BC /* LZYUploadRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LZYUploadRequest.m; sourceTree = "<group>"; };
+		4A1098AF22A78EE900C488BC /* LVRecordTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LVRecordTool.m; sourceTree = "<group>"; };
+		4A1098B022A78EE900C488BC /* YYRecordTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYRecordTool.h; sourceTree = "<group>"; };
+		4A1098B122A78EE900C488BC /* YYRecordTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYRecordTool.m; sourceTree = "<group>"; };
+		4A1098B222A78EE900C488BC /* LVRecordTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LVRecordTool.h; sourceTree = "<group>"; };
+		4A1098B622A79AE300C488BC /* AliOSSFileUploadUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AliOSSFileUploadUtil.h; sourceTree = "<group>"; };
+		4A1098B722A79AE300C488BC /* AliOSSFileUploadUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AliOSSFileUploadUtil.m; sourceTree = "<group>"; };
+		4A1098BB22A79DE000C488BC /* NetManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetManager.h; sourceTree = "<group>"; };
+		4A1098BC22A79DE000C488BC /* NetManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetManager.m; sourceTree = "<group>"; };
 		4A3E35352269BD7800C4C96B /* UINavigationController+FDFullscreenPopGesture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+FDFullscreenPopGesture.h"; sourceTree = "<group>"; };
 		4A3E35362269BD7800C4C96B /* UINavigationController+FDFullscreenPopGesture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+FDFullscreenPopGesture.m"; sourceTree = "<group>"; };
 		4A3E35382269BD7800C4C96B /* BlocksKit+UIKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BlocksKit+UIKit.h"; sourceTree = "<group>"; };
@@ -752,6 +761,7 @@
 		4A08D67922817B9400A22E6C /* NetWorkTool */ = {
 			isa = PBXGroup;
 			children = (
+				4A1098B522A79AE300C488BC /* FileNetwork */,
 				4A08D6F6228272CE00A22E6C /* NetManager */,
 				4A08D6EE228272CE00A22E6C /* NetworkingYYApiObject */,
 				4A08D6F9228272CE00A22E6C /* NetworkYTK */,
@@ -777,8 +787,8 @@
 		4A08D6F6228272CE00A22E6C /* NetManager */ = {
 			isa = PBXGroup;
 			children = (
-				4A08D6F8228272CE00A22E6C /* NetManager.h */,
-				4A08D6F7228272CE00A22E6C /* NetManager.m */,
+				4A1098BB22A79DE000C488BC /* NetManager.h */,
+				4A1098BC22A79DE000C488BC /* NetManager.m */,
 			);
 			path = NetManager;
 			sourceTree = "<group>";
@@ -786,33 +796,10 @@
 		4A08D6F9228272CE00A22E6C /* NetworkYTK */ = {
 			isa = PBXGroup;
 			children = (
-				4A08D6FA228272CE00A22E6C /* SDQZNetwork */,
-				4A08D72F2282B28600A22E6C /* LZYBaseRequest.h */,
-				4A08D7302282B28600A22E6C /* LZYBaseRequest.m */,
+				4A08D704228272CE00A22E6C /* YTKNetwork */,
+				4A1098BA22A79CAB00C488BC /* LZYYTKNetwork */,
 			);
 			path = NetworkYTK;
-			sourceTree = "<group>";
-		};
-		4A08D6FA228272CE00A22E6C /* SDQZNetwork */ = {
-			isa = PBXGroup;
-			children = (
-				4A08D6FB228272CE00A22E6C /* NoNeedAccessTokenAPI */,
-				4A08D702228272CE00A22E6C /* SDQZBaseRequest.h */,
-				4A08D701228272CE00A22E6C /* SDQZBaseRequest.m */,
-				4A08D704228272CE00A22E6C /* YTKNetwork */,
-			);
-			path = SDQZNetwork;
-			sourceTree = "<group>";
-		};
-		4A08D6FB228272CE00A22E6C /* NoNeedAccessTokenAPI */ = {
-			isa = PBXGroup;
-			children = (
-				4A08D6FC228272CE00A22E6C /* SDQZAccessTokenAPI.h */,
-				4A08D6FE228272CE00A22E6C /* SDQZAccessTokenAPI.m */,
-				4A08D6FD228272CE00A22E6C /* SDQZLoginPostAPI.h */,
-				4A08D6FF228272CE00A22E6C /* SDQZLoginPostAPI.m */,
-			);
-			path = NoNeedAccessTokenAPI;
 			sourceTree = "<group>";
 		};
 		4A08D704228272CE00A22E6C /* YTKNetwork */ = {
@@ -871,6 +858,10 @@
 		4A0916F6228915D90059FAD9 /* Tool */ = {
 			isa = PBXGroup;
 			children = (
+				4A1098B222A78EE900C488BC /* LVRecordTool.h */,
+				4A1098AF22A78EE900C488BC /* LVRecordTool.m */,
+				4A1098B022A78EE900C488BC /* YYRecordTool.h */,
+				4A1098B122A78EE900C488BC /* YYRecordTool.m */,
 				4A803297229E1EFA0054ACCE /* FPSLabel.h */,
 				4A803296229E1EF90054ACCE /* FPSLabel.m */,
 				4ABCE35D228D66AF00676337 /* SDQZEncryptUtils */,
@@ -1059,6 +1050,37 @@
 				4A0917EC228C19380059FAD9 /* MBProgressHUD.m */,
 			);
 			path = MBProgressHUD;
+			sourceTree = "<group>";
+		};
+		4A1098B522A79AE300C488BC /* FileNetwork */ = {
+			isa = PBXGroup;
+			children = (
+				4A1098B622A79AE300C488BC /* AliOSSFileUploadUtil.h */,
+				4A1098B722A79AE300C488BC /* AliOSSFileUploadUtil.m */,
+			);
+			path = FileNetwork;
+			sourceTree = "<group>";
+		};
+		4A1098B922A79C7400C488BC /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				4A1098A622A7495E00C488BC /* LLCenterDetailPostRequest.h */,
+				4A1098A722A7495E00C488BC /* LLCenterDetailPostRequest.m */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		4A1098BA22A79CAB00C488BC /* LZYYTKNetwork */ = {
+			isa = PBXGroup;
+			children = (
+				4A08D72F2282B28600A22E6C /* LZYBaseRequest.h */,
+				4A08D7302282B28600A22E6C /* LZYBaseRequest.m */,
+				4A1098A922A74E0600C488BC /* LZYDownloadRequest.h */,
+				4A1098AA22A74E0600C488BC /* LZYDownloadRequest.m */,
+				4A1098AC22A772B300C488BC /* LZYUploadRequest.h */,
+				4A1098AD22A772B300C488BC /* LZYUploadRequest.m */,
+			);
+			path = LZYYTKNetwork;
 			sourceTree = "<group>";
 		};
 		4A3E35342269BD7800C4C96B /* UINavigationController+FDFullscreenPopGesture */ = {
@@ -1424,6 +1446,7 @@
 				4A08D66B22800DD300A22E6C /* Dynamic */,
 				4A08D66722800DAA00A22E6C /* Message */,
 				4A08D66322800D9A00A22E6C /* Mine */,
+				4A1098B922A79C7400C488BC /* Network */,
 			);
 			path = Module;
 			sourceTree = "<group>";
@@ -1839,7 +1862,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				4A08D71A228272CE00A22E6C /* YYApiObject.m in Sources */,
-				4A08D71B228272CE00A22E6C /* NetManager.m in Sources */,
 				4ABCE3E1228E492B00676337 /* JXCategoryTitleImageCellModel.m in Sources */,
 				4ABCE364228D66AF00676337 /* SDQZEncryptUtils.m in Sources */,
 				4A0713EA2293CE0C00F658D2 /* GCDGroup.m in Sources */,
@@ -1847,6 +1869,7 @@
 				4A0917A6228C00070059FAD9 /* LZYFileManager.m in Sources */,
 				4ABCE3E0228E492B00676337 /* JXCategoryTitleImageCell.m in Sources */,
 				4A3E355C2269BD7800C4C96B /* UIGestureRecognizer+BlocksKit.m in Sources */,
+				4A1098B422A78EE900C488BC /* YYRecordTool.m in Sources */,
 				4ADD35492297D3D7000AC344 /* NSCache+QTSafe.m in Sources */,
 				4ABCE3E8228E492B00676337 /* JXCategoryNumberView.m in Sources */,
 				4ADD34FB22979E95000AC344 /* LLLoginViewController.m in Sources */,
@@ -1875,7 +1898,6 @@
 				4A0713FF229695A900F658D2 /* UITextView+Placeholder.m in Sources */,
 				4ABCE3CE228E492B00676337 /* JXCategoryTitleVerticalZoomCellModel.m in Sources */,
 				4A0713F522962D1E00F658D2 /* UIViewController+CommonTipView.m in Sources */,
-				4A08D71D228272CE00A22E6C /* SDQZLoginPostAPI.m in Sources */,
 				4A3E355B2269BD7800C4C96B /* UIView+BlocksKit.m in Sources */,
 				4A08D6782281684E00A22E6C /* LLPublishDetailViewController.m in Sources */,
 				4A0917E8228C18780059FAD9 /* UUMarqueeView.m in Sources */,
@@ -1885,7 +1907,6 @@
 				4A0713F22296265400F658D2 /* LLWeakScriptMessageDelegate.m in Sources */,
 				4A3E35592269BD7800C4C96B /* UIBarButtonItem+BlocksKit.m in Sources */,
 				4ADD35372297D3D7000AC344 /* NSMutableArray+QTSafe.m in Sources */,
-				4A08D71E228272CE00A22E6C /* SDQZBaseRequest.m in Sources */,
 				4ABCE3D0228E492B00676337 /* JXCategoryTitleVerticalZoomView.m in Sources */,
 				4A0917DF228C18780059FAD9 /* SVRadialGradientLayer.m in Sources */,
 				4A08D71F228272CE00A22E6C /* YTKNetworkConfig.m in Sources */,
@@ -1951,18 +1972,21 @@
 				4ABCE2E2228D555A00676337 /* LZYBaseTableViewCell.m in Sources */,
 				4A0917E2228C18780059FAD9 /* SVIndefiniteAnimatedView.m in Sources */,
 				4A091751228943D90059FAD9 /* SandBoxHelper.m in Sources */,
+				4A1098A822A7495E00C488BC /* LLCenterDetailPostRequest.m in Sources */,
 				4ABCE3CF228E492B00676337 /* JXCategoryTitleVerticalZoomCell.m in Sources */,
 				4ADD35412297D3D7000AC344 /* UIApplication+QTSafe.m in Sources */,
+				4A1098BD22A79DE000C488BC /* NetManager.m in Sources */,
 				4A08D718228272CE00A22E6C /* YYNetworkingConfig.m in Sources */,
 				4ABCE3E5228E492B00676337 /* JXCategoryImageView.m in Sources */,
 				4ABCE3DB228E492B00676337 /* JXCategoryIndicatorView.m in Sources */,
 				4ABCE3E7228E492B00676337 /* JXCategoryImageCellModel.m in Sources */,
-				4A08D71C228272CE00A22E6C /* SDQZAccessTokenAPI.m in Sources */,
+				4A1098B322A78EE900C488BC /* LVRecordTool.m in Sources */,
 				4ABCE3D8228E492B00676337 /* JXCategoryIndicatorBackgroundView.m in Sources */,
 				4ABCE3F0228E492B00676337 /* JXCategoryListCollectionContainerView.m in Sources */,
 				4A0917A0228ABE440059FAD9 /* LZYAuthorizationUtils.m in Sources */,
 				4AFE35F02269BA79003120DC /* UIView+Frame.m in Sources */,
 				4AF29C4D2276E63300622BC2 /* NSDate+Transfer.m in Sources */,
+				4A1098B822A79AE300C488BC /* AliOSSFileUploadUtil.m in Sources */,
 				4ABCE3D9228E492B00676337 /* JXCategoryIndicatorCellModel.m in Sources */,
 				4ABCE3DF228E492B00676337 /* JXCategoryTitleImageView.m in Sources */,
 				4A3E355D2269BD7800C4C96B /* UIPopoverController+BlocksKit.m in Sources */,
@@ -2000,8 +2024,10 @@
 				4ABCE3DC228E492B00676337 /* JXCategoryDotCell.m in Sources */,
 				4ABCE3D2228E492B00676337 /* JXCategoryIndicatorTriangleView.m in Sources */,
 				4ABCE3CC228E492B00676337 /* JXPagerView.m in Sources */,
+				4A1098AB22A74E0600C488BC /* LZYDownloadRequest.m in Sources */,
 				4A08D721228272CE00A22E6C /* YTKNetworkPrivate.m in Sources */,
 				4AF29CFB22781E1700622BC2 /* LZYCustomBaseTabBarController.m in Sources */,
+				4A1098AE22A772B300C488BC /* LZYUploadRequest.m in Sources */,
 				4A3E355A2269BD7800C4C96B /* UIAlertView+BlocksKit.m in Sources */,
 				4A0917ED228C19380059FAD9 /* MBProgressHUD.m in Sources */,
 				4AF29CF22277E10B00622BC2 /* LZYConfirmView.m in Sources */,

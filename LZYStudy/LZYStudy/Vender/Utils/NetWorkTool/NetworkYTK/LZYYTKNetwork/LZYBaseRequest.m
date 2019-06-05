@@ -55,10 +55,10 @@
 }
 
 #pragma mark - Override Methods
+
 - (NSString *)baseUrl {
     return @"";
 }
-
 - (NSTimeInterval)requestTimeoutInterval {
     return 20;
 }
