@@ -85,6 +85,8 @@
 		4A1098B422A78EE900C488BC /* YYRecordTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A1098B122A78EE900C488BC /* YYRecordTool.m */; };
 		4A1098B822A79AE300C488BC /* AliOSSFileUploadUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A1098B722A79AE300C488BC /* AliOSSFileUploadUtil.m */; };
 		4A1098BD22A79DE000C488BC /* NetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A1098BC22A79DE000C488BC /* NetManager.m */; };
+		4A1098FE22A8AD0500C488BC /* LLMessagePhotoCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A1098FD22A8AD0500C488BC /* LLMessagePhotoCollectionViewCell.m */; };
+		4A10990122A8AFAC00C488BC /* LLPhotosWaterFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A10990022A8AFAC00C488BC /* LLPhotosWaterFlowLayout.m */; };
 		4A3E35562269BD7800C4C96B /* UINavigationController+FDFullscreenPopGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A3E35362269BD7800C4C96B /* UINavigationController+FDFullscreenPopGesture.m */; };
 		4A3E35572269BD7800C4C96B /* NSTimer+BlocksKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A3E353A2269BD7800C4C96B /* NSTimer+BlocksKit.m */; };
 		4A3E35582269BD7800C4C96B /* UIWebView+BlocksKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A3E353F2269BD7800C4C96B /* UIWebView+BlocksKit.m */; };
@@ -107,7 +109,6 @@
 		4A803292229CD6720054ACCE /* QzTeam.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 4A803291229CD6720054ACCE /* QzTeam.pdf */; };
 		4A803298229E1EFA0054ACCE /* FPSLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A803296229E1EF90054ACCE /* FPSLabel.m */; };
 		4ABCE2E2228D555A00676337 /* LZYBaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ABCE2E1228D555A00676337 /* LZYBaseTableViewCell.m */; };
-		4ABCE2E5228D610F00676337 /* LLMessageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ABCE2E4228D610F00676337 /* LLMessageTableViewCell.m */; };
 		4ABCE363228D66AF00676337 /* MF_Base64Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ABCE361228D66AF00676337 /* MF_Base64Additions.m */; };
 		4ABCE364228D66AF00676337 /* SDQZEncryptUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ABCE362228D66AF00676337 /* SDQZEncryptUtils.m */; };
 		4ABCE3CA228E492B00676337 /* JXPagerListContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ABCE366228E492B00676337 /* JXPagerListContainerView.m */; };
@@ -379,6 +380,10 @@
 		4A1098B722A79AE300C488BC /* AliOSSFileUploadUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AliOSSFileUploadUtil.m; sourceTree = "<group>"; };
 		4A1098BB22A79DE000C488BC /* NetManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetManager.h; sourceTree = "<group>"; };
 		4A1098BC22A79DE000C488BC /* NetManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetManager.m; sourceTree = "<group>"; };
+		4A1098FC22A8AD0500C488BC /* LLMessagePhotoCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LLMessagePhotoCollectionViewCell.h; sourceTree = "<group>"; };
+		4A1098FD22A8AD0500C488BC /* LLMessagePhotoCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LLMessagePhotoCollectionViewCell.m; sourceTree = "<group>"; };
+		4A1098FF22A8AFAC00C488BC /* LLPhotosWaterFlowLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LLPhotosWaterFlowLayout.h; sourceTree = "<group>"; };
+		4A10990022A8AFAC00C488BC /* LLPhotosWaterFlowLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LLPhotosWaterFlowLayout.m; sourceTree = "<group>"; };
 		4A3E35352269BD7800C4C96B /* UINavigationController+FDFullscreenPopGesture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+FDFullscreenPopGesture.h"; sourceTree = "<group>"; };
 		4A3E35362269BD7800C4C96B /* UINavigationController+FDFullscreenPopGesture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+FDFullscreenPopGesture.m"; sourceTree = "<group>"; };
 		4A3E35382269BD7800C4C96B /* BlocksKit+UIKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BlocksKit+UIKit.h"; sourceTree = "<group>"; };
@@ -423,8 +428,6 @@
 		4A803297229E1EFA0054ACCE /* FPSLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FPSLabel.h; sourceTree = "<group>"; };
 		4ABCE2E0228D555A00676337 /* LZYBaseTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LZYBaseTableViewCell.h; sourceTree = "<group>"; };
 		4ABCE2E1228D555A00676337 /* LZYBaseTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LZYBaseTableViewCell.m; sourceTree = "<group>"; };
-		4ABCE2E3228D610F00676337 /* LLMessageTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LLMessageTableViewCell.h; sourceTree = "<group>"; };
-		4ABCE2E4228D610F00676337 /* LLMessageTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LLMessageTableViewCell.m; sourceTree = "<group>"; };
 		4ABCE35E228D66AF00676337 /* SDQZEncryptUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDQZEncryptUtils.h; sourceTree = "<group>"; };
 		4ABCE360228D66AF00676337 /* MF_Base64Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MF_Base64Additions.h; sourceTree = "<group>"; };
 		4ABCE361228D66AF00676337 /* MF_Base64Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MF_Base64Additions.m; sourceTree = "<group>"; };
@@ -728,8 +731,10 @@
 			children = (
 				4A08D66822800DB600A22E6C /* LLMessageViewController.h */,
 				4A08D66922800DB600A22E6C /* LLMessageViewController.m */,
-				4ABCE2E3228D610F00676337 /* LLMessageTableViewCell.h */,
-				4ABCE2E4228D610F00676337 /* LLMessageTableViewCell.m */,
+				4A1098FC22A8AD0500C488BC /* LLMessagePhotoCollectionViewCell.h */,
+				4A1098FD22A8AD0500C488BC /* LLMessagePhotoCollectionViewCell.m */,
+				4A1098FF22A8AFAC00C488BC /* LLPhotosWaterFlowLayout.h */,
+				4A10990022A8AFAC00C488BC /* LLPhotosWaterFlowLayout.m */,
 			);
 			path = Message;
 			sourceTree = "<group>";
@@ -1971,6 +1976,7 @@
 				4A08D723228272CE00A22E6C /* YTKBatchRequest.m in Sources */,
 				4ABCE2E2228D555A00676337 /* LZYBaseTableViewCell.m in Sources */,
 				4A0917E2228C18780059FAD9 /* SVIndefiniteAnimatedView.m in Sources */,
+				4A1098FE22A8AD0500C488BC /* LLMessagePhotoCollectionViewCell.m in Sources */,
 				4A091751228943D90059FAD9 /* SandBoxHelper.m in Sources */,
 				4A1098A822A7495E00C488BC /* LLCenterDetailPostRequest.m in Sources */,
 				4ABCE3CF228E492B00676337 /* JXCategoryTitleVerticalZoomCell.m in Sources */,
@@ -1991,7 +1997,6 @@
 				4ABCE3DF228E492B00676337 /* JXCategoryTitleImageView.m in Sources */,
 				4A3E355D2269BD7800C4C96B /* UIPopoverController+BlocksKit.m in Sources */,
 				4A08D719228272CE00A22E6C /* YYNetworkManager.m in Sources */,
-				4ABCE2E5228D610F00676337 /* LLMessageTableViewCell.m in Sources */,
 				4ABCE3CD228E492B00676337 /* JXPagerListRefreshView.m in Sources */,
 				4ABCE3DA228E492B00676337 /* JXCategoryIndicatorCell.m in Sources */,
 				4ABCE3CB228E492B00676337 /* JXPagerMainTableView.m in Sources */,
@@ -2023,6 +2028,7 @@
 				4ADD353A2297D3D7000AC344 /* NSException+QTSafe.m in Sources */,
 				4ABCE3DC228E492B00676337 /* JXCategoryDotCell.m in Sources */,
 				4ABCE3D2228E492B00676337 /* JXCategoryIndicatorTriangleView.m in Sources */,
+				4A10990122A8AFAC00C488BC /* LLPhotosWaterFlowLayout.m in Sources */,
 				4ABCE3CC228E492B00676337 /* JXPagerView.m in Sources */,
 				4A1098AB22A74E0600C488BC /* LZYDownloadRequest.m in Sources */,
 				4A08D721228272CE00A22E6C /* YTKNetworkPrivate.m in Sources */,
