@@ -1677,6 +1677,11 @@
 				TargetAttributes = {
 					4AFE35AA2269A52B003120DC = {
 						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					4AFE35C22269A52C003120DC = {
 						CreatedOnToolsVersion = 10.1;
@@ -2214,6 +2219,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 5DYL533N39;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/LZYStudy/Support Files/PrefixHeader.pch";
 				HEADER_SEARCH_PATHS = $PODS_ROOT;

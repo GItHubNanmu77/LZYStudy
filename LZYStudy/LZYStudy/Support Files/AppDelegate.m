@@ -10,8 +10,9 @@
 #import "LLCustomTabBarController.h"
 #import "LLLoginViewController.h"
 #import "LZYCustomBaseNavigationViewController.h"
+#import <UserNotifications/UserNotifications.h>
 
-@interface AppDelegate ()<UITabBarControllerDelegate,UIDocumentInteractionControllerDelegate>
+@interface AppDelegate ()<UITabBarControllerDelegate, UIDocumentInteractionControllerDelegate, UNUserNotificationCenterDelegate>
 
 @property (nonatomic, strong) LLCustomTabBarController *tabVC;
 @end
@@ -21,6 +22,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    [self registerAPN];
+    
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     BOOL isLogin = [[NSUserDefaults standardUserDefaults] boolForKey:@"isLogin"];
     if (isLogin){
@@ -35,6 +38,11 @@
     }
    
     [self.window makeKeyAndVisible];
+    if (@available(iOS 10.0, *)) {
+        [self receiveNotificationWithOptions:launchOptions];
+    } else {
+        // Fallback on earlier versions
+    }
     return YES;
 }
 //过渡动画
@@ -115,4 +123,110 @@
 -(CGRect)documentInteractionControllerRectForPreview:(UIDocumentInteractionController *)controller{
     return self.window.rootViewController.view.bounds;
 }
+
+// 注册通知
+- (void)registerAPN {
+    
+    if (@available(iOS 10.0, *)) { // iOS10 以上
+        UNUserNotificationCenter *center = [UNUserNotificationCenter currentNotificationCenter];
+        [center requestAuthorizationWithOptions:(UNAuthorizationOptionAlert + UNAuthorizationOptionSound) completionHandler:^(BOOL granted, NSError * _Nullable error) {
+            
+        }];
+    } else {// iOS8.0 以上
+        UIUserNotificationSettings *setting = [UIUserNotificationSettings settingsForTypes:UIUserNotificationTypeBadge | UIUserNotificationTypeSound | UIUserNotificationTypeAlert categories:nil];
+        [[UIApplication sharedApplication] registerUserNotificationSettings:setting];
+    }
+}
+
+-(void)application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification{
+    NSDictionary *dic = notification.userInfo;
+    NSLog(@"点击本地%@",dic);
+    NSLog(@"本地通知 %ld",(long)application.applicationState );
+    // 用户在前台
+    if (application.applicationState == UIApplicationStateInactive ) {
+        NSDictionary *dic = notification.userInfo;
+//        [self remoteNotificationWith:[dic objectForKey:@"payload"] ];
+        NSLog(@"在前台");
+        self.tabVC.selectedIndex = 2;
+    }else if ([UIApplication sharedApplication].applicationState == UIApplicationStateInactive || [UIApplication sharedApplication].applicationState == UIApplicationStateBackground) {
+            //后台状态下，直接跳转到跳转页面。
+            NSLog(@"在后台");
+        self.tabVC.selectedIndex = 1;
+    }
+    
+}
+
+
+//点击本地推送
+- (void)userNotificationCenter:(UNUserNotificationCenter *)center didReceiveNotificationResponse:(UNNotificationResponse *)response   withCompletionHandler:(void(^)())completionHandler API_AVAILABLE(ios(10.0)){
+    NSLog(@"********** iOS10.0之后  **********");
+    [[UIApplication sharedApplication] setApplicationIconBadgeNumber:0];
+//    [GeTuiSdk resetBadge];
+    NSDictionary * userInfo =    response.notification.request.content.userInfo;
+    
+    NSLog(@"userInfo=%@ %@",userInfo , [userInfo[@"payload"] class]);
+    if ([UIApplication sharedApplication].applicationState == UIApplicationStateActive) {
+        
+    }
+    //后台状态下，直接跳转到跳转页面。
+    if ([UIApplication sharedApplication].applicationState == UIApplicationStateInactive || [UIApplication sharedApplication].applicationState == UIApplicationStateBackground)
+    {
+        
+    }
+    if (@available(iOS 10.0, *)) {
+        // 系统要求执行这个 方法
+        completionHandler(UNNotificationPresentationOptionAlert);
+    } else {
+        // Fallback on earlier versions
+    }
+}
+
+// APP被杀死在didfinishLaunch里面处理
+- (void)receiveNotificationWithOptions:(NSDictionary *)launchOptions API_AVAILABLE(ios(10.0)){
+    if (launchOptions) {
+        if (launchOptions[UIApplicationLaunchOptionsRemoteNotificationKey]) {// 远程
+            NSLog(@"点击推送。从、啊app后台进去");
+        } else if (launchOptions [UIApplicationLaunchOptionsLocalNotificationKey]) { //本地
+            UILocalNotification *noti = [launchOptions objectForKey:UIApplicationLaunchOptionsLocalNotificationKey];
+            NSDictionary *dic =  noti.userInfo;
+            self.tabVC.selectedIndex = 1;
+        }
+    }
+}
+
+// 移除某一个指定的通知
+- (void)removeOneNotificationWithID:(NSString *)noticeId {
+    if (@available(iOS 10.0, *)) {
+        UNUserNotificationCenter *center = [UNUserNotificationCenter currentNotificationCenter];
+        [center getPendingNotificationRequestsWithCompletionHandler:^(NSArray<UNNotificationRequest *> * _Nonnull requests) {
+            for (UNNotificationRequest *req in requests){
+                NSLog(@"存在的ID:%@\n",req.identifier);
+            }
+            NSLog(@"移除currentID:%@",noticeId);
+        }];
+        
+        [center removePendingNotificationRequestsWithIdentifiers:@[noticeId]];
+    }else {
+        NSArray *array=[[UIApplication sharedApplication] scheduledLocalNotifications];
+        for (UILocalNotification *localNotification in array){
+            NSDictionary *userInfo = localNotification.userInfo;
+            NSString *obj = [userInfo objectForKey:@"noticeId"];
+            if ([obj isEqualToString:noticeId]) {
+                [[UIApplication sharedApplication] cancelLocalNotification:localNotification];
+            }
+        }
+    }
+}
+
+// 移除所有通知
+- (void)removeAllNotification {
+    if (@available(iOS 10.0, *)) {
+        UNUserNotificationCenter *center = [UNUserNotificationCenter currentNotificationCenter];
+        [center removeAllPendingNotificationRequests];
+    }else {
+        [[UIApplication sharedApplication] cancelAllLocalNotifications];
+    }
+}
+
+
 @end
