@@ -105,6 +105,13 @@
 		4A3E35CD2269C6B400C4C96B /* NSDictionary+SafeAccess.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A3E35CC2269C6B400C4C96B /* NSDictionary+SafeAccess.m */; };
 		4A3E35D02269CA6200C4C96B /* UIView+RoundCorner.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A3E35CF2269CA6200C4C96B /* UIView+RoundCorner.m */; };
 		4A3E35D32269CC3700C4C96B /* NSString+Modify.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A3E35D22269CC3700C4C96B /* NSString+Modify.m */; };
+		4A5172EF22B32C9A00CE8203 /* LLCategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A5172EE22B32C9A00CE8203 /* LLCategoryViewController.m */; };
+		4A5172F222B3432A00CE8203 /* LLCategoryDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A5172F122B3432A00CE8203 /* LLCategoryDetailViewController.m */; };
+		4A5172F922B3460500CE8203 /* LLCategoryDetailTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A5172F822B3460500CE8203 /* LLCategoryDetailTableViewCell.m */; };
+		4A5172FC22B37D6600CE8203 /* LLShoppingCartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A5172FB22B37D6600CE8203 /* LLShoppingCartViewController.m */; };
+		4A5172FF22B382DC00CE8203 /* LLShoppingCartTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A5172FE22B382DC00CE8203 /* LLShoppingCartTableViewCell.m */; };
+		4A51730322B3843400CE8203 /* LLShoppingCartModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A51730222B3843400CE8203 /* LLShoppingCartModel.m */; };
+		4A51730622B3995C00CE8203 /* PurchaseCarAnimationTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A51730422B3995C00CE8203 /* PurchaseCarAnimationTool.m */; };
 		4A80328E229CD54B0054ACCE /* LLPdfReaderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A80328D229CD54B0054ACCE /* LLPdfReaderViewController.m */; };
 		4A803292229CD6720054ACCE /* QzTeam.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 4A803291229CD6720054ACCE /* QzTeam.pdf */; };
 		4A803298229E1EFA0054ACCE /* FPSLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A803296229E1EF90054ACCE /* FPSLabel.m */; };
@@ -421,6 +428,20 @@
 		4A3E35CF2269CA6200C4C96B /* UIView+RoundCorner.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+RoundCorner.m"; sourceTree = "<group>"; };
 		4A3E35D12269CC3700C4C96B /* NSString+Modify.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+Modify.h"; sourceTree = "<group>"; };
 		4A3E35D22269CC3700C4C96B /* NSString+Modify.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+Modify.m"; sourceTree = "<group>"; };
+		4A5172ED22B32C9A00CE8203 /* LLCategoryViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LLCategoryViewController.h; sourceTree = "<group>"; };
+		4A5172EE22B32C9A00CE8203 /* LLCategoryViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LLCategoryViewController.m; sourceTree = "<group>"; };
+		4A5172F022B3432A00CE8203 /* LLCategoryDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LLCategoryDetailViewController.h; sourceTree = "<group>"; };
+		4A5172F122B3432A00CE8203 /* LLCategoryDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LLCategoryDetailViewController.m; sourceTree = "<group>"; };
+		4A5172F722B3460500CE8203 /* LLCategoryDetailTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LLCategoryDetailTableViewCell.h; sourceTree = "<group>"; };
+		4A5172F822B3460500CE8203 /* LLCategoryDetailTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LLCategoryDetailTableViewCell.m; sourceTree = "<group>"; };
+		4A5172FA22B37D6600CE8203 /* LLShoppingCartViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LLShoppingCartViewController.h; sourceTree = "<group>"; };
+		4A5172FB22B37D6600CE8203 /* LLShoppingCartViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LLShoppingCartViewController.m; sourceTree = "<group>"; };
+		4A5172FD22B382DC00CE8203 /* LLShoppingCartTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LLShoppingCartTableViewCell.h; sourceTree = "<group>"; };
+		4A5172FE22B382DC00CE8203 /* LLShoppingCartTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LLShoppingCartTableViewCell.m; sourceTree = "<group>"; };
+		4A51730122B3843400CE8203 /* LLShoppingCartModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LLShoppingCartModel.h; sourceTree = "<group>"; };
+		4A51730222B3843400CE8203 /* LLShoppingCartModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LLShoppingCartModel.m; sourceTree = "<group>"; };
+		4A51730422B3995C00CE8203 /* PurchaseCarAnimationTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PurchaseCarAnimationTool.m; sourceTree = "<group>"; };
+		4A51730522B3995C00CE8203 /* PurchaseCarAnimationTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PurchaseCarAnimationTool.h; sourceTree = "<group>"; };
 		4A80328C229CD54B0054ACCE /* LLPdfReaderViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LLPdfReaderViewController.h; sourceTree = "<group>"; };
 		4A80328D229CD54B0054ACCE /* LLPdfReaderViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LLPdfReaderViewController.m; sourceTree = "<group>"; };
 		4A803291229CD6720054ACCE /* QzTeam.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = QzTeam.pdf; sourceTree = "<group>"; };
@@ -1155,6 +1176,51 @@
 			path = DynamicDelegate;
 			sourceTree = "<group>";
 		};
+		4A5172F422B3459100CE8203 /* Shop */ = {
+			isa = PBXGroup;
+			children = (
+				4A51730022B3841500CE8203 /* Model */,
+				4A5172F622B345B600CE8203 /* View */,
+				4A5172F522B345AC00CE8203 /* Controller */,
+			);
+			path = Shop;
+			sourceTree = "<group>";
+		};
+		4A5172F522B345AC00CE8203 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				4A5172ED22B32C9A00CE8203 /* LLCategoryViewController.h */,
+				4A5172EE22B32C9A00CE8203 /* LLCategoryViewController.m */,
+				4A5172F022B3432A00CE8203 /* LLCategoryDetailViewController.h */,
+				4A5172F122B3432A00CE8203 /* LLCategoryDetailViewController.m */,
+				4A5172FA22B37D6600CE8203 /* LLShoppingCartViewController.h */,
+				4A5172FB22B37D6600CE8203 /* LLShoppingCartViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		4A5172F622B345B600CE8203 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4A5172F722B3460500CE8203 /* LLCategoryDetailTableViewCell.h */,
+				4A5172F822B3460500CE8203 /* LLCategoryDetailTableViewCell.m */,
+				4A5172FD22B382DC00CE8203 /* LLShoppingCartTableViewCell.h */,
+				4A5172FE22B382DC00CE8203 /* LLShoppingCartTableViewCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4A51730022B3841500CE8203 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4A51730122B3843400CE8203 /* LLShoppingCartModel.h */,
+				4A51730222B3843400CE8203 /* LLShoppingCartModel.m */,
+				4A51730522B3995C00CE8203 /* PurchaseCarAnimationTool.h */,
+				4A51730422B3995C00CE8203 /* PurchaseCarAnimationTool.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		4ABCE35D228D66AF00676337 /* SDQZEncryptUtils */ = {
 			isa = PBXGroup;
 			children = (
@@ -1542,6 +1608,7 @@
 				4A08D66122800D8E00A22E6C /* LLHomeViewController.m */,
 				4ABCE407228E90AE00676337 /* LLUserInfoViewController.h */,
 				4ABCE408228E90AE00676337 /* LLUserInfoViewController.m */,
+				4A5172F422B3459100CE8203 /* Shop */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -1882,6 +1949,7 @@
 				4A1098B422A78EE900C488BC /* YYRecordTool.m in Sources */,
 				4ADD35492297D3D7000AC344 /* NSCache+QTSafe.m in Sources */,
 				4ABCE3E8228E492B00676337 /* JXCategoryNumberView.m in Sources */,
+				4A51730322B3843400CE8203 /* LLShoppingCartModel.m in Sources */,
 				4ADD34FB22979E95000AC344 /* LLLoginViewController.m in Sources */,
 				4ADD35392297D3D7000AC344 /* NSString+QTSafe.m in Sources */,
 				4A0917DE228C18780059FAD9 /* SGQRCodeScanView.m in Sources */,
@@ -1933,6 +2001,7 @@
 				4A0713EF2296232E00F658D2 /* LLWebViewController.m in Sources */,
 				4A3E35622269BD7800C4C96B /* A2DynamicDelegate.m in Sources */,
 				4ABCE3D3228E492B00676337 /* JXCategoryIndicatorRainbowLineView.m in Sources */,
+				4A5172FC22B37D6600CE8203 /* LLShoppingCartViewController.m in Sources */,
 				4ADD354E2297D3D7000AC344 /* NSTimer+QTSafe.m in Sources */,
 				4A0917DC228C18780059FAD9 /* SGQRCodeObtainConfigure.m in Sources */,
 				4A3E35602269BD7800C4C96B /* A2BlockInvocation.m in Sources */,
@@ -1941,6 +2010,7 @@
 				4A08D66622800DA400A22E6C /* LLMineViewController.m in Sources */,
 				4ADD354D2297D3D7000AC344 /* NSMutableAttributedString+QTSafe.m in Sources */,
 				4AF29CF82277FC2900622BC2 /* CustomTabBar.m in Sources */,
+				4A5172F222B3432A00CE8203 /* LLCategoryDetailViewController.m in Sources */,
 				4A071405229699B600F658D2 /* NSString+Judge.m in Sources */,
 				4A08D720228272CE00A22E6C /* YTKChainRequest.m in Sources */,
 				4ADD35452297D3D7000AC344 /* UINavigationController+QTSafe.m in Sources */,
@@ -1949,6 +2019,7 @@
 				4A0713F922962DBB00F658D2 /* LZYCommonTipView.m in Sources */,
 				4A091739228943110059FAD9 /* IAPManager.m in Sources */,
 				4A3E355E2269BD7800C4C96B /* UIActionSheet+BlocksKit.m in Sources */,
+				4A5172F922B3460500CE8203 /* LLCategoryDetailTableViewCell.m in Sources */,
 				4ABCE3D5228E492B00676337 /* JXCategoryIndicatorBallView.m in Sources */,
 				4ADD35362297D3D7000AC344 /* NSObject+Exceptioin.m in Sources */,
 				4A08D66A22800DB600A22E6C /* LLMessageViewController.m in Sources */,
@@ -1978,9 +2049,11 @@
 				4ABCE3D7228E492B00676337 /* JXCategoryIndicatorDotLineView.m in Sources */,
 				4ABCE3D1228E492B00676337 /* JXCategoryIndicatorLineView.m in Sources */,
 				4A0713EB2293CE0C00F658D2 /* GCDSemaphore.m in Sources */,
+				4A5172EF22B32C9A00CE8203 /* LLCategoryViewController.m in Sources */,
 				4A08D723228272CE00A22E6C /* YTKBatchRequest.m in Sources */,
 				4ABCE2E2228D555A00676337 /* LZYBaseTableViewCell.m in Sources */,
 				4A0917E2228C18780059FAD9 /* SVIndefiniteAnimatedView.m in Sources */,
+				4A51730622B3995C00CE8203 /* PurchaseCarAnimationTool.m in Sources */,
 				4A1098FE22A8AD0500C488BC /* LLMessagePhotoCollectionViewCell.m in Sources */,
 				4A091751228943D90059FAD9 /* SandBoxHelper.m in Sources */,
 				4A1098A822A7495E00C488BC /* LLCenterDetailPostRequest.m in Sources */,
@@ -2003,6 +2076,7 @@
 				4A3E355D2269BD7800C4C96B /* UIPopoverController+BlocksKit.m in Sources */,
 				4A08D719228272CE00A22E6C /* YYNetworkManager.m in Sources */,
 				4ABCE3CD228E492B00676337 /* JXPagerListRefreshView.m in Sources */,
+				4A5172FF22B382DC00CE8203 /* LLShoppingCartTableViewCell.m in Sources */,
 				4ABCE3DA228E492B00676337 /* JXCategoryIndicatorCell.m in Sources */,
 				4ABCE3CB228E492B00676337 /* JXPagerMainTableView.m in Sources */,
 				4ADD35612297EBCF000AC344 /* UIView+Snapshot.m in Sources */,

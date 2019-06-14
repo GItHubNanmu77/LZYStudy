@@ -25,7 +25,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.view.backgroundColor = [UIColor greenColor];
+    self.view.backgroundColor = [UIColor whiteColor];
     
     [self.view addSubview:self.collView];
     
@@ -108,7 +108,7 @@
 - (UICollectionView *)collView {
     if (!_collView) {
         _collView = ({
-            UICollectionView *collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, LZY_SCREEN_WIDTH, LZY_SCREEN_HEIGHT - LZY_IPHONE_NAV_HEIGHT  - LZY_IPHNOE_TAB_BAR_HEIGHT) collectionViewLayout:self.verticalLayout];
+            UICollectionView *collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, LZY_SCREEN_WIDTH, LZY_SCREEN_HEIGHT - LZY_IPHONE_NAV_HEIGHT  - LZY_TAB_BAR_SAFE_BOTTOM_MARGIN) collectionViewLayout:self.verticalLayout];
             collectionView.backgroundColor = RGB3(247);
             collectionView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
             collectionView.dataSource = self;
