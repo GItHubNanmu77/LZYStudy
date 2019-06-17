@@ -13,7 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface LLShoppingCartTableViewCell : UITableViewCell
 
-@property (nonatomic, copy) void(^cellButtonBlock) (UIImageView *addButton);
+@property (nonatomic, copy) void(^cellButtonBlock) (UIButton *addButton);
 
 - (void)updateData:(LLShoppingCartModel *)model;
 @end

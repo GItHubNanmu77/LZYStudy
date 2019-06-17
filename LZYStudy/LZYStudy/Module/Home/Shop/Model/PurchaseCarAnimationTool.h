@@ -38,4 +38,6 @@ typedef void (^animationFinisnBlock)(BOOL finish);
  *  @param shakeView <#shakeView description#>
  */
 + (void)shakeAnimation:(UIView *)shakeView;
+
+- (void)startAnimationFrom:(CGPoint)startPoint to:(CGPoint)finishPoint completion:(animationFinisnBlock)completion;
 @end

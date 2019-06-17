@@ -13,11 +13,30 @@
 
 @implementation PurchaseCarAnimationTool
 #pragma mark - instancetype
+- (void)dealloc {
+    NSLog(@"%@ -- dealloc",NSStringFromClass([self class]));
+}
 + (instancetype)shareTool
 {
     return [[PurchaseCarAnimationTool alloc]init];
 }
 #pragma public function
+- (void)startAnimationFrom:(CGPoint)startPoint to:(CGPoint)finishPoint completion:(animationFinisnBlock)completion{
+    _layer = [CALayer layer];
+    _layer.backgroundColor = [UIColor redColor].CGColor;
+    _layer.position = startPoint;
+    _layer.frame = CGRectMake(startPoint.x, startPoint.y, 20, 20);
+    _layer.cornerRadius = 10;
+    
+    UIWindow *keyWindow = [UIApplication sharedApplication].keyWindow;
+    [keyWindow.layer addSublayer:_layer];
+    /// 路径
+    [self createPathFrom:startPoint to:finishPoint];
+    /// 回调
+    if (completion) {
+        _animationFinisnBlock = completion;
+    }
+}
 - (void)startAnimationandView:(UIView *)view
                          rect:(CGRect)rect
                   finisnPoint:(CGPoint)finishPoint
@@ -59,6 +78,17 @@
     
 }
 #pragma mark - private function
+- (void)createPathFrom:(CGPoint)startPoint to:(CGPoint)finishPoint {
+    UIBezierPath *path = [UIBezierPath bezierPath];
+    [path moveToPoint:startPoint];
+    [path addQuadCurveToPoint:finishPoint controlPoint:CGPointMake(startPoint.x - 100, startPoint.y - 40)];
+    CAKeyframeAnimation *pathAnimation = [CAKeyframeAnimation animationWithKeyPath:@"position"];
+    pathAnimation.path = path.CGPath;
+    pathAnimation.duration = 0.5;
+    pathAnimation.delegate = self;
+    [pathAnimation setValue:_layer forKey:@"pathAnimation"];
+    [_layer addAnimation:pathAnimation forKey:nil];
+}
 /// 创建动画
 - (void)createAnimationwithRect:(CGRect)rect
                     finishPoint:(CGPoint)finishPoint {
@@ -95,7 +125,14 @@
 #pragma mark - CAAnimationDelegate
 - (void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag
 {
-    if (anim == [_layer animationForKey:@"group"]) {
+    if (_layer == [anim valueForKey:@"pathAnimation"]) {
+        [_layer removeFromSuperlayer];
+        _layer = nil;
+        if (_animationFinisnBlock) {
+            _animationFinisnBlock(YES);
+        }
+    }
+    if (anim == [_layer animationForKey:@"group"] || anim == [_layer animationForKey:@"pathAnimation"]) {
         [_layer removeFromSuperlayer];
         _layer = nil;
         if (_animationFinisnBlock) {

@@ -27,7 +27,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    self.view.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:self.table];
     [self.view addSubview:self.cartButton];
 }
@@ -64,24 +64,32 @@
     }
     [cell updateData:self.dataArray[indexPath.row]];
     @LZY_weakify(self)
-    cell.cellButtonBlock = ^(UIImageView * _Nonnull addButton) {
+    cell.cellButtonBlock = ^(UIButton * _Nonnull addButton) {
      
         
         LLShoppingCartTableViewCell * wCell = (LLShoppingCartTableViewCell *)[tableView cellForRowAtIndexPath:indexPath];
         CGRect rect = wCell.frame;
         
+        
         /// 获取当前cell 相对于self.view 当前的坐标
-        rect.origin.y          = rect.origin.y - tableView.contentOffset.y;
+        rect.origin.y = rect.origin.y - tableView.contentOffset.y + LZY_IPHONE_NAV_HEIGHT + addButton.y;
+        CGPoint point = CGPointMake(addButton.x, rect.origin.y);
         
-        CGRect imageViewRect   = addButton.frame;
-        imageViewRect.origin.x = rect.origin.x;
-        imageViewRect.origin.y = rect.origin.y + imageViewRect.origin.y;
-        
-        [[PurchaseCarAnimationTool shareTool] startAnimationandView:addButton rect:imageViewRect finisnPoint:CGPointMake(ScreenWidth / 4 * 2.5, ScreenHeight - 49)  finishBlock:^(BOOL finish) {
-               @LZY_strongify(self)
+        [[PurchaseCarAnimationTool shareTool] startAnimationFrom:point to:CGPointMake(self.cartButton.right, self.cartButton.y + LZY_IPHONE_NAV_HEIGHT) completion:^(BOOL finish) {
+            @LZY_strongify(self)
             NSInteger count = self.badgeView.badgeText.integerValue;
             self.badgeView.badgeText = [NSString stringWithFormat:@"%zi",++count];
         }];
+        
+        
+//        CGRect imageViewRect   = addButton.frame;
+//        imageViewRect.origin.x = rect.origin.x;
+//        imageViewRect.origin.y = rect.origin.y + imageViewRect.origin.y;
+//        [[PurchaseCarAnimationTool shareTool] startAnimationandView:addButton rect:imageViewRect finisnPoint:CGPointMake(ScreenWidth / 4 * 2.5, ScreenHeight - 49)  finishBlock:^(BOOL finish) {
+//               @LZY_strongify(self)
+//            NSInteger count = self.badgeView.badgeText.integerValue;
+//            self.badgeView.badgeText = [NSString stringWithFormat:@"%zi",++count];
+//        }];
     };
     return cell;
 }
@@ -93,7 +101,7 @@
 #pragma mark - Getter
 - (UITableView*)table{
     if(!_table){
-        _table = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, LZY_SCREEN_WIDTH, self.view.height - LZY_TAB_BAR_SAFE_BOTTOM_MARGIN) style:UITableViewStylePlain];
+        _table = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, LZY_SCREEN_WIDTH, LZY_SCREEN_HEIGHT - LZY_IPHONE_NAV_HEIGHT - LZY_TAB_BAR_SAFE_BOTTOM_MARGIN) style:UITableViewStylePlain];
         _table.backgroundColor = [UIColor whiteColor];
         _table.separatorStyle = UITableViewCellSeparatorStyleNone;
         _table.delegate = self;
@@ -133,7 +141,7 @@
         model4.price = @"5.99";
         model4.count = 2;
         
-        _dataArray = [NSMutableArray arrayWithArray:@[model1, model2, model3, model4]];
+        _dataArray = [NSMutableArray arrayWithArray:@[model1, model2, model3, model4, model1, model2, model3, model4]];
     }
     return _dataArray;
 }

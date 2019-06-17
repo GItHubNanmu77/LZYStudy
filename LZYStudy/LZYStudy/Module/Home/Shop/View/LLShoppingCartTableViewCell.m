@@ -189,7 +189,7 @@
     NSInteger count = self.countLabel.text.integerValue;
     if (sender == self.addButton) {
         count++;
-        !self.cellButtonBlock ? : self.cellButtonBlock(self.productImageView);
+        !self.cellButtonBlock ? : self.cellButtonBlock(sender);
     } else {
         count--;
     }
