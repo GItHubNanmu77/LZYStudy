@@ -26,9 +26,6 @@
 		4A08D67122800EF100A22E6C /* LZYCustomBaseNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A08D67022800EF100A22E6C /* LZYCustomBaseNavigationViewController.m */; };
 		4A08D6752280306000A22E6C /* LLPublishViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A08D6742280306000A22E6C /* LLPublishViewController.m */; };
 		4A08D6782281684E00A22E6C /* LLPublishDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A08D6772281684E00A22E6C /* LLPublishDetailViewController.m */; };
-		4A08D718228272CE00A22E6C /* YYNetworkingConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A08D6EF228272CE00A22E6C /* YYNetworkingConfig.m */; };
-		4A08D719228272CE00A22E6C /* YYNetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A08D6F0228272CE00A22E6C /* YYNetworkManager.m */; };
-		4A08D71A228272CE00A22E6C /* YYApiObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A08D6F1228272CE00A22E6C /* YYApiObject.m */; };
 		4A08D71F228272CE00A22E6C /* YTKNetworkConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A08D705228272CE00A22E6C /* YTKNetworkConfig.m */; };
 		4A08D720228272CE00A22E6C /* YTKChainRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A08D707228272CE00A22E6C /* YTKChainRequest.m */; };
 		4A08D721228272CE00A22E6C /* YTKNetworkPrivate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A08D70B228272CE00A22E6C /* YTKNetworkPrivate.m */; };
@@ -38,8 +35,6 @@
 		4A08D725228272CE00A22E6C /* YTKChainRequestAgent.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A08D714228272CE00A22E6C /* YTKChainRequestAgent.m */; };
 		4A08D726228272CE00A22E6C /* YTKBatchRequestAgent.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A08D715228272CE00A22E6C /* YTKBatchRequestAgent.m */; };
 		4A08D727228272CE00A22E6C /* YTKRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A08D717228272CE00A22E6C /* YTKRequest.m */; };
-		4A08D72D2282760E00A22E6C /* YYDatastore.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A08D72B2282760E00A22E6C /* YYDatastore.m */; };
-		4A08D72E2282760E00A22E6C /* YYDBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A08D72C2282760E00A22E6C /* YYDBManager.m */; };
 		4A08D7312282B28600A22E6C /* LZYBaseRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A08D7302282B28600A22E6C /* LZYBaseRequest.m */; };
 		4A091706228916870059FAD9 /* MBHUD_Success@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A0916FE228916870059FAD9 /* MBHUD_Success@2x.png */; };
 		4A091707228916870059FAD9 /* MBHUD_Info@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A0916FF228916870059FAD9 /* MBHUD_Info@3x.png */; };
@@ -275,13 +270,6 @@
 		4A08D6742280306000A22E6C /* LLPublishViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LLPublishViewController.m; sourceTree = "<group>"; };
 		4A08D6762281684E00A22E6C /* LLPublishDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LLPublishDetailViewController.h; sourceTree = "<group>"; };
 		4A08D6772281684E00A22E6C /* LLPublishDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LLPublishDetailViewController.m; sourceTree = "<group>"; };
-		4A08D6EF228272CE00A22E6C /* YYNetworkingConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYNetworkingConfig.m; sourceTree = "<group>"; };
-		4A08D6F0228272CE00A22E6C /* YYNetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYNetworkManager.m; sourceTree = "<group>"; };
-		4A08D6F1228272CE00A22E6C /* YYApiObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYApiObject.m; sourceTree = "<group>"; };
-		4A08D6F2228272CE00A22E6C /* YYNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYNetworking.h; sourceTree = "<group>"; };
-		4A08D6F3228272CE00A22E6C /* YYNetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYNetworkManager.h; sourceTree = "<group>"; };
-		4A08D6F4228272CE00A22E6C /* YYNetworkingConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYNetworkingConfig.h; sourceTree = "<group>"; };
-		4A08D6F5228272CE00A22E6C /* YYApiObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYApiObject.h; sourceTree = "<group>"; };
 		4A08D705228272CE00A22E6C /* YTKNetworkConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YTKNetworkConfig.m; sourceTree = "<group>"; };
 		4A08D706228272CE00A22E6C /* YTKBaseRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTKBaseRequest.h; sourceTree = "<group>"; };
 		4A08D707228272CE00A22E6C /* YTKChainRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YTKChainRequest.m; sourceTree = "<group>"; };
@@ -301,10 +289,6 @@
 		4A08D715228272CE00A22E6C /* YTKBatchRequestAgent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YTKBatchRequestAgent.m; sourceTree = "<group>"; };
 		4A08D716228272CE00A22E6C /* YTKNetworkPrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTKNetworkPrivate.h; sourceTree = "<group>"; };
 		4A08D717228272CE00A22E6C /* YTKRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YTKRequest.m; sourceTree = "<group>"; };
-		4A08D7292282760E00A22E6C /* YYDatastore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYDatastore.h; sourceTree = "<group>"; };
-		4A08D72A2282760E00A22E6C /* YYDBManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYDBManager.h; sourceTree = "<group>"; };
-		4A08D72B2282760E00A22E6C /* YYDatastore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYDatastore.m; sourceTree = "<group>"; };
-		4A08D72C2282760E00A22E6C /* YYDBManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYDBManager.m; sourceTree = "<group>"; };
 		4A08D72F2282B28600A22E6C /* LZYBaseRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LZYBaseRequest.h; sourceTree = "<group>"; };
 		4A08D7302282B28600A22E6C /* LZYBaseRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LZYBaseRequest.m; sourceTree = "<group>"; };
 		4A0916FE228916870059FAD9 /* MBHUD_Success@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MBHUD_Success@2x.png"; sourceTree = "<group>"; };
@@ -789,25 +773,9 @@
 			children = (
 				4A1098B522A79AE300C488BC /* FileNetwork */,
 				4A08D6F6228272CE00A22E6C /* NetManager */,
-				4A08D6EE228272CE00A22E6C /* NetworkingYYApiObject */,
 				4A08D6F9228272CE00A22E6C /* NetworkYTK */,
 			);
 			path = NetWorkTool;
-			sourceTree = "<group>";
-		};
-		4A08D6EE228272CE00A22E6C /* NetworkingYYApiObject */ = {
-			isa = PBXGroup;
-			children = (
-				4A08D7282282760E00A22E6C /* DB */,
-				4A08D6F5228272CE00A22E6C /* YYApiObject.h */,
-				4A08D6F1228272CE00A22E6C /* YYApiObject.m */,
-				4A08D6F2228272CE00A22E6C /* YYNetworking.h */,
-				4A08D6F4228272CE00A22E6C /* YYNetworkingConfig.h */,
-				4A08D6EF228272CE00A22E6C /* YYNetworkingConfig.m */,
-				4A08D6F3228272CE00A22E6C /* YYNetworkManager.h */,
-				4A08D6F0228272CE00A22E6C /* YYNetworkManager.m */,
-			);
-			path = NetworkingYYApiObject;
 			sourceTree = "<group>";
 		};
 		4A08D6F6228272CE00A22E6C /* NetManager */ = {
@@ -852,17 +820,6 @@
 				4A08D717228272CE00A22E6C /* YTKRequest.m */,
 			);
 			path = YTKNetwork;
-			sourceTree = "<group>";
-		};
-		4A08D7282282760E00A22E6C /* DB */ = {
-			isa = PBXGroup;
-			children = (
-				4A08D7292282760E00A22E6C /* YYDatastore.h */,
-				4A08D72B2282760E00A22E6C /* YYDatastore.m */,
-				4A08D72A2282760E00A22E6C /* YYDBManager.h */,
-				4A08D72C2282760E00A22E6C /* YYDBManager.m */,
-			);
-			path = DB;
 			sourceTree = "<group>";
 		};
 		4A0916F5228915B10059FAD9 /* Utils */ = {
@@ -1938,7 +1895,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4A08D71A228272CE00A22E6C /* YYApiObject.m in Sources */,
 				4ABCE3E1228E492B00676337 /* JXCategoryTitleImageCellModel.m in Sources */,
 				4ABCE364228D66AF00676337 /* SDQZEncryptUtils.m in Sources */,
 				4A0713EA2293CE0C00F658D2 /* GCDGroup.m in Sources */,
@@ -2036,14 +1992,12 @@
 				4ABCE3E9228E492B00676337 /* JXCategoryNumberCell.m in Sources */,
 				4ADD35382297D3D7000AC344 /* NSArray+QTSafe.m in Sources */,
 				4A0917572289548A0059FAD9 /* MBProgressHUD+XY.m in Sources */,
-				4A08D72D2282760E00A22E6C /* YYDatastore.m in Sources */,
 				4AFE35B02269A52B003120DC /* AppDelegate.m in Sources */,
 				4ABCE3DD228E492B00676337 /* JXCategoryDotView.m in Sources */,
 				4ADD35462297D3D7000AC344 /* NSMutableSet+QTSafe.m in Sources */,
 				4A0917A9228C01DC0059FAD9 /* UIButton+FitStyle.m in Sources */,
 				4A3E35572269BD7800C4C96B /* NSTimer+BlocksKit.m in Sources */,
 				4A803298229E1EFA0054ACCE /* FPSLabel.m in Sources */,
-				4A08D72E2282760E00A22E6C /* YYDBManager.m in Sources */,
 				4ABCE3EA228E492B00676337 /* JXCategoryNumberCellModel.m in Sources */,
 				4A3E35D32269CC3700C4C96B /* NSString+Modify.m in Sources */,
 				4ABCE3D7228E492B00676337 /* JXCategoryIndicatorDotLineView.m in Sources */,
@@ -2060,7 +2014,6 @@
 				4ABCE3CF228E492B00676337 /* JXCategoryTitleVerticalZoomCell.m in Sources */,
 				4ADD35412297D3D7000AC344 /* UIApplication+QTSafe.m in Sources */,
 				4A1098BD22A79DE000C488BC /* NetManager.m in Sources */,
-				4A08D718228272CE00A22E6C /* YYNetworkingConfig.m in Sources */,
 				4ABCE3E5228E492B00676337 /* JXCategoryImageView.m in Sources */,
 				4ABCE3DB228E492B00676337 /* JXCategoryIndicatorView.m in Sources */,
 				4ABCE3E7228E492B00676337 /* JXCategoryImageCellModel.m in Sources */,
@@ -2074,7 +2027,6 @@
 				4ABCE3D9228E492B00676337 /* JXCategoryIndicatorCellModel.m in Sources */,
 				4ABCE3DF228E492B00676337 /* JXCategoryTitleImageView.m in Sources */,
 				4A3E355D2269BD7800C4C96B /* UIPopoverController+BlocksKit.m in Sources */,
-				4A08D719228272CE00A22E6C /* YYNetworkManager.m in Sources */,
 				4ABCE3CD228E492B00676337 /* JXPagerListRefreshView.m in Sources */,
 				4A5172FF22B382DC00CE8203 /* LLShoppingCartTableViewCell.m in Sources */,
 				4ABCE3DA228E492B00676337 /* JXCategoryIndicatorCell.m in Sources */,
