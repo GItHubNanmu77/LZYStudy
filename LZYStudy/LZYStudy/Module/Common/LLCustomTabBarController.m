@@ -15,7 +15,9 @@
 #import "LLPublishViewController.h"
 #import "LZYCustomBaseNavigationViewController.h"
 
-
+#import "LLShopListViewController.h"
+#import "LLLayoutListViewController.h"
+#import "LLAnimationListViewController.h"
 
 @interface LLCustomTabBarController ()
 
@@ -53,18 +55,21 @@
  */
 - (void)setupViewControllers {
     // 首页
-    LLHomeViewController *homeVC = [[LLHomeViewController alloc] init];
+//    LLHomeViewController *homeVC = [[LLHomeViewController alloc] init];
+    LLShopListViewController *homeVC = [[LLShopListViewController alloc] init];
     LZYCustomBaseNavigationViewController *homeNav = [[LZYCustomBaseNavigationViewController alloc] initWithRootViewController:homeVC];
     [homeNav showFPSLable];
     
     // 消息
-    LLMessageViewController *messageVC = [[LLMessageViewController alloc] init];
+//    LLMessageViewController *messageVC = [[LLMessageViewController alloc] init];
+    LLLayoutListViewController *messageVC = [[LLLayoutListViewController alloc] init];
     LZYCustomBaseNavigationViewController *messageNav = [[LZYCustomBaseNavigationViewController alloc] initWithRootViewController:messageVC];
     [messageNav showFPSLable];
     
     // 动态
-    LLDynamicViewController *dynamicVC = [[LLDynamicViewController alloc] init];
-    LZYCustomBaseNavigationViewController *dynanmicNav = [[LZYCustomBaseNavigationViewController alloc] initWithRootViewController:dynamicVC];
+//    LLDynamicViewController *dynanmicVC = [[LLDynamicViewController alloc] init];
+    LLAnimationListViewController *dynanmicVC = [[LLAnimationListViewController alloc] init];
+    LZYCustomBaseNavigationViewController *dynanmicNav = [[LZYCustomBaseNavigationViewController alloc] initWithRootViewController:dynanmicVC];
     [dynanmicNav showFPSLable];
     
     // 我的

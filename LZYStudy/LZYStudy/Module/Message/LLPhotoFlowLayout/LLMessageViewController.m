@@ -11,6 +11,7 @@
 #import "LZYSheetAlertManager.h"
 #import "LLMessagePhotoCollectionViewCell.h"
 #import "LLPhotosWaterFlowLayout.h"
+#import <TZImagePickerController/TZImagePickerController.h>
 
 @interface LLMessageViewController () <UICollectionViewDelegate, UICollectionViewDataSource, UINavigationControllerDelegate, UIImagePickerControllerDelegate, TZImagePickerControllerDelegate,  WaterFlowLayoutDelegate>
 
