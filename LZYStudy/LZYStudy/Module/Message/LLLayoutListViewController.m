@@ -10,6 +10,8 @@
 
 #import "LLDynamicViewController.h"
 #import "LLMessageViewController.h"
+#import "LLDragViewController.h"
+#import "LLCardViewController.h"
 
 @interface LLLayoutListViewController () <UITableViewDelegate, UITableViewDataSource>
 
@@ -70,9 +72,13 @@
         vc.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:vc animated:YES];
     } else if (indexPath.row == 2) {
-//        LLShoppingCartViewController *vc = [[LLShoppingCartViewController alloc]init];
-//        vc.hidesBottomBarWhenPushed = YES;
-//        [self.navigationController pushViewController:vc animated:YES];
+        LLDragViewController *vc = [[LLDragViewController alloc]init];
+        vc.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:vc animated:YES];
+    } else if (indexPath.row == 3) {
+        LLCardViewController *vc = [[LLCardViewController alloc]init];
+        vc.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:vc animated:YES];
     }
 }
 
@@ -93,6 +99,8 @@
         _dataArray = [NSMutableArray array];
         [_dataArray addObject:@"横竖变化布局"];
         [_dataArray addObject:@"图片流水布局"];
+        [_dataArray addObject:@"拖动排序"];
+        [_dataArray addObject:@"中心卡片放大"];
     }
     return _dataArray;
 }
