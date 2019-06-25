@@ -134,6 +134,8 @@
 		4A4937CC22C1B60000FA24F9 /* 3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4A4937B822C1B60000FA24F9 /* 3.jpg */; };
 		4A4937CD22C1B60000FA24F9 /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4A4937B922C1B60000FA24F9 /* 1.jpg */; };
 		4A4937CE22C1B60000FA24F9 /* 0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4A4937BA22C1B60000FA24F9 /* 0.jpg */; };
+		4A4937D122C1F57C00FA24F9 /* LLPileCardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A4937D022C1F57C00FA24F9 /* LLPileCardView.m */; };
+		4A4937D522C1F5C400FA24F9 /* LLPileCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A4937D422C1F5C300FA24F9 /* LLPileCardViewController.m */; };
 		4A5172EF22B32C9A00CE8203 /* LLCategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A5172EE22B32C9A00CE8203 /* LLCategoryViewController.m */; };
 		4A5172F222B3432A00CE8203 /* LLCategoryDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A5172F122B3432A00CE8203 /* LLCategoryDetailViewController.m */; };
 		4A5172F922B3460500CE8203 /* LLCategoryDetailTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A5172F822B3460500CE8203 /* LLCategoryDetailTableViewCell.m */; };
@@ -496,6 +498,10 @@
 		4A4937B822C1B60000FA24F9 /* 3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 3.jpg; sourceTree = "<group>"; };
 		4A4937B922C1B60000FA24F9 /* 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpg; sourceTree = "<group>"; };
 		4A4937BA22C1B60000FA24F9 /* 0.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 0.jpg; sourceTree = "<group>"; };
+		4A4937CF22C1F57C00FA24F9 /* LLPileCardView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LLPileCardView.h; sourceTree = "<group>"; };
+		4A4937D022C1F57C00FA24F9 /* LLPileCardView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LLPileCardView.m; sourceTree = "<group>"; };
+		4A4937D322C1F5C300FA24F9 /* LLPileCardViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LLPileCardViewController.h; sourceTree = "<group>"; };
+		4A4937D422C1F5C300FA24F9 /* LLPileCardViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LLPileCardViewController.m; sourceTree = "<group>"; };
 		4A5172ED22B32C9A00CE8203 /* LLCategoryViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LLCategoryViewController.h; sourceTree = "<group>"; };
 		4A5172EE22B32C9A00CE8203 /* LLCategoryViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LLCategoryViewController.m; sourceTree = "<group>"; };
 		4A5172F022B3432A00CE8203 /* LLCategoryDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LLCategoryDetailViewController.h; sourceTree = "<group>"; };
@@ -831,6 +837,7 @@
 			children = (
 				4A2BD22822BB210C0047E370 /* LLLayoutListViewController.h */,
 				4A2BD22922BB210C0047E370 /* LLLayoutListViewController.m */,
+				4A4937D222C1F58700FA24F9 /* LLPileCardView */,
 				4A2BD22C22BB23450047E370 /* LLChangeLayout */,
 				4A2BD22B22BB230F0047E370 /* LLPhotoFlowLayout */,
 				4A2BD24422C0AEBB0047E370 /* LLDragViewController */,
@@ -1318,6 +1325,17 @@
 				4A4937BA22C1B60000FA24F9 /* 0.jpg */,
 			);
 			path = images;
+			sourceTree = "<group>";
+		};
+		4A4937D222C1F58700FA24F9 /* LLPileCardView */ = {
+			isa = PBXGroup;
+			children = (
+				4A4937D322C1F5C300FA24F9 /* LLPileCardViewController.h */,
+				4A4937D422C1F5C300FA24F9 /* LLPileCardViewController.m */,
+				4A4937CF22C1F57C00FA24F9 /* LLPileCardView.h */,
+				4A4937D022C1F57C00FA24F9 /* LLPileCardView.m */,
+			);
+			path = LLPileCardView;
 			sourceTree = "<group>";
 		};
 		4A5172F422B3459100CE8203 /* Shop */ = {
@@ -2249,6 +2267,7 @@
 				4A803298229E1EFA0054ACCE /* FPSLabel.m in Sources */,
 				4ABCE3EA228E492B00676337 /* JXCategoryNumberCellModel.m in Sources */,
 				4A3E35D32269CC3700C4C96B /* NSString+Modify.m in Sources */,
+				4A4937D522C1F5C400FA24F9 /* LLPileCardViewController.m in Sources */,
 				4ABCE3D7228E492B00676337 /* JXCategoryIndicatorDotLineView.m in Sources */,
 				4ABCE3D1228E492B00676337 /* JXCategoryIndicatorLineView.m in Sources */,
 				4A0713EB2293CE0C00F658D2 /* GCDSemaphore.m in Sources */,
@@ -2309,6 +2328,7 @@
 				4ADD35402297D3D7000AC344 /* NSNumber+QTSafe.m in Sources */,
 				4ABCE3EE228E492B00676337 /* JXCategoryIndicatorParamsModel.m in Sources */,
 				4A2BD22322BB1DDC0047E370 /* LLAnimationListViewController.m in Sources */,
+				4A4937D122C1F57C00FA24F9 /* LLPileCardView.m in Sources */,
 				4ADD353C2297D3D7000AC344 /* NSDictionary+QTSafe.m in Sources */,
 				4ADD353A2297D3D7000AC344 /* NSException+QTSafe.m in Sources */,
 				4ABCE3DC228E492B00676337 /* JXCategoryDotCell.m in Sources */,

@@ -12,6 +12,7 @@
 #import "LLMessageViewController.h"
 #import "LLDragViewController.h"
 #import "LLCardViewController.h"
+#import "LLPileCardViewController.h"
 
 @interface LLLayoutListViewController () <UITableViewDelegate, UITableViewDataSource>
 
@@ -79,6 +80,10 @@
         LLCardViewController *vc = [[LLCardViewController alloc]init];
         vc.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:vc animated:YES];
+    } else if (indexPath.row == 4) {
+        LLPileCardViewController *vc = [[LLPileCardViewController alloc]init];
+        vc.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:vc animated:YES];
     }
 }
 
@@ -101,6 +106,7 @@
         [_dataArray addObject:@"图片流水布局"];
         [_dataArray addObject:@"拖动排序"];
         [_dataArray addObject:@"中心卡片放大"];
+        [_dataArray addObject:@"层叠卡片滑动"];
     }
     return _dataArray;
 }
