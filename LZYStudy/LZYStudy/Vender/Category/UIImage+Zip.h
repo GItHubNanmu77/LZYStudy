@@ -121,14 +121,14 @@
  
  @return <#return value description#>
  */
-- (UIImage *)addroundCorner;
+- (UIImage *)addRoundCorner;
 
 /**
  根据图片生成圆形图(UIBezierPath+Core Graphics)
  
  @return <#return value description#>
  */
-- (UIImage *)addRoundCornerByBezierPath;
+- (UIImage *)addRoundCornerWithBezierPath;
 
 /**
  根据图片生成圆形图：可设置圆角半径

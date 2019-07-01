@@ -82,6 +82,7 @@ typedef void (*_VIMP)(id, SEL, ...);
                                        class_getInstanceMethod(self.class, @selector(swiz_dealloc)));
     });
 }
+
 - (void)swiz_viewWillAppear:(BOOL)animated{
     [self swiz_viewWillAppear:animated];
 #if defined(DEBUG)
@@ -92,6 +93,7 @@ typedef void (*_VIMP)(id, SEL, ...);
 - (void)swiz_viewWillDisappear:(BOOL)animated{
     [self swiz_viewWillDisappear:animated];
 }
+
 - (void)swiz_viewDidLoad{
     
 }

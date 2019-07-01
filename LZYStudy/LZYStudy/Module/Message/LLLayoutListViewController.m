@@ -30,6 +30,11 @@
     self.view.backgroundColor = [UIColor cyanColor];
     [self initSubviews];
     
+    NSMutableArray *arr = [NSMutableArray array];
+    for (int i=0; i<1000; i++) {
+        UIImage *ima = [UIImage imageNamed:@"Tips_Error"];
+        [arr addObject:ima];
+    }
 }
 
 - (void)initSubviews {

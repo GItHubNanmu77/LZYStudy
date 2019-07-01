@@ -29,8 +29,11 @@
     if (isLogin){
         LLCustomTabBarController *tabVC = [[LLCustomTabBarController alloc] init];
         self.tabVC = tabVC;
+        self.tabVC.selectedIndex = 1;
         self.tabVC.delegate = self;
         self.window.rootViewController = self.tabVC;
+//        self.tabVC.selectedIndex = 0;
+        [self performSelector:@selector(selectFirstIndex) withObject:nil afterDelay:0];
     } else {
         LLLoginViewController *loginVC = [[LLLoginViewController alloc] init];
         LZYCustomBaseNavigationViewController *loginNav = [[LZYCustomBaseNavigationViewController alloc] initWithRootViewController:loginVC];
@@ -38,6 +41,7 @@
     }
    
     [self.window makeKeyAndVisible];
+    
     if (@available(iOS 10.0, *)) {
         [self receiveNotificationWithOptions:launchOptions];
     } else {
@@ -52,6 +56,10 @@
     transition.type = kCATransitionFade;
     //apply transition to tab bar controller's view
     [self.tabVC.view.layer addAnimation:transition forKey:nil];
+}
+
+- (void)selectFirstIndex {
+    self.tabVC.selectedIndex = 0;
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

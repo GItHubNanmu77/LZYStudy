@@ -40,7 +40,9 @@
     if (!view) {
         imageView = [[UIImageView alloc] initWithFrame:cards.bounds];
         NSString *name = [NSString stringWithFormat:@"%ld.jpg",(long)index];
-        imageView.image = [UIImage imageNamed:name];
+//        imageView.image = [UIImage imageNamed:name]; //花费时间 155ms
+        NSString *filePath = [[NSBundle mainBundle]pathForResource:name ofType:nil];
+        imageView.image = [UIImage imageWithContentsOfFile:filePath];//时间 2.0ms
         imageView.contentMode = UIViewContentModeScaleAspectFill;
         imageView.clipsToBounds = YES;
     }

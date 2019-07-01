@@ -127,7 +127,9 @@
         _dataArray = [NSMutableArray array];
         for (int i=0; i<20; i++) {
             NSString *name = [NSString stringWithFormat:@"%d.jpg",i];
-            UIImage *img = [UIImage imageNamed:name];
+            NSString *filePath = [[NSBundle mainBundle] pathForResource:name ofType:nil];
+            UIImage *img = [UIImage imageWithContentsOfFile:filePath];
+//            UIImage *img = [UIImage imageNamed:name];
             [_dataArray addObject:img];
         }
     }
