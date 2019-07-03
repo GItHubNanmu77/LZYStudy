@@ -82,6 +82,7 @@
 		4A1098BD22A79DE000C488BC /* NetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A1098BC22A79DE000C488BC /* NetManager.m */; };
 		4A1098FE22A8AD0500C488BC /* LLMessagePhotoCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A1098FD22A8AD0500C488BC /* LLMessagePhotoCollectionViewCell.m */; };
 		4A10990122A8AFAC00C488BC /* LLPhotosWaterFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A10990022A8AFAC00C488BC /* LLPhotosWaterFlowLayout.m */; };
+		4A13312222CC9D3600AE3EF1 /* LLFaceSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A13312122CC9D3600AE3EF1 /* LLFaceSecondViewController.m */; };
 		4A2BD22322BB1DDC0047E370 /* LLAnimationListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A2BD22222BB1DDC0047E370 /* LLAnimationListViewController.m */; };
 		4A2BD22722BB20480047E370 /* LLShopListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A2BD22622BB20480047E370 /* LLShopListViewController.m */; };
 		4A2BD22A22BB210C0047E370 /* LLLayoutListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A2BD22922BB210C0047E370 /* LLLayoutListViewController.m */; };
@@ -416,6 +417,8 @@
 		4A1098FD22A8AD0500C488BC /* LLMessagePhotoCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LLMessagePhotoCollectionViewCell.m; sourceTree = "<group>"; };
 		4A1098FF22A8AFAC00C488BC /* LLPhotosWaterFlowLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LLPhotosWaterFlowLayout.h; sourceTree = "<group>"; };
 		4A10990022A8AFAC00C488BC /* LLPhotosWaterFlowLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LLPhotosWaterFlowLayout.m; sourceTree = "<group>"; };
+		4A13312022CC9D3600AE3EF1 /* LLFaceSecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LLFaceSecondViewController.h; sourceTree = "<group>"; };
+		4A13312122CC9D3600AE3EF1 /* LLFaceSecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LLFaceSecondViewController.m; sourceTree = "<group>"; };
 		4A2BD22122BB1DDC0047E370 /* LLAnimationListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LLAnimationListViewController.h; sourceTree = "<group>"; };
 		4A2BD22222BB1DDC0047E370 /* LLAnimationListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LLAnimationListViewController.m; sourceTree = "<group>"; };
 		4A2BD22522BB20480047E370 /* LLShopListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LLShopListViewController.h; sourceTree = "<group>"; };
@@ -828,6 +831,8 @@
 				4A08D66522800DA400A22E6C /* LLMineViewController.m */,
 				4A80328C229CD54B0054ACCE /* LLPdfReaderViewController.h */,
 				4A80328D229CD54B0054ACCE /* LLPdfReaderViewController.m */,
+				4A13312022CC9D3600AE3EF1 /* LLFaceSecondViewController.h */,
+				4A13312122CC9D3600AE3EF1 /* LLFaceSecondViewController.m */,
 			);
 			path = Mine;
 			sourceTree = "<group>";
@@ -2277,6 +2282,7 @@
 				4A0917E2228C18780059FAD9 /* SVIndefiniteAnimatedView.m in Sources */,
 				4A51730622B3995C00CE8203 /* PurchaseCarAnimationTool.m in Sources */,
 				4A1098FE22A8AD0500C488BC /* LLMessagePhotoCollectionViewCell.m in Sources */,
+				4A13312222CC9D3600AE3EF1 /* LLFaceSecondViewController.m in Sources */,
 				4A51736722B8D41F00CE8203 /* YYDBManager.m in Sources */,
 				4A091751228943D90059FAD9 /* SandBoxHelper.m in Sources */,
 				4A1098A822A7495E00C488BC /* LLCenterDetailPostRequest.m in Sources */,

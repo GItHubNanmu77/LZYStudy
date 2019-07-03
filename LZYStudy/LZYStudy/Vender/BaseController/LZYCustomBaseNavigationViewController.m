@@ -82,7 +82,7 @@
 
 - (FPSLabel *)lb_fps {
     if (!_lb_fps) {
-        _lb_fps = [[FPSLabel alloc] initWithFrame:CGRectMake(0, 0, 80, 40)];
+        _lb_fps = [[FPSLabel alloc] initWithFrame:CGRectMake(60, 0, 80, 40)];
         [self.view addSubview:_lb_fps];
     }
     return _lb_fps;

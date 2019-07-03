@@ -15,6 +15,8 @@
 #import <UserNotifications/UserNotifications.h>
 #import "LZYDeviceUtils.h"
 
+#import "LLFaceSecondViewController.h"
+
 @interface LLMineViewController ()
 @property (nonatomic, strong) UIButton *loginButton;
 @property (nonatomic, strong) UIButton *nextButton;
@@ -85,12 +87,12 @@
             button.layer.cornerRadius = 4;
             [button bk_addEventHandler:^(id sender) {
                 @LZY_strongify(self)
-//                LLPdfReaderViewController *vc = [[LLPdfReaderViewController alloc] init];
-//                vc.hidesBottomBarWhenPushed = YES;
-//                [self.navigationController pushViewController:vc animated:YES];
-                dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-                    [self checkUserNotificationEnable];
-                });
+                LLFaceSecondViewController *vc = [[LLFaceSecondViewController alloc] init];
+                vc.hidesBottomBarWhenPushed = YES;
+                [self.navigationController pushViewController:vc animated:YES];
+//                dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+//                    [self checkUserNotificationEnable];
+//                });
                 
             } forControlEvents:UIControlEventTouchUpInside];
             button;
