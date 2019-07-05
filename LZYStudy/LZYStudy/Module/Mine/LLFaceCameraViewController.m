@@ -1,15 +1,16 @@
 //
-//  LLFaceSecondViewController.m
+//  LLFaceCameraViewController.m
 //  LZYStudy
 //
 //  Created by cisdi on 2019/7/3.
 //  Copyright © 2019 lzy. All rights reserved.
 //
 
-#import "LLFaceSecondViewController.h"
+#import "LLFaceCameraViewController.h"
 #import <AVFoundation/AVFoundation.h>
+#import "LZYSheetAlertManager.h"
 
-@interface LLFaceSecondViewController ()<AVCaptureMetadataOutputObjectsDelegate, AVCaptureVideoDataOutputSampleBufferDelegate>
+@interface LLFaceCameraViewController ()<AVCaptureMetadataOutputObjectsDelegate, AVCaptureVideoDataOutputSampleBufferDelegate>
 //捕捉会话
 @property(nonatomic,strong)AVCaptureSession *captureSession;
 @property (nonatomic, strong) AVCaptureDeviceInput *input;
@@ -28,14 +29,27 @@
 
 @end
 
-@implementation LLFaceSecondViewController
+@implementation LLFaceCameraViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-      _isFirst = YES;
-    [self startReading];
+    self.view.backgroundColor = [UIColor whiteColor];
     
+    if (TARGET_IPHONE_SIMULATOR == 1 && TARGET_OS_IPHONE == 1) {
+        //模拟器
+        [[LZYSheetAlertManager sharedLZYSheetAlertManager] showAlert:self title:@"相机不支持模拟器" message:@"请切换到真机调试" handlerConfirmAction:^{
+            [self.navigationController popViewControllerAnimated:YES];
+        }];
+    }else{
+        //真机
+        _isFirst = YES;
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self startReading];
+        });
+        
+    }
+
     [self.view addSubview:self.changeButton];
     [self.view addSubview:self.faceImageView];
     [self.view bringSubviewToFront:self.faceImageView];
@@ -92,8 +106,8 @@
     }
     //3.创建媒体数据输出流
     AVCaptureMetadataOutput *captureMetadataOutput = [[AVCaptureMetadataOutput alloc] init];
-    //创建数据输出流
     
+    //创建数据输出流
     AVCaptureVideoDataOutput *dataOutput = [[AVCaptureVideoDataOutput alloc] init];
     dataOutput.alwaysDiscardsLateVideoFrames = YES;
 //     dispatch_queue_t mainQueue = dispatch_get_main_queue();
@@ -323,7 +337,7 @@
                 //这个布尔值用于判断检测到人脸后，获取到人脸照片，不用再进行持续检测
                 if (_isFirst) {
                     //因为刚开始扫描到的人脸是模糊照片，所以延迟几秒获取
-                    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
                         @LZY_strongify(self)
                         CGImageRef cgImageRef = [temporaryContext createCGImage:ciImage fromRect:faceFeature.bounds];
                         
