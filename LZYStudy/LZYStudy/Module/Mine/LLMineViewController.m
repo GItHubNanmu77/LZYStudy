@@ -16,6 +16,8 @@
 #import "LLPdfReaderViewController.h"
 #import "LLFaceCameraViewController.h"
 #import "LLFaceImageViewController.h"
+#import "LLFolderViewController.h"
+#import "LLTipView.h"
 
 #import "LZYDeviceUtils.h"
 
@@ -94,6 +96,12 @@
         LLFaceImageViewController *vc = [[LLFaceImageViewController alloc] init];
         vc.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:vc animated:YES];
+    } else if (indexPath.row == 4){
+        LLTipView *tipView = [[LLTipView alloc] initWithFrame:CGRectMake(100, 100, 200, 200)];
+        [tipView show];
+    } else {
+        LLFolderViewController *vc = [[LLFolderViewController alloc] init];
+        [self.navigationController pushViewController:vc animated:YES];
     }
 }
 
@@ -125,10 +133,11 @@
         [_dataArray addObject:@"PDF阅读器"];
         [_dataArray addObject:@"人脸识别AVFoundation"];
         [_dataArray addObject:@"人脸识别CoreImage"];
+        [_dataArray addObject:@"弹出view"];
+        [_dataArray addObject:@"展开折叠label"];
     }
     return _dataArray;
 }
-
 
 - (UIButton *)loginButton {
     if (!_loginButton) {

@@ -85,6 +85,7 @@
 		4A13312222CC9D3600AE3EF1 /* LLFaceCameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A13312122CC9D3600AE3EF1 /* LLFaceCameraViewController.m */; };
 		4A13312522CD941700AE3EF1 /* LLFaceImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A13312422CD941700AE3EF1 /* LLFaceImageViewController.m */; };
 		4A13312722CDA20C00AE3EF1 /* 我用苍老疼爱你.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4A13312622CDA20C00AE3EF1 /* 我用苍老疼爱你.jpg */; };
+		4A13317C22D5B55C00AE3EF1 /* LLTipView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A13317A22D5B55B00AE3EF1 /* LLTipView.m */; };
 		4A2BD22322BB1DDC0047E370 /* LLAnimationListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A2BD22222BB1DDC0047E370 /* LLAnimationListViewController.m */; };
 		4A2BD22722BB20480047E370 /* LLShopListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A2BD22622BB20480047E370 /* LLShopListViewController.m */; };
 		4A2BD22A22BB210C0047E370 /* LLLayoutListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A2BD22922BB210C0047E370 /* LLLayoutListViewController.m */; };
@@ -242,6 +243,7 @@
 		4AF29CF22277E10B00622BC2 /* LZYConfirmView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AF29CF12277E10B00622BC2 /* LZYConfirmView.m */; };
 		4AF29CF82277FC2900622BC2 /* CustomTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AF29CF72277FC2900622BC2 /* CustomTabBar.m */; };
 		4AF29CFB22781E1700622BC2 /* LZYCustomBaseTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AF29CFA22781E1700622BC2 /* LZYCustomBaseTabBarController.m */; };
+		4AF8A6B122E00384005C8E3E /* LLFolderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AF8A6B022E00384005C8E3E /* LLFolderViewController.m */; };
 		4AFE35B02269A52B003120DC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AFE35AF2269A52B003120DC /* AppDelegate.m */; };
 		4AFE35B32269A52B003120DC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AFE35B22269A52B003120DC /* ViewController.m */; };
 		4AFE35B62269A52B003120DC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AFE35B42269A52B003120DC /* Main.storyboard */; };
@@ -424,6 +426,8 @@
 		4A13312322CD941700AE3EF1 /* LLFaceImageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LLFaceImageViewController.h; sourceTree = "<group>"; };
 		4A13312422CD941700AE3EF1 /* LLFaceImageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LLFaceImageViewController.m; sourceTree = "<group>"; };
 		4A13312622CDA20C00AE3EF1 /* 我用苍老疼爱你.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "我用苍老疼爱你.jpg"; sourceTree = "<group>"; };
+		4A13317A22D5B55B00AE3EF1 /* LLTipView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLTipView.m; sourceTree = "<group>"; };
+		4A13317B22D5B55C00AE3EF1 /* LLTipView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLTipView.h; sourceTree = "<group>"; };
 		4A2BD22122BB1DDC0047E370 /* LLAnimationListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LLAnimationListViewController.h; sourceTree = "<group>"; };
 		4A2BD22222BB1DDC0047E370 /* LLAnimationListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LLAnimationListViewController.m; sourceTree = "<group>"; };
 		4A2BD22522BB20480047E370 /* LLShopListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LLShopListViewController.h; sourceTree = "<group>"; };
@@ -713,6 +717,8 @@
 		4AF29CF72277FC2900622BC2 /* CustomTabBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomTabBar.m; sourceTree = "<group>"; };
 		4AF29CF922781E1700622BC2 /* LZYCustomBaseTabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LZYCustomBaseTabBarController.h; sourceTree = "<group>"; };
 		4AF29CFA22781E1700622BC2 /* LZYCustomBaseTabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LZYCustomBaseTabBarController.m; sourceTree = "<group>"; };
+		4AF8A6AF22E00384005C8E3E /* LLFolderViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LLFolderViewController.h; sourceTree = "<group>"; };
+		4AF8A6B022E00384005C8E3E /* LLFolderViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LLFolderViewController.m; sourceTree = "<group>"; };
 		4AFE35AB2269A52B003120DC /* LZYStudy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LZYStudy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AFE35AE2269A52B003120DC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		4AFE35AF2269A52B003120DC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -834,12 +840,16 @@
 			children = (
 				4A08D66422800DA400A22E6C /* LLMineViewController.h */,
 				4A08D66522800DA400A22E6C /* LLMineViewController.m */,
+				4A13317B22D5B55C00AE3EF1 /* LLTipView.h */,
+				4A13317A22D5B55B00AE3EF1 /* LLTipView.m */,
 				4A80328C229CD54B0054ACCE /* LLPdfReaderViewController.h */,
 				4A80328D229CD54B0054ACCE /* LLPdfReaderViewController.m */,
 				4A13312022CC9D3600AE3EF1 /* LLFaceCameraViewController.h */,
 				4A13312122CC9D3600AE3EF1 /* LLFaceCameraViewController.m */,
 				4A13312322CD941700AE3EF1 /* LLFaceImageViewController.h */,
 				4A13312422CD941700AE3EF1 /* LLFaceImageViewController.m */,
+				4AF8A6AF22E00384005C8E3E /* LLFolderViewController.h */,
+				4AF8A6B022E00384005C8E3E /* LLFolderViewController.m */,
 				4A13312622CDA20C00AE3EF1 /* 我用苍老疼爱你.jpg */,
 			);
 			path = Mine;
@@ -2219,6 +2229,7 @@
 				4ADD35372297D3D7000AC344 /* NSMutableArray+QTSafe.m in Sources */,
 				4ABCE3D0228E492B00676337 /* JXCategoryTitleVerticalZoomView.m in Sources */,
 				4A0917DF228C18780059FAD9 /* SVRadialGradientLayer.m in Sources */,
+				4AF8A6B122E00384005C8E3E /* LLFolderViewController.m in Sources */,
 				4A08D71F228272CE00A22E6C /* YTKNetworkConfig.m in Sources */,
 				4ADD353B2297D3D7000AC344 /* NSOrderedSet+QTSafe.m in Sources */,
 				4A3E35B42269BD8800C4C96B /* UIImage+Zip.m in Sources */,
@@ -2327,6 +2338,7 @@
 				4ABCE3EF228E492B00676337 /* JXCategoryViewAnimator.m in Sources */,
 				4AF29C502276E9C700622BC2 /* NSString+Transfer.m in Sources */,
 				4A0917E1228C18780059FAD9 /* SVProgressHUD.m in Sources */,
+				4A13317C22D5B55C00AE3EF1 /* LLTipView.m in Sources */,
 				4ABCE363228D66AF00676337 /* MF_Base64Additions.m in Sources */,
 				4ADD353E2297D3D7000AC344 /* NSSet+QTSafe.m in Sources */,
 				4A08D724228272CE00A22E6C /* YTKNetworkAgent.m in Sources */,
