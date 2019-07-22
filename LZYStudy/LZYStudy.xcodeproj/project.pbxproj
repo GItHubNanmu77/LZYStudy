@@ -244,6 +244,7 @@
 		4AF29CF82277FC2900622BC2 /* CustomTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AF29CF72277FC2900622BC2 /* CustomTabBar.m */; };
 		4AF29CFB22781E1700622BC2 /* LZYCustomBaseTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AF29CFA22781E1700622BC2 /* LZYCustomBaseTabBarController.m */; };
 		4AF8A6B122E00384005C8E3E /* LLFolderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AF8A6B022E00384005C8E3E /* LLFolderViewController.m */; };
+		4AF8A73D22E58C24005C8E3E /* LZYSearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AF8A73C22E58C24005C8E3E /* LZYSearchBar.m */; };
 		4AFE35B02269A52B003120DC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AFE35AF2269A52B003120DC /* AppDelegate.m */; };
 		4AFE35B32269A52B003120DC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AFE35B22269A52B003120DC /* ViewController.m */; };
 		4AFE35B62269A52B003120DC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AFE35B42269A52B003120DC /* Main.storyboard */; };
@@ -719,6 +720,8 @@
 		4AF29CFA22781E1700622BC2 /* LZYCustomBaseTabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LZYCustomBaseTabBarController.m; sourceTree = "<group>"; };
 		4AF8A6AF22E00384005C8E3E /* LLFolderViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LLFolderViewController.h; sourceTree = "<group>"; };
 		4AF8A6B022E00384005C8E3E /* LLFolderViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LLFolderViewController.m; sourceTree = "<group>"; };
+		4AF8A73B22E58C24005C8E3E /* LZYSearchBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LZYSearchBar.h; sourceTree = "<group>"; };
+		4AF8A73C22E58C24005C8E3E /* LZYSearchBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LZYSearchBar.m; sourceTree = "<group>"; };
 		4AFE35AB2269A52B003120DC /* LZYStudy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LZYStudy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AFE35AE2269A52B003120DC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		4AFE35AF2269A52B003120DC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -1717,6 +1720,8 @@
 				4A0917AB228C12D00059FAD9 /* LZYURLImageView.m */,
 				4ABCE2E0228D555A00676337 /* LZYBaseTableViewCell.h */,
 				4ABCE2E1228D555A00676337 /* LZYBaseTableViewCell.m */,
+				4AF8A73B22E58C24005C8E3E /* LZYSearchBar.h */,
+				4AF8A73C22E58C24005C8E3E /* LZYSearchBar.m */,
 			);
 			path = BaseView;
 			sourceTree = "<group>";
@@ -2240,6 +2245,7 @@
 				4ADD354A2297D3D7000AC344 /* NSObject+QTKVOSafe.m in Sources */,
 				4A08D7312282B28600A22E6C /* LZYBaseRequest.m in Sources */,
 				4ABCE3FA228E657500676337 /* LLDynamicModel.m in Sources */,
+				4AF8A73D22E58C24005C8E3E /* LZYSearchBar.m in Sources */,
 				4A3E35612269BD7800C4C96B /* NSObject+A2BlockDelegate.m in Sources */,
 				4A0713EF2296232E00F658D2 /* LLWebViewController.m in Sources */,
 				4A3E35622269BD7800C4C96B /* A2DynamicDelegate.m in Sources */,
