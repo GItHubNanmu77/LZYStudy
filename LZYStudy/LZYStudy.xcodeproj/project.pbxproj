@@ -245,6 +245,9 @@
 		4AF29CFB22781E1700622BC2 /* LZYCustomBaseTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AF29CFA22781E1700622BC2 /* LZYCustomBaseTabBarController.m */; };
 		4AF8A6B122E00384005C8E3E /* LLFolderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AF8A6B022E00384005C8E3E /* LLFolderViewController.m */; };
 		4AF8A73D22E58C24005C8E3E /* LZYSearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AF8A73C22E58C24005C8E3E /* LZYSearchBar.m */; };
+		4AF8A7E322E6FB7B005C8E3E /* LLWeChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AF8A7E222E6FB7B005C8E3E /* LLWeChatViewController.m */; };
+		4AF8A7E622E7E032005C8E3E /* LLMiniAppViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AF8A7E522E7E032005C8E3E /* LLMiniAppViewController.m */; };
+		4AF8A7EA22E807E5005C8E3E /* SDEyeAnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AF8A7E822E807E5005C8E3E /* SDEyeAnimationView.m */; };
 		4AFE35B02269A52B003120DC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AFE35AF2269A52B003120DC /* AppDelegate.m */; };
 		4AFE35B32269A52B003120DC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AFE35B22269A52B003120DC /* ViewController.m */; };
 		4AFE35B62269A52B003120DC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AFE35B42269A52B003120DC /* Main.storyboard */; };
@@ -722,6 +725,12 @@
 		4AF8A6B022E00384005C8E3E /* LLFolderViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LLFolderViewController.m; sourceTree = "<group>"; };
 		4AF8A73B22E58C24005C8E3E /* LZYSearchBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LZYSearchBar.h; sourceTree = "<group>"; };
 		4AF8A73C22E58C24005C8E3E /* LZYSearchBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LZYSearchBar.m; sourceTree = "<group>"; };
+		4AF8A7E122E6FB7B005C8E3E /* LLWeChatViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LLWeChatViewController.h; sourceTree = "<group>"; };
+		4AF8A7E222E6FB7B005C8E3E /* LLWeChatViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LLWeChatViewController.m; sourceTree = "<group>"; };
+		4AF8A7E422E7E032005C8E3E /* LLMiniAppViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LLMiniAppViewController.h; sourceTree = "<group>"; };
+		4AF8A7E522E7E032005C8E3E /* LLMiniAppViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LLMiniAppViewController.m; sourceTree = "<group>"; };
+		4AF8A7E822E807E5005C8E3E /* SDEyeAnimationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDEyeAnimationView.m; sourceTree = "<group>"; };
+		4AF8A7E922E807E5005C8E3E /* SDEyeAnimationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDEyeAnimationView.h; sourceTree = "<group>"; };
 		4AFE35AB2269A52B003120DC /* LZYStudy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LZYStudy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AFE35AE2269A52B003120DC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		4AFE35AF2269A52B003120DC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -868,6 +877,7 @@
 				4A2BD22B22BB230F0047E370 /* LLPhotoFlowLayout */,
 				4A2BD24422C0AEBB0047E370 /* LLDragViewController */,
 				4A2BD24822C0CAEE0047E370 /* LLCardLayout */,
+				4AF8A7E022E6FB58005C8E3E /* LLWeChat */,
 			);
 			path = Message;
 			sourceTree = "<group>";
@@ -1768,6 +1778,27 @@
 			path = Common;
 			sourceTree = "<group>";
 		};
+		4AF8A7E022E6FB58005C8E3E /* LLWeChat */ = {
+			isa = PBXGroup;
+			children = (
+				4AF8A7E722E807E5005C8E3E /* EyeAnimationView */,
+				4AF8A7E122E6FB7B005C8E3E /* LLWeChatViewController.h */,
+				4AF8A7E222E6FB7B005C8E3E /* LLWeChatViewController.m */,
+				4AF8A7E422E7E032005C8E3E /* LLMiniAppViewController.h */,
+				4AF8A7E522E7E032005C8E3E /* LLMiniAppViewController.m */,
+			);
+			path = LLWeChat;
+			sourceTree = "<group>";
+		};
+		4AF8A7E722E807E5005C8E3E /* EyeAnimationView */ = {
+			isa = PBXGroup;
+			children = (
+				4AF8A7E922E807E5005C8E3E /* SDEyeAnimationView.h */,
+				4AF8A7E822E807E5005C8E3E /* SDEyeAnimationView.m */,
+			);
+			path = EyeAnimationView;
+			sourceTree = "<group>";
+		};
 		4AFE35A22269A52B003120DC = {
 			isa = PBXGroup;
 			children = (
@@ -2316,6 +2347,7 @@
 				4ADD35412297D3D7000AC344 /* UIApplication+QTSafe.m in Sources */,
 				4A1098BD22A79DE000C488BC /* NetManager.m in Sources */,
 				4ABCE3E5228E492B00676337 /* JXCategoryImageView.m in Sources */,
+				4AF8A7E622E7E032005C8E3E /* LLMiniAppViewController.m in Sources */,
 				4ABCE3DB228E492B00676337 /* JXCategoryIndicatorView.m in Sources */,
 				4ABCE3E7228E492B00676337 /* JXCategoryImageCellModel.m in Sources */,
 				4A1098B322A78EE900C488BC /* LVRecordTool.m in Sources */,
@@ -2323,6 +2355,7 @@
 				4ABCE3F0228E492B00676337 /* JXCategoryListCollectionContainerView.m in Sources */,
 				4A0917A0228ABE440059FAD9 /* LZYAuthorizationUtils.m in Sources */,
 				4AFE35F02269BA79003120DC /* UIView+Frame.m in Sources */,
+				4AF8A7EA22E807E5005C8E3E /* SDEyeAnimationView.m in Sources */,
 				4AF29C4D2276E63300622BC2 /* NSDate+Transfer.m in Sources */,
 				4A1098B822A79AE300C488BC /* AliOSSFileUploadUtil.m in Sources */,
 				4ABCE3D9228E492B00676337 /* JXCategoryIndicatorCellModel.m in Sources */,
@@ -2378,6 +2411,7 @@
 				4AF29CF22277E10B00622BC2 /* LZYConfirmView.m in Sources */,
 				4A3E35632269BD7800C4C96B /* NSObject+A2DynamicDelegate.m in Sources */,
 				4ABCE3E2228E492B00676337 /* JXCategoryTitleCellModel.m in Sources */,
+				4AF8A7E322E6FB7B005C8E3E /* LLWeChatViewController.m in Sources */,
 				4A0917E7228C18780059FAD9 /* XLImageViewer.m in Sources */,
 				4ABCE3F4228E492B00676337 /* JXCategoryBaseCellModel.m in Sources */,
 				4A0917E0228C18780059FAD9 /* SVProgressAnimatedView.m in Sources */,

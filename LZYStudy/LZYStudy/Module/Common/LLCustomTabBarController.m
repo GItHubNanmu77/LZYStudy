@@ -29,7 +29,7 @@
 
 
 - (void)dealloc {
-    [[NSNotificationCenter defaultCenter] removeObserver:self];
+    
 }
 
 - (void)viewDidLoad {
@@ -44,9 +44,7 @@
     // 设置自定义tabbar
     [self setupCustomizeTabBar];
     
-    
-    // 收到IM消息是否显示红点通知
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(refreshMessageRedDotNotification:) name:@"MESSAGE_REDDOT" object:nil];
+
 }
 
 #pragma mark - Private Method
