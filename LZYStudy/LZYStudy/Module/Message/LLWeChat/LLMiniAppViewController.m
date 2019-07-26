@@ -10,8 +10,9 @@
 
 @interface LLMiniAppViewController ()<UICollectionViewDelegate, UICollectionViewDataSource>
 @property (nonatomic, strong) NSMutableArray *dataSource;
-@property (nonatomic, strong) UICollectionView *collView;
+//@property (nonatomic, strong) UICollectionView *collView;
 @property (nonatomic, strong) UIView *vHeader;
+@property (nonatomic, assign) BOOL isHideCollView;
 
 @end
 
@@ -22,7 +23,7 @@
     
     self.title = @"小程序";
     
-    self.view.backgroundColor = RGB3(216);
+    self.view.backgroundColor = RGB3(255);
     [self.view addSubview:self.vHeader];
     
     [self.view addSubview:self.collView];
@@ -41,7 +42,8 @@
     UICollectionViewCell *cell = (UICollectionViewCell *)[collectionView dequeueReusableCellWithReuseIdentifier:@"UICollectionViewCell" forIndexPath:indexPath];
     
     UIImageView *imgView = [[UIImageView alloc] initWithFrame:CGRectMake(15, 15, cell.width-30, cell.height-30)];
-    imgView.backgroundColor = [UIColor redColor];
+    imgView.backgroundColor = RandomColor;
+    imgView.userInteractionEnabled = YES;
     [cell.contentView addSubview:imgView];
     return cell;
 }
@@ -54,15 +56,29 @@
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
     [collectionView deselectItemAtIndexPath:indexPath animated:YES];
+    NSLog(@"点击cell");
+}
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    NSLog(@"===%f",self.collView.contentOffset.y);
+    
+    if (self.collView.contentOffset.y > self.collView.contentSize.height - self.collView.height + 50) {
+        self.isHideCollView = YES;
+    }
 }
 
+-(void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
+    
+    if (self.hideCollViewBlock && self.isHideCollView) {
+        self.hideCollViewBlock();
+    }
+}
 
 - (UICollectionView*)collView{
     if (!_collView) {
         UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
         layout.minimumLineSpacing = 0;
         layout.minimumInteritemSpacing = 0;
-        _collView = [[UICollectionView alloc]initWithFrame:CGRectMake(0, -LZY_IPHONE_NAV_HEIGHT, LZY_SCREEN_WIDTH, LZY_SCREEN_HEIGHT - LZY_IPHONE_NAV_HEIGHT) collectionViewLayout:layout];
+        _collView = [[UICollectionView alloc]initWithFrame:CGRectMake(0, 0, LZY_SCREEN_WIDTH, LZY_SCREEN_HEIGHT - LZY_IPHONE_NAV_STATUS_HEIGHT * 2) collectionViewLayout:layout];
         [_collView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"UICollectionViewCell"];
         _collView.contentInset = UIEdgeInsetsMake(0, 0, 0, 0);
         _collView.backgroundColor = RGB3(216);
@@ -75,7 +91,7 @@
 - (NSMutableArray *)dataSource {
     if (!_dataSource) {
         _dataSource = [NSMutableArray array];
-        for (int i = 0;i < 10 ; i++) {
+        for (int i = 0;i < 30 ; i++) {
             NSString *str = [NSString stringWithFormat:@"%d",i];
             [_dataSource addObject:str];
         }
@@ -85,9 +101,9 @@
 
 - (UIView *)vHeader {
     if(!_vHeader) {
-        _vHeader = [[UIView alloc] initWithFrame:CGRectMake(0, 0, LZY_SCREEN_WIDTH, LZY_IPHONE_NAV_HEIGHT)];
+        _vHeader = [[UIView alloc] initWithFrame:CGRectMake(0, -LZY_IPHONE_NAV_STATUS_HEIGHT, LZY_SCREEN_WIDTH, LZY_IPHONE_NAV_STATUS_HEIGHT)];
         _vHeader.backgroundColor = RGB3(216);
-        UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(60, LZY_IPHNOE_STATUS_BAR_HEIGHT, LZY_SCREEN_WIDTH - 120, LZY_IPHONE_NAV_HEIGHT - LZY_IPHNOE_STATUS_BAR_HEIGHT)];
+        UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(60, LZY_IPHNOE_STATUS_BAR_HEIGHT, LZY_SCREEN_WIDTH - 120, LZY_IPHONE_NAV_STATUS_HEIGHT - LZY_IPHNOE_STATUS_BAR_HEIGHT)];
         label.text = @"小程序";
         label.textColor = RGB3(0);
         label.font = [UIFont boldSystemFontOfSize:17];

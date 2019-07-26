@@ -230,7 +230,7 @@ static NSString *const LL_WKWebView_Title = @"title";
             }
             configuration.userContentController = userContentController;
             
-            WKWebView *wkWebView = [[WKWebView alloc] initWithFrame:CGRectMake(0.0, 0.0, LZY_SCREEN_WIDTH, LZY_SCREEN_HEIGHT - LZY_IPHONE_NAV_HEIGHT) configuration:configuration];
+            WKWebView *wkWebView = [[WKWebView alloc] initWithFrame:CGRectMake(0.0, 0.0, LZY_SCREEN_WIDTH, LZY_SCREEN_HEIGHT - LZY_IPHONE_NAV_STATUS_HEIGHT) configuration:configuration];
             wkWebView.UIDelegate = self;
             wkWebView.navigationDelegate = self;
             wkWebView.allowsBackForwardNavigationGestures = YES;

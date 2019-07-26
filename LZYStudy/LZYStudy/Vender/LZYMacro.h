@@ -83,9 +83,13 @@
 #ifndef LZY_TAB_BAR_SAFE_BOTTOM_MARGIN
 #define LZY_TAB_BAR_SAFE_BOTTOM_MARGIN (LZY_IS_IPHONEX ? 34.f : 0.f)
 #endif
+// 适配iPhone X 导航栏加状态栏高度
+#ifndef LZY_IPHONE_NAV_STATUS_HEIGHT
+#define LZY_IPHONE_NAV_STATUS_HEIGHT (LZY_IS_IPHONEX ? 88.f : 64.f)
+#endif
 // 适配iPhone X 导航栏高度
 #ifndef LZY_IPHONE_NAV_HEIGHT
-#define LZY_IPHONE_NAV_HEIGHT (LZY_IS_IPHONEX ? 88.f : 64.f)
+#define LZY_IPHONE_NAV_HEIGHT (LZY_IS_IPHONEX ? 44.f : 44.f)
 #endif
 // 适配iPhone X 表格等视图的偏移
 #ifndef LZY_VIEW_CONTENT_INSETS_MAKE

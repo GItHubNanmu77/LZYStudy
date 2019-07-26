@@ -107,7 +107,7 @@
 #pragma mark - Getter
 - (UITableView *)table {
     if(!_table){
-        _table = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, 100, self.view.height - LZY_TAB_BAR_SAFE_BOTTOM_MARGIN- LZY_IPHONE_NAV_HEIGHT) style:UITableViewStylePlain];
+        _table = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, 100, self.view.height - LZY_TAB_BAR_SAFE_BOTTOM_MARGIN- LZY_IPHONE_NAV_STATUS_HEIGHT) style:UITableViewStylePlain];
         _table.backgroundColor = [UIColor whiteColor];
         _table.separatorStyle = UITableViewCellSeparatorStyleNone;
         _table.contentInset = UIEdgeInsetsMake(10, 0, 0, 0);
@@ -124,7 +124,7 @@
         UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc]init];
         layout.minimumLineSpacing = 0;
         layout.minimumInteritemSpacing = 0;
-        _collView = [[UICollectionView alloc]initWithFrame:CGRectMake(self.table.width, 0, LZY_SCREEN_WIDTH - self.table.width, self.view.height - LZY_TAB_BAR_SAFE_BOTTOM_MARGIN - LZY_IPHONE_NAV_HEIGHT) collectionViewLayout:layout];
+        _collView = [[UICollectionView alloc]initWithFrame:CGRectMake(self.table.width, 0, LZY_SCREEN_WIDTH - self.table.width, self.view.height - LZY_TAB_BAR_SAFE_BOTTOM_MARGIN - LZY_IPHONE_NAV_STATUS_HEIGHT) collectionViewLayout:layout];
         [_collView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"UICollectionViewCell"];
         _collView.contentInset = UIEdgeInsetsMake(10, 5, 0, 5);
         _collView.backgroundColor = RGB3(255);

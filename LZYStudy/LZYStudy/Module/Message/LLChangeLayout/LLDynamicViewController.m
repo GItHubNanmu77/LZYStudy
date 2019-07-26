@@ -118,7 +118,7 @@
 - (UICollectionView *)collView {
     if (!_collView) {
         _collView = ({
-            UICollectionView *collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, LZY_SCREEN_WIDTH, LZY_SCREEN_HEIGHT - LZY_IPHONE_NAV_HEIGHT - LZY_TAB_BAR_SAFE_BOTTOM_MARGIN) collectionViewLayout:self.verticalLayout];
+            UICollectionView *collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, LZY_SCREEN_WIDTH, LZY_SCREEN_HEIGHT - LZY_IPHONE_NAV_STATUS_HEIGHT - LZY_TAB_BAR_SAFE_BOTTOM_MARGIN) collectionViewLayout:self.verticalLayout];
             collectionView.backgroundColor = RGB3(247);
             //            collectionView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
             collectionView.dataSource = self;

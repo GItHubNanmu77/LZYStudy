@@ -72,10 +72,10 @@
         
         
         /// 获取当前cell 相对于self.view 当前的坐标
-        rect.origin.y = rect.origin.y - tableView.contentOffset.y + LZY_IPHONE_NAV_HEIGHT + addButton.y;
+        rect.origin.y = rect.origin.y - tableView.contentOffset.y + LZY_IPHONE_NAV_STATUS_HEIGHT + addButton.y;
         CGPoint point = CGPointMake(addButton.x, rect.origin.y);
         
-        [[PurchaseCarAnimationTool shareTool] startAnimationFrom:point to:CGPointMake(self.cartButton.right, self.cartButton.y + LZY_IPHONE_NAV_HEIGHT) completion:^(BOOL finish) {
+        [[PurchaseCarAnimationTool shareTool] startAnimationFrom:point to:CGPointMake(self.cartButton.right, self.cartButton.y + LZY_IPHONE_NAV_STATUS_HEIGHT) completion:^(BOOL finish) {
             @LZY_strongify(self)
             NSInteger count = self.badgeView.badgeText.integerValue;
             self.badgeView.badgeText = [NSString stringWithFormat:@"%zi",++count];
@@ -101,7 +101,7 @@
 #pragma mark - Getter
 - (UITableView*)table{
     if(!_table){
-        _table = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, LZY_SCREEN_WIDTH, LZY_SCREEN_HEIGHT - LZY_IPHONE_NAV_HEIGHT - LZY_TAB_BAR_SAFE_BOTTOM_MARGIN) style:UITableViewStylePlain];
+        _table = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, LZY_SCREEN_WIDTH, LZY_SCREEN_HEIGHT - LZY_IPHONE_NAV_STATUS_HEIGHT - LZY_TAB_BAR_SAFE_BOTTOM_MARGIN) style:UITableViewStylePlain];
         _table.backgroundColor = [UIColor whiteColor];
         _table.separatorStyle = UITableViewCellSeparatorStyleNone;
         _table.delegate = self;

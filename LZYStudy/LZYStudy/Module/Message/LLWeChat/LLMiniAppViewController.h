@@ -11,6 +11,9 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface LLMiniAppViewController : UIViewController
+@property (nonatomic, strong) UICollectionView *collView;
+
+@property (nonatomic, copy) void(^hideCollViewBlock) (void);
 
 @end
 
