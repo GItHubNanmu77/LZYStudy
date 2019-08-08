@@ -53,8 +53,8 @@
  */
 - (void)setupViewControllers {
     // 首页
-//    LLHomeViewController *homeVC = [[LLHomeViewController alloc] init];
-    LLShopListViewController *homeVC = [[LLShopListViewController alloc] init];
+    LLHomeViewController *homeVC = [[LLHomeViewController alloc] init];
+//    LLShopListViewController *homeVC = [[LLShopListViewController alloc] init];
     LZYCustomBaseNavigationViewController *homeNav = [[LZYCustomBaseNavigationViewController alloc] initWithRootViewController:homeVC];
     [homeNav showFPSLable];
     

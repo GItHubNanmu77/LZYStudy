@@ -11,6 +11,8 @@
 #import "LLCategoryViewController.h"
 #import "LLCategoryDetailViewController.h"
 #import "LLShoppingCartViewController.h"
+#import "LZYPullTableView.h"
+#import "LZYSheetAlertManager.h"
 
 @interface LLHomeViewController () <UITableViewDelegate, UITableViewDataSource>
 
@@ -28,11 +30,24 @@
     self.view.backgroundColor = [UIColor cyanColor];
     [self initSubviews];
    
+    
 }
 
 - (void)initSubviews {
     [self.view addSubview:self.table];
 }
+
+- (void)copyString {
+    //UIPasteboard：该类支持写入和读取数据，类似剪贴板
+    UIPasteboard *pasteBoard = [UIPasteboard generalPasteboard];
+    NSString *string = @"sdf123123sdfsd";
+    pasteBoard.string = string;
+    [SVProgressHUD showSuccessWithStatus:@"复制成功"];
+}
+
+
+
+
 
 #pragma  mark - UITableViewDelegate
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -74,6 +89,12 @@
         LLShoppingCartViewController *vc = [[LLShoppingCartViewController alloc]init];
         vc.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:vc animated:YES];
+    } else {
+        LZYPullTableView *pullView = [[LZYPullTableView alloc] initWithFrame:CGRectZero dataSource:@[@"111",@"222",@"333"]];
+        pullView.selectedBlock = ^(NSString * _Nonnull text) {
+            NSLog(@"%@",text);
+        };
+        [pullView show];
     }
 }
 
@@ -95,6 +116,7 @@
         [_dataArray addObject:@"商城常用标签分类"];
         [_dataArray addObject:@"商城常用两表联动分类"];
         [_dataArray addObject:@"商城常用购物车动画"];
+        [_dataArray addObject:@"商城下拉弹窗"];
     }
     return _dataArray;
 }

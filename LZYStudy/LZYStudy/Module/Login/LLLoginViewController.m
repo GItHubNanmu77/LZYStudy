@@ -9,11 +9,12 @@
 #import "LLLoginViewController.h"
 #import "LLCustomTabBarController.h"
 #import "AppDelegate.h"
+#import "LLRegisterViewController.h"
 
 @interface LLLoginViewController ()
 @property (nonatomic, strong) UIButton *loginButton;
 @property (nonatomic, strong) UIButton *managerButton;
-
+@property (nonatomic, strong) UIButton *registerButton;
 @end
 
 @implementation LLLoginViewController
@@ -25,6 +26,9 @@
     self.view.backgroundColor = [UIColor purpleColor];
     [self.view addSubview:self.loginButton];
     [self.view addSubview:self.managerButton];
+    [self.view addSubview:self.registerButton];
+    
+     
 }
 
 - (void)viewDidLayoutSubviews {
@@ -32,6 +36,7 @@
     
     self.loginButton.frame = CGRectMake((self.view.width - 80)/2, self.view.height - 220, 120, 40);
     self.managerButton.frame = CGRectMake((self.view.width - 80)/2, self.loginButton.bottom + 10, 80, 40);
+    self.registerButton.frame = CGRectMake(40, self.managerButton.bottom + 10, self.view.width - 80, 50);
 }
 
 - (UIButton *)loginButton {
@@ -81,5 +86,27 @@
         });
     }
     return _managerButton;
+}
+
+- (UIButton *)registerButton {
+    if (!_registerButton) {
+        @LZY_weakify(self)
+        _registerButton = ({
+            UIButton *button = [[UIButton alloc] init];
+            button.showsTouchWhenHighlighted = YES;
+            button.titleLabel.font = LZY_FONT_FROM_NAME_SIZE(17.0);
+            [button setTitleColor:RGB3(255) forState:UIControlStateNormal];
+            [button setTitle:@"注册" forState:UIControlStateNormal];
+            [button setBackgroundColor:RGB(24, 197, 247)];
+            button.layer.cornerRadius = 4;
+            [button bk_addEventHandler:^(UIButton *sender) {
+                @LZY_strongify(self)
+                LLRegisterViewController *vc = [[LLRegisterViewController alloc] init];
+                [self.navigationController pushViewController:vc animated:YES];
+            } forControlEvents:UIControlEventTouchUpInside];
+            button;
+        });
+    }
+    return _registerButton;
 }
 @end

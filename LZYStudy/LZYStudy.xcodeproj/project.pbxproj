@@ -248,6 +248,9 @@
 		4AF8A7E322E6FB7B005C8E3E /* LLWeChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AF8A7E222E6FB7B005C8E3E /* LLWeChatViewController.m */; };
 		4AF8A7E622E7E032005C8E3E /* LLMiniAppViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AF8A7E522E7E032005C8E3E /* LLMiniAppViewController.m */; };
 		4AF8A7EA22E807E5005C8E3E /* SDEyeAnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AF8A7E822E807E5005C8E3E /* SDEyeAnimationView.m */; };
+		4AF8A8F322F959AB005C8E3E /* LZYPullTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AF8A8F222F959AB005C8E3E /* LZYPullTableView.m */; };
+		4AF8A8F622FBB0AF005C8E3E /* LLRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AF8A8F522FBB0AF005C8E3E /* LLRegisterViewController.m */; };
+		4AF8A8F922FBC7D1005C8E3E /* LZYGCDTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AF8A8F822FBC7D1005C8E3E /* LZYGCDTimer.m */; };
 		4AFE35B02269A52B003120DC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AFE35AF2269A52B003120DC /* AppDelegate.m */; };
 		4AFE35B32269A52B003120DC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AFE35B22269A52B003120DC /* ViewController.m */; };
 		4AFE35B62269A52B003120DC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AFE35B42269A52B003120DC /* Main.storyboard */; };
@@ -731,6 +734,12 @@
 		4AF8A7E522E7E032005C8E3E /* LLMiniAppViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LLMiniAppViewController.m; sourceTree = "<group>"; };
 		4AF8A7E822E807E5005C8E3E /* SDEyeAnimationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDEyeAnimationView.m; sourceTree = "<group>"; };
 		4AF8A7E922E807E5005C8E3E /* SDEyeAnimationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDEyeAnimationView.h; sourceTree = "<group>"; };
+		4AF8A8F122F959AB005C8E3E /* LZYPullTableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LZYPullTableView.h; sourceTree = "<group>"; };
+		4AF8A8F222F959AB005C8E3E /* LZYPullTableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LZYPullTableView.m; sourceTree = "<group>"; };
+		4AF8A8F422FBB0AF005C8E3E /* LLRegisterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LLRegisterViewController.h; sourceTree = "<group>"; };
+		4AF8A8F522FBB0AF005C8E3E /* LLRegisterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LLRegisterViewController.m; sourceTree = "<group>"; };
+		4AF8A8F722FBC7D1005C8E3E /* LZYGCDTimer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LZYGCDTimer.h; sourceTree = "<group>"; };
+		4AF8A8F822FBC7D1005C8E3E /* LZYGCDTimer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LZYGCDTimer.m; sourceTree = "<group>"; };
 		4AFE35AB2269A52B003120DC /* LZYStudy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LZYStudy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AFE35AE2269A52B003120DC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		4AFE35AF2269A52B003120DC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -986,6 +995,8 @@
 				4A09179F228ABE440059FAD9 /* LZYAuthorizationUtils.m */,
 				4A0917A1228ABEDD0059FAD9 /* LZYDeviceUtils.h */,
 				4A0917A2228ABEDD0059FAD9 /* LZYDeviceUtils.m */,
+				4AF8A8F722FBC7D1005C8E3E /* LZYGCDTimer.h */,
+				4AF8A8F822FBC7D1005C8E3E /* LZYGCDTimer.m */,
 			);
 			path = Tool;
 			sourceTree = "<group>";
@@ -1656,6 +1667,8 @@
 			children = (
 				4ADD34F922979E95000AC344 /* LLLoginViewController.h */,
 				4ADD34FA22979E95000AC344 /* LLLoginViewController.m */,
+				4AF8A8F422FBB0AF005C8E3E /* LLRegisterViewController.h */,
+				4AF8A8F522FBB0AF005C8E3E /* LLRegisterViewController.m */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -1732,6 +1745,8 @@
 				4ABCE2E1228D555A00676337 /* LZYBaseTableViewCell.m */,
 				4AF8A73B22E58C24005C8E3E /* LZYSearchBar.h */,
 				4AF8A73C22E58C24005C8E3E /* LZYSearchBar.m */,
+				4AF8A8F122F959AB005C8E3E /* LZYPullTableView.h */,
+				4AF8A8F222F959AB005C8E3E /* LZYPullTableView.m */,
 			);
 			path = BaseView;
 			sourceTree = "<group>";
@@ -2235,6 +2250,7 @@
 				4ABCE3EC228E492B00676337 /* JXCategoryFactory.m in Sources */,
 				4ABCE3F2228E492B00676337 /* JXCategoryBaseView.m in Sources */,
 				4A0713E92293CE0C00F658D2 /* GCDTimer.m in Sources */,
+				4AF8A8F922FBC7D1005C8E3E /* LZYGCDTimer.m in Sources */,
 				4A08D66222800D8E00A22E6C /* LLHomeViewController.m in Sources */,
 				4ADD35342297D3D7000AC344 /* NSMutableDictionary+QTSafe.m in Sources */,
 				4ABCE3F1228E492B00676337 /* UIColor+JXAdd.m in Sources */,
@@ -2250,6 +2266,7 @@
 				4ADD35352297D3D7000AC344 /* NSMutableOrderedSet+QTSafe.m in Sources */,
 				4A0713E82293CE0C00F658D2 /* GCDQueue.m in Sources */,
 				4A3E35582269BD7800C4C96B /* UIWebView+BlocksKit.m in Sources */,
+				4AF8A8F322F959AB005C8E3E /* LZYPullTableView.m in Sources */,
 				4A3E35562269BD7800C4C96B /* UINavigationController+FDFullscreenPopGesture.m in Sources */,
 				4A0713FF229695A900F658D2 /* UITextView+Placeholder.m in Sources */,
 				4ABCE3CE228E492B00676337 /* JXCategoryTitleVerticalZoomCellModel.m in Sources */,
@@ -2285,6 +2302,7 @@
 				4ADD354E2297D3D7000AC344 /* NSTimer+QTSafe.m in Sources */,
 				4A0917DC228C18780059FAD9 /* SGQRCodeObtainConfigure.m in Sources */,
 				4A3E35602269BD7800C4C96B /* A2BlockInvocation.m in Sources */,
+				4AF8A8F622FBB0AF005C8E3E /* LLRegisterViewController.m in Sources */,
 				4ABCE3DE228E492B00676337 /* JXCategoryDotCellModel.m in Sources */,
 				4ABCE3E4228E492B00676337 /* JXCategoryTitleView.m in Sources */,
 				4A08D66622800DA400A22E6C /* LLMineViewController.m in Sources */,
