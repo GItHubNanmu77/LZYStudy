@@ -12,6 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface LLRegisterViewController : UIViewController
 
+@property (nonatomic, strong) NSMutableArray *secondArray;
 @end
 
 NS_ASSUME_NONNULL_END

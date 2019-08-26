@@ -18,6 +18,7 @@
 #import "LLFaceImageViewController.h"
 #import "LLFolderViewController.h"
 #import "LLTipView.h"
+#import "LLWebTableViewController.h"
 
 #import "LZYDeviceUtils.h"
 
@@ -67,10 +68,10 @@
 }
 
 - (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    static NSString *identifier = @"UITableViewCell";
-    UITableViewCell *cell = (UITableViewCell*)[tableView dequeueReusableCellWithIdentifier:identifier];
+//    static NSString *identifier = @"UITableViewCell";
+    UITableViewCell *cell = (UITableViewCell*)[tableView dequeueReusableCellWithIdentifier:@"UITableViewCell"];
     if(!cell){
-        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
+        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"UITableViewCell"];
     }
     cell.textLabel.text = self.dataArray[indexPath.row];
     
@@ -99,8 +100,13 @@
     } else if (indexPath.row == 4){
         LLTipView *tipView = [[LLTipView alloc] initWithFrame:CGRectMake(100, 100, 200, 200)];
         [tipView show];
-    } else {
+    } else if (indexPath.row == 5){
         LLFolderViewController *vc = [[LLFolderViewController alloc] init];
+        vc.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:vc animated:YES];
+    } else {
+        LLWebTableViewController *vc = [[LLWebTableViewController alloc] init];
+        vc.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:vc animated:YES];
     }
 }
@@ -135,6 +141,7 @@
         [_dataArray addObject:@"人脸识别CoreImage"];
         [_dataArray addObject:@"弹出view"];
         [_dataArray addObject:@"展开折叠label"];
+        [_dataArray addObject:@"webTable"];
     }
     return _dataArray;
 }

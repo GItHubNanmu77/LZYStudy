@@ -10,11 +10,13 @@
 #import "LLCustomTabBarController.h"
 #import "AppDelegate.h"
 #import "LLRegisterViewController.h"
+#import "NSString+Convert.h"
 
 @interface LLLoginViewController ()
 @property (nonatomic, strong) UIButton *loginButton;
 @property (nonatomic, strong) UIButton *managerButton;
 @property (nonatomic, strong) UIButton *registerButton;
+@property (nonatomic, strong) NSMutableArray *firstArray;
 @end
 
 @implementation LLLoginViewController
@@ -28,15 +30,37 @@
     [self.view addSubview:self.managerButton];
     [self.view addSubview:self.registerButton];
     
-     
+    self.firstArray = [NSMutableArray arrayWithArray:@[@"1",@"3",@"2"]];
+    
+   
+    
+    
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+     [SVProgressHUD setContainerView:nil];
+    
+    [self.navigationController.navigationBar setHidden:YES];
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    
+    [SVProgressHUD dismiss];
+    [self.navigationController.navigationBar setHidden:NO];
+    NSLog(@"---%@",self.firstArray);
+}
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+     NSLog(@"---%@",self.firstArray);
+}
 - (void)viewDidLayoutSubviews {
     [super viewDidLayoutSubviews];
     
-    self.loginButton.frame = CGRectMake((self.view.width - 80)/2, self.view.height - 220, 120, 40);
-    self.managerButton.frame = CGRectMake((self.view.width - 80)/2, self.loginButton.bottom + 10, 80, 40);
-    self.registerButton.frame = CGRectMake(40, self.managerButton.bottom + 10, self.view.width - 80, 50);
+    self.managerButton.frame = CGRectMake((self.view.width - 80)/2, self.view.height - 220 + 10, 80, 40);
+    self.loginButton.frame = CGRectMake(40, self.managerButton.bottom + 10, self.view.width - 80, 50);
+    self.registerButton.frame = CGRectMake(40, self.loginButton.bottom + 10, self.view.width - 80, 50);
 }
 
 - (UIButton *)loginButton {
@@ -81,6 +105,8 @@
             button.layer.cornerRadius = 4;
             [button bk_addEventHandler:^(UIButton *sender) {
                 sender.selected = !sender.selected;
+                [SVProgressHUD setOffsetFromCenter:UIOffsetMake(0,0)];
+                [SVProgressHUD show];
             } forControlEvents:UIControlEventTouchUpInside];
             button;
         });
@@ -109,4 +135,6 @@
     }
     return _registerButton;
 }
+
+
 @end

@@ -29,6 +29,18 @@
     [self.view addSubview:self.expandButton];
     
     [self layout];
+    
+    
+    //    [self convertToArrayFromHexString:@"4154440000046affffff98ffffffebc423"];
+    [self convertToArrayFromHexString:@"4154440000085cffffff10ffffffcd1423"];
+    
+    // 角度X
+    NSString *angleYStr = @"FFFFFCC0"; // 230
+    int outVal;
+    NSScanner *scanner = [NSScanner scannerWithString:angleYStr];
+    [scanner scanHexInt:&outVal];
+    double angleY = ((double)outVal) / 10;
+    NSLog(@"角度Y:%.3f", angleY);
 }
 
 - (void)textFieldDidChange:(UITextField *)tf {
@@ -125,6 +137,61 @@
     }
     return _expandButton;
 }
-
+- (NSMutableArray *)convertToArrayFromHexString:(NSString *)hexString {
+    
+    if (!hexString || hexString.length == 0) {
+        return nil;
+    }
+    NSMutableArray *array = [NSMutableArray array];
+    if(hexString.length == 34) {
+        // 前缀：ATD
+        NSString *prefixStr = [hexString substringToIndex:6];
+        
+        char *myBuffer = (char *)malloc((int)[prefixStr length] / 2 + 1);
+        bzero(myBuffer, [prefixStr length] / 2 + 1);
+        for (int i = 0; i < [prefixStr length] - 1; i += 2) {
+            unsigned int anInt;
+            NSString *hexCharStr = [prefixStr substringWithRange:NSMakeRange(i, 2)];
+            NSScanner *scanner = [[NSScanner alloc] initWithString:hexCharStr];
+            [scanner scanHexInt:&anInt];
+            myBuffer[i / 2] = (char)anInt;
+        }
+        NSString *unicodeString = [NSString stringWithCString:myBuffer encoding:4];
+        NSLog(@"前缀字符串:%@",unicodeString);
+        
+        if ([unicodeString isEqualToString:@"ATD"]) {
+            // 距离
+            NSString *distanceStr = [hexString substringWithRange:NSMakeRange(6, 8)];
+            long distance = strtoul(distanceStr.UTF8String, 0, 16);
+            double distanceD = ((double)distance) / 10000;
+            NSLog(@"距离:%.3f米", distanceD);
+            
+            // 角度X
+            NSString *angleXStr = [hexString substringWithRange:NSMakeRange(14, 8)];
+            if([angleXStr hasPrefix:@"f"]) {
+                
+            }
+            int outValX;
+            NSScanner *scannerX = [NSScanner scannerWithString:angleXStr];
+            [scannerX scanHexInt:&outValX];
+            double angleX = ((double)outValX) / 10;
+            NSLog(@"角度X:%.3f", angleX);
+            
+            // 角度Y
+            NSString *angleYStr = [hexString substringWithRange:NSMakeRange(22, 8)];
+            int outValY;
+            NSScanner *scannerY = [NSScanner scannerWithString:angleYStr];
+            [scannerY scanHexInt:&outValY];
+            double angleY = ((double)outValY) / 10;
+            NSLog(@"角度Y:%.3f", angleY);
+            
+            [array addObject:@(distanceD)];
+            [array addObject:@(angleX)];
+            [array addObject:@(angleY)];
+        }
+    }
+    return array;
+    
+}
 
 @end

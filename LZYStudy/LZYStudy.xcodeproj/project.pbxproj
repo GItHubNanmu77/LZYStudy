@@ -152,6 +152,8 @@
 		4A51736522B8D41F00CE8203 /* YYApiObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A51735922B8D41F00CE8203 /* YYApiObject.m */; };
 		4A51736622B8D41F00CE8203 /* YYDatastore.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A51735E22B8D41F00CE8203 /* YYDatastore.m */; };
 		4A51736722B8D41F00CE8203 /* YYDBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A51735F22B8D41F00CE8203 /* YYDBManager.m */; };
+		4A57779C2313893C00D2D217 /* DoubleSliderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A57779B2313893B00D2D217 /* DoubleSliderView.m */; };
+		4A57779F2313B55500D2D217 /* LLWebTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A57779E2313B55500D2D217 /* LLWebTableViewController.m */; };
 		4A80328E229CD54B0054ACCE /* LLPdfReaderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A80328D229CD54B0054ACCE /* LLPdfReaderViewController.m */; };
 		4A803292229CD6720054ACCE /* QzTeam.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 4A803291229CD6720054ACCE /* QzTeam.pdf */; };
 		4A803298229E1EFA0054ACCE /* FPSLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A803296229E1EF90054ACCE /* FPSLabel.m */; };
@@ -251,6 +253,7 @@
 		4AF8A8F322F959AB005C8E3E /* LZYPullTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AF8A8F222F959AB005C8E3E /* LZYPullTableView.m */; };
 		4AF8A8F622FBB0AF005C8E3E /* LLRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AF8A8F522FBB0AF005C8E3E /* LLRegisterViewController.m */; };
 		4AF8A8F922FBC7D1005C8E3E /* LZYGCDTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AF8A8F822FBC7D1005C8E3E /* LZYGCDTimer.m */; };
+		4AF8A8FD22FD177C005C8E3E /* NSString+Convert.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AF8A8FC22FD177C005C8E3E /* NSString+Convert.m */; };
 		4AFE35B02269A52B003120DC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AFE35AF2269A52B003120DC /* AppDelegate.m */; };
 		4AFE35B32269A52B003120DC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AFE35B22269A52B003120DC /* ViewController.m */; };
 		4AFE35B62269A52B003120DC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AFE35B42269A52B003120DC /* Main.storyboard */; };
@@ -546,6 +549,10 @@
 		4A51736022B8D41F00CE8203 /* YYNetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYNetworkManager.h; sourceTree = "<group>"; };
 		4A51736122B8D41F00CE8203 /* YYNetworkingConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYNetworkingConfig.h; sourceTree = "<group>"; };
 		4A51736222B8D41F00CE8203 /* YYApiObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYApiObject.h; sourceTree = "<group>"; };
+		4A57779A2313893B00D2D217 /* DoubleSliderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DoubleSliderView.h; sourceTree = "<group>"; };
+		4A57779B2313893B00D2D217 /* DoubleSliderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DoubleSliderView.m; sourceTree = "<group>"; };
+		4A57779D2313B55500D2D217 /* LLWebTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LLWebTableViewController.h; sourceTree = "<group>"; };
+		4A57779E2313B55500D2D217 /* LLWebTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LLWebTableViewController.m; sourceTree = "<group>"; };
 		4A80328C229CD54B0054ACCE /* LLPdfReaderViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LLPdfReaderViewController.h; sourceTree = "<group>"; };
 		4A80328D229CD54B0054ACCE /* LLPdfReaderViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LLPdfReaderViewController.m; sourceTree = "<group>"; };
 		4A803291229CD6720054ACCE /* QzTeam.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = QzTeam.pdf; sourceTree = "<group>"; };
@@ -740,6 +747,8 @@
 		4AF8A8F522FBB0AF005C8E3E /* LLRegisterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LLRegisterViewController.m; sourceTree = "<group>"; };
 		4AF8A8F722FBC7D1005C8E3E /* LZYGCDTimer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LZYGCDTimer.h; sourceTree = "<group>"; };
 		4AF8A8F822FBC7D1005C8E3E /* LZYGCDTimer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LZYGCDTimer.m; sourceTree = "<group>"; };
+		4AF8A8FB22FD177C005C8E3E /* NSString+Convert.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+Convert.h"; sourceTree = "<group>"; };
+		4AF8A8FC22FD177C005C8E3E /* NSString+Convert.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+Convert.m"; sourceTree = "<group>"; };
 		4AFE35AB2269A52B003120DC /* LZYStudy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LZYStudy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AFE35AE2269A52B003120DC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		4AFE35AF2269A52B003120DC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -871,6 +880,8 @@
 				4A13312422CD941700AE3EF1 /* LLFaceImageViewController.m */,
 				4AF8A6AF22E00384005C8E3E /* LLFolderViewController.h */,
 				4AF8A6B022E00384005C8E3E /* LLFolderViewController.m */,
+				4A57779D2313B55500D2D217 /* LLWebTableViewController.h */,
+				4A57779E2313B55500D2D217 /* LLWebTableViewController.m */,
 				4A13312622CDA20C00AE3EF1 /* 我用苍老疼爱你.jpg */,
 			);
 			path = Mine;
@@ -968,6 +979,7 @@
 		4A0916F5228915B10059FAD9 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				4A5777992313892500D2D217 /* Doubleslider */,
 				4A0713DE2293CE0C00F658D2 /* GCDCommon */,
 				4ABCE36E228E492B00676337 /* JXCategoryView */,
 				4ABCE365228E492B00676337 /* JXPagerView */,
@@ -1458,6 +1470,15 @@
 			path = DB;
 			sourceTree = "<group>";
 		};
+		4A5777992313892500D2D217 /* Doubleslider */ = {
+			isa = PBXGroup;
+			children = (
+				4A57779A2313893B00D2D217 /* DoubleSliderView.h */,
+				4A57779B2313893B00D2D217 /* DoubleSliderView.m */,
+			);
+			path = Doubleslider;
+			sourceTree = "<group>";
+		};
 		4ABCE35D228D66AF00676337 /* SDQZEncryptUtils */ = {
 			isa = PBXGroup;
 			children = (
@@ -1903,6 +1924,8 @@
 				4A3E35D22269CC3700C4C96B /* NSString+Modify.m */,
 				4AF29C4E2276E9C700622BC2 /* NSString+Transfer.h */,
 				4AF29C4F2276E9C700622BC2 /* NSString+Transfer.m */,
+				4AF8A8FB22FD177C005C8E3E /* NSString+Convert.h */,
+				4AF8A8FC22FD177C005C8E3E /* NSString+Convert.m */,
 				4ADD34FD2297D3D6000AC344 /* QTSafe */,
 				4A0917A7228C01DC0059FAD9 /* UIButton+FitStyle.h */,
 				4A0917A8228C01DC0059FAD9 /* UIButton+FitStyle.m */,
@@ -2328,6 +2351,7 @@
 				4ABCE3E3228E492B00676337 /* JXCategoryTitleCell.m in Sources */,
 				4A51736322B8D41F00CE8203 /* YYNetworkingConfig.m in Sources */,
 				4A0917DA228C18780059FAD9 /* JSBadgeView.m in Sources */,
+				4A57779F2313B55500D2D217 /* LLWebTableViewController.m in Sources */,
 				4ABCE3D4228E492B00676337 /* JXCategoryIndicatorImageView.m in Sources */,
 				4ADD35442297D3D7000AC344 /* NSMutableString+QTSafe.m in Sources */,
 				4A2BD24322C0AEAF0047E370 /* LLDragViewController.m in Sources */,
@@ -2403,6 +2427,7 @@
 				4ADD35472297D3D7000AC344 /* NSObject+QTAdd.m in Sources */,
 				4ADD35432297D3D7000AC344 /* UIView+ThreadCheck.m in Sources */,
 				4A0917DD228C18780059FAD9 /* SGQRCodeObtain.m in Sources */,
+				4AF8A8FD22FD177C005C8E3E /* NSString+Convert.m in Sources */,
 				4A80328E229CD54B0054ACCE /* LLPdfReaderViewController.m in Sources */,
 				4A2BD23D22BB76B40047E370 /* LLDrawingViewController.m in Sources */,
 				4A3E35CD2269C6B400C4C96B /* NSDictionary+SafeAccess.m in Sources */,
@@ -2410,6 +2435,7 @@
 				4A0917E6228C18780059FAD9 /* XLImageViewerItem.m in Sources */,
 				4ABCE3EB228E492B00676337 /* JXCategoryListContainerView.m in Sources */,
 				4A08D725228272CE00A22E6C /* YTKChainRequestAgent.m in Sources */,
+				4A57779C2313893C00D2D217 /* DoubleSliderView.m in Sources */,
 				4ADD35402297D3D7000AC344 /* NSNumber+QTSafe.m in Sources */,
 				4ABCE3EE228E492B00676337 /* JXCategoryIndicatorParamsModel.m in Sources */,
 				4A2BD22322BB1DDC0047E370 /* LLAnimationListViewController.m in Sources */,

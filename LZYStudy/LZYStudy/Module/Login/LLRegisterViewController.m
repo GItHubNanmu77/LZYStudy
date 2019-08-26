@@ -22,10 +22,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"注册";
-    self.view.backgroundColor = [UIColor whiteColor];
+    self.view.backgroundColor = [UIColor redColor];
     
     [self.view addSubview:self.scrollView];
     [self.scrollView addSubview:self.codeButton];
+    
+    [self.secondArray addObject:@"123"];
+     NSLog(@"---%@",self.secondArray);
+    
+   
 }
 
 - (void)viewWillLayoutSubviews{
@@ -60,7 +65,11 @@
 
 
 - (void)buttonAction:(UIButton *)sender {
-    
+     [SVProgressHUD setContainerView:self.view];
+    CGFloat h = -LZY_IPHONE_NAV_STATUS_HEIGHT - 88;
+    [SVProgressHUD setOffsetFromCenter:UIOffsetMake(0, h)];
+   
+    [SVProgressHUD show];
     self.timeout = 60;
     [self startTimer];
 }
@@ -89,9 +98,9 @@
                 self.codeButton.enabled = YES;
             });
         } else {
-            int seconds = self.timeout % (allTime + 1);
+//            int seconds = self.timeout % (allTime + 1);
             dispatch_async(dispatch_get_main_queue(), ^{
-                [self.codeButton setTitle:[NSString stringWithFormat:@"%.2d秒", seconds] forState:UIControlStateNormal];
+                [self.codeButton setTitle:[NSString stringWithFormat:@"%.2d秒", self.timeout] forState:UIControlStateNormal];
                 self.codeButton.backgroundColor = [UIColor grayColor];
                 self.codeButton.enabled = NO;
             });
@@ -123,7 +132,7 @@
     if (!_scrollView) {
         _scrollView = [[UIScrollView alloc] init];
         _scrollView.contentSize = CGSizeMake(LZY_SCREEN_WIDTH, LZY_SCREEN_HEIGHT * 1.7);
-        _scrollView.backgroundColor = [UIColor whiteColor];
+        _scrollView.backgroundColor = [UIColor redColor];
         
     }
     return _scrollView;
