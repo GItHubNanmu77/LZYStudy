@@ -1,0 +1,15 @@
+/* 
+  Language.strings
+  LZYStudy
+
+  Created by cisdi on 2019/9/2.
+  Copyright © 2019 lzy. All rights reserved.
+*/
+
+"Language" = "言语";
+
+"Chinese" = "简体中文";
+"English" = "English";
+"Japanese" = "日本语";
+
+"Log Out" = "登出";

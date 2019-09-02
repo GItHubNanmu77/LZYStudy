@@ -33,7 +33,8 @@
     [self.view addSubview:self.table];
 }
 - (void)loadRequest {
-    NSString *url = @"https://www.jianshu.com/u/842cccac8576";
+//    NSString *url = @"https://www.jianshu.com/u/842cccac8576";
+    NSString *url = @"https://www.baidu.com";
     [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:url]]];
 }
 

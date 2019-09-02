@@ -7,6 +7,7 @@
 //
 
 #import "LLMineViewController.h"
+#import "LZYMacro.h"
 
 #import <UserNotifications/UserNotifications.h>
 #import "AppDelegate.h"
@@ -19,6 +20,7 @@
 #import "LLFolderViewController.h"
 #import "LLTipView.h"
 #import "LLWebTableViewController.h"
+#import "LLLanguageViewController.h"
 
 #import "LZYDeviceUtils.h"
 
@@ -34,8 +36,17 @@
 
 @implementation LLMineViewController
 
+- (void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:@"LanguageChanged" object:nil];
+}
+
+- (void)LanguageChanged {
+   
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+   
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor redColor];
     
@@ -104,8 +115,12 @@
         LLFolderViewController *vc = [[LLFolderViewController alloc] init];
         vc.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:vc animated:YES];
-    } else {
+    } else if (indexPath.row == 6){
         LLWebTableViewController *vc = [[LLWebTableViewController alloc] init];
+        vc.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:vc animated:YES];
+    } else {
+        LLLanguageViewController *vc = [[LLLanguageViewController alloc] init];
         vc.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:vc animated:YES];
     }
@@ -141,7 +156,8 @@
         [_dataArray addObject:@"人脸识别CoreImage"];
         [_dataArray addObject:@"弹出view"];
         [_dataArray addObject:@"展开折叠label"];
-        [_dataArray addObject:@"webTable"];
+        [_dataArray addObject:@"WebTableFooter"];
+        [_dataArray addObject:Localized(@"Language")];
     }
     return _dataArray;
 }
@@ -153,7 +169,7 @@
             button.showsTouchWhenHighlighted = YES;
             button.titleLabel.font = LZY_FONT_FROM_NAME_SIZE(17.0);
             [button setTitleColor:RGB3(51) forState:UIControlStateNormal];
-            [button setTitle:@"退出" forState:UIControlStateNormal];
+            [button setTitle:Localized(@"Log Out") forState:UIControlStateNormal];
             [button setBackgroundColor:RGB(100,181,245)];
             button.layer.cornerRadius = 4;
             [button bk_addEventHandler:^(id sender) {

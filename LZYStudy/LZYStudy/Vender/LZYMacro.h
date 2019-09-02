@@ -15,6 +15,7 @@
 #import "LZYURLImageView.h"
 #import "LZYConfirmView.h"
 #import "LZYDateTimePickerView.h"
+#import "LanguageManager.h"
 
 #import "BlocksKit+UIKit.h"
 #import "NSDate+Transfer.h"
@@ -172,8 +173,8 @@ alpha:1.0]
 #define LZY_FONT_FROM_NAME_SIZE_MEDIUM(sizeValue) ([UIFont fontWithName:@"PingFangSC-Medium" size:LZY_WIDTH_SCALE_IPHONE(sizeValue)])
 #endif
 //国际化
-#define NSLocString(key,comment) [[NSBundle mainBundle] localizedStringForKey:(key) value:@"" table:nil]
-
+//#define NSLocString(key,comment) [[NSBundle mainBundle] localizedStringForKey:(key) value:@"" table:nil]
+#define Localized(key)  [[LanguageManager bundle] localizedStringForKey:(key) value:nil table:@"Localizable"]
 
 //单例化一个类
 ///头文件

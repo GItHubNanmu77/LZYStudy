@@ -86,6 +86,9 @@
 		4A13312522CD941700AE3EF1 /* LLFaceImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A13312422CD941700AE3EF1 /* LLFaceImageViewController.m */; };
 		4A13312722CDA20C00AE3EF1 /* 我用苍老疼爱你.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4A13312622CDA20C00AE3EF1 /* 我用苍老疼爱你.jpg */; };
 		4A13317C22D5B55C00AE3EF1 /* LLTipView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A13317A22D5B55B00AE3EF1 /* LLTipView.m */; };
+		4A1BFBE8231CA9E500C53841 /* LLLanguageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A1BFBE7231CA9E500C53841 /* LLLanguageViewController.m */; };
+		4A1BFBF1231CBB4C00C53841 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4A1BFBF3231CBB4C00C53841 /* Localizable.strings */; };
+		4A1BFBF8231CBEDD00C53841 /* LanguageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A1BFBF7231CBEDD00C53841 /* LanguageManager.m */; };
 		4A2BD22322BB1DDC0047E370 /* LLAnimationListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A2BD22222BB1DDC0047E370 /* LLAnimationListViewController.m */; };
 		4A2BD22722BB20480047E370 /* LLShopListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A2BD22622BB20480047E370 /* LLShopListViewController.m */; };
 		4A2BD22A22BB210C0047E370 /* LLLayoutListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A2BD22922BB210C0047E370 /* LLLayoutListViewController.m */; };
@@ -438,6 +441,17 @@
 		4A13312622CDA20C00AE3EF1 /* 我用苍老疼爱你.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "我用苍老疼爱你.jpg"; sourceTree = "<group>"; };
 		4A13317A22D5B55B00AE3EF1 /* LLTipView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLTipView.m; sourceTree = "<group>"; };
 		4A13317B22D5B55C00AE3EF1 /* LLTipView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLTipView.h; sourceTree = "<group>"; };
+		4A1BFBE4231CA96A00C53841 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
+		4A1BFBE5231CA96A00C53841 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		4A1BFBE6231CA9E500C53841 /* LLLanguageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LLLanguageViewController.h; sourceTree = "<group>"; };
+		4A1BFBE7231CA9E500C53841 /* LLLanguageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LLLanguageViewController.m; sourceTree = "<group>"; };
+		4A1BFBED231CBA2F00C53841 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Main.strings; sourceTree = "<group>"; };
+		4A1BFBEE231CBA2F00C53841 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		4A1BFBF2231CBB4C00C53841 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		4A1BFBF4231CBB5300C53841 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		4A1BFBF5231CBD8000C53841 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
+		4A1BFBF6231CBEDD00C53841 /* LanguageManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LanguageManager.h; sourceTree = "<group>"; };
+		4A1BFBF7231CBEDD00C53841 /* LanguageManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LanguageManager.m; sourceTree = "<group>"; };
 		4A2BD22122BB1DDC0047E370 /* LLAnimationListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LLAnimationListViewController.h; sourceTree = "<group>"; };
 		4A2BD22222BB1DDC0047E370 /* LLAnimationListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LLAnimationListViewController.m; sourceTree = "<group>"; };
 		4A2BD22522BB20480047E370 /* LLShopListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LLShopListViewController.h; sourceTree = "<group>"; };
@@ -882,6 +896,8 @@
 				4AF8A6B022E00384005C8E3E /* LLFolderViewController.m */,
 				4A57779D2313B55500D2D217 /* LLWebTableViewController.h */,
 				4A57779E2313B55500D2D217 /* LLWebTableViewController.m */,
+				4A1BFBE6231CA9E500C53841 /* LLLanguageViewController.h */,
+				4A1BFBE7231CA9E500C53841 /* LLLanguageViewController.m */,
 				4A13312622CDA20C00AE3EF1 /* 我用苍老疼爱你.jpg */,
 			);
 			path = Mine;
@@ -1054,6 +1070,8 @@
 				4A09179C228AB88C0059FAD9 /* LZYSheetAlertManager.m */,
 				4A0917A4228C00070059FAD9 /* LZYFileManager.h */,
 				4A0917A5228C00070059FAD9 /* LZYFileManager.m */,
+				4A1BFBF6231CBEDD00C53841 /* LanguageManager.h */,
+				4A1BFBF7231CBEDD00C53841 /* LanguageManager.m */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -1801,6 +1819,7 @@
 				4AFE35BC2269A52C003120DC /* Info.plist */,
 				4AFE35BD2269A52C003120DC /* main.m */,
 				4A09175C22896A6B0059FAD9 /* PrefixHeader.pch */,
+				4A1BFBF3231CBB4C00C53841 /* Localizable.strings */,
 			);
 			path = "Support Files";
 			sourceTree = "<group>";
@@ -2054,6 +2073,8 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hans",
+				ja,
 			);
 			mainGroup = 4AFE35A22269A52B003120DC;
 			productRefGroup = 4AFE35AC2269A52B003120DC /* Products */;
@@ -2102,6 +2123,7 @@
 				4ABCE402228E668D00676337 /* 6.jpg in Resources */,
 				4A4937CD22C1B60000FA24F9 /* 1.jpg in Resources */,
 				4ABCE405228E668D00676337 /* 2.jpg in Resources */,
+				4A1BFBF1231CBB4C00C53841 /* Localizable.strings in Resources */,
 				4A4937CC22C1B60000FA24F9 /* 3.jpg in Resources */,
 				4A4937C322C1B60000FA24F9 /* 10.jpg in Resources */,
 				4A4937C522C1B60000FA24F9 /* 19.jpg in Resources */,
@@ -2376,6 +2398,7 @@
 				4ABCE3D1228E492B00676337 /* JXCategoryIndicatorLineView.m in Sources */,
 				4A0713EB2293CE0C00F658D2 /* GCDSemaphore.m in Sources */,
 				4A5172EF22B32C9A00CE8203 /* LLCategoryViewController.m in Sources */,
+				4A1BFBF8231CBEDD00C53841 /* LanguageManager.m in Sources */,
 				4A08D723228272CE00A22E6C /* YTKBatchRequest.m in Sources */,
 				4ABCE2E2228D555A00676337 /* LZYBaseTableViewCell.m in Sources */,
 				4A0917E2228C18780059FAD9 /* SVIndefiniteAnimatedView.m in Sources */,
@@ -2390,6 +2413,7 @@
 				4A1098BD22A79DE000C488BC /* NetManager.m in Sources */,
 				4ABCE3E5228E492B00676337 /* JXCategoryImageView.m in Sources */,
 				4AF8A7E622E7E032005C8E3E /* LLMiniAppViewController.m in Sources */,
+				4A1BFBE8231CA9E500C53841 /* LLLanguageViewController.m in Sources */,
 				4ABCE3DB228E492B00676337 /* JXCategoryIndicatorView.m in Sources */,
 				4ABCE3E7228E492B00676337 /* JXCategoryImageCellModel.m in Sources */,
 				4A1098B322A78EE900C488BC /* LVRecordTool.m in Sources */,
@@ -2494,10 +2518,22 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		4A1BFBF3231CBB4C00C53841 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4A1BFBF2231CBB4C00C53841 /* en */,
+				4A1BFBF4231CBB5300C53841 /* zh-Hans */,
+				4A1BFBF5231CBD8000C53841 /* ja */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		4AFE35B42269A52B003120DC /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				4AFE35B52269A52B003120DC /* Base */,
+				4A1BFBE4231CA96A00C53841 /* zh-Hans */,
+				4A1BFBED231CBA2F00C53841 /* ja */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -2506,6 +2542,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				4AFE35BA2269A52C003120DC /* Base */,
+				4A1BFBE5231CA96A00C53841 /* zh-Hans */,
+				4A1BFBEE231CBA2F00C53841 /* ja */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -2517,6 +2555,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -2576,6 +2615,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";

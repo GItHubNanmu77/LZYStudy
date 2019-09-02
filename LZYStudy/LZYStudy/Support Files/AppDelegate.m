@@ -12,6 +12,9 @@
 #import "LZYCustomBaseNavigationViewController.h"
 #import <UserNotifications/UserNotifications.h>
 #import "LZYSheetAlertManager.h"
+#import "LanguageManager.h"
+#import "LLMineViewController.h"
+#import "LLLanguageViewController.h"
 
 @interface AppDelegate ()<UITabBarControllerDelegate, UIDocumentInteractionControllerDelegate, UNUserNotificationCenterDelegate>
 
@@ -24,7 +27,20 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     [self registerAPN];
+    //初始化应用语言
+    [LanguageManager setUserLanguage:[LanguageManager currentUserLanguage]];
     
+    [self setRootViewContrller];
+    
+    if (@available(iOS 10.0, *)) {
+        [self receiveNotificationWithOptions:launchOptions];
+    } else {
+        // Fallback on earlier versions
+    }
+    return YES;
+}
+
+- (void)setRootViewContrller {
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     BOOL isLogin = [[NSUserDefaults standardUserDefaults] boolForKey:@"isLogin"];
     if (isLogin){
@@ -33,22 +49,26 @@
         self.tabVC.selectedIndex = 1;
         self.tabVC.delegate = self;
         self.window.rootViewController = self.tabVC;
-//        self.tabVC.selectedIndex = 0;
+        //        self.tabVC.selectedIndex = 0;
         [self performSelector:@selector(selectFirstIndex) withObject:nil afterDelay:0];
     } else {
         LLLoginViewController *loginVC = [[LLLoginViewController alloc] init];
         LZYCustomBaseNavigationViewController *loginNav = [[LZYCustomBaseNavigationViewController alloc] initWithRootViewController:loginVC];
         self.window.rootViewController = loginNav;
     }
-   
-    [self.window makeKeyAndVisible];
     
-    if (@available(iOS 10.0, *)) {
-        [self receiveNotificationWithOptions:launchOptions];
-    } else {
-        // Fallback on earlier versions
-    }
-    return YES;
+    [self.window makeKeyAndVisible];
+}
+
+- (void)setLanguage {
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    LLCustomTabBarController *tabVC = [[LLCustomTabBarController alloc] init];
+    self.tabVC = tabVC;
+    self.tabVC.delegate = self;
+    self.window.rootViewController = self.tabVC;
+    [self.window makeKeyAndVisible];
+    self.tabVC.selectedIndex = 3;
+    
 }
 //过渡动画
 - (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController
