@@ -160,6 +160,8 @@
 		4A80328E229CD54B0054ACCE /* LLPdfReaderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A80328D229CD54B0054ACCE /* LLPdfReaderViewController.m */; };
 		4A803292229CD6720054ACCE /* QzTeam.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 4A803291229CD6720054ACCE /* QzTeam.pdf */; };
 		4A803298229E1EFA0054ACCE /* FPSLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A803296229E1EF90054ACCE /* FPSLabel.m */; };
+		4A930CD5233CB30500E77D9E /* LLGravityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A930CD4233CB30500E77D9E /* LLGravityViewController.m */; };
+		4AAE1B1523404D7400D9975A /* LLGCDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AAE1B1423404D7400D9975A /* LLGCDViewController.m */; };
 		4ABCE2E2228D555A00676337 /* LZYBaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ABCE2E1228D555A00676337 /* LZYBaseTableViewCell.m */; };
 		4ABCE363228D66AF00676337 /* MF_Base64Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ABCE361228D66AF00676337 /* MF_Base64Additions.m */; };
 		4ABCE364228D66AF00676337 /* SDQZEncryptUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ABCE362228D66AF00676337 /* SDQZEncryptUtils.m */; };
@@ -215,6 +217,10 @@
 		4ABCE405228E668D00676337 /* 2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4ABCE3FF228E668C00676337 /* 2.jpg */; };
 		4ABCE406228E668D00676337 /* 4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4ABCE400228E668D00676337 /* 4.jpg */; };
 		4ABCE409228E90AE00676337 /* LLUserInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ABCE408228E90AE00676337 /* LLUserInfoViewController.m */; };
+		4AD304972341B3C3002D5451 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AD304962341B3C3002D5451 /* NotificationCenter.framework */; };
+		4AD3049B2341B3C3002D5451 /* TodayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AD3049A2341B3C3002D5451 /* TodayViewController.m */; };
+		4AD3049E2341B3C3002D5451 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AD3049C2341B3C3002D5451 /* MainInterface.storyboard */; };
+		4AD304A22341B3C3002D5451 /* LZYTodayWidget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 4AD304952341B3C3002D5451 /* LZYTodayWidget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		4ADD34FB22979E95000AC344 /* LLLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ADD34FA22979E95000AC344 /* LLLoginViewController.m */; };
 		4ADD35342297D3D7000AC344 /* NSMutableDictionary+QTSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ADD34FF2297D3D6000AC344 /* NSMutableDictionary+QTSafe.m */; };
 		4ADD35352297D3D7000AC344 /* NSMutableOrderedSet+QTSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ADD35002297D3D6000AC344 /* NSMutableOrderedSet+QTSafe.m */; };
@@ -272,6 +278,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		4AD304A02341B3C3002D5451 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4AFE35A32269A52B003120DC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4AD304942341B3C3002D5451;
+			remoteInfo = LZYTodayWidget;
+		};
 		4AFE35C42269A52C003120DC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 4AFE35A32269A52B003120DC /* Project object */;
@@ -287,6 +300,20 @@
 			remoteInfo = LZYStudy;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		4AD304A32341B3C3002D5451 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				4AD304A22341B3C3002D5451 /* LZYTodayWidget.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		06E74CCC4503672FE0FF2342 /* Pods-LZYStudyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LZYStudyUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LZYStudyUITests/Pods-LZYStudyUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -572,6 +599,10 @@
 		4A803291229CD6720054ACCE /* QzTeam.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = QzTeam.pdf; sourceTree = "<group>"; };
 		4A803296229E1EF90054ACCE /* FPSLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FPSLabel.m; sourceTree = "<group>"; };
 		4A803297229E1EFA0054ACCE /* FPSLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FPSLabel.h; sourceTree = "<group>"; };
+		4A930CD3233CB30500E77D9E /* LLGravityViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LLGravityViewController.h; sourceTree = "<group>"; };
+		4A930CD4233CB30500E77D9E /* LLGravityViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LLGravityViewController.m; sourceTree = "<group>"; };
+		4AAE1B1323404D7400D9975A /* LLGCDViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LLGCDViewController.h; sourceTree = "<group>"; };
+		4AAE1B1423404D7400D9975A /* LLGCDViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LLGCDViewController.m; sourceTree = "<group>"; };
 		4ABCE2E0228D555A00676337 /* LZYBaseTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LZYBaseTableViewCell.h; sourceTree = "<group>"; };
 		4ABCE2E1228D555A00676337 /* LZYBaseTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LZYBaseTableViewCell.m; sourceTree = "<group>"; };
 		4ABCE35E228D66AF00676337 /* SDQZEncryptUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDQZEncryptUtils.h; sourceTree = "<group>"; };
@@ -679,6 +710,12 @@
 		4ABCE400228E668D00676337 /* 4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 4.jpg; sourceTree = "<group>"; };
 		4ABCE407228E90AE00676337 /* LLUserInfoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LLUserInfoViewController.h; sourceTree = "<group>"; };
 		4ABCE408228E90AE00676337 /* LLUserInfoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LLUserInfoViewController.m; sourceTree = "<group>"; };
+		4AD304952341B3C3002D5451 /* LZYTodayWidget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = LZYTodayWidget.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		4AD304962341B3C3002D5451 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		4AD304992341B3C3002D5451 /* TodayViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TodayViewController.h; sourceTree = "<group>"; };
+		4AD3049A2341B3C3002D5451 /* TodayViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TodayViewController.m; sourceTree = "<group>"; };
+		4AD3049D2341B3C3002D5451 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		4AD3049F2341B3C3002D5451 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4ADD34F922979E95000AC344 /* LLLoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LLLoginViewController.h; sourceTree = "<group>"; };
 		4ADD34FA22979E95000AC344 /* LLLoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LLLoginViewController.m; sourceTree = "<group>"; };
 		4ADD34FE2297D3D6000AC344 /* UINavigationController+QTSafe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+QTSafe.h"; sourceTree = "<group>"; };
@@ -793,6 +830,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		4AD304922341B3C3002D5451 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4AD304972341B3C3002D5451 /* NotificationCenter.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4AFE35A82269A52B003120DC /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -826,6 +871,7 @@
 				FE23D9FFA9DE01FDC0DA490B /* Pods_LZYStudy.framework */,
 				9422221D95E7E4591B847561 /* Pods_LZYStudyTests.framework */,
 				8B85FE7F43930A7724304F6D /* Pods_LZYStudyUITests.framework */,
+				4AD304962341B3C3002D5451 /* NotificationCenter.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -922,6 +968,7 @@
 			isa = PBXGroup;
 			children = (
 				4A2BD22422BB1DE60047E370 /* Animation */,
+				4A930CD2233CAEF100E77D9E /* Dynamic */,
 			);
 			path = Dynamic;
 			sourceTree = "<group>";
@@ -933,6 +980,8 @@
 				4A08D6742280306000A22E6C /* LLPublishViewController.m */,
 				4A08D6762281684E00A22E6C /* LLPublishDetailViewController.h */,
 				4A08D6772281684E00A22E6C /* LLPublishDetailViewController.m */,
+				4AAE1B1323404D7400D9975A /* LLGCDViewController.h */,
+				4AAE1B1423404D7400D9975A /* LLGCDViewController.m */,
 			);
 			path = Center;
 			sourceTree = "<group>";
@@ -1121,10 +1170,10 @@
 		4A0917AE228C18770059FAD9 /* FLAnimatedImage */ = {
 			isa = PBXGroup;
 			children = (
-				4A0917AF228C18770059FAD9 /* FLAnimatedImage.m */,
-				4A0917B0228C18770059FAD9 /* FLAnimatedImageView.m */,
 				4A0917B1228C18770059FAD9 /* FLAnimatedImage.h */,
+				4A0917AF228C18770059FAD9 /* FLAnimatedImage.m */,
 				4A0917B2228C18770059FAD9 /* FLAnimatedImageView.h */,
+				4A0917B0228C18770059FAD9 /* FLAnimatedImageView.m */,
 			);
 			path = FLAnimatedImage;
 			sourceTree = "<group>";
@@ -1497,6 +1546,15 @@
 			path = Doubleslider;
 			sourceTree = "<group>";
 		};
+		4A930CD2233CAEF100E77D9E /* Dynamic */ = {
+			isa = PBXGroup;
+			children = (
+				4A930CD3233CB30500E77D9E /* LLGravityViewController.h */,
+				4A930CD4233CB30500E77D9E /* LLGravityViewController.m */,
+			);
+			path = Dynamic;
+			sourceTree = "<group>";
+		};
 		4ABCE35D228D66AF00676337 /* SDQZEncryptUtils */ = {
 			isa = PBXGroup;
 			children = (
@@ -1701,6 +1759,17 @@
 			path = Base;
 			sourceTree = "<group>";
 		};
+		4AD304982341B3C3002D5451 /* LZYTodayWidget */ = {
+			isa = PBXGroup;
+			children = (
+				4AD304992341B3C3002D5451 /* TodayViewController.h */,
+				4AD3049A2341B3C3002D5451 /* TodayViewController.m */,
+				4AD3049C2341B3C3002D5451 /* MainInterface.storyboard */,
+				4AD3049F2341B3C3002D5451 /* Info.plist */,
+			);
+			path = LZYTodayWidget;
+			sourceTree = "<group>";
+		};
 		4ADD34F822979E6C000AC344 /* Login */ = {
 			isa = PBXGroup;
 			children = (
@@ -1860,6 +1929,7 @@
 				4AFE35AD2269A52B003120DC /* LZYStudy */,
 				4AFE35C62269A52C003120DC /* LZYStudyTests */,
 				4AFE35D12269A52C003120DC /* LZYStudyUITests */,
+				4AD304982341B3C3002D5451 /* LZYTodayWidget */,
 				4AFE35AC2269A52B003120DC /* Products */,
 				A6546ADE58E375526906EA7B /* Pods */,
 				422D0D6ACDAB31D982566A3D /* Frameworks */,
@@ -1872,6 +1942,7 @@
 				4AFE35AB2269A52B003120DC /* LZYStudy.app */,
 				4AFE35C32269A52C003120DC /* LZYStudyTests.xctest */,
 				4AFE35CE2269A52C003120DC /* LZYStudyUITests.xctest */,
+				4AD304952341B3C3002D5451 /* LZYTodayWidget.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1982,6 +2053,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		4AD304942341B3C3002D5451 /* LZYTodayWidget */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4AD304A62341B3C3002D5451 /* Build configuration list for PBXNativeTarget "LZYTodayWidget" */;
+			buildPhases = (
+				4AD304912341B3C3002D5451 /* Sources */,
+				4AD304922341B3C3002D5451 /* Frameworks */,
+				4AD304932341B3C3002D5451 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LZYTodayWidget;
+			productName = LZYTodayWidget;
+			productReference = 4AD304952341B3C3002D5451 /* LZYTodayWidget.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		4AFE35AA2269A52B003120DC /* LZYStudy */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4AFE35D72269A52C003120DC /* Build configuration list for PBXNativeTarget "LZYStudy" */;
@@ -1991,10 +2079,12 @@
 				4AFE35A82269A52B003120DC /* Frameworks */,
 				4AFE35A92269A52B003120DC /* Resources */,
 				45D9AE0254939F2FA040F9D4 /* [CP] Embed Pods Frameworks */,
+				4AD304A32341B3C3002D5451 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				4AD304A12341B3C3002D5451 /* PBXTargetDependency */,
 			);
 			name = LZYStudy;
 			productName = LZYStudy;
@@ -2045,9 +2135,13 @@
 		4AFE35A32269A52B003120DC /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				DefaultBuildSystemTypeForWorkspace = Original;
 				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = lzy;
 				TargetAttributes = {
+					4AD304942341B3C3002D5451 = {
+						CreatedOnToolsVersion = 11.0;
+					};
 					4AFE35AA2269A52B003120DC = {
 						CreatedOnToolsVersion = 10.1;
 						SystemCapabilities = {
@@ -2084,11 +2178,20 @@
 				4AFE35AA2269A52B003120DC /* LZYStudy */,
 				4AFE35C22269A52C003120DC /* LZYStudyTests */,
 				4AFE35CD2269A52C003120DC /* LZYStudyUITests */,
+				4AD304942341B3C3002D5451 /* LZYTodayWidget */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		4AD304932341B3C3002D5451 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4AD3049E2341B3C3002D5451 /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4AFE35A92269A52B003120DC /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -2267,6 +2370,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		4AD304912341B3C3002D5451 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4AD3049B2341B3C3002D5451 /* TodayViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4AFE35A72269A52B003120DC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -2473,10 +2584,12 @@
 				4A1098AB22A74E0600C488BC /* LZYDownloadRequest.m in Sources */,
 				4A08D721228272CE00A22E6C /* YTKNetworkPrivate.m in Sources */,
 				4AF29CFB22781E1700622BC2 /* LZYCustomBaseTabBarController.m in Sources */,
+				4A930CD5233CB30500E77D9E /* LLGravityViewController.m in Sources */,
 				4A1098AE22A772B300C488BC /* LZYUploadRequest.m in Sources */,
 				4A3E355A2269BD7800C4C96B /* UIAlertView+BlocksKit.m in Sources */,
 				4A0917ED228C19380059FAD9 /* MBProgressHUD.m in Sources */,
 				4AF29CF22277E10B00622BC2 /* LZYConfirmView.m in Sources */,
+				4AAE1B1523404D7400D9975A /* LLGCDViewController.m in Sources */,
 				4A3E35632269BD7800C4C96B /* NSObject+A2DynamicDelegate.m in Sources */,
 				4ABCE3E2228E492B00676337 /* JXCategoryTitleCellModel.m in Sources */,
 				4AF8A7E322E6FB7B005C8E3E /* LLWeChatViewController.m in Sources */,
@@ -2505,6 +2618,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		4AD304A12341B3C3002D5451 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4AD304942341B3C3002D5451 /* LZYTodayWidget */;
+			targetProxy = 4AD304A02341B3C3002D5451 /* PBXContainerItemProxy */;
+		};
 		4AFE35C52269A52C003120DC /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 4AFE35AA2269A52B003120DC /* LZYStudy */;
@@ -2526,6 +2644,14 @@
 				4A1BFBF5231CBD8000C53841 /* ja */,
 			);
 			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		4AD3049C2341B3C3002D5451 /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4AD3049D2341B3C3002D5451 /* Base */,
+			);
+			name = MainInterface.storyboard;
 			sourceTree = "<group>";
 		};
 		4AFE35B42269A52B003120DC /* Main.storyboard */ = {
@@ -2551,6 +2677,44 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		4AD304A42341B3C3002D5451 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7BT4LD3H35;
+				INFOPLIST_FILE = LZYTodayWidget/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = lzy.LZYStudy.LZYTodayWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4AD304A52341B3C3002D5451 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5DYL533N39;
+				INFOPLIST_FILE = LZYTodayWidget/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = lzy.LZYStudy.LZYTodayWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		4AFE35D52269A52C003120DC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -2672,7 +2836,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEVELOPMENT_TEAM = 5DYL533N39;
+				DEVELOPMENT_TEAM = 7BT4LD3H35;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/LZYStudy/Support Files/PrefixHeader.pch";
 				HEADER_SEARCH_PATHS = $PODS_ROOT;
 				INFOPLIST_FILE = "/Users/cisdi/LZYStudy/LZYStudy/LZYStudy/Support Files/Info.plist";
@@ -2785,6 +2949,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		4AD304A62341B3C3002D5451 /* Build configuration list for PBXNativeTarget "LZYTodayWidget" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4AD304A42341B3C3002D5451 /* Debug */,
+				4AD304A52341B3C3002D5451 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		4AFE35A62269A52B003120DC /* Build configuration list for PBXProject "LZYStudy" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

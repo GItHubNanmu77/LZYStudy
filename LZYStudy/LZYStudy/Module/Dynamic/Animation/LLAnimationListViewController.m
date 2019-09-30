@@ -11,12 +11,14 @@
 #import "LLAnimationSpeedViewController.h"
 #import "LLBallAnimationViewController.h"
 #import "LLDrawingViewController.h"
+#import "LLGravityViewController.h"
 
 @interface LLAnimationListViewController () <UITableViewDelegate, UITableViewDataSource>
 
 @property (nonatomic, strong) NSMutableArray *dataArray;
 @property (nonatomic, strong) UITableView *table;
 
+@property (nonatomic, strong) NSMutableArray *vcArray;
 
 @end
 
@@ -62,19 +64,10 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    if (indexPath.row == 0) {
-        LLAnimationSpeedViewController *vc = [[LLAnimationSpeedViewController alloc]init];
-        vc.hidesBottomBarWhenPushed = YES;
-        [self.navigationController pushViewController:vc animated:YES];
-    } else if (indexPath.row == 1) {
-        LLBallAnimationViewController *vc = [[LLBallAnimationViewController alloc]init];
-        vc.hidesBottomBarWhenPushed = YES;
-        [self.navigationController pushViewController:vc animated:YES];
-    } else if (indexPath.row == 2) {
-        LLDrawingViewController *vc = [[LLDrawingViewController alloc]init];
-        vc.hidesBottomBarWhenPushed = YES;
-        [self.navigationController pushViewController:vc animated:YES];
-    }
+    UIViewController *vc = self.vcArray[indexPath.row];
+    vc.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:vc animated:YES];
+    
 }
 
 #pragma mark - Getter & Setter
@@ -95,7 +88,20 @@
         [_dataArray addObject:@"动画速度"];
         [_dataArray addObject:@"动画缓冲"];
         [_dataArray addObject:@"物理模拟"];
+        [_dataArray addObject:@"重力模拟"];
     }
     return _dataArray;
 }
+
+- (NSMutableArray *)vcArray {
+    if (!_vcArray) {
+        _vcArray = [NSMutableArray array];
+        [_vcArray addObject:[LLAnimationSpeedViewController new]];
+        [_vcArray addObject:[LLBallAnimationViewController new]];
+        [_vcArray addObject:[LLDrawingViewController new]];
+        [_vcArray addObject:[LLGravityViewController new]];
+    }
+    return _vcArray;
+}
+
 @end

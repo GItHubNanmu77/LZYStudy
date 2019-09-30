@@ -27,7 +27,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.view.backgroundColor = [UIColor cyanColor];
+//    self.view.backgroundColor = [UIColor systemRedColor];
     [self initSubviews];
    
     
@@ -44,10 +44,6 @@
     pasteBoard.string = string;
     [SVProgressHUD showSuccessWithStatus:@"复制成功"];
 }
-
-
-
-
 
 #pragma  mark - UITableViewDelegate
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {

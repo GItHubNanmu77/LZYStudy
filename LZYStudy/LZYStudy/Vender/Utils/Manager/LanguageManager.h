@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-
+static NSString *const kLanguageKey = @"LanguageKey";
 
 static NSString *const kEnglish = @"en";
 static NSString *const kChinese = @"zh-Hans";

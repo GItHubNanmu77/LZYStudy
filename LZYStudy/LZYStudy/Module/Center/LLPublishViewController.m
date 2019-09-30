@@ -9,6 +9,7 @@
 #import "LLPublishViewController.h"
 #import "LLPublishDetailViewController.h"
 #import "LLDynamicModel.h"
+#import "LLGCDViewController.h"
 
 @interface LLPublishViewController ()
 @property (nonatomic, strong) CAShapeLayer *shape;
@@ -86,6 +87,8 @@
     
 //    [self moveLine];
 //    [self hitView:touches];
+    LLGCDViewController *vc = [[LLGCDViewController alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (void)hitView:(NSSet<UITouch *> *)touches {

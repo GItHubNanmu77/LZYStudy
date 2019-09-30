@@ -30,12 +30,31 @@
     [self.view addSubview:self.managerButton];
     [self.view addSubview:self.registerButton];
     
-    self.firstArray = [NSMutableArray arrayWithArray:@[@"1",@"3",@"2"]];
-    
-   
-    
-    
+//    self.firstArray = [NSMutableArray arrayWithArray:@[@"1",@"3",@"2"]];
+//        
+//    [[[self test1] test2] test3:[self test4]];
 }
+
+
+- (id)test1{
+    NSLog(@"%@",NSStringFromSelector(@selector(test1)));
+    return self;
+}
+
+- (id)test2{
+    NSLog(@"%@",NSStringFromSelector(@selector(test2)));
+    return self;
+}
+
+- (void)test3:(NSString *)aa{
+    NSLog(@"%@",NSStringFromSelector(@selector(test3:)));
+}
+
+- (NSString *)test4{
+    NSLog(@"%@",NSStringFromSelector(@selector(test4)));
+    return @"123";
+}
+
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];

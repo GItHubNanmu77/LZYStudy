@@ -22,8 +22,8 @@ static NSBundle *bundle = nil;
 //跟随系统语言
 + (void)followSystemLanguage {
     NSUserDefaults *def = [NSUserDefaults standardUserDefaults];
-    [def removeObjectForKey:@"LocalLanguageKey"];
-    [def setValue:nil forKey:@"LocalLanguageKey"];
+    [def removeObjectForKey:kLanguageKey];
+    [def setValue:nil forKey:kLanguageKey];
     [def synchronize];
     bundle = nil;
 }
@@ -35,11 +35,11 @@ static NSBundle *bundle = nil;
         return;
     }
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
-    NSString *currLanguage = [userDefaults valueForKey:@"LocalLanguageKey"];
+    NSString *currLanguage = [userDefaults valueForKey:kLanguageKey];
     if ([currLanguage isEqualToString:language]) {
         return;
     }
-    [userDefaults setValue:language forKey:@"LocalLanguageKey"];
+    [userDefaults setValue:language forKey:kLanguageKey];
     [userDefaults synchronize];
     
     NSString *path = [[NSBundle mainBundle] pathForResource:language ofType:@"lproj"];
@@ -49,7 +49,7 @@ static NSBundle *bundle = nil;
 //获取当前语言
 + (NSString *)currentUserLanguage {
     NSUserDefaults *def = [NSUserDefaults standardUserDefaults];
-    NSString *language = [def valueForKey:@"LocalLanguageKey"];
+    NSString *language = [def valueForKey:kLanguageKey];
     if(!language) {//系统默认第一语言
         return [NSLocale preferredLanguages].firstObject;
     }

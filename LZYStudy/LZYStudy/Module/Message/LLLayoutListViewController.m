@@ -102,6 +102,11 @@
             vc.hidesBottomBarWhenPushed = YES;
             [self.navigationController pushViewController:vc animated:YES];
         } break;
+        case 6:{
+            
+            
+            
+        } break;
             
         default:
             break;
