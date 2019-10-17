@@ -17,9 +17,9 @@ target 'LZYStudy' do
   pod 'YYModel', :git => 'https://github.com/ibireme/YYModel.git' ,:inhibit_warnings => true
   pod 'PPNetworkHelper', :git => 'https://github.com/jkpang/PPNetworkHelper.git', :inhibit_warnings => true
   pod 'TZImagePickerController',:git =>'https://github.com/banchichen/TZImagePickerController.git',:inhibit_warnings => true
+  pod "HandyFrame"
   # pod 'MBProgressHUD',:inhibit_warnings => true
   # pod 'SVProgressHUD', :inhibit_warnings => true
-  
   # Pods for LZYStudy
 
   target 'LZYStudyTests' do

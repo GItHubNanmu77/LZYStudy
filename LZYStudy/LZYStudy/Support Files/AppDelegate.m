@@ -26,17 +26,17 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-//    [self registerAPN];
+    [self registerAPN];
     //初始化应用语言
-//    [LanguageManager setUserLanguage:[LanguageManager currentUserLanguage]];
+    [LanguageManager setUserLanguage:[LanguageManager currentUserLanguage]];
     
     [self setRootViewContrller];
     
-//    if (@available(iOS 10.0, *)) {
-//        [self receiveNotificationWithOptions:launchOptions];
-//    } else {
-//        // Fallback on earlier versions
-//    }
+    if (@available(iOS 10.0, *)) {
+        [self receiveNotificationWithOptions:launchOptions];
+    } else {
+        // Fallback on earlier versions
+    }
     return YES;
 }
 - (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options {
@@ -55,7 +55,6 @@
         self.tabVC.selectedIndex = 1;
         self.tabVC.delegate = self;
         self.window.rootViewController = self.tabVC;
-        //        self.tabVC.selectedIndex = 0;
         [self performSelector:@selector(selectFirstIndex) withObject:nil afterDelay:0];
     } else {
         LLLoginViewController *loginVC = [[LLLoginViewController alloc] init];

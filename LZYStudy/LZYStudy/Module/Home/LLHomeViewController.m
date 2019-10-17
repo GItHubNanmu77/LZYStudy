@@ -13,6 +13,7 @@
 #import "LLShoppingCartViewController.h"
 #import "LZYPullTableView.h"
 #import "LZYSheetAlertManager.h"
+#import "CTMainViewController.h"
 
 @interface LLHomeViewController () <UITableViewDelegate, UITableViewDataSource>
 
@@ -85,12 +86,16 @@
         LLShoppingCartViewController *vc = [[LLShoppingCartViewController alloc]init];
         vc.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:vc animated:YES];
-    } else {
+    } else if (indexPath.row == 3){
         LZYPullTableView *pullView = [[LZYPullTableView alloc] initWithFrame:CGRectZero dataSource:@[@"111",@"222",@"333"]];
         pullView.selectedBlock = ^(NSString * _Nonnull text) {
             NSLog(@"%@",text);
         };
         [pullView show];
+    } else {
+        CTMainViewController *vc = [[CTMainViewController alloc] init];
+        vc.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:vc animated:YES];
     }
 }
 
@@ -113,6 +118,7 @@
         [_dataArray addObject:@"商城常用两表联动分类"];
         [_dataArray addObject:@"商城常用购物车动画"];
         [_dataArray addObject:@"商城下拉弹窗"];
+        [_dataArray addObject:@"CTMediator"];
     }
     return _dataArray;
 }
