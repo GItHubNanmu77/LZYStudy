@@ -135,7 +135,11 @@ static NSString *const LL_WKWebView_Title = @"title";
     if ([absoluteString hasSuffix:@".pdf"]) {
         //不允许跳转
         decisionHandler(WKNavigationResponsePolicyCancel);
-        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:absoluteString] options:@{} completionHandler:nil];
+        if (@available(iOS 10.0, *)) {
+            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:absoluteString] options:@{} completionHandler:nil];
+        } else {
+            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:absoluteString]];
+        }
     } else {
         //允许跳转
         decisionHandler(WKNavigationResponsePolicyAllow);

@@ -30,6 +30,19 @@
     return self;
 }
 
+- (instancetype)initWithCoder:(NSCoder *)coder {
+    self = [super initWithCoder:coder];
+    if (self) {
+      
+    }
+    return self;
+}
+
++ (instancetype)shareView {
+    UIView *tipView = [[NSBundle mainBundle] loadNibNamed:@"LLTipView" owner:self options:nil].firstObject;
+    return tipView;
+}
+
 - (UIButton *)btnConfirm {
     if (!_btnConfirm) {
         _btnConfirm = ({

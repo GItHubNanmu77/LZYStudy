@@ -11,7 +11,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface LLTipView : UIView
-
++ (instancetype)shareView;
 - (void)show;
 @end
 

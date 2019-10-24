@@ -110,6 +110,7 @@
         [self.navigationController pushViewController:vc animated:YES];
     } else if (indexPath.row == 4){
         LLTipView *tipView = [[LLTipView alloc] initWithFrame:CGRectMake(100, 100, 200, 200)];
+//        LLTipView *tipView = [LLTipView shareView];
         [tipView show];
     } else if (indexPath.row == 5){
         LLFolderViewController *vc = [[LLFolderViewController alloc] init];

@@ -12,6 +12,7 @@
 #import "LLBallAnimationViewController.h"
 #import "LLDrawingViewController.h"
 #import "LLGravityViewController.h"
+#import "LLRuntimeViewController.h"
 
 @interface LLAnimationListViewController () <UITableViewDelegate, UITableViewDataSource>
 
@@ -89,6 +90,7 @@
         [_dataArray addObject:@"动画缓冲"];
         [_dataArray addObject:@"物理模拟"];
         [_dataArray addObject:@"重力模拟"];
+        [_dataArray addObject:@"runtime"];
     }
     return _dataArray;
 }
@@ -100,6 +102,7 @@
         [_vcArray addObject:[LLBallAnimationViewController new]];
         [_vcArray addObject:[LLDrawingViewController new]];
         [_vcArray addObject:[LLGravityViewController new]];
+        [_vcArray addObject:[LLRuntimeViewController new]];
     }
     return _vcArray;
 }
