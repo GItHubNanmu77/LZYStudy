@@ -1,8 +1,8 @@
 //
-//  LLFaceSecondViewController.h
+//  LLLanguageViewController.h
 //  LZYStudy
 //
-//  Created by cisdi on 2019/7/3.
+//  Created by cisdi on 2019/9/2.
 //  Copyright © 2019 lzy. All rights reserved.
 //
 
@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface LLFaceSecondViewController : UIViewController
+@interface LLLanguageViewController : UIViewController
 
 @end
 

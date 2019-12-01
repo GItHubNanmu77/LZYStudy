@@ -9,11 +9,14 @@
 #import "LLLoginViewController.h"
 #import "LLCustomTabBarController.h"
 #import "AppDelegate.h"
+#import "LLRegisterViewController.h"
+#import "NSString+Convert.h"
 
 @interface LLLoginViewController ()
 @property (nonatomic, strong) UIButton *loginButton;
 @property (nonatomic, strong) UIButton *managerButton;
-
+@property (nonatomic, strong) UIButton *registerButton;
+@property (nonatomic, strong) NSMutableArray *firstArray;
 @end
 
 @implementation LLLoginViewController
@@ -25,13 +28,58 @@
     self.view.backgroundColor = [UIColor purpleColor];
     [self.view addSubview:self.loginButton];
     [self.view addSubview:self.managerButton];
+    [self.view addSubview:self.registerButton];
+    
+//    self.firstArray = [NSMutableArray arrayWithArray:@[@"1",@"3",@"2"]];
+//        
+//    [[[self test1] test2] test3:[self test4]];
 }
 
+
+- (id)test1{
+    NSLog(@"%@",NSStringFromSelector(@selector(test1)));
+    return self;
+}
+
+- (id)test2{
+    NSLog(@"%@",NSStringFromSelector(@selector(test2)));
+    return self;
+}
+
+- (void)test3:(NSString *)aa{
+    NSLog(@"%@",NSStringFromSelector(@selector(test3:)));
+}
+
+- (NSString *)test4{
+    NSLog(@"%@",NSStringFromSelector(@selector(test4)));
+    return @"123";
+}
+
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+     [SVProgressHUD setContainerView:nil];
+    
+    [self.navigationController.navigationBar setHidden:YES];
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    
+    [SVProgressHUD dismiss];
+    [self.navigationController.navigationBar setHidden:NO];
+    NSLog(@"---%@",self.firstArray);
+}
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+     NSLog(@"---%@",self.firstArray);
+}
 - (void)viewDidLayoutSubviews {
     [super viewDidLayoutSubviews];
     
-    self.loginButton.frame = CGRectMake((self.view.width - 80)/2, self.view.height - 220, 120, 40);
-    self.managerButton.frame = CGRectMake((self.view.width - 80)/2, self.loginButton.bottom + 10, 80, 40);
+    self.managerButton.frame = CGRectMake((self.view.width - 80)/2, self.view.height - 220 + 10, 80, 40);
+    self.loginButton.frame = CGRectMake(40, self.managerButton.bottom + 10, self.view.width - 80, 50);
+    self.registerButton.frame = CGRectMake(40, self.loginButton.bottom + 10, self.view.width - 80, 50);
 }
 
 - (UIButton *)loginButton {
@@ -76,10 +124,36 @@
             button.layer.cornerRadius = 4;
             [button bk_addEventHandler:^(UIButton *sender) {
                 sender.selected = !sender.selected;
+                [SVProgressHUD setOffsetFromCenter:UIOffsetMake(0,0)];
+                [SVProgressHUD show];
             } forControlEvents:UIControlEventTouchUpInside];
             button;
         });
     }
     return _managerButton;
 }
+
+- (UIButton *)registerButton {
+    if (!_registerButton) {
+        @LZY_weakify(self)
+        _registerButton = ({
+            UIButton *button = [[UIButton alloc] init];
+            button.showsTouchWhenHighlighted = YES;
+            button.titleLabel.font = LZY_FONT_FROM_NAME_SIZE(17.0);
+            [button setTitleColor:RGB3(255) forState:UIControlStateNormal];
+            [button setTitle:@"注册" forState:UIControlStateNormal];
+            [button setBackgroundColor:RGB(24, 197, 247)];
+            button.layer.cornerRadius = 4;
+            [button bk_addEventHandler:^(UIButton *sender) {
+                @LZY_strongify(self)
+                LLRegisterViewController *vc = [[LLRegisterViewController alloc] init];
+                [self.navigationController pushViewController:vc animated:YES];
+            } forControlEvents:UIControlEventTouchUpInside];
+            button;
+        });
+    }
+    return _registerButton;
+}
+
+
 @end

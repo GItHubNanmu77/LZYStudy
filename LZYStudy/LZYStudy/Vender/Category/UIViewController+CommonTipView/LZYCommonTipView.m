@@ -74,7 +74,7 @@
 
 - (void)show:(NSString *)tipsText btnTitle:(NSString *)btnTitle {
     self.animationImageView.x = (self.width - self.animationImageView.width) / 2;
-    self.animationImageView.y = (self.height - self.animationImageView.height) / 2 - LZY_IPHONE_NAV_HEIGHT;
+    self.animationImageView.y = (self.height - self.animationImageView.height) / 2 - LZY_IPHONE_NAV_STATUS_HEIGHT;
     
     self.tipsLabel.text = tipsText;
     [self.tipsLabel sizeToFit];

@@ -9,6 +9,7 @@
 #import "LLPublishViewController.h"
 #import "LLPublishDetailViewController.h"
 #import "LLDynamicModel.h"
+#import "LLGCDViewController.h"
 
 @interface LLPublishViewController ()
 @property (nonatomic, strong) CAShapeLayer *shape;
@@ -30,7 +31,7 @@
     
 //    [self drawRainbow];
 //    [self showcolorLayer];
-    [self keyFrameAnimation];
+//    [self keyFrameAnimation];
 }
 - (void)showcolorLayer{
     //create a red layer
@@ -79,13 +80,15 @@
 }
 
 -(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-    LLPublishDetailViewController *vc = [[LLPublishDetailViewController alloc] init];
-    vc.name = self.name;
-    vc.model = self.model;
-    [self.navigationController pushViewController:vc animated:YES];
+//    LLPublishDetailViewController *vc = [[LLPublishDetailViewController alloc] init];
+//    vc.name = self.name;
+//    vc.model = self.model;
+//    [self.navigationController pushViewController:vc animated:YES];
     
 //    [self moveLine];
 //    [self hitView:touches];
+    LLGCDViewController *vc = [[LLGCDViewController alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (void)hitView:(NSSet<UITouch *> *)touches {

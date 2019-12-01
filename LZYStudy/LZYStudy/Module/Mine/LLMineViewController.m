@@ -7,32 +7,62 @@
 //
 
 #import "LLMineViewController.h"
+#import "LZYMacro.h"
 
-#import "LLLoginViewController.h"
-#import "AppDelegate.h"
-#import "LZYCustomBaseNavigationViewController.h"
-#import "LLPdfReaderViewController.h"
 #import <UserNotifications/UserNotifications.h>
+#import "AppDelegate.h"
+
+#import "LZYCustomBaseNavigationViewController.h"
+#import "LLLoginViewController.h"
+#import "LLPdfReaderViewController.h"
+#import "LLFaceCameraViewController.h"
+#import "LLFaceImageViewController.h"
+#import "LLFolderViewController.h"
+#import "LLTipView.h"
+#import "LLWebTableViewController.h"
+#import "LLLanguageViewController.h"
+
 #import "LZYDeviceUtils.h"
 
+<<<<<<< HEAD
 #import "LLFaceSecondViewController.h"
 #import "UIView+RoundCorner.h"
 #import "LZYMacro.h"
+=======
+@interface LLMineViewController () <UITableViewDelegate, UITableViewDataSource>
 
-@interface LLMineViewController ()
+@property (nonatomic, strong) NSMutableArray *dataArray;
+@property (nonatomic, strong) UITableView *table;
+>>>>>>> 797e18da6695dbbc89eaa1d56843e09196e147e6
+
 @property (nonatomic, strong) UIButton *loginButton;
+<<<<<<< HEAD
 @property (nonatomic, strong) UIButton *nextButton;
 @property (nonatomic, strong) UIView *roundView;
 @property (nonatomic, assign) NSInteger beer;
 @property (nonatomic, assign) NSInteger abeer;
+=======
+
+
+>>>>>>> 797e18da6695dbbc89eaa1d56843e09196e147e6
 @end
 
 @implementation LLMineViewController
 
+- (void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:@"LanguageChanged" object:nil];
+}
+
+- (void)LanguageChanged {
+   
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+   
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor redColor];
+<<<<<<< HEAD
 //    [self.view addSubview:self.loginButton];
 //    [self.view addSubview:self.nextButton];
     NSString *name = [LZYDeviceUtils name];
@@ -53,33 +83,142 @@
     self.beer = 0;
     [self moneyToBeer:20];
     [self changeToBeer:20];
+=======
+    
+    
+    NSString *deviceName = [LZYDeviceUtils name];
+    NSString *sysName = [LZYDeviceUtils systemName];
+    NSString *sysVer = [LZYDeviceUtils systemVersion];
+    NSLog(@"deviceName:%@ -- systemName:%@ - systemVersion:%@",deviceName, sysName, sysVer);
+   
+    [self.view addSubview:self.table];
+    [self.view addSubview:self.loginButton];
+>>>>>>> 797e18da6695dbbc89eaa1d56843e09196e147e6
 }
 
 - (void)viewDidLayoutSubviews {
     [super viewDidLayoutSubviews];
     
+<<<<<<< HEAD
 //    self.roundView.frame = CGRectMake(100, 100, 200, 200);
     
     [self.roundView addRoundCorner:UIRectCornerTopLeft | UIRectCornerTopRight cornerRadius:12];
     
     self.loginButton.frame = CGRectMake((self.view.width - 80)/2, self.view.height - 220, 80, 40);
     self.nextButton.frame = CGRectMake((self.view.width - 80)/2,  220, 80, 40);
+=======
+>>>>>>> 797e18da6695dbbc89eaa1d56843e09196e147e6
 }
 
+#pragma mark - UITableViewDataSource & UITableViewDelegate
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return self.dataArray.count;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 50;
+}
+
+- (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+//    static NSString *identifier = @"UITableViewCell";
+    UITableViewCell *cell = (UITableViewCell*)[tableView dequeueReusableCellWithIdentifier:@"UITableViewCell"];
+    if(!cell){
+        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"UITableViewCell"];
+    }
+    cell.textLabel.text = self.dataArray[indexPath.row];
+    
+    return cell;
+}
+
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    if (indexPath.row == 0) {
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [self checkUserNotificationEnable];
+        });
+    } else if (indexPath.row == 1) {
+        LLPdfReaderViewController *vc = [[LLPdfReaderViewController alloc] init];
+        vc.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:vc animated:YES];
+    } else if (indexPath.row == 2) {
+        LLFaceCameraViewController *vc = [[LLFaceCameraViewController alloc] init];
+        vc.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:vc animated:YES];
+    } else if (indexPath.row == 3) {
+        LLFaceImageViewController *vc = [[LLFaceImageViewController alloc] init];
+        vc.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:vc animated:YES];
+    } else if (indexPath.row == 4){
+        LLTipView *tipView = [[LLTipView alloc] initWithFrame:CGRectMake(100, 100, 200, 200)];
+//        LLTipView *tipView = [LLTipView shareView];
+        [tipView show];
+    } else if (indexPath.row == 5){
+        LLFolderViewController *vc = [[LLFolderViewController alloc] init];
+        vc.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:vc animated:YES];
+    } else if (indexPath.row == 6){
+        LLWebTableViewController *vc = [[LLWebTableViewController alloc] init];
+        vc.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:vc animated:YES];
+    } else {
+        LLLanguageViewController *vc = [[LLLanguageViewController alloc] init];
+        vc.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:vc animated:YES];
+    }
+}
+
+
+#pragma mark - Getter & Setter
+- (UITableView *)table {
+    if(!_table){
+        _table = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, LZY_SCREEN_WIDTH, LZY_SCREEN_HEIGHT) style:UITableViewStylePlain];
+        _table.backgroundColor = [UIColor whiteColor];
+        _table.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
+        _table.delegate = self;
+        _table.dataSource = self;
+        _table.tableFooterView = self.loginButton;
+        [_table registerClass:[UITableViewCell class] forCellReuseIdentifier:@"UITableViewCell"];
+
+        if (@available(iOS 11.0, *)) {
+            _table.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+        } else {
+            self.automaticallyAdjustsScrollViewInsets = NO;
+        }
+    }
+    return _table;
+}
+
+- (NSMutableArray *)dataArray {
+    if (!_dataArray) {
+        _dataArray = [NSMutableArray array];
+        [_dataArray addObject:@"添加本地通知"];
+        [_dataArray addObject:@"PDF阅读器"];
+        [_dataArray addObject:@"人脸识别AVFoundation"];
+        [_dataArray addObject:@"人脸识别CoreImage"];
+        [_dataArray addObject:@"弹出view"];
+        [_dataArray addObject:@"展开折叠label"];
+        [_dataArray addObject:@"WebTableFooter"];
+        [_dataArray addObject:Localized(@"Language")];
+    }
+    return _dataArray;
+}
 
 - (UIButton *)loginButton {
     if (!_loginButton) {
         _loginButton = ({
-            @LZY_weakify(self)
-            UIButton *button = [[UIButton alloc] init];
+            UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, LZY_SCREEN_WIDTH, 58)];
             button.showsTouchWhenHighlighted = YES;
             button.titleLabel.font = LZY_FONT_FROM_NAME_SIZE(17.0);
             [button setTitleColor:RGB3(51) forState:UIControlStateNormal];
-            [button setTitle:@"退出" forState:UIControlStateNormal];
-            [button setBackgroundColor:RGB3(255)];
+            [button setTitle:Localized(@"Log Out") forState:UIControlStateNormal];
+            [button setBackgroundColor:RGB(100,181,245)];
             button.layer.cornerRadius = 4;
             [button bk_addEventHandler:^(id sender) {
-                @LZY_strongify(self)
                 
                 [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"isLogin"];
                 [[NSUserDefaults standardUserDefaults] synchronize];
@@ -95,31 +234,34 @@
     return _loginButton;
 }
 
-- (UIButton *)nextButton {
-    if (!_nextButton) {
-        _nextButton = ({
-            @LZY_weakify(self)
-            UIButton *button = [[UIButton alloc] init];
-            button.showsTouchWhenHighlighted = YES;
-            button.titleLabel.font = LZY_FONT_FROM_NAME_SIZE(17.0);
-            [button setTitleColor:RGB3(51) forState:UIControlStateNormal];
-            [button setTitle:@"下一页" forState:UIControlStateNormal];
-            [button setBackgroundColor:RGB3(123)];
-            button.layer.cornerRadius = 4;
-            [button bk_addEventHandler:^(id sender) {
-                @LZY_strongify(self)
-                LLFaceSecondViewController *vc = [[LLFaceSecondViewController alloc] init];
-                vc.hidesBottomBarWhenPushed = YES;
-                [self.navigationController pushViewController:vc animated:YES];
-//                dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-//                    [self checkUserNotificationEnable];
-//                });
-                
-            } forControlEvents:UIControlEventTouchUpInside];
-            button;
-        });
+
+
+//检查授权
+- (void)checkUserNotificationEnable { // 判断用户是否允许接收通知
+    if (@available(iOS 10.0, *)) {
+        __block BOOL isOn = NO;
+        @LZY_weakify(self)
+        UNUserNotificationCenter *center = [UNUserNotificationCenter currentNotificationCenter];
+        [center getNotificationSettingsWithCompletionHandler:^(UNNotificationSettings * _Nonnull settings) {
+            @LZY_strongify(self)
+            if (settings.notificationCenterSetting == UNNotificationSettingEnabled) {
+                isOn = YES;
+                NSLog(@"打开了通知");
+                [self addLocalNotice];
+            }else {
+                isOn = NO;
+                NSLog(@"关闭了通知");
+                [self showAlertView];
+            }
+        }];
+    }else {
+        if ([[UIApplication sharedApplication] currentUserNotificationSettings].types == UIUserNotificationTypeNone){
+            NSLog(@"关闭了通知");
+            [self showAlertView];
+        }else {
+            NSLog(@"打开了通知");
+        }
     }
-    return _nextButton;
 }
 
 - (void)addLocalNotice {
@@ -176,34 +318,6 @@
         notif.repeatInterval = NSCalendarUnitWeekOfYear;
         
         [[UIApplication sharedApplication] scheduleLocalNotification:notif];
-    }
-}
-
-//检查授权
-- (void)checkUserNotificationEnable { // 判断用户是否允许接收通知
-    if (@available(iOS 10.0, *)) {
-        __block BOOL isOn = NO;
-        @LZY_weakify(self)
-        UNUserNotificationCenter *center = [UNUserNotificationCenter currentNotificationCenter];
-        [center getNotificationSettingsWithCompletionHandler:^(UNNotificationSettings * _Nonnull settings) {
-            @LZY_strongify(self)
-            if (settings.notificationCenterSetting == UNNotificationSettingEnabled) {
-                isOn = YES;
-                NSLog(@"打开了通知");
-                [self addLocalNotice];
-            }else {
-                isOn = NO;
-                NSLog(@"关闭了通知");
-                [self showAlertView];
-            }
-        }];
-    }else {
-        if ([[UIApplication sharedApplication] currentUserNotificationSettings].types == UIUserNotificationTypeNone){
-            NSLog(@"关闭了通知");
-            [self showAlertView];
-        }else {
-            NSLog(@"打开了通知");
-        }
     }
 }
 

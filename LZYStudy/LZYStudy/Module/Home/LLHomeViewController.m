@@ -11,11 +11,15 @@
 #import "LLCategoryViewController.h"
 #import "LLCategoryDetailViewController.h"
 #import "LLShoppingCartViewController.h"
+#import "LZYPullTableView.h"
+#import "LZYSheetAlertManager.h"
+#import "CTMainViewController.h"
 
 @interface LLHomeViewController () <UITableViewDelegate, UITableViewDataSource>
 
 @property (nonatomic, strong) NSMutableArray *dataArray;
 @property (nonatomic, strong) UITableView *table;
+@property (nonatomic, strong) NSMutableArray *vcArray;
 
 
 @end
@@ -25,13 +29,22 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.view.backgroundColor = [UIColor cyanColor];
+//    self.view.backgroundColor = [UIColor systemRedColor];
     [self initSubviews];
    
+    
 }
 
 - (void)initSubviews {
     [self.view addSubview:self.table];
+}
+
+- (void)copyString {
+    //UIPasteboard：该类支持写入和读取数据，类似剪贴板
+    UIPasteboard *pasteBoard = [UIPasteboard generalPasteboard];
+    NSString *string = @"sdf123123sdfsd";
+    pasteBoard.string = string;
+    [SVProgressHUD showSuccessWithStatus:@"复制成功"];
 }
 
 #pragma  mark - UITableViewDelegate
@@ -41,10 +54,6 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return self.dataArray.count;
-}
-
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 50;
 }
 
 - (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -62,19 +71,9 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    if (indexPath.row == 0) {
-        LLCategoryViewController *vc = [[LLCategoryViewController alloc]init];
-        vc.hidesBottomBarWhenPushed = YES;
-        [self.navigationController pushViewController:vc animated:YES];
-    } else if (indexPath.row == 1) {
-        LLCategoryDetailViewController *vc = [[LLCategoryDetailViewController alloc]init];
-        vc.hidesBottomBarWhenPushed = YES;
-        [self.navigationController pushViewController:vc animated:YES];
-    } else if (indexPath.row == 2) {
-        LLShoppingCartViewController *vc = [[LLShoppingCartViewController alloc]init];
-        vc.hidesBottomBarWhenPushed = YES;
-        [self.navigationController pushViewController:vc animated:YES];
-    }
+    UIViewController *vc = self.vcArray[indexPath.row];
+    vc.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 #pragma mark - Getter & Setter
@@ -83,6 +82,7 @@
         _table = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, LZY_SCREEN_WIDTH, LZY_SCREEN_HEIGHT) style:UITableViewStylePlain];
         _table.backgroundColor = [UIColor whiteColor];
         _table.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
+        _table.rowHeight = 50.0;
         _table.delegate = self;
         _table.dataSource = self;
     }
@@ -95,7 +95,19 @@
         [_dataArray addObject:@"商城常用标签分类"];
         [_dataArray addObject:@"商城常用两表联动分类"];
         [_dataArray addObject:@"商城常用购物车动画"];
+        [_dataArray addObject:@"CTMediator"];
     }
     return _dataArray;
+}
+
+- (NSMutableArray *)vcArray {
+    if (!_vcArray) {
+        _vcArray = [NSMutableArray array];
+        [_vcArray addObject:[LLCategoryViewController new]];
+        [_vcArray addObject:[LLCategoryDetailViewController new]];
+        [_vcArray addObject:[LLShoppingCartViewController new]];
+        [_vcArray addObject:[CTMainViewController new]];
+    }
+    return _vcArray;
 }
 @end

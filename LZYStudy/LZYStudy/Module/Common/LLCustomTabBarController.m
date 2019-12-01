@@ -29,24 +29,25 @@
 
 
 - (void)dealloc {
-    [[NSNotificationCenter defaultCenter] removeObserver:self];
+    
+}
+- (UIStatusBarStyle)preferredStatusBarStyle {
+    return UIStatusBarStyleDefault;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // 显示状态栏
-    [[UIApplication sharedApplication] setStatusBarHidden:NO withAnimation:UIStatusBarAnimationNone];
-    // 导航栏样式
-    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent animated:NO];
+//    [[UIApplication sharedApplication] setStatusBarHidden:NO withAnimation:UIStatusBarAnimationNone];
+//    // 导航栏样式
+//    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleDefault animated:NO];
     
     // 安装 ViewControllers
     [self setupViewControllers];
     // 设置自定义tabbar
     [self setupCustomizeTabBar];
     
-    
-    // 收到IM消息是否显示红点通知
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(refreshMessageRedDotNotification:) name:@"MESSAGE_REDDOT" object:nil];
+
 }
 
 #pragma mark - Private Method
@@ -55,27 +56,27 @@
  */
 - (void)setupViewControllers {
     // 首页
-//    LLHomeViewController *homeVC = [[LLHomeViewController alloc] init];
-    LLShopListViewController *homeVC = [[LLShopListViewController alloc] init];
+    LLHomeViewController *homeVC = [[LLHomeViewController alloc] init];
+//    LLShopListViewController *homeVC = [[LLShopListViewController alloc] init];
     LZYCustomBaseNavigationViewController *homeNav = [[LZYCustomBaseNavigationViewController alloc] initWithRootViewController:homeVC];
-    [homeNav showFPSLable];
+//    [homeNav showFPSLable];
     
     // 消息
 //    LLMessageViewController *messageVC = [[LLMessageViewController alloc] init];
     LLLayoutListViewController *messageVC = [[LLLayoutListViewController alloc] init];
     LZYCustomBaseNavigationViewController *messageNav = [[LZYCustomBaseNavigationViewController alloc] initWithRootViewController:messageVC];
-    [messageNav showFPSLable];
+//    [messageNav showFPSLable];
     
     // 动态
 //    LLDynamicViewController *dynanmicVC = [[LLDynamicViewController alloc] init];
     LLAnimationListViewController *dynanmicVC = [[LLAnimationListViewController alloc] init];
     LZYCustomBaseNavigationViewController *dynanmicNav = [[LZYCustomBaseNavigationViewController alloc] initWithRootViewController:dynanmicVC];
-    [dynanmicNav showFPSLable];
+//    [dynanmicNav showFPSLable];
     
     // 我的
     LLMineViewController *mineVC = [[LLMineViewController alloc] init];
     LZYCustomBaseNavigationViewController *mineNav = [[LZYCustomBaseNavigationViewController alloc] initWithRootViewController:mineVC];
-    [mineNav showFPSLable];
+//    [mineNav showFPSLable];
     
     self.viewControllers = @[homeNav, messageNav, dynanmicNav, mineNav];
 }

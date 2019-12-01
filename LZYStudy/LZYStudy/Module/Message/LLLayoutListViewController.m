@@ -13,6 +13,7 @@
 #import "LLDragViewController.h"
 #import "LLCardViewController.h"
 #import "LLPileCardViewController.h"
+#import "LLWeChatViewController.h"
 
 @interface LLLayoutListViewController () <UITableViewDelegate, UITableViewDataSource>
 
@@ -69,26 +70,46 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    if (indexPath.row == 0) {
-        LLDynamicViewController *vc = [[LLDynamicViewController alloc]init];
-        vc.hidesBottomBarWhenPushed = YES;
-        [self.navigationController pushViewController:vc animated:YES];
-    } else if (indexPath.row == 1) {
-        LLMessageViewController *vc = [[LLMessageViewController alloc]init];
-        vc.hidesBottomBarWhenPushed = YES;
-        [self.navigationController pushViewController:vc animated:YES];
-    } else if (indexPath.row == 2) {
-        LLDragViewController *vc = [[LLDragViewController alloc]init];
-        vc.hidesBottomBarWhenPushed = YES;
-        [self.navigationController pushViewController:vc animated:YES];
-    } else if (indexPath.row == 3) {
-        LLCardViewController *vc = [[LLCardViewController alloc]init];
-        vc.hidesBottomBarWhenPushed = YES;
-        [self.navigationController pushViewController:vc animated:YES];
-    } else if (indexPath.row == 4) {
-        LLPileCardViewController *vc = [[LLPileCardViewController alloc]init];
-        vc.hidesBottomBarWhenPushed = YES;
-        [self.navigationController pushViewController:vc animated:YES];
+    
+    switch (indexPath.row) {
+        case 0:{
+                LLDynamicViewController *vc = [[LLDynamicViewController alloc]init];
+                vc.hidesBottomBarWhenPushed = YES;
+                [self.navigationController pushViewController:vc animated:YES];
+            } break;
+        case 1:{
+            LLMessageViewController *vc = [[LLMessageViewController alloc]init];
+            vc.hidesBottomBarWhenPushed = YES;
+            [self.navigationController pushViewController:vc animated:YES];
+        } break;
+        case 2:{
+            LLDragViewController *vc = [[LLDragViewController alloc]init];
+            vc.hidesBottomBarWhenPushed = YES;
+            [self.navigationController pushViewController:vc animated:YES];
+        } break;
+        case 3:{
+            LLCardViewController *vc = [[LLCardViewController alloc]init];
+            vc.hidesBottomBarWhenPushed = YES;
+            [self.navigationController pushViewController:vc animated:YES];
+        } break;
+        case 4:{
+            LLPileCardViewController *vc = [[LLPileCardViewController alloc]init];
+            vc.hidesBottomBarWhenPushed = YES;
+            [self.navigationController pushViewController:vc animated:YES];
+        } break;
+        case 5:{
+            LLWeChatViewController *vc = [[LLWeChatViewController alloc]init];
+            vc.hidesBottomBarWhenPushed = YES;
+            [self.navigationController pushViewController:vc animated:YES];
+        } break;
+        case 6:{
+            
+            
+            
+        } break;
+            
+        default:
+            break;
     }
 }
 
@@ -112,6 +133,7 @@
         [_dataArray addObject:@"拖动排序"];
         [_dataArray addObject:@"中心卡片放大"];
         [_dataArray addObject:@"层叠卡片滑动"];
+        [_dataArray addObject:@"微信列表"];
     }
     return _dataArray;
 }

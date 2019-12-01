@@ -24,7 +24,7 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
     
-    self.drawingView = [[LLDrawingView alloc] initWithFrame:CGRectMake(0, LZY_IPHONE_NAV_HEIGHT, LZY_SCREEN_WIDTH, 400)];
+    self.drawingView = [[LLDrawingView alloc] initWithFrame:CGRectMake(0, LZY_IPHONE_NAV_STATUS_HEIGHT, LZY_SCREEN_WIDTH, 400)];
     self.drawingView.backgroundColor = RGB3(240);
     [self.view addSubview:self.drawingView];
     
@@ -71,7 +71,7 @@
 
 - (UIView*)paintingView{
     if(!_paintingView){
-        _paintingView = [[UIView alloc] initWithFrame:CGRectMake(0, LZY_IPHONE_NAV_HEIGHT, LZY_SCREEN_WIDTH, 400)];
+        _paintingView = [[UIView alloc] initWithFrame:CGRectMake(0, LZY_IPHONE_NAV_STATUS_HEIGHT, LZY_SCREEN_WIDTH, 400)];
         _paintingView.backgroundColor = RGB3(240);
     }
     return _paintingView;

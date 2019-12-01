@@ -135,7 +135,11 @@ static NSString *const LL_WKWebView_Title = @"title";
     if ([absoluteString hasSuffix:@".pdf"]) {
         //不允许跳转
         decisionHandler(WKNavigationResponsePolicyCancel);
-        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:absoluteString] options:@{} completionHandler:nil];
+        if (@available(iOS 10.0, *)) {
+            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:absoluteString] options:@{} completionHandler:nil];
+        } else {
+            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:absoluteString]];
+        }
     } else {
         //允许跳转
         decisionHandler(WKNavigationResponsePolicyAllow);
@@ -230,7 +234,7 @@ static NSString *const LL_WKWebView_Title = @"title";
             }
             configuration.userContentController = userContentController;
             
-            WKWebView *wkWebView = [[WKWebView alloc] initWithFrame:CGRectMake(0.0, 0.0, LZY_SCREEN_WIDTH, LZY_SCREEN_HEIGHT - LZY_IPHONE_NAV_HEIGHT) configuration:configuration];
+            WKWebView *wkWebView = [[WKWebView alloc] initWithFrame:CGRectMake(0.0, 0.0, LZY_SCREEN_WIDTH, LZY_SCREEN_HEIGHT - LZY_IPHONE_NAV_STATUS_HEIGHT) configuration:configuration];
             wkWebView.UIDelegate = self;
             wkWebView.navigationDelegate = self;
             wkWebView.allowsBackForwardNavigationGestures = YES;

@@ -44,7 +44,7 @@ static float CardHeightScale = 0.8f;
             continue;
         }
         //根据余弦函数，弧度在 -π/4 到 π/4,即 scale在 √2/2~1~√2/2 间变化
-        CGFloat scale = fabs(cos(progress * M_PI/4));
+        CGFloat scale = fabs(cos(progress * M_PI/6));
         //缩放大小
         attributes.transform = CGAffineTransformMakeScale(scale, scale);
         //更新中间位
