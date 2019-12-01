@@ -23,28 +23,20 @@
 #import "LLLanguageViewController.h"
 
 #import "LZYDeviceUtils.h"
-
-<<<<<<< HEAD
-#import "LLFaceSecondViewController.h"
 #import "UIView+RoundCorner.h"
 #import "LZYMacro.h"
-=======
 @interface LLMineViewController () <UITableViewDelegate, UITableViewDataSource>
 
 @property (nonatomic, strong) NSMutableArray *dataArray;
 @property (nonatomic, strong) UITableView *table;
->>>>>>> 797e18da6695dbbc89eaa1d56843e09196e147e6
 
 @property (nonatomic, strong) UIButton *loginButton;
-<<<<<<< HEAD
 @property (nonatomic, strong) UIButton *nextButton;
 @property (nonatomic, strong) UIView *roundView;
 @property (nonatomic, assign) NSInteger beer;
 @property (nonatomic, assign) NSInteger abeer;
-=======
 
 
->>>>>>> 797e18da6695dbbc89eaa1d56843e09196e147e6
 @end
 
 @implementation LLMineViewController
@@ -62,7 +54,6 @@
    
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor redColor];
-<<<<<<< HEAD
 //    [self.view addSubview:self.loginButton];
 //    [self.view addSubview:self.nextButton];
     NSString *name = [LZYDeviceUtils name];
@@ -83,31 +74,21 @@
     self.beer = 0;
     [self moneyToBeer:20];
     [self changeToBeer:20];
-=======
     
     
-    NSString *deviceName = [LZYDeviceUtils name];
-    NSString *sysName = [LZYDeviceUtils systemName];
-    NSString *sysVer = [LZYDeviceUtils systemVersion];
-    NSLog(@"deviceName:%@ -- systemName:%@ - systemVersion:%@",deviceName, sysName, sysVer);
-   
     [self.view addSubview:self.table];
     [self.view addSubview:self.loginButton];
->>>>>>> 797e18da6695dbbc89eaa1d56843e09196e147e6
 }
 
 - (void)viewDidLayoutSubviews {
     [super viewDidLayoutSubviews];
     
-<<<<<<< HEAD
 //    self.roundView.frame = CGRectMake(100, 100, 200, 200);
     
     [self.roundView addRoundCorner:UIRectCornerTopLeft | UIRectCornerTopRight cornerRadius:12];
     
     self.loginButton.frame = CGRectMake((self.view.width - 80)/2, self.view.height - 220, 80, 40);
     self.nextButton.frame = CGRectMake((self.view.width - 80)/2,  220, 80, 40);
-=======
->>>>>>> 797e18da6695dbbc89eaa1d56843e09196e147e6
 }
 
 #pragma mark - UITableViewDataSource & UITableViewDelegate

@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -1170,9 +1170,6 @@
 			isa = PBXGroup;
 			children = (
 				4A4466872350133000EF31DF /* Common */,
-				4A2BD23922BB62890047E370 /* ball3.png */,
-				4A2BD23722BB5EFA0047E370 /* ball2.png */,
-				4A2BD23222BB37B40047E370 /* ball.png */,
 				4A803291229CD6720054ACCE /* QzTeam.pdf */,
 				4ABCE3FE228E668C00676337 /* 1.jpg */,
 				4ABCE3FF228E668C00676337 /* 2.jpg */,
@@ -2465,7 +2462,6 @@
 				4A4466A22350133000EF31DF /* Menu_Bg@2x.png in Resources */,
 				4A4937C922C1B60000FA24F9 /* 7.jpg in Resources */,
 				4ABCE404228E668D00676337 /* 1.jpg in Resources */,
-				4A2BD23822BB5EFA0047E370 /* ball2.png in Resources */,
 				4A4466A82350133000EF31DF /* Delete_Icon@2x.png in Resources */,
 				4A4937BE22C1B60000FA24F9 /* 15.jpg in Resources */,
 				4A44669D2350133000EF31DF /* Nav_Back_Icon@3x.png in Resources */,
@@ -2507,11 +2503,9 @@
 				4A44669E2350133000EF31DF /* Nav_Back_Icon@2x.png in Resources */,
 				4A4466A62350133000EF31DF /* Tips_NoData@3x.png in Resources */,
 				4AFE35B62269A52B003120DC /* Main.storyboard in Resources */,
-				4A2BD23A22BB62890047E370 /* ball3.png in Resources */,
 				4A44669B2350133000EF31DF /* Jump_Icon@2x.png in Resources */,
 				4A13312722CDA20C00AE3EF1 /* 我用苍老疼爱你.jpg in Resources */,
 				4A44669F2350133000EF31DF /* Tips_Network@3x.png in Resources */,
-				4A2BD23322BB37B40047E370 /* ball.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3140,7 +3134,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 7BT4LD3H35;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/LZYStudy/Support Files/PrefixHeader.pch";
-				HEADER_SEARCH_PATHS = $PODS_ROOT;
+				HEADER_SEARCH_PATHS = "$PODS_ROOT";
 				INFOPLIST_FILE = "$(SRCROOT)/LZYStudy/Support Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -3161,7 +3155,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5DYL533N39;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/LZYStudy/Support Files/PrefixHeader.pch";
-				HEADER_SEARCH_PATHS = $PODS_ROOT;
+				HEADER_SEARCH_PATHS = "$PODS_ROOT";
 				INFOPLIST_FILE = "$(SRCROOT)/LZYStudy/Support Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
