@@ -16,11 +16,15 @@
 #import "LZYDeviceUtils.h"
 
 #import "LLFaceSecondViewController.h"
+#import "UIView+RoundCorner.h"
+#import "LZYMacro.h"
 
 @interface LLMineViewController ()
 @property (nonatomic, strong) UIButton *loginButton;
 @property (nonatomic, strong) UIButton *nextButton;
-
+@property (nonatomic, strong) UIView *roundView;
+@property (nonatomic, assign) NSInteger beer;
+@property (nonatomic, assign) NSInteger abeer;
 @end
 
 @implementation LLMineViewController
@@ -29,17 +33,34 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor redColor];
-    [self.view addSubview:self.loginButton];
-    [self.view addSubview:self.nextButton];
+//    [self.view addSubview:self.loginButton];
+//    [self.view addSubview:self.nextButton];
     NSString *name = [LZYDeviceUtils name];
     NSString *sysName = [LZYDeviceUtils systemName];
     NSString *sysVer = [LZYDeviceUtils systemVersion];
     NSLog(@"%@ -- %@ - %@",name,sysName,sysVer);
-   
+    
+    [self.view addSubview:self.roundView];
+    [self.roundView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.mas_equalTo(self.view).offset(100);
+        make.left.mas_equalTo(self.view).offset(100);
+        make.width.mas_equalTo(100);
+        make.height.mas_equalTo(100);
+    }];
+    [self.roundView addRoundCorner:UIRectCornerBottomLeft | UIRectCornerBottomRight cornerRadius:12];
+    
+    //换啤酒
+    self.beer = 0;
+    [self moneyToBeer:20];
+    [self changeToBeer:20];
 }
 
 - (void)viewDidLayoutSubviews {
     [super viewDidLayoutSubviews];
+    
+//    self.roundView.frame = CGRectMake(100, 100, 200, 200);
+    
+    [self.roundView addRoundCorner:UIRectCornerTopLeft | UIRectCornerTopRight cornerRadius:12];
     
     self.loginButton.frame = CGRectMake((self.view.width - 80)/2, self.view.height - 220, 80, 40);
     self.nextButton.frame = CGRectMake((self.view.width - 80)/2,  220, 80, 40);
@@ -211,4 +232,61 @@
         }
     });
 }
+- (UIView *)roundView {
+    if (!_roundView) {
+        _roundView = ({
+            UIView *view = [[UIView alloc] init];
+            view.backgroundColor = [UIColor blueColor];
+            view;
+        });
+    }
+    return _roundView;
+}
+/**
+ 题目，有25元钱，一瓶酒4块钱，2个空瓶可以换一瓶酒，4个瓶盖可以换一瓶酒。总共能喝几瓶酒？
+ */
+- (NSInteger)moneyToBeer:(NSInteger )money{
+    NSLog(@"+++++%d",money);
+    NSInteger beer;
+    NSInteger bottle;
+    NSInteger cap;
+    beer = money / 4;
+    bottle = beer;
+    cap = beer;
+    NSInteger bbeer = bottle / 2 ;
+    NSInteger cbeer = cap / 4;
+    
+    NSInteger moreMoney = bottle * 2 + cap * 1;
+    self.beer += beer;
+    NSLog(@"========%ld",(long)self.beer);
+    NSLog(@"------%d",moreMoney);
+    if (moreMoney > 3) {
+        [self moneyToBeer:moreMoney];
+    }
+    
+    return moreMoney;
+}
+ 
+- (NSInteger)changeToBeer:(NSInteger )money{
+    NSLog(@"+++++%d",money);
+    NSInteger beer;
+    NSInteger bottle;
+    NSInteger cap;
+    beer = money / 4;
+    bottle = beer;
+    cap = beer;
+    NSInteger bbeer = bottle / 2 ;
+    NSInteger cbeer = cap / 4;
+    NSInteger allbeer = bbeer + cbeer;
+    NSInteger more = allbeer * 4;
+    self.abeer += beer;
+    NSLog(@"========++++%ld",(long)self.abeer);
+    
+    if (more > 3) {
+        [self changeToBeer:more];
+    }
+    
+    return more;
+}
 @end
+ 
